@@ -12,12 +12,20 @@ include::locale/attributes.adoc[]
 
 image::digitaliseringsdirektoratet.png[width=50%, pdfwidth=30vw]
 
-Publisert: 2020-03-05
-{description}
-
-IMPORTANT: Denne versjonen av veilederen var utarbeidet for https://data.norge.no/specification/dcat-ap-no/v1.1/[DCAT-AP-NO v.1.1] som er [yellow-background]#under utfasing#. Veilederen vil bli oppdatert for https://data.norge.no/specification/dcat-ap-no/[DCAT-AP-NO v.2.0].
-
 include::./shared/download.adoc[]
+
+NOTE: *Innmelding av feil og mangler:* +
+Dersom du finner feil eller mangler i dokumentet, ber vi om at dette meldes inn på https://github.com/Informasjonsforvaltning/dcat-ap-no-veileder/issues[Github Issues]. Dersom du ikke allerede har bruker på Github kan du opprette bruker gratis.
+
+
+*Status*: [yellow-background]#under utarbeidelse# +
+*Versjon*: 2.0 +
+*Publisert*: [yellow-background]#under utarbeidelse# +
+*Gjeldende versjon*: https://data.norge.no/guide/veileder-beskrivelse-av-datasett/ +
+*Forrige versjon*: https://data.norge.no/guide/veileder-beskrivelse-av-datasett/v1 [yellow-background]#(kommer)# +
+*Redaktørens utkast*: https://informasjonsforvaltning.github.io/veileder-beskrivelse-av-datasett/
+
+
 
 // :leveloffset: +1
 
