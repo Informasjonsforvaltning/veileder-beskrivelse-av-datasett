@@ -1,6 +1,6 @@
 include::locale/attributes.adoc[]
-= Spesifikasjonsmal
-:description: Mal for bruk til nye spesifikasjoner som er laga i asciidoc.
+= Veileder for beskrivelse av datasett
+:description:
 :doctype: book
 :docinfo:
 :icons: font
@@ -12,14 +12,33 @@ include::locale/attributes.adoc[]
 
 image::digitaliseringsdirektoratet.png[width=50%, pdfwidth=30vw]
 
-Publisert: 2020-03-05
+include::./shared/download.adoc[]
 
-WARNING: Dette er mal-dokument for andre spesifikasjoner.
+NOTE: *Innmelding av feil og mangler:* +
+Dersom du finner feil eller mangler i dokumentet, ber vi om at dette meldes inn på https://github.com/Informasjonsforvaltning/dcat-ap-no-veileder/issues[Github Issues]. Dersom du ikke allerede har bruker på Github kan du opprette bruker gratis.
 
-include::shared/download.adoc[]
 
-// Innhold her. Feks ei fil pr kapittel:
-include::forord.adoc[]
-include::kapittel_1.adoc[]
+*Status*: [yellow-background]#under utarbeidelse# +
+*Versjon*: 2.0 +
+*Publisert*: [yellow-background]#under utarbeidelse# +
+*Gjeldende versjon*: https://data.norge.no/guide/veileder-beskrivelse-av-datasett/ +
+*Forrige versjon*: https://data.norge.no/guide/veileder-beskrivelse-av-datasett/v1 [yellow-background]#(kommer)# +
+*Redaktørens utkast*: https://informasjonsforvaltning.github.io/veileder-beskrivelse-av-datasett/
 
-include::shared/stats.adoc[]
+
+
+// :leveloffset: +1
+
+// Innhold her.
+include::Innledning.adoc[]
+include::Hva_er_et_datasett.adoc[]
+include::Datasett.adoc[]
+include::Enhet.adoc[]
+include::Kontaktpunkt.adoc[]
+include::Distribusjon.adoc[]
+include::Datakatalog.adoc[]
+include::Referanser.adoc[]
+
+
+
+include::./shared/stats.adoc[]
