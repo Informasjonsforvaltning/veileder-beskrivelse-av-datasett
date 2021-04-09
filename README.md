@@ -1,7 +1,7 @@
 # veileder-beskrivelse-av-datasett
 For forvaltning av "Veileder for beskrivelse av datasett"
 
-Gjeldende versjon blir publisert til: https://doc.difi.no/data/veileder-for-beskrivelse-av-datasett/
+Gjeldende versjon blir publisert til: https://data.norge.no/guide/veileder-beskrivelse-av-datasett/
 
 Redaktørens utkast blir publisert til: https://informasjonsforvaltning.github.io/veileder-beskrivelse-av-datasett/
 
