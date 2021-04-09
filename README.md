@@ -1,4 +1,4 @@
-# dcat-ap-no-veileder
+# veileder-beskrivelse-av-datasett
 For forvaltning av "Veileder for beskrivelse av datasett"
 
 Gjeldende versjon blir publisert til: https://doc.difi.no/data/veileder-for-beskrivelse-av-datasett/
