@@ -1,4 +1,6 @@
-== Datakatalog
+== Beskrivelse av en datakatalog [[datakatalog]]
+
+WARNING: [red yellow-background]#_NB! hele kapittelet er under oppdatering_#
 
 === Hva er en datakatalog?
 
