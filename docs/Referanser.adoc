@@ -1,8 +1,12 @@
 
 == Referanser
 
-DCAT-W3C: https://www.w3.org/TR/vocab-dcat/[Data Catalog Vocabulary (DCAT), Recommendation 16 January 2014] +
-DCAT-AP: https://joinup.ec.europa.eu/asset/dcat_application_profile/home[DCAT Application Profile for data portals in Europe, version 1.1], 2015-10-23 +
-DCAT-AP-NO: https://doc.difi.no/dcat-ap-no/[Standard for beskrivelse av datasett og datakataloger, versjon 1.1], 2016-10-11 +
-W3C-DWBP: http://www.w3.org/TR/dwbp/[Data on the Web Best Practices- Working Draft 12 January 2016]
-POD: Project Open Data Metadata Schema v1.1, February 2015
+WARNING: [red yellow-background]#_NB! hele kapittelet er under oppdatering_#
+
+DCAT: https://www.w3.org/TR/vocab-dcat/[Data Catalog Vocabulary (DCAT) - Version 2], W3C Recommendation, 2020-02-04
+
+DCAT-AP: https://joinup.ec.europa.eu/asset/dcat_application_profile/home[DCAT Application Profile for data portals in Europe], version 2.0.0+, 2019-10-03+
+
+DCAT-AP-NO: https://data.norge.no/specification/dcat-ap-no/[tandard for beskrivelse av datasett, datatjenester og datakataloger (DCAT-AP-NO)], versjon 2.0.0+, 2020-10-29+
+
+W3C-DWBP: http://www.w3.org/TR/dwbp/[Data on the Web Best Practices], W3C Recommendation, 2017-01-31
