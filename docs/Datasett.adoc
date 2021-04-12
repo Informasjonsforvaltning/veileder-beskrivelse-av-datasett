@@ -1,5 +1,7 @@
 
-== Datasett
+== Beskrivelse av et datasett [[datasett]]
+
+WARNING: [red yellow-background]#_NB! hele kapittelet er under oppdatering_#
 
 === Hvordan beskrive et datasett?
 
