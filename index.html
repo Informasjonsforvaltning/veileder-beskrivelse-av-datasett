@@ -446,18 +446,15 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div id="toc" class="toc2">
 <div id="toctitle">Innholdsfortegnelse</div>
 <ul class="sectlevel1">
-<li><a href="#_innledning">Innledning</a>
+<li><a href="#om-denne-veilederen">Om denne veilederen</a>
 <ul class="sectlevel2">
-<li><a href="#_bakgrunn">Bakgrunn</a></li>
-<li><a href="#_veilederen">Veilederen</a>
-<ul class="sectlevel3">
-<li><a href="#_mål_og_hensikt">Mål og hensikt</a></li>
-<li><a href="#_struktur">Struktur</a></li>
-<li><a href="#_målgruppe">Målgruppe</a></li>
+<li><a href="#hensikt-og-avgrensing">Hensikt og avgrensing</a></li>
+<li><a href="#målgruppe">Målgruppe</a></li>
+<li><a href="#struktur">Struktur</a></li>
 </ul>
 </li>
-<li><a href="#_hvordan_starte">Hvordan starte?</a></li>
-<li><a href="#_hvor_dypt_skal_man_gå_i_nedbrytingen">Hvor dypt skal man gå i nedbrytingen?</a></li>
+<li><a href="#datasett">Beskrivelse av et datasett</a>
+<ul class="sectlevel2">
 <li><a href="#_hvordan_beskrive_et_datasett">Hvordan beskrive et datasett?</a></li>
 <li><a href="#_eier_av_datasettet">Eier av datasettet</a></li>
 <li><a href="#_skaper_av_datasettet">Skaper av datasettet</a></li>
@@ -501,22 +498,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_eksempeldata">Eksempeldata</a></li>
 </ul>
 </li>
-<li><a href="#_enhet">Enhet</a>
-<ul class="sectlevel2">
-<li><a href="#_enhetsnavn">Enhetsnavn</a></li>
-<li><a href="#_organisasjonsnummer">Organisasjonsnummer</a></li>
-<li><a href="#_utgivertype">Utgivertype</a></li>
-</ul>
-</li>
-<li><a href="#_kontaktpunkt_2">Kontaktpunkt</a>
-<ul class="sectlevel2">
-<li><a href="#_organisasjonsenhet">Organisasjonsenhet</a></li>
-<li><a href="#_e_post">E-post</a></li>
-<li><a href="#_telefon">Telefon</a></li>
-<li><a href="#_kontaktskjema">Kontaktskjema</a></li>
-</ul>
-</li>
-<li><a href="#_distribusjon">Distribusjon</a>
+<li><a href="#distribusjon">Beskrivelse av en distribusjon</a>
 <ul class="sectlevel2">
 <li><a href="#_beskrivelse">Beskrivelse</a></li>
 <li><a href="#_distribusjonstype">Distribusjonstype</a></li>
@@ -530,7 +512,8 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_lisens">Lisens</a></li>
 </ul>
 </li>
-<li><a href="#_datakatalog">Datakatalog</a>
+<li><a href="#datatjeneste">Beskrivelse av en datatjeneste</a></li>
+<li><a href="#datakatalog">Beskrivelse av en datakatalog</a>
 <ul class="sectlevel2">
 <li><a href="#_hva_er_en_datakatalog">Hva er en datakatalog?</a></li>
 <li><a href="#_tittel">Tittel</a></li>
@@ -586,168 +569,79 @@ Dersom du finner feil eller mangler i dokumentet, ber vi om at dette meldes inn 
 <strong>Forrige versjon</strong>: <a href="https://data.norge.no/guide/veileder-beskrivelse-av-datasett/v1" class="bare">https://data.norge.no/guide/veileder-beskrivelse-av-datasett/v1</a><br>
 <strong>Redaktørens utkast</strong>: <a href="https://informasjonsforvaltning.github.io/veileder-beskrivelse-av-datasett/" class="bare">https://informasjonsforvaltning.github.io/veileder-beskrivelse-av-datasett/</a></p>
 </div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Merk"></i>
-</td>
-<td class="content">
-For normative beskrivelser av feltene som er omtalt i dette dokumentet, se DCAT-AP-NO: <a href="https://doc.difi.no/data/dcat-ap-no-stotte-til-teknisk-implementering/">Støtte til teknisk implementering av dcat-ap-no</a>
-</td>
-</tr>
-</table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="om-denne-veilederen"><a class="anchor" href="#om-denne-veilederen"></a>Om denne veilederen</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="hensikt-og-avgrensing"><a class="anchor" href="#hensikt-og-avgrensing"></a>Hensikt og avgrensing</h3>
+<div class="paragraph">
+<p>Denne veilederen skal bidra til bedre beskrivelser av datasettene som forvaltes av en virksomhet. For offentlige virksomheter kan dette være en del av prosessene for å skape orden i eget hus, oppnå mer gjenbruk av data mellom offentlige virksomheter  og å gjøre mer åpne offentlige data tilgjengelig for næringsliv og sivilsamfunn. Se <a href="https://data.norge.no/guide/veileder-orden-i-eget-hus/">Veileder for orden i eget hus</a> for hvordan din virksomhet skaper orden i eget hus, bl.a. hvordan kartlegge hvilke data som skal beskrives.</p>
+</div>
+<div class="paragraph">
+<p>Denne veilederen tar utgangspunktet i at din virksomhet har kartlagt hvilke data som skal beskrives. Veilederen skal gi en hjelp i å beskrive data i henhold til forvaltningsstandarden <a href="https://data.norge.no/specification/dcat-ap-no/">DCAT-AP-NO</a>, slik at beskrivelsene kan utnyttes godt av andre.</p>
+</div>
+<div class="paragraph">
+<p>Det er ikke et mål for denne veilederen å beskrive alle felter i DCAT-AP-NO, heller ikke teknisk og normativt. For normative beskrivelser av alle feltene i DCAT-AP-NO, se <a href="https://data.norge.no/specification/dcat-ap-no/">DCAT-AP-NO</a> og <a href="https://github.com/Informasjonsforvaltning/dcat-ap-no/tree/develop/shacl">valideringsreglene (shacl)</a>.</p>
+</div>
+<div class="paragraph">
+<p>Denne veilederen er ikke en direkte veiledning for bruk av <a href="https://data.norge.no/publishing">registreringsverktøyet i Fellesdatakatalogen</a>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="målgruppe"><a class="anchor" href="#målgruppe"></a>Målgruppe</h3>
+<div class="paragraph">
+<p>Målgruppen for denne veilederen er primært deg som skal beskrive datasett, datatjenester og datakataloger i din virksomhet i henhold til <a href="https://data.norge.no/specification/dcat-ap-no/">DCAT-AP-NO</a>.</p>
+</div>
+<div class="paragraph">
+<p>Sekundært kan også veilederen brukes av deg som skal utvikle/tilpasse verktøystøtte i virksomhetene for beskrivelser av datasett/datatjenester/datakataloger og/eller eksponering av slike beskrivelser i henhold til <a href="https://data.norge.no/specification/dcat-ap-no/">DCAT-AP-NO</a>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="struktur"><a class="anchor" href="#struktur"></a>Struktur</h3>
+<div class="paragraph">
+<p><span class="red yellow-background"><em>foreløpig tekst</em>:</span></p>
+</div>
+<div class="paragraph">
+<p>Denne veilederen beskriver hvordan du beskriver:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>et <a href="#datasett">datasett</a></p>
+</li>
+<li>
+<p>en <a href="#distribusjon">distribusjon</a></p>
+</li>
+<li>
+<p>en <a href="#datatjeneste">datatjeneste</a></p>
+</li>
+<li>
+<p>en <a href="#datakatalog">datakatalog</a></p>
+</li>
+<li>
+<p><span class="red yellow-background"><em>muligens et kapittel for egenskaper som inngår i flere klasser?</em></span></p>
+</li>
+</ul>
+</div>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_innledning"><a class="anchor" href="#_innledning"></a>Innledning</h2>
+<h2 id="datasett"><a class="anchor" href="#datasett"></a>Beskrivelse av et datasett</h2>
 <div class="sectionbody">
-<div class="sect2">
-<h3 id="_bakgrunn"><a class="anchor" href="#_bakgrunn"></a>Bakgrunn</h3>
-<div class="paragraph">
-<p>Digital Agenda og Digitaliseringsrundskrivet viser til målet om at brukeren (privatperson, offentlig og privat virksomhet og frivilligheten) ikke skal trenge å avgi informasjon som han allerede har avgitt. I <a href="https://lovdata.no/dokument/NL/lov/1997-06-06-35#shareModal">Lov om Oppgaveregisteret</a> § 5 stilles det krav til statlige virksomheter at informasjon fra næringslivet er samordnet slik at man ikke etterspør samme informasjon flere ganger. Det langsiktige målet er at gjenbruk er hovedregel.</p>
-</div>
-<div class="paragraph">
-<p>Den enkelte offentlige virksomhet har etter <a href="https://www.regjeringen.no/no/dokumenter/digitaliseringsrundskrivet/id2569983/">Digitaliseringsrundskrivet</a> (spesielt punkt 1.3) krav til å holde en oversikt over hvilke data de forvalter. Videre legger Regjeringens <a href="https://www.regjeringen.no/id2536870/">Retningslinjer ved tilgjengeliggjøring av offentlige data</a> opp til at offentlige data skal dokumenteres og synliggjøres slik at de er enkle å oppdage, vurdere og eventuelt ta i bruk til nye formål.</p>
-</div>
-<div class="paragraph">
-<p>Difi forvalter et <a href="https://www.difi.no/fagomrader-og-tjenester/digitalisering-og-samordning/nasjonal-arkitektur/informasjonsforvaltning">felles offentlig rammeverk for informasjonsforvaltning</a> som inneholder veiledere, spesifikasjoner og standarder som er  relevante for informasjonsforvaltning i offentlig sektor. En <a href="https://www.difi.no/fagomrader-og-tjenester/digitalisering-og-samordning/nasjonal-arkitektur/informasjonsforvaltning/veileder-orden-i-eget-hus">Veileder for orden i eget hus</a> er laget for å støtte arbeid med å etablere en praksis for dette i egen virksomhet og en <a href="https://www.difi.no/fagomrader-og-tjenester/digitalisering-og-samordning/nasjonal-arkitektur/informasjonsforvaltning/faglig-arena-informasjonsforvaltning">faglig arena for informasjonsforvaltning</a> etablert av Difi for å gi erfaringsutveksling mellom de offentlige virksomhetene.</p>
-</div>
-<div class="paragraph">
-<p>Offentlige virksomheter forvalter store mengder opplysninger fordelt på mange registre. For at offentlige virksomheter skal utnytte informasjon fra andre ved utvikling av digitale brukerrettede tjenester, trenger de å vite hvilken informasjon som finnes og kan gjenbrukes. De behøver å kjenne til hvilke datasett som finnes, og evaluere om de er riktige til sitt formål. Til dette trengs egne oversikter å eksponeres utenfor virksomheten. Private virksomheter trenger en oversikt for å kunne finne, forstå og nyttiggjøre seg av åpne data til transparens, innovasjon og næringsutvikling, og få tilgang til opplysninger som kan bedre brukers prosess i private løsninger (myData) der deling skjer med brukers samtykke.</p>
-</div>
-<div class="paragraph">
-<p>En felles oversikt etableres med Felles datakatalog. DCAT-AP v1.1 er den gjeldende europeiske spesifikasjonen for beskrivelser av datasett og datakataloger. Formålet er å gjøre det enklere å søke etter åpne datasett på tvers av dataportaler i EUs medlemsstater. En norsk versjon kalt <a href="https://doc.difi.no/dcat-ap-no/">DCAT-AP-NO</a> 1.1 er basert på den europeiske. Den norske standarden inneholder utvidelser som er nyttig for også å beskrive datasett som ikke er åpne.</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_veilederen"><a class="anchor" href="#_veilederen"></a>Veilederen</h3>
-<div class="sect3">
-<h4 id="_mål_og_hensikt"><a class="anchor" href="#_mål_og_hensikt"></a>Mål og hensikt</h4>
-<div class="paragraph">
-<p>Denne veilederen skal bidra til bedre beskrivelser av datasettene som virksomhetene i offentlig sektor forvalter, som en del av prosessene for å skape orden i eget hus, oppnå mer gjenbruk av data mellom offentlige virksomheter  og å gjøre mer åpne offentlige data tilgjengelig for næringsliv og sivilsamfunn. Veilederen tar ikke stilling til hvordan du skal kartlegge hvilken informasjon din virksomhet forvalter. For kartlegging av informasjon i din virksomhet, kan bl.a. Difis veileder for <a href="http://internkontroll.infosikkerhet.difi.no/">Internkontroll i praksis - informasjonssikkerhet</a> brukes.</p>
-</div>
-<div class="paragraph">
-<p>Denne veilederen er laget for å gi en hjelp til at innholdet fra virksomhetene beskrives slik at de kan utnyttes godt av andre. Veilederen skal hjelpe de offentlige virksomhetene å beskrive sine data i henhold til forvaltningsstandarden <a href="https://doc.difi.no/dcat-ap-no/">DCAT-AP-NO</a>.</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_struktur"><a class="anchor" href="#_struktur"></a>Struktur</h4>
-<div class="paragraph">
-<p>Digitaliseringsrundskrivet sier</p>
-</div>
-<div class="quoteblock">
-<blockquote>
-Den enkelte virksomhet skal ha oversikt over hvilke data den håndterer,  hva dataene betyr, hva de kan brukes til, hvilke prosesser de inngår i, og hvem som kan bruke dem (informasjonsforvaltning).<br>
-I samsvar med viderebruksbestemmelsene i offentleglova skal virksomheten gjøre egnet informasjon tilgjengelig i maskinlesbare formater, fortrinnsvis gjennom API&#8217;er.
-</blockquote>
-<div class="attribution">
-&#8212; Digitaliseringsrundskrivet 2017
-</div>
-</div>
-<div class="paragraph">
-<p>Strukturen på veilederen er bygget opp i henhold til dette. Veilederen skal bidra til å beskrive bedre bl.a.</p>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>Hvilke datasett man har?</p>
-</li>
-<li>
-<p>Hvem forvalter datasettene?</p>
-</li>
-<li>
-<p>Hva er opphavet til dataene?</p>
-</li>
-<li>
-<p>Til hvilket formål er de samlet inn?</p>
-</li>
-<li>
-<p>Hvilke tjenester kan man benytte for å få tilgang til dataene?</p>
-</li>
-<li>
-<p>Er dataene autoritative?</p>
-</li>
-</ol>
-</div>
-<div class="paragraph">
-<p>Vedlegg A gir normative definisjoner av feltene.</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_målgruppe"><a class="anchor" href="#_målgruppe"></a>Målgruppe</h4>
-<div class="paragraph">
-<p>Målgruppen for denne veilederen er primært deg som skal bruke DCAT-AP-NO til å beskrive datasett og datakataloger i din virksomhet.</p>
-</div>
-<div class="paragraph">
-<p>Sekundært kan også veilederen brukes av deg som skal utvikle/tilpasse verktøystøtte i virksomhetene for beskrivelser av datasett/datakataloger og/eller eksponering av slike beskrivelser i henhold til DCAT-AP-NO.
-== Hva er et datasett?</p>
-</div>
-<div class="paragraph">
-<p>“Et <em>datasett</em> er en samling med data (for eksempel i form av en tabell, liste eller en database)  som kan gjøres tilgjengelig som en nedlastbar fil, og/eller nåes via et Web-API (definert som <em>en organisert samling av data</em>).” Se forøvrig ordforklaringene til <a href="https://doc.difi.no/dcat-ap-no/#_ord_uttrykk_og_forkortelser">Standard for beskrivelse av datasett og datakataloger</a> (DCAT-AP-NO).</p>
-</div>
-<div class="paragraph">
-<p>Veilederen kan også benyttes til å beskrive ustrukturerte samlinger av data, men hovedhensikten og dermed eksemplene i denne veilederen er utelukkende basert på beskrivelser av <em>strukturerte</em> datasett.</p>
-</div>
-<div class="paragraph">
-<p>Det kan være vanskelig å vurdere hva som er samling av data og dermed hvor stor eller liten samlingen skal være. Kriterier for å avgrense et datasett vil kunne variere mellom virksomheter og over tid. Se <a href="https://www.difi.no/artikkel/2016/06/erfaringer-med-bestemme-hva-et-datasett-er-og-hvilke-datasett-som-skal-beskrives">Brønnøysundregistrenes tanker rundt dette</a>.</p>
-</div>
-<div class="paragraph">
-<p>Eksempler på avgrensing av et datasett:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Enhetsregisteret: Med tanke på datadeling med andre, betrakter Brønnøysundregistrene ikke hele Enhetsregisteret som ett stort datasett, men deler videre Enhetsregisteret inn i datasettene Juridisk Person, Virksomhet/Bedrift, Roller. I tillegg kan tilgangsnivå skille Roller i to datasett; ett komplett, og et der sensitive data er fjernet.</p>
-</li>
-<li>
-<p>I Matrikkelen er datasettene Eiendom, Adresse, Bygning. Datasettene distribueres i henhold til ulike applikasjonsskjema (informasjonsmodeller) og på ulike formater.</p>
-</li>
-<li>
-<p>Aa-registeret inneholder datasettet Arbeidsforhold - kilde: A-ordningen, relasjon til Enhetsregisteret og DSF.</p>
-</li>
-<li>
-<p>Det sentrale folkeregisteret (DSF) inneholder Innbyggere, andre personer med tilknytning til riket, bosted, samemantall osv.</p>
-</li>
-<li>
-<p>Uføre (vedtak om uførestatus) fra NAV er en avgrensning av populasjonen og dermed et datasett.</p>
-</li>
-<li>
-<p>Lovlig opphold fra UDI er et datasett</p>
-</li>
-<li>
-<p>Vernepliktige er etter lov om verneplikt en del av Forsvarets verneplikts- og tjenesteregister.</p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_hvordan_starte"><a class="anchor" href="#_hvordan_starte"></a>Hvordan starte?</h3>
-<div class="paragraph">
-<p>Det er naturlig å fokusere på å beskrive datasett som oppfattes å være knyttet til virksomhetens kjerneoppgaver. Disse vil trolig være av interesse for flere enn interne anliggender. Gjennom tilbakemeldinger og etterspørsel etter de datasettbeskrivelsene man har publisert, har man grunnlag for prioritering av arbeid med å gjøre datasettene tilgjengelig. Det er også naturlig å beskrive data man allerede deler.</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>starte med hele registeret og få det beskrevet</p>
-</li>
-<li>
-<p>avhengig av brukerbehov, tilgjengeliggjøring (distribusjon) og formål dele det inn i mindre datasett (subsett)</p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_hvor_dypt_skal_man_gå_i_nedbrytingen"><a class="anchor" href="#_hvor_dypt_skal_man_gå_i_nedbrytingen"></a>Hvor dypt skal man gå i nedbrytingen?</h3>
-<div class="paragraph">
-<p>Hvis datasettet ditt er veldig stort og omfattende i den forstand at det omhandler flere ulike tema, kan det være hensiktsmessig å se etter måter å dele det opp på. Slik kan det bli mer håndterbart og enklere å sette seg inn i for brukerne.</p>
-</div>
-<div class="paragraph">
-<p>Hvis datasettet ditt for eksempel omfatter kjøretøy, dets eiere og registrerte mangler, kan det vært bedre å dele dette opp i tre datasett. Når man deler opp datasett på denne måten bør man bruke relasjoner i DCAT til å angi sammenhengen mellom de ulike datasettene.
-== Datasett</p>
-</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Advarsel"></i>
+</td>
+<td class="content">
+<span class="red yellow-background"><em>NB! hele kapittelet er under oppdatering</em></span>
+</td>
+</tr>
+</table>
 </div>
 <div class="sect2">
 <h3 id="_hvordan_beskrive_et_datasett"><a class="anchor" href="#_hvordan_beskrive_et_datasett"></a>Hvordan beskrive et datasett?</h3>
@@ -2287,170 +2181,20 @@ Et lite folkelig ord (løsøre) er brukt. Avgrensningene her er greie</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_enhet"><a class="anchor" href="#_enhet"></a>Enhet</h2>
+<h2 id="distribusjon"><a class="anchor" href="#distribusjon"></a>Beskrivelse av en distribusjon</h2>
 <div class="sectionbody">
-<div class="paragraph">
-<p>Relasjonen eier og skaper fra datasettbeskrivelsen peker på en klasse Enhet. Offentlig sektors datasett skal ha organisasjoner som ansvarlige eiere.</p>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Advarsel"></i>
+</td>
+<td class="content">
+<span class="red yellow-background"><em>NB! hele kapittelet er under oppdatering</em></span>
+</td>
+</tr>
+</table>
 </div>
-<div class="ulist">
-<ul>
-<li>
-<p>Det anbefales å referere direkte til Enhetsregisteret, som vil hente opplysningene direkte derfra</p>
-</li>
-<li>
-<p>Sekundært benytte egenskapene under med eller uten en sameas lenke.</p>
-</li>
-</ul>
-</div>
-<div class="sect2">
-<h3 id="_enhetsnavn"><a class="anchor" href="#_enhetsnavn"></a>Enhetsnavn</h3>
-<div class="paragraph">
-<div class="title">Sammendrag</div>
-<p>Navnet på enheten benyttes i visninger</p>
-</div>
-<div class="paragraph">
-<div class="title">Anbefalinger</div>
-<p>Navnet på enheten benyttes i visninger</p>
-</div>
-<div class="listingblock">
-<div class="title">Eksempler</div>
-<div class="content">
-<pre>&lt;&gt; a foaf:Agent ;
-   foaf:name “Brønnøysundregistrene”@no .</pre>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_organisasjonsnummer"><a class="anchor" href="#_organisasjonsnummer"></a>Organisasjonsnummer</h3>
-<div class="paragraph">
-<div class="title">Sammendrag</div>
-<p>Enheter skal oppgis med organisasjonsnummer.</p>
-</div>
-<div class="paragraph">
-<div class="title">Anbefalinger</div>
-<p>Enheter skal oppgis med organisasjonsnummer.</p>
-</div>
-<div class="listingblock">
-<div class="title">Eksempler</div>
-<div class="content">
-<pre>&lt;&gt; a foaf:Agent ;
-   dct:identifier “974760673” .</pre>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_utgivertype"><a class="anchor" href="#_utgivertype"></a>Utgivertype</h3>
-<div class="paragraph">
-<div class="title">Sammendrag</div>
-<p>Enheter angis med organisasjonstype for å skille mellom offentlige og private datasetteiere.</p>
-</div>
-<div class="paragraph">
-<div class="title">Anbefalinger</div>
-<p>Enheter angis med organisasjonstype for å skille mellom offentlige og private datasetteiere
- * Brukes organisasjonsnummer hentes dette fra Enhetsregisteret</p>
-</div>
-<div class="paragraph">
-<p>Eksempler</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre>&lt;&gt; a foaf:Agent ;
-   er:orgform [
-       skos:prefLabel "ORGL";
-       dct:description "Organisasjonsledd";
-   ]  .</pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_kontaktpunkt_2"><a class="anchor" href="#_kontaktpunkt_2"></a>Kontaktpunkt</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>Relasjonen kontaktpunkt fra datasettbeskrivelsen peker på en klasse Organisasjonsenhet</p>
-</div>
-<div class="sect2">
-<h3 id="_organisasjonsenhet"><a class="anchor" href="#_organisasjonsenhet"></a>Organisasjonsenhet</h3>
-<div class="paragraph">
-<div class="title">Sammendrag</div>
-<p>Kontaktpunkt angis med organisasjonsenhet. Dette kan være navnet til en gruppe, avdeling, seksjon eller liknende i organisasjonen</p>
-</div>
-<div class="paragraph">
-<div class="title">Anbefalinger</div>
-<p>Kontaktpunkt angis med organisasjonsenhet
- * Dette kan være navnet til en avdeling, seksjon, kontor, gruppe eller liknende i organisasjonen.
- * Kontaktinformasjon på person frarådes.</p>
-</div>
-<div class="listingblock">
-<div class="title">Eksempler</div>
-<div class="content">
-<pre>&lt;&gt; &lt;http://data.brreg.no/datakatalog/kontaktpunkt/a-7&gt;
-      a vcard:Organization ;
-      vcard:organization-unit  "Difi ID porten" .</pre>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_e_post"><a class="anchor" href="#_e_post"></a>E-post</h3>
-<div class="paragraph">
-<div class="title">Sammendrag</div>
-<p>Angi e-postadresse for kontaktpunktet dersom dette er en ønsket kontaktform</p>
-</div>
-<div class="paragraph">
-<div class="title">Anbefalinger</div>
-<p>Angi e-postadresse for kontaktpunktet dersom dette er en ønsket kontaktform</p>
-</div>
-<div class="listingblock">
-<div class="title">Eksempler</div>
-<div class="content">
-<pre>&lt;&gt; &lt;http://data.brreg.no/datakatalog/kontaktpunkt/a-7&gt;
-      vcard:hasEmail     &lt;mailto:idporten@difi.no&gt; .</pre>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_telefon"><a class="anchor" href="#_telefon"></a>Telefon</h3>
-<div class="paragraph">
-<div class="title">Sammendrag</div>
-<p>Angi telefonnummer for kontaktpunktet dersom dette er en ønsket kontaktform</p>
-</div>
-<div class="paragraph">
-<div class="title">Anbefalinger</div>
-<p>Angi telefonnummer for kontaktpunktet dersom dette er en ønsket kontaktform</p>
-</div>
-<div class="listingblock">
-<div class="title">Eksempler</div>
-<div class="content">
-<pre>&lt;&gt; &lt;http://data.brreg.no/datakatalog/kontaktpunkt/a-7&gt;
-      vcard:hasTelephone &lt;tel:80030300&gt; .</pre>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_kontaktskjema"><a class="anchor" href="#_kontaktskjema"></a>Kontaktskjema</h3>
-<div class="paragraph">
-<div class="title">Sammendrag</div>
-<p>Angi referanse til kontaktskjema på web dersom dette er en ønsket kontaktform</p>
-</div>
-<div class="paragraph">
-<div class="title">Anbefalinger</div>
-<p>Angi referanse til kontaktskjema på web dersom dette er en ønsket kontaktform
- * Hvis det finnes et web-basert kontaktskjema bør dette benyttes</p>
-</div>
-<div class="listingblock">
-<div class="title">Eksempler</div>
-<div class="content">
-<pre>&lt;&gt; &lt;http://data.brreg.no/datakatalog/kontaktpunkt/a-7&gt;
-      vcard:hasURL &lt;http://eid.difi.no/en/contact-support&gt; .</pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="_distribusjon"><a class="anchor" href="#_distribusjon"></a>Distribusjon</h2>
-<div class="sectionbody">
 <div class="paragraph">
 <p>En distribusjon er en spesifikk måte å gjøre et datasettet tilgjengelig på. Hvert datasett kan være tilgjengelig på flere måter, for eksempel i ulike format eller fra ulike nettadresser. Eksempel på distribusjoner kan være nedlastbar CSV-fil, et API eller en RSS-strøm.</p>
 </div>
@@ -2784,8 +2528,31 @@ Et lite folkelig ord (løsøre) er brukt. Avgrensningene her er greie</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_datakatalog"><a class="anchor" href="#_datakatalog"></a>Datakatalog</h2>
+<h2 id="datatjeneste"><a class="anchor" href="#datatjeneste"></a>Beskrivelse av en datatjeneste</h2>
 <div class="sectionbody">
+<div class="paragraph">
+<p>Nytt i DCAT-AP-NO v.2 er at standarden nå også støtter beskriveser av datatjeneste (aka API), som v.1.x av DCAT-AP-NO ikke gjorde.</p>
+</div>
+<div class="paragraph">
+<p><span class="red yellow-background"><em>tekst kommer</em></span></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="datakatalog"><a class="anchor" href="#datakatalog"></a>Beskrivelse av en datakatalog</h2>
+<div class="sectionbody">
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Advarsel"></i>
+</td>
+<td class="content">
+<span class="red yellow-background"><em>NB! hele kapittelet er under oppdatering</em></span>
+</td>
+</tr>
+</table>
+</div>
 <div class="sect2">
 <h3 id="_hva_er_en_datakatalog"><a class="anchor" href="#_hva_er_en_datakatalog"></a>Hva er en datakatalog?</h3>
 <div class="paragraph">
@@ -2956,12 +2723,29 @@ Et lite folkelig ord (løsøre) er brukt. Avgrensningene her er greie</p>
 <div class="sect1">
 <h2 id="_referanser"><a class="anchor" href="#_referanser"></a>Referanser</h2>
 <div class="sectionbody">
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Advarsel"></i>
+</td>
+<td class="content">
+<span class="red yellow-background"><em>NB! hele kapittelet er under oppdatering</em></span>
+</td>
+</tr>
+</table>
+</div>
 <div class="paragraph">
-<p>DCAT-W3C: <a href="https://www.w3.org/TR/vocab-dcat/">Data Catalog Vocabulary (DCAT), Recommendation 16 January 2014</a><br>
-DCAT-AP: <a href="https://joinup.ec.europa.eu/asset/dcat_application_profile/home">DCAT Application Profile for data portals in Europe, version 1.1</a>, 2015-10-23<br>
-DCAT-AP-NO: <a href="https://doc.difi.no/dcat-ap-no/">Standard for beskrivelse av datasett og datakataloger, versjon 1.1</a>, 2016-10-11<br>
-W3C-DWBP: <a href="http://www.w3.org/TR/dwbp/">Data on the Web Best Practices- Working Draft 12 January 2016</a>
-POD: Project Open Data Metadata Schema v1.1, February 2015</p>
+<p>DCAT: <a href="https://www.w3.org/TR/vocab-dcat/">Data Catalog Vocabulary (DCAT) - Version 2</a>, W3C Recommendation, 2020-02-04</p>
+</div>
+<div class="paragraph">
+<p>DCAT-AP: <a href="https://joinup.ec.europa.eu/asset/dcat_application_profile/home">DCAT Application Profile for data portals in Europe</a>, version 2.0.0+, 2019-10-03+</p>
+</div>
+<div class="paragraph">
+<p>DCAT-AP-NO: <a href="https://data.norge.no/specification/dcat-ap-no/">tandard for beskrivelse av datasett, datatjenester og datakataloger (DCAT-AP-NO)</a>, versjon 2.0.0+, 2020-10-29+</p>
+</div>
+<div class="paragraph">
+<p>W3C-DWBP: <a href="http://www.w3.org/TR/dwbp/">Data on the Web Best Practices</a>, W3C Recommendation, 2017-01-31</p>
 </div>
 <!-- Google Analytics -->
 <script>
@@ -2979,7 +2763,7 @@ ga('send', 'pageview');
 </div>
 <div id="footer">
 <div id="footer-text">
-Sist oppdatert 2021-04-09 09:16:07 UTC
+Sist oppdatert 2021-04-14 06:02:56 UTC
 </div>
 </div>
 </body>
