@@ -2,11 +2,11 @@
 
 === Hensikt og avgrensing [[hensikt-og-avgrensing]]
 
-Denne veilederen skal bidra til bedre beskrivelser av datasettene som virksomhetene i offentlig sektor forvalter, som en del av prosessene for å skape orden i eget hus, oppnå mer gjenbruk av data mellom offentlige virksomheter  og å gjøre mer åpne offentlige data tilgjengelig for næringsliv og sivilsamfunn. Se https://data.norge.no/guide/veileder-orden-i-eget-hus/[Veileder for orden i eget hus] for hvordan din virksomhet skaper orden i eget hus, bl.a. hvordan kartlegge hvilke data som skal beskrives.
+Denne veilederen skal bidra til bedre beskrivelser av datasettene som forvaltes av en virksomhet. For offentlige virksomheter kan dette være en del av prosessene for å skape orden i eget hus, oppnå mer gjenbruk av data mellom offentlige virksomheter  og å gjøre mer åpne offentlige data tilgjengelig for næringsliv og sivilsamfunn. Se https://data.norge.no/guide/veileder-orden-i-eget-hus/[Veileder for orden i eget hus] for hvordan din virksomhet skaper orden i eget hus, bl.a. hvordan kartlegge hvilke data som skal beskrives.
 
 Denne veilederen tar utgangspunktet i at din virksomhet har kartlagt hvilke data som skal beskrives. Veilederen skal gi en hjelp i å beskrive data i henhold til forvaltningsstandarden https://data.norge.no/specification/dcat-ap-no/[DCAT-AP-NO], slik at beskrivelsene kan utnyttes godt av andre.
 
-Det er ikke et mål for denne veilederen å beskrive alle felter i DCAT-AP-NO, heller ikke teknisk og normativt. For normative beskrivelser alle feltene i DCAT-AP-NO, se https://data.norge.no/specification/dcat-ap-no/[DCAT-AP-NO] og https://github.com/Informasjonsforvaltning/dcat-ap-no/tree/develop/shacl[valideringsreglene (shacl)].
+Det er ikke et mål for denne veilederen å beskrive alle felter i DCAT-AP-NO, heller ikke teknisk og normativt. For normative beskrivelser av alle feltene i DCAT-AP-NO, se https://data.norge.no/specification/dcat-ap-no/[DCAT-AP-NO] og https://github.com/Informasjonsforvaltning/dcat-ap-no/tree/develop/shacl[valideringsreglene (shacl)].
 
 Denne veilederen er ikke en direkte veiledning for bruk av https://data.norge.no/publishing[registreringsverktøyet i Fellesdatakatalogen].
 
