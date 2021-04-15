@@ -1,4 +1,4 @@
-== Beskrivelse av en datakatalog [[datakatalog]]
+== Beskrivelse av datakatalog [[beskrivelse-av-datakatalog]]
 
 WARNING: [red yellow-background]#_NB! hele kapittelet er under oppdatering_#
 
