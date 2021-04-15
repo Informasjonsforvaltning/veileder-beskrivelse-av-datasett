@@ -1,67 +1,116 @@
-
-== Beskrivelse av et datasett [[datasett]]
+== Beskrivelse av datasett [[beskrivelse-av-datasett]]
 
 WARNING: [red yellow-background]#_NB! hele kapittelet er under oppdatering_#
 
-=== Hvordan beskrive et datasett?
+Se https://data.norge.no/guide/veileder-orden-i-eget-hus/[Veileder for orden i eget hus] hvordan din virksomhet kartlegger hvilke datasett som skal beskrives. Denne veilederen beskriver videre hvordan datasett beskrives i henhold til forvaltningsstandarden https://data.norge.no/specification/dcat-ap-no/[DCAT-AP-NO v.2].
 
-Denne veilederen beskriver videre hvordan datasett beskrives i henhold til standarden https://doc.difi.no/dcat-ap-no/[DCAT-AP-NO v.1.1]. For å ha med all nødvendig informasjon, er det en del felter som må fylles ut. I det følgende går vi gjennom de enkelte feltene og hvordan disse skal fylles ut.
+For at din beskrivelse av et datasett skal kunne nyttegjøres av andre, er det noen felter som skal/bør/kan fylles ut. I det følgende går vi gjennom de enkelte feltene og hvordan disse skal fylles ut.
 
-Eksempel på en beskrivelse av et datasett:
+=== Eksempel på en datasettbeskrivelse [[eksempel-datasettbeskrivelse]]
+
+Under er et eksempel på en datasettbeskrivelse, med dummydata, hvor felter som er *uthevet* er obligatoriske:
 ****
-*Tittel*: Partiregisteret +
-*Datasetteier*: Brønnøysundregistrene +
-*Beskrivelse*: Partiregisteret er et register over politiske parti i Norge. Hovedformålet med registeret er å gi parti anledning til å skaffe seg enerett på partinavn. +
-*Sentrale opplysninger i datasettet*: Organisasjonsnummer, Parti, Partinavn, Utøvende organ, Kontaktperson +
-*Tema*: Offentlig forvaltning +
-*Geografisk omfang*: Norge +
-*Oppdateringsfrekvens*: Daglig +
-*Tilgangsrettigheter*: Offentlig +
-*Språk*: Norsk +
-*Kontaktpunkt*: Brønnøysundregistrene, partiregisteret@brreg.no +
-*Relatert til*: Enhetsregisteret +
-*Distribusjon*: +
+*https://data.norge.no/specification/dcat-ap-no/#Datasett-tittel[Datasett: tittel]*: Eksempeldatasett +
+*https://data.norge.no/specification/dcat-ap-no/#Datasett-utgiver[Datasett: utgiver]*: Direktoratet for eksempler +
+*https://data.norge.no/specification/dcat-ap-no/#Datasett-beskrivelse[Datasett: beskrivelse]*: Datasett med eksempeldata.
+Formålet med dette datasettet er å illustrere hvordan et datasett skal/bør/kan beskrives iht. DCAT-AP-NO. +
+*https://data.norge.no/specification/dcat-ap-no/#Datasett-tema[Datasett: tema]*: Offentlig forvaltning +
+https://data.norge.no/specification/dcat-ap-no/#Datasett-begrep[Datasett: begrep]: datasett, eksempeldata +
+https://data.norge.no/specification/dcat-ap-no/#Datasett-dekningsomr%C3%A5de[Datasett: dekningsområde]: Norge +
+https://data.norge.no/specification/dcat-ap-no/#Datasett-frekvens[Datasett: frekvens]: Daglig +
+https://data.norge.no/specification/dcat-ap-no/#Datasett-tilgangsniv%C3%A5[Datasett: tilgangsnivå]: Offentlig +
+https://data.norge.no/specification/dcat-ap-no/#Datasett-spr%C3%A5k[Datasett: språk]: Norsk bokmål +
+https://data.norge.no/specification/dcat-ap-no/#Datasett-kontaktpunkt[Datasett: kontaktpunkt]: Direktoratet for eksempler, eks@direks.eks +
+Distribusjon: se under <<beskrivelse-av-distribusjon, Beskrivelse av distribusjon>>
 ****
-Se felles datakatalog for flere eksempler (https://fellesdatakatalog.brreg.no/[fellesdatakatalog.brreg.no]).
 
+Se ellers https://data.norge.no/[Felles datakatalog] for konkrete eksempler på beskrivelser av virkelige datasett.
 
-=== Eier av datasettet
+=== Obligatoriske felter i en datasettbeskrivelse [[datasett-obligatoriske-felter]]
+
+Som et minimum skal følgende tas med i en datasettbeskrivelse:
+
+* Datasett: beskrivelse
+* Datasett: identifikator
+* Datasett: tittel
+* Datasett: tema
+* Datasett: utgiver
+
+==== Datasett: beskrivelse [[datasett-beskrivelse]]
 
 .Sammendrag
-Skal peke på en Enhet i Enhetsregisteret.
+https://data.norge.no/specification/dcat-ap-no/#Datasett-beskrivelse[Datasett: beskrivelse] skal være kortfattet. Hensikten/formålet med datasettet bør komme fram. Hvilke opplysninger som utgjør kjernen i datasettet bør angis. Bruk folkelige ord. Beskriv avgrensninger, hva datasettet ikke inneholder. Begrens bruk av lenker og markup.
 
 .Anbefalinger
-Identifisering av den enheten som er ansvarlig for at datasettet _er_ tilgjengelig, ikke den som faktisk gjør datasettet tilgjengelig. Eier er et obligatorisk felt.
+En kort og presis beskrivelse av datasettet skal gjøre det lett for andre å se hva det inneholder.
 
- * Skal peke på en Enhet (juridisk person, organisasjonsledd, underenhet)
- * Det offisielle navnet på virksomheten vil hentes fra Enhetsregisteret, men kortform (f.eks. Difi) kan legges inn av brukeren
- * Eieren av datasettet forvalter sammensetning av dataene, altså datasettet, og ikke nødvendigvis selve dataene.
+ * Beskrivelsen skal være kortfattet slik at lister over datasett forståes ved å lese de første linjene.
+ * Hensikten med datasettet bør komme fram (f.eks. “Løsøreregisteret inneholder tinglyste flyttbare eiendeler”).
+ * Beskriv hva datasettet inneholder. Hvilke opplysninger som utgjør kjernen i datasettet bør angis.
+ * Feltinnhold skal ikke listes, men listes i emneord eller begreper.
+ * Beskrivelsen er ikke en gjentakelse av <<datasett-tittel, tittel>>
+ * Bruk folkelige ord (f.eks.”Løsøre” må forklares. F.eks. “flyttbare eiendeler (Løsøre)”, ev. bare folkelige uttrykk mens faguttrykket tas med som stikkord slik at det gir treff i søk)
+ * Beskriv avgrensninger, hva datasettet ikke inneholder, dersom dette kan misforstås ut fra tittelen.
+ * Begrens bruk av lenker og markup (formatering) i teksten. Skal man angi språk må teksten formelt sett være fri for lenker og formatering (HTML).
+ * Der målform er kjent skal "nb" eller "nn" brukes, "no" brukes ellers.
 
 .Eksempler
-* [*] Arbeids- og velferdsdirektoratet
+
+* [ ] [line-through]#“Løsøreregisteret inneholder løsøre med unntak av skip og luftfartøy”#
+Et lite folkelig ord (løsøre) er brukt. Avgrensningene her er greie.
+
+* [ ] [line-through]#“Løsøreregisteret inneholder tinglyste flyttbare eiendeler som biler og båter”#
+Hva som inngår i datasettet er godt beskrevet, men unntakene her er utelatt.
+
+* [*] “Løsøreregisteret inneholder tinglyste flyttbare eiendeler med unntak av skip og luftfartøy”
+
 ----
-<>  dct:publisher <http://data.brreg.no/enhetsregisteret/enhet/889640782> . #NAV
+<> dct:description "Løsøreregisteret inneholder tinglyste flyttbare eiendeler med unntak av skip og luftfartøy"@nb .
 ----
 
-=== Skaper av datasettet
+==== Datasett: identifikator [[datasett-identifikator]]
+
+Verdien til https://data.norge.no/specification/dcat-ap-no/#Datasett-identifikator[Datasett: identifikator] er som regel systemgenerert av verktøyet som brukes til å beskrive et datasett, slik at du som vanlig bruker ikke trenger å fylle ut dette feltet manuelt.
+
+Resten av beskivelsen i dette avsnittet er for deg som skal utvikle/tilpasse verktøystøtte.
 
 .Sammendrag
-Brukes unntaksvis der det er datasett som er satt sammen av data som andre er ansvarlige for
+[red yellow-background]#<tekst kommer>#
 
-.Anbefalinger
-Egenskapen angir produsent(er) av datasettet der dette er en annen enn dataeier
+.Anbefaling
 
- * Brukes unntaksvis der det er datasett som er satt sammen av data som andre er ansvarlige for
- * Skaper vil ikke angis med organisasjonsnummer siden det typisk vil være en sammensatt gruppe.
+Subjektet (det første leddet) i en RDF-trippel er per definisjon en identifikator (URI). I en konkret realisering vil instanser av klassen Datasett (`dcat:Dataset`) derfor få en «innebygd» identifikator.
+
+For å ha minst mulig avvik fra EU-standarden som DCAT-AP-NO er basert på, har vi beholdt krav på at dct:identifier er obligatorisk for dcat:Dataset. `dct:identifier` trenger ikke å inneholde den samme identifikatoren som den innebygde URIen i en trippel, men _når_ det er den samme identifikatoren, anbefales det at hele den innebygde URIen (subjektet i en trippel) kopieres til `dct:identifier`.
 
 .Eksempler
 
-* [*] “Kommunene”
+------
+<https://examples.com/exDataset> a dcat:Dataset ;
+   dct:identifier "https://examples.com/exDataset"^^xsd:anyURI .
+------
+
+
+==== Datasett: tema [[datasett-tema]]
+
+.Sammendrag
+Ett eller flere temaer velges fra den kontrollerte listen av EU-temaer
+
+.Anbefalinger
+For å kunne sortere datasettet inn under gitte kategorier er det behov for tema
+
+ * Ett eller flere temaer velges fra http://publications.europa.eu/mdr/authority/data-theme/index.html[den kontrollerte listen av EU-temaer].
+
+.Eksempler
+
+* [*] *Helse* (lenke: http://publications.europa.eu/mdr/authority/data-theme/HEAL)
+
 ----
 <>  <http://data.brreg.no/datakatalog/datasett/12>
-    dct:creator “Kommunene” .
+     dcat:theme <http://publications.europa.eu/mdr/authority/data-theme/HEAL> .
 ----
-=== Tittel på datasett
+
+==== Datasett: tittel [[datasett-tittel]]
 
 .Sammendrag
 Tittelen skal være kortfattet, kunne stå alene og gi mening. Organisasjonens navn trenger ikke å være med. Tittelen skal gjenspeile avgrensninger dersom datasettet er avgrenset i populasjonen. Forkortelser skal skrives helt ut.
@@ -83,241 +132,32 @@ Datasettet har en tittel slik at det bl.a. kan vises i lister. Tittel er et obli
 * [*] “Digital Terreng Modell 10m oppløsning (DTM10)”
 * [ ] [.line-through]#“DTM10”#
 
-=== Formål
+==== Datasett: utgiver [[datasett-utgiver]]
 
 .Sammendrag
-Beskrivelsen skal være kortfattet og ikke gjentas i Beskrivelsesfeltet.
+Skal peke på en Enhet i Enhetsregisteret.
 
 .Anbefalinger
-En setnings-beskrivelse av formålet til datasettet.
+Identifisering av den enheten som er ansvarlig for at datasettet _er_ tilgjengelig, ikke den som faktisk gjør datasettet tilgjengelig. Eier er et obligatorisk felt.
 
- * Det er formålet for opprettelsen eller at datasettet i det hele tatt eksisterer som skal beskrives her
- * Beskrivelsen skal være kortfattet og ikke gjentas i Beskrivelsesfeltet.
- * Dersom datasettet inneholder personopplysninger skal dette feltet brukes for å gjengi det formålet i henhold til personopplysningsloven som ligger til grunn for datasettet.
-
-.Eksempler
-* [*] Løsøreregisteret er etablert for å tinglyse heftelser (pant) i løsøre, uten tilknytning til fast eiendom
-* [*] Kontakt- og reservasjonsregisteret er etablert for at det offentlige skal kunne kommunisere elektronisk med innbyggerne, og benyttes i forbindelse med saksbehandling og utføring av forvaltningsoppgaver for øvrig, og skal benyttes til varsling etter eforvaltningsforskriftens § 8 tredje ledd. Se eforvaltningsforskriften §§ 29-35
-
-----
-<>  dcatno:objective “Løsøreregisteret er etablert for å tinglyse heftelser (pant) i løsøre, uten tilknytning til fast eiendom”@no .
-----
-
-
-=== Beskrivelse av datasett
-
-.Sammendrag
-Beskrivelsen skal være kortfattet. Hensikten med datasettet bør komme fram. Hvilke opplysninger som utgjør kjernen i datasettet bør angis. Bruk folkelige ord. Beskriv avgrensninger, hva datasettet ikke inneholder. Begrens lenker og markup.
-
-.Anbefalinger
-En kort og presis beskrivelse av datasettet skal gjøre det lett for andre å se hva det inneholder. Beskrivelse er et obligatorisk felt.
-
- * Beskrivelsen skal være kortfattet slik at lister over datasett forståes ved å lese de første linjene.
- * Hensikten med datasettet bør komme fram (f.eks. “Løsøreregisteret inneholder tinglyste flyttbare eiendeler”).
- * Beskriv hva datasettet inneholder. Hvilke opplysninger som utgjør kjernen i datasettet bør angis.
- * Feltinnhold skal ikke listes, men listes i emneord eller begreper.
- * Beskrivelsen er ikke en gjentakelse av tittel
- * Bruk folkelige ord (f.eks.”Løsøre” må forklares. F.eks. “flyttbare eiendeler (Løsøre)”, ev. bare folkelige uttrykk mens faguttrykket tas med som stikkord slik at det gir treff i søk)
- * Beskriv avgrensninger, hva datasettet ikke inneholder, dersom dette kan misforstås ut fra tittelen.
- * Begrens lenker og markup (formatering) i teksten. Skal man angi språk må teksten formelt sett være fri for lenker og formatering (HTML).
- * Der målform er kjent skal "nb" eller "nn" brukes, "no" brukes ellers.
+ * Skal peke på en Enhet (juridisk person, organisasjonsledd, underenhet)
+ * Det offisielle navnet på virksomheten vil hentes fra Enhetsregisteret, men kortform (f.eks. Difi) kan legges inn av brukeren
+ * Eieren av datasettet forvalter sammensetning av dataene, altså datasettet, og ikke nødvendigvis selve dataene.
 
 .Eksempler
-
-* [ ] [line-through]#“Løsøreregisteret inneholder løsøre med unntak av skip og luftfartøy”#
-Et lite folkelig ord (løsøre) er brukt. Avgrensningene her er greie
-
-* [ ] [line-through]#“Løsøreregisteret inneholder tinglyste flyttbare eiendeler som biler og båter”#
-
-Hva som inngår i datasettet er godt beskrevet, men unntakene her er utelatt.
-
-* [*] “Løsøreregisteret inneholder tinglyste flyttbare eiendeler med unntak av skip og luftfartøy”
-
-
-=== Dokumentasjon
-
-.Sammendrag
-Referanse til en side som inneholder utdypende dokumentasjon om datasettet.
-
-.Anbefalinger
-Utdypende dokumentasjon av datasettet angis ved å peke på en side der den finnes.
-
-.Eksempler
-
-
-* [*] https://confluence.brreg.no/display/DBNPUB/Informasjonsmodell+for+Enhetsregisteret+og+Foretaksregisteret
+* [*] Arbeids- og velferdsdirektoratet
 ----
-<> foaf:page
-  <https://confluence.brreg.no/display/DBNPUB/Informasjonsmodell+for+Enhetsregisteret+og+Foretaksregisteret> .
-----
-
-=== Landingsside
-
-.Sammendrag
-Referanse til en side som beskriver datasettetet.
-
-.Anbefalinger
-
-Dokumentasjon om datasettet på en landingsside hos datasetteieren som kan beskrive datasettets innhold og struktur, og tilgang. Det anbefales at Dokumentasjon brukes der man refererer til utfyllende dokumentasjon, og Distribusjon benyttes f.eks. når man vil referere til en søkeside.
-
- * kan referere til datasettets hjemmeside
- * kan referere til en samleside som beskriver innhold og struktur
- * kan referere til en samleside om nedlasting/bruk/søk (tjenestene)
- * det kan refereres til flere sider
-
-.Eksempler
-
-* [*] https://confluence.brreg.no/display/DBNPUB/Informasjonsmodell+for+Enhetsregisteret+og+Foretaksregisteret
-----
-<> dcat:landingpage
-  <https://confluence.brreg.no/display/DBNPUB/Informasjonsmodell+for+Enhetsregisteret+og+Foretaksregisteret>, <https://www.brreg.no/om-oss/samfunnsoppdraget-vart/registera-vare/einingsregisteret/> .
-----
-
-=== Tilgangsnivå
-
-.Sammendrag
-Angi om datasettet offentlig åpne data, eller er helt eller delvis skjermet for innsyn.
-
-.Anbefalinger
-Det er behov for å angi i hvilken grad datasettet kan bli gjort tilgjengelig for allmennheten, uten hensyn til om det er publisert eller ikke
-
- * *Angi om datasettet er helt eller delvis skjermet for innsyn*. Offentlig, begrenset offentlighet og unntatt offentlighet.
- * *Skal gjenspeile det mest begrensede feltet/opplysningen i datasettet*
- * “Offentlig” betyr at datasettet ikke inneholder begrensede opplysninger og kan legges ut som åpne data, selv om det ikke er laget en løsning for tilgang. Se https://doc.difi.no/data/veileder-apne-data/[Difis veileder for åpne data].
- * “Begrenset offentlighet” betyr at tilgangen til opplysningene avhenger av hvilket formål opplysningene er innsamlet til, og hvilket lovhjemmel den som skal bruke dataene har. Begrensningen kan skyldes innhold som personopplysninger. Når noen ønsker å benytte datasettet må man foreta en konkret vurdering av tilgangen.
- * “Unntatt offentlighet” betyr saksbehandler har med referanse til lov eller forskrift valgt at  datasett (dokumenter eller saksopplysninger) kan unndras fra offentlighet. Typiske eksempler er interne dokumenter, styringsdialog, ansettelser, gradert informasjon, forretningshemmeligheter eller data som andre eier.
- * *Varianter av datasettet kan være offentlig*** ***ved at det utelater de felt som gjør at det opprinnelige datasettet er begrenset teller unntatt offentlighet.* (se relasjoner mellom datasett)
- * *Ved bruk av verdiene "begrenset offentlighet" og "unntatt offentlighet" er egenskapen skjermingshjemmel anbefalt*
-
-.Eksempler
-Enhetsregisteret (hele):
-
-* [*] begrenset offentlighet
-
-Enhetsregisteret - Juridisk person (hovedenhet)
-
-* [*] offentlig
-
-----
-<>  dcat:accessRights <http://publications.europa.eu/resource/authority/access-right/PUBLIC>.
+<>  dct:publisher <http://data.brreg.no/enhetsregisteret/enhet/889640782> . #NAV
 ----
 
 
-=== Skjermingshjemmel
 
-.Sammendrag
+=== Anbefalte felter i en datasettbeskrivelse [[datasett-anbefalte-telfer]]
 
-Angi referanse til relevant lov eller forskrift.
-
-.Anbefalinger
-Dersom datasettet har begrensninger på deling trenger vi å vite hva skjermingen gjelder. Det kan være hjemmel (kilde for påstand) i offentlighetsloven, sikkerhetsloven, beskyttelsesinstruksen eller annet lovverk som ligger til grunn for vurdering av tilgangsnivå.
-
- * Angi referanse til relevant lov eller forskrift. Helst til lovdata på paragraf-nivå.
- * Egenskapen er anbefalt dersom «tilgangsnivå» har verdiene «begrenset» eller «ikke-offentlig»
-
-.Eksempler
-
-* [*] Forvaltningsloven, taushetsplikt §13
-* [*]  Offentleglova, Opplysningar som er underlagde teieplikt §13
-
-----
-<>   dcatno:legalBasisFor [ .
-     skos:prefLabel “Forvaltningsloven, taushetsplikt §13” ;
-     rdfs:seeAlso <https://lovdata.no/lov/1967-02-10/§13> .
-   ], [
-     skos:prefLabel “Offentliglova, taushetsplikt §13” ;
-     rdfs:seeAlso <https://lovdata.no/lov/1967-02-10/§13> .
-   ] .
-----
-
-=== Behandlingsgrunnlag
-
-.Sammendrag
-Behandlingsgrunnlag knyttes enten til angitt lovhjemmel, samtykke eller nødvendighetsvurdering.
-
-.Anbefalinger
-Etter personopplysningsloven skal det foreligge et grunnlag for behandling av personopplysninger.
-
- * Dersom et datasett inneholder personopplysninger skal det være et grunnlag for behandlingen.
- * Behandlingsgrunnlag knyttes til alternativene som finnes i forordningens artikkel 6, 9 eller 10. Angi dette i tekst.
- * Dersom behandlingsgrunnlaget forutsetter et supplerende rettslig grunnlag, se artikkel 6(3), skal det angis en referanse til dette rettslige grunnlaget. Helst til lovdata på paragraf-nivå.
-
-.Eksempler
-
-----
-<> dcatno:accessRightsComment [
-       skos:prefLabel “Treffe vedtak om tjenestepensjon til i hovedsak statsansatte og (kommunale) lærere”@no ;
-     rdfs:seeAlso <https://lovdata.no/dokument/NL/lov/1949-07-28-26/KAPITTEL_1#§1> .
-] .
-----
+[red yellow-background]#<en innlednende tekst kommer>#
 
 
-=== Utleveringshjemmel
-
-.Sammendrag
-Henvisning til regelverk som begrunner en offentlig virksomhet sin rett eller plikt til å utlevere opplysninger til andre private personer eller juridiske personer.
-
-.Anbefalinger
-Informasjon om utleveringshjemmel gjør det enklere for brukere av datasettet å se om det er nødvendig med egen hjemmel for innhenting eller om de kan få tillatelse til å bruke opplysninger etter søknad til dataeier.
-
- * Henvisning til regelverk som begrunner en offentlig virksomhet sin rett eller plikt til å utlevere opplysninger til andre private personer eller juridiske personer.
- * Henvisningen gjøres til lovdata på paragraf-nivå.
-
-.Eksempler
-----
-<>   dcatno:accessRightsComment [
-       skos:prefLabel “behandling av helseopplysninger i nasjonal kjernejournal, personaljournalloven §13”@no ;
-     rdfs:seeAlso <https://lovdata.no/lov/2014-06-20-42/§13> .
-] .
-----
-
-
-=== Tema
-
-.Sammendrag
-Ett eller flere temaer velges fra den kontrollerte listen av EU-temaer
-
-.Anbefalinger
-For å kunne sortere datasettet inn under gitte kategorier er det behov for tema
-
- * Ett eller flere temaer velges fra http://publications.europa.eu/mdr/authority/data-theme/index.html[den kontrollerte listen av EU-temaer].
-
-.Eksempler
-
-* [*] *Helse* (lenke: http://publications.europa.eu/mdr/authority/data-theme/HEAL)
-
-----
-<>  <http://data.brreg.no/datakatalog/datasett/12>
-     dcat:theme <http://publications.europa.eu/mdr/authority/data-theme/HEAL> .
-----
-
-
-=== Type
-
-.Sammendrag
-Referanse til en klassifisering av datasettets type innhold. Refererer til EU publication office sine datasett-typer
-
-.Anbefalinger
-Referanse til en klassifisering av datasettets type innhold. Refererer til EU publication office sine datasett-typer.
-
- * Datasett som anses som å inneholde data angis med “Datasett”
- * Datasett som anses som metadata (f.eks. Kodelister, Taksonomier og Tesauri) skal angis tilsvarende
- * Datasett som anses som testdata angis som “Testdata”
-
-.Eksempler
-----
-<> dct:type <http://publications.europa.eu/resource/authority/dataset-type/CODE_LIST> .
-
-<>  dct:type
-<http://data.brreg.no/datasettype/Datasett> .
-
-<> dct:type
-<http://data.brreg.no/datasettype/TestDatasett> .
-
-----
-
-
-=== Begrep
+==== Datasett: begrep [[datasett-begrep]]
 
 .Sammendrag
 
@@ -345,29 +185,29 @@ https://www.difi.no/artikkel/2015/10/begrepsanalyse-og-definisjonsarbeid[https:/
                 <http://brreg.no/begrepskatalog/begep/tingslysning> .
 ----
 
-=== Søkeord
+==== Datasett: ble generert ved [[datasett-bleGenerertVed]]
+
+[red yellow-background]#<tekst kommer, prov:wasGeneratedBy>#
+
+==== Datasett: datasettdistribusjon [[datasett-distribusjon]]
 
 .Sammendrag
-Angi synonymer og andre ord som kan hjelpe i søk. Sentralt innhold i datasettet som ikke ennå har begrepsdefinisjoner.
+For å angi hvor man kan få tilgang til datasettet skal det angis ulike distribusjoner.
 
 .Anbefalinger
-Ord og uttrykk som hjelper brukeren til å finne datasettet inkluderes (der det ikke er eksplisitt angitt referanser til begreper)
+For å angi hvor man kan få tilgang til datasettet skal det angis ulike distribusjoner.
 
- * Angi synonymer til hjelp i søk
- * Angi sentralt innhold i datasettet som ikke finnes begrepsdefinisjoner for ennå
-
-I noen tilfeller mangler noen av begrepsdefinisjonene som er sentrale for å beskrive datasettet, eller man har et ord som ikke formelt forbindes med datasettet men som man vet at mange likevel bruker. Da kan vi bruke dette feltet for å sørge for at disse søkeordene likevel gir treff i søkemotoren.
+ * Det angis i utgangspunktet en distribusjon per fil, feed eller API
+ * Dersom det er ett API som leverer flere filformater angis det som en distribusjon
 
 .Eksempler
-
-* [*] uførepensjon, uførepensjonister, uførereform
 ----
-<http://data.brreg.no/datakatalog/datasett/12>
-     dcat:keyword “uførepensjon”@no, “uførepensjonister”@no, “uførereformen”@no .
+ <> <http://brreg.no/catalogs/974760673/datasets/63086dda-9b72-43f0-bbc2-3ced4bc2edd6>
+    dcat:distribution <http://data.brreg.no/datakatalog/distribusjon/12>
+. # til et beskrivelse av et API
 ----
 
-
-=== Geografisk avgrensing
+==== Datasett: dekningsområde [[datasett-dekningsområde]]
 
 .Sammendrag
 Angi geografisk avgrensning dersom datasett kun har innhold fra visse områder. Referer til geografiske områder angitt med URI fra Statens Kartverk eller GeoNames
@@ -399,7 +239,55 @@ Det er ønskelig å synliggjøre om datasettets utvalg er begrenset til bestemte
 # eksempel på lenker til Kartverket (kommer)
 ----
 
-=== Tidsmessig avgrensing
+==== Datasett: emneord [[datasett-emneord]]
+
+.Sammendrag
+Angi synonymer og andre ord som kan hjelpe i søk. Sentralt innhold i datasettet som ikke ennå har begrepsdefinisjoner.
+
+.Anbefalinger
+Ord og uttrykk som hjelper brukeren til å finne datasettet inkluderes (der det ikke er eksplisitt angitt referanser til begreper)
+
+ * Angi synonymer til hjelp i søk
+ * Angi sentralt innhold i datasettet som ikke finnes begrepsdefinisjoner for ennå
+
+I noen tilfeller mangler noen av begrepsdefinisjonene som er sentrale for å beskrive datasettet, eller man har et ord som ikke formelt forbindes med datasettet men som man vet at mange likevel bruker. Da kan vi bruke dette feltet for å sørge for at disse søkeordene likevel gir treff i søkemotoren.
+
+.Eksempler
+
+* [*] uførepensjon, uførepensjonister, uførereform
+----
+<http://data.brreg.no/datakatalog/datasett/12>
+     dcat:keyword “uførepensjon”@no, “uførepensjonister”@no, “uførereformen”@no .
+----
+
+==== Datasett: følger [[datasett-følger]]
+
+[red yellow-background]#<tekst kommer>#
+
+
+==== Datasett: kontaktpunkt [[datasett-kontaktpunkt]]
+
+.Sammendrag
+Angi kontaktinformasjonen som kan brukes ved henvendelser om et datasett.
+
+.Anbefalinger
+Egenskapen kontaktpunkt angis for å komme i dialog med eieren av datasettet.
+
+ * Angi kontaktinformasjonen som kan brukes ved henvendelser om et datasett.
+ * Vcard https://www.w3.org/TR/vcard-rdf[https://www.w3.org/TR/vcard-rdf] benyttes for å beskrive kontaktpunktet (se anbefaling under hvert Kontaktpunkt-felt)
+
+.Eksempler
+
+* [*] Avdeling Digitalisering
+
+----
+<> <http://data.brreg.no/datakatalog/datasett/12>
+    dcat:contactPoint <http://data.brreg.no/datakatalog/kontaktpunkt/a-7> .
+----
+
+==== Datasett: tidsrom [[datasett-tidsrom]]
+
+[red yellow-background]#_NB! Tidsmessig avgrensing tidligere_#
 
 .Sammendrag
 Angi tidsmessig avgrensning dersom datasett kun har innhold fra visse perioder. Dersom det finnes en tilsvarende komplett oversikt, bør også dette beskrives som et eget datasett
@@ -434,28 +322,370 @@ En tidsromangivelse er nødvendig for datasett hvor innholdet dekker et avgrense
    ] .
 ----
 
-
-=== Utgivelse
+==== Datasett: tilgangsnivå [[datasett-tilgangsnivå]]
 
 .Sammendrag
-Tidspunktet angir når innholdet i datasettet gjøres tilgjengelig.
+Angi om datasettet offentlig åpne data, eller er helt eller delvis skjermet for innsyn.
 
 .Anbefalinger
-For å forstå når datasettet er operativt og tilgjengelig angis tidspunkt for utgivelse.
+Det er behov for å angi i hvilken grad datasettet kan bli gjort tilgjengelig for allmennheten, uten hensyn til om det er publisert eller ikke
 
- * Angis som tidspunkt (dato alene tolkes som kl. 00:00)
- * Tidspunktet angir når innholdet i datasettet gjøres tilgjengelig. Dette er ikke alltid  samsvarende med når den enkelte distribusjonen er tilgjengelig. Og heller ikke når beskrivelsen om datasettet utgis (katalogpostens utgivelse).
- * Tidspunkt angis med xsd:dateTime. Dette inkluderer utvidelser av kapittel 5.4 i ISO 8601 med tidssoner) [-]CCYY-MM-DDThh:mm:ss[Z|(+|-)hh:mm]
+ * *Angi om datasettet er helt eller delvis skjermet for innsyn*. Offentlig, begrenset offentlighet og unntatt offentlighet.
+ * *Skal gjenspeile det mest begrensede feltet/opplysningen i datasettet*
+ * “Offentlig” betyr at datasettet ikke inneholder begrensede opplysninger og kan legges ut som åpne data, selv om det ikke er laget en løsning for tilgang. Se https://doc.difi.no/data/veileder-apne-data/[Difis veileder for åpne data].
+ * “Begrenset offentlighet” betyr at tilgangen til opplysningene avhenger av hvilket formål opplysningene er innsamlet til, og hvilket lovhjemmel den som skal bruke dataene har. Begrensningen kan skyldes innhold som personopplysninger. Når noen ønsker å benytte datasettet må man foreta en konkret vurdering av tilgangen.
+ * “Unntatt offentlighet” betyr saksbehandler har med referanse til lov eller forskrift valgt at  datasett (dokumenter eller saksopplysninger) kan unndras fra offentlighet. Typiske eksempler er interne dokumenter, styringsdialog, ansettelser, gradert informasjon, forretningshemmeligheter eller data som andre eier.
+ * *Varianter av datasettet kan være offentlig*** ***ved at det utelater de felt som gjør at det opprinnelige datasettet er begrenset teller unntatt offentlighet.* (se relasjoner mellom datasett)
+ * *Ved bruk av verdiene "begrenset offentlighet" og "unntatt offentlighet" er egenskapen skjermingshjemmel anbefalt*
+
+.Eksempler
+Enhetsregisteret (hele):
+
+* [*] begrenset offentlighet
+
+Enhetsregisteret - Juridisk person (hovedenhet)
+
+* [*] offentlig
+
+----
+<>  dcat:accessRights <http://publications.europa.eu/resource/authority/access-right/PUBLIC>.
+----
+
+
+
+=== Valgfrie felter i en datasettbeskrivelse [[datasett-valgfrie-felter]]
+
+[red yellow-background]#<innledende tekst kommer>#
+
+==== Datasett: annen identifikator [[datasett-annenIdentifikator]]
+
+[red yellow-background]#<tekst kommer, adms:identifier>#
+
+==== Datasett: dokumentasjon [[datasett-dokumentasjon]]
+
+.Sammendrag
+Referanse til en side som inneholder utdypende dokumentasjon om datasettet.
+
+.Anbefalinger
+Utdypende dokumentasjon av datasettet angis ved å peke på en side der den finnes.
+
+.Eksempler
+
+
+* [*] https://confluence.brreg.no/display/DBNPUB/Informasjonsmodell+for+Enhetsregisteret+og+Foretaksregisteret
+----
+<> foaf:page
+  <https://confluence.brreg.no/display/DBNPUB/Informasjonsmodell+for+Enhetsregisteret+og+Foretaksregisteret> .
+----
+
+==== Datasett: eksempeldata [[datasett-eksempeldata]]
+
+[red yellow-background]#NB! Forrige versjon bruker ikke adms:sample i eksemplet, selv om dette avsnittet handler om eksempeldata#
+
+.Sammendrag
+Benyttes for å gi eksempeldata for et datasett, og hvordan en faktisk distribusjon ser ut.
+
+.Anbefalinger
+Benyttes for å gi eksempeldata for et datasett, og hvordan en faktisk distribusjon ser ut.
+ * Dersom datasettet inneholder personopplysninger vil det være nyttig for bruker å se en eksempedata som viser en anonymisert rad i datasettet.
+
+.Eksempler
+
+----
+<> <http://brreg.no/catalogs/974761076/datasets/e3fc94e4-cc7e-4290-b479-4e0c99dc6caa>
+    dcat:distribution <http://data.brreg.no/datakatalog/distribusjon/124312>
+. # til et beskrivelse av en eksempel-distribusjon av folkeregisteret
+----
+
+==== Datasett: endringsdato [[datasett-endringsdato]]
+
+.Sammendrag
+Tidspunktet angir når innholdet i datasettet sist er endret.
+
+.Anbefalinger
+For å forstå når datasettet sist ble oppdatert angis tidspunkt for siste endring
+
+ * Tidspunktet angir når innholdet i datasettet sist er endret.
+ * Angis som tidspunkt (dato alene tolkes som kl. 00:00:00 norsk tid)
+ * Tidspunkt angis med xsd:dateTime etter kapittel 5.4 i ISO 8601 utvidet med tidssoner [-]CCYY-MM-DDThh:mm:ss[Z|(+|-)hh:mm]
 
 .Eksempler
 
 * [*] 01.01.2017 00:00
+
 ----
-<> <http://data.brreg.no/datakatalog/datasett/12>
-     dct:issued “2017-01-01T00:00:00+01:00”^xsd:DateTime .
+<> <http://data.brreg.no/datakatalog/datasett/12>+
 ----
 
-=== Språk
+==== Datasett: er del av [[datasett-erDelAv]]
+
+.Sammendrag
+Der registre oppdeles i mindre datasett skal relasjonen brukes.
+
+.Anbefalinger
+Peker til et datasett som det aktuelle datasettet er en delmengde av av, eller at det er brutt opp i mindre datasett.
+
+ * Der registre oppdeles i mindre datasett skal relasjonen brukes. F.eks. er datasettet Underenheter er del av datasettet Enhetsregisteret.
+
+.Eksempler
+
+----
+<> dct:isPartOf [
+   skos:prefLabel “Det sentrale folkeregisteret”@no ;
+   rdfs:seeAlso <http://brreg.no/catalogs/974761076/datasets/e3fc94e4-cc7e-4290-b479-4e0c99dc6caa> ] .
+----
+
+==== Datasett: er påkrevd av [[datasett-erPåkrevdAv]]
+
+.Sammendrag
+Peker til en ressurs som må være tilstede for at datasettet skal kunne produseres
+
+.Anbefalinger
+Peker til en ressurs som må være tilstede for at datasettet skal kunne produseres.
+
+ * Peker til ressurs (datasett eller annet) som aktuelt datasett er avhengig av
+
+.Eksempler
+----
+<> dct:isPartOf [
+   skos:prefLabel “Postnummer i Norge”@no ;
+   rdfs:seeAlso <https://data.norge.no/node/1252> ] .
+----
+
+==== Datasett: er referert av [[Datasett-erReferertAv]]
+
+[red yellow-background]#<tekst kommer, dct:isPartOf>#
+
+==== Datasett: er versjon av [[datasett-erVersjonAv]]
+
+.Sammendrag
+Referanse til et datasett som i prinsippet er det samme, men hvor innholdet er blitt oppdatert på bakgrunn av bedret datakvalitet e.l.
+
+.Anbefalinger
+
+Peker til et datasett som det aktuelle datasettet er en versjon av.
+
+ * I prinsippet det samme datasettet, men hvor innholdet er blitt oppdatert på bakgrunn av bedret datakvalitet e.l.
+ * Peker til en versjon av det aktuelle datasettet kan avledes (har versjon).
+
+.Eksempler
+----
+<> dct:isVersionOf [
+   skos:prefLabel “Bydeler fra 1.1.2004”@no ;
+   rdfs:seeAlso <https://data.norge.no/node/1115> ] .
+----
+
+==== Datasett: erstatter [[datasett-erstatter]]
+
+[red yellow-background]#<tekst kommer>#
+
+==== Datasett: erstattes av [[datasett-erstattesAv]]
+
+.Sammendrag
+Peker til et datasett som erstatter et aktuelt datasettet
+
+.Anbefalinger
+Peker til et datasett som erstatter et aktuelt datasettet.
+
+ * F.eks. kan et kodeverk bli erstattet av en nyere utgave.
+
+.Eksempler
+
+----
+<> dct:isReplacedBy [
+   skos:prefLabel “Bydeler fra 1.1.2004”@no ;
+   rdfs:seeAlso <https://data.norge.no/node/1115> ] .
+----
+
+==== Datasett: frekvens [[datasett-frekvens]]
+
+[red yellow-background]#Oppdateringsfrekvens#
+
+.Sammendrag
+Beskriv hvor ofte datasettet har nytt innhold
+
+.Anbefalinger
+En angivelse hvor ofte datasettet blir oppdatert.
+
+ * Beskriv hvor ofte datasettet har nytt innhold. For eksempel oppdateres Enhetsregisteret med nye enheter og sletting av enheter _kontinuerlig_, mens Inntektsdata fra likningen (Skattemelding) er _årlig_ og Folketelling fra 1910 oppdateres _aldri_.
+ * Begreper (og tilhørende URIer) fra http://publications.europa.eu/mdr/authority/frequency/index.html[Frequency Name Authority List] skal benyttes
+
+.Eksempler
+
+----
+<> dct:accruralPeriodicity  <http://publications.europa.eu/resource/authority/frequency/MONTHLY>
+----
+
+==== Datasett: har del [[datasett-harDel]]
+
+[red yellow-background]#<tekst kommer, dct:hasPart>#
+
+==== Datasett: har kvalitetsnote [[datasett-harKvalitetsNote]]
+
+[red yellow-background]#<tekst kommer, dqv:hasQualityAnnotation>#
+
+==== Datasett: har måleresultat [[datasett-harMåleresultat]]
+
+[red yellow-background]#<tekst kommer, dqv:hasQualityMeasurement>#
+
+==== Datasett: har versjon [[datasett-harVersjon]]
+
+[red yellow-background]#<tekst kommer, dct:hasVersion>#
+
+==== Datasett: i samsvar [[datasett-iSamsvarMed]]
+
+[red yellow-background]#<ta med kopling til informasjonsmodell her>#
+
+.Sammendrag
+Angi at et datasett er i samsvar med en standard, spesifikasjon eller implementasjonsregel.
+
+.Anbefalinger
+Det er behov for å vite om et datasett er i henhold til gitt(e) standard(er).
+
+ * Benyttes til å angi at et datasett er i samsvar med en standard, spesifikasjon eller implementasjonsregel. Eksempel: Et datasett er i samsvar med SOSI 4.5 som  innholdsstandard.
+ * For referanser til maskinlesbare informasjonsmodeller, skal egenskapen “informasjonsmodell benyttes”
+
+.Eksempler
+----
+<> dcat:conformsTo [
+  skos:prefLabel “Produktspesifikasjon NVE flomsoner 1.0”@no
+  rdfs:seeAlso <http://sosi.geonorge.no/Produktspesifikasjoner/Produktspesifikasjon_NVE_Flomsoner_1%200.pdf>
+] .
+----
+
+==== Datasett: kilde [[datasett-kilde]]
+
+.Sammendrag
+Peker til ressurs (datasett eller annet) som helt eller delvis er en kilde for det aktuelle datasettet.
+
+.Anbefalinger
+Peker til en ressurs som er kilde til datasettet
+
+ * Peker til ressurs (datasett eller annet) som helt eller delvis er en kilde for det aktuelle datasettet. F.eks. kan et datasett er opprettet basert på data som er hentet fra en nettside, uten at den er definert som et datasett.
+ * Dersom et åpent datasett er basert på et annet hvor personopplysninger er fjernet, kan relasjonen brukes.
+ * Et datasett som er avledet fra et annet skal ha en referanse til kilde for det aktuelle datasettet.
+ * Dersom det er et utvalg fra et annet datasett bør heller relasjonen _del av_ brukes
+
+.Eksempler
+
+----
+<> dcat:source [
+   skos:prefLabel “Det sentrale folkeregisteret”@no ;
+   rdfs:seeAlso <http://brreg.no/catalogs/974761076/datasets/e3fc94e4-cc7e-4290-b479-4e0c99dc6caa> ] .
+----
+
+==== Datasett: krever [[datasett-krever]]
+
+[red yellow-background]#<tekst kommer, dct:requires>#
+
+==== Datasett: kvalifisert relasjon [[datasett-kvalifisertRelasjon]]
+
+[red yellow-background]#<tekst kommer, prov:qualifiedRelation>#
+
+==== Datasett: landingsside [[datasett-landingsside]]
+
+.Sammendrag
+Referanse til en side som beskriver datasettetet.
+
+.Anbefalinger
+
+Dokumentasjon om datasettet på en landingsside hos datasetteieren som kan beskrive datasettets innhold og struktur, og tilgang. Det anbefales at Dokumentasjon brukes der man refererer til utfyllende dokumentasjon, og Distribusjon benyttes f.eks. når man vil referere til en søkeside.
+
+ * kan referere til datasettets hjemmeside
+ * kan referere til en samleside som beskriver innhold og struktur
+ * kan referere til en samleside om nedlasting/bruk/søk (tjenestene)
+ * det kan refereres til flere sider
+
+.Eksempler
+
+* [*] https://confluence.brreg.no/display/DBNPUB/Informasjonsmodell+for+Enhetsregisteret+og+Foretaksregisteret
+----
+<> dcat:landingpage
+  <https://confluence.brreg.no/display/DBNPUB/Informasjonsmodell+for+Enhetsregisteret+og+Foretaksregisteret>, <https://www.brreg.no/om-oss/samfunnsoppdraget-vart/registera-vare/einingsregisteret/> .
+----
+
+==== Datasett: opphav [[datasett-opphav]]
+
+
+.Sammendrag
+Angi om opplysningene i datasettet er resultat av vedtak eller innsamlet fra bruker eller tredjepart
+
+.Anbefalinger
+Det er behov for en sortering om innholdet er basert på avgjørelse truffet under utøvelse av offentlig myndighet (vedtak) eller er kommer fra andre kilder (bruker eller tredjepart). Vedtak anses å være autoritative kilder for hele forvaltningen.
+
+ * Angi om opplysningene i datasettet er resultat av vedtak eller innsamlet fra bruker eller tredjepart
+ * Det skal velges en verdi fra et kontrollert vokabular med verdiene Vedtak, Bruker og Tredjepart
+
+Enkelte offentlige virksomheter har datasett som innen sitt område eller nasjonalt er å anse autoritative kilder. Eksempler på slike datasett er Enhetsregisteret (ER), Folkeregisteret (DSF), Matrikkelen og Aa-registeret.  Per i dag er de tre første formelle grunndataregistre, men det er flere andre datasett som i større eller mindre grad blir gjenbrukt innenfor sektorer eller generelt innenfor offentlig sektor og resten av samfunnet.
+
+.Eksempler
+
+* [*] Vedtak
+----
+<> dct:provenance <http://data.brreg.no/opphav/vedtak>
+----
+
+
+==== Datasett: produsent [[datasett-produsent]]
+
+.Sammendrag
+Brukes unntaksvis der det er datasett som er satt sammen av data som andre er ansvarlige for
+
+.Anbefalinger
+Egenskapen angir produsent(er) av datasettet der dette er en annen enn dataeier
+
+ * Brukes unntaksvis der det er datasett som er satt sammen av data som andre er ansvarlige for
+ * Skaper vil ikke angis med organisasjonsnummer siden det typisk vil være en sammensatt gruppe.
+
+.Eksempler
+
+* [*] “Kommunene”
+----
+<>  <http://data.brreg.no/datakatalog/datasett/12>
+    dct:creator “Kommunene” .
+----
+
+==== Datasett: refererer til [[datasett-referererTil]]
+
+.Sammendrag
+Referanse til andre datasett som det kan være nyttig for brukere å være oppmerksom på.
+
+.Anbefalinger
+Referanse til andre datasett som det kan være nyttig for brukere å være oppmerksom på
+
+ * Peker til datasett som kan være aktuelt å se i sammenheng med det aktuelle datasettet, f.eks. for Enhetsregisteret supplerende informasjon om Enheter, men ikke direkte relatert.
+
+.Eksempler
+----
+<> dct:references [
+   skos:prefLabel “Register over offentlig støtte”@no ;
+   rdfs:seeAlso <http://brreg.no/catalogs/974760673/datasets/ca04abdd-6327-4833-bd05-7a3dca20e6a5> ] .
+----
+
+==== Datasett: relatert ressurs [[datasett-relatertRessurs]]
+
+.Sammendrag
+Referanse til andre datasett som gir supplerende informasjon om innholdet.
+
+.Anbefalinger
+En generell relasjon som peker til ressurser som er relatert til datasettet.
+
+ * Angi referanser til andre datasett som gir supplerende informasjon om innholdet. Kan f.eks. være å relatere til et annet register.
+
+.Eksempler
+
+----
+<> dct:relation [
+    skos:prefLabel “Det sentrale folkeregisteret”@no ;
+   rdfs:seeAlso <http://brreg.no/catalogs/974761076/datasets/e3fc94e4-cc7e-4290-b479-4e0c99dc6caa> ] .
+----
+
+==== Datasett: romlig oppløsning [[datasett-romligOppløsning]]
+
+[red yellow-background]#<tekst kommer, dcat:spatialResolutionInMeters>#
+
+
+==== Datasett: språk [[datasett-språk]]
 
 .Sammendrag
 Hovedspråket benyttet i datasettets innhold angis
@@ -477,65 +707,148 @@ For å forstå hvilket språk innholdet til datasettet har angis dette
      dct:language <http://publications.europa.eu/resource/authority/language/NOR> .
 ----
 
-=== Opphav
+==== Datasett: tidsromsoppløsning [[datasett-tidsromsoppløsning]]
 
+[red yellow-background]#<tekst kommer, dcat:temporalResolution>#
+
+==== Datasett: type [[datasett-type]]
 
 .Sammendrag
-Angi om opplysningene i datasettet er resultat av vedtak eller innsamlet fra bruker eller tredjepart
+Referanse til en klassifisering av datasettets type innhold. Refererer til EU publication office sine datasett-typer
 
 .Anbefalinger
-Det er behov for en sortering om innholdet er basert på avgjørelse truffet under utøvelse av offentlig myndighet (vedtak) eller er kommer fra andre kilder (bruker eller tredjepart). Vedtak anses å være autoritative kilder for hele forvaltningen.
+Referanse til en klassifisering av datasettets type innhold. Refererer til EU publication office sine datasett-typer.
 
- * Angi om opplysningene i datasettet er resultat av vedtak eller innsamlet fra bruker eller tredjepart
- * Det skal velges en verdi fra et kontrollert vokabular med verdiene Vedtak, Bruker og Tredjepart
-
-Enkelte offentlige virksomheter har datasett som innen sitt område eller nasjonalt er å anse autoritative kilder. Eksempler på slike datasett er Enhetsregisteret (ER), Folkeregisteret (DSF), Matrikkelen og Aa-registeret.  Per i dag er de tre første formelle grunndataregistre, men det er flere andre datasett som i større eller mindre grad blir gjenbrukt innenfor sektorer eller generelt innenfor offentlig sektor og resten av samfunnet.
+ * Datasett som anses som å inneholde data angis med “Datasett”
+ * Datasett som anses som metadata (f.eks. Kodelister, Taksonomier og Tesauri) skal angis tilsvarende
+ * Datasett som anses som testdata angis som “Testdata”
 
 .Eksempler
-
-* [*] Vedtak
 ----
-<> dct:provenance <http://data.brreg.no/opphav/vedtak>
+<> dct:type <http://publications.europa.eu/resource/authority/dataset-type/CODE_LIST> .
+
+<>  dct:type
+<http://data.brreg.no/datasettype/Datasett> .
+
+<> dct:type
+<http://data.brreg.no/datasettype/TestDatasett> .
+
 ----
 
-=== Oppdateringsfrekvens
+==== Datasett: utgivelsesdato [[datasett-utgivelsesdato]]
 
 .Sammendrag
-Beskriv hvor ofte datasettet har nytt innhold
+Tidspunktet angir når innholdet i datasettet gjøres tilgjengelig.
 
 .Anbefalinger
-En angivelse hvor ofte datasettet blir oppdatert.
+For å forstå når datasettet er operativt og tilgjengelig angis tidspunkt for utgivelse.
 
- * Beskriv hvor ofte datasettet har nytt innhold. For eksempel oppdateres Enhetsregisteret med nye enheter og sletting av enheter _kontinuerlig_, mens Inntektsdata fra likningen (Skattemelding) er _årlig_ og Folketelling fra 1910 oppdateres _aldri_.
- * Begreper (og tilhørende URIer) fra http://publications.europa.eu/mdr/authority/frequency/index.html[Frequency Name Authority List] skal benyttes
-
-.Eksempler
-
-----
-<> dct:accruralPeriodicity  <http://publications.europa.eu/resource/authority/frequency/MONTHLY>
-----
-
-=== Sist oppdatert
-
-.Sammendrag
-Tidspunktet angir når innholdet i datasettet sist er endret.
-
-.Anbefalinger
-For å forstå når datasettet sist ble oppdatert angis tidspunkt for siste endring
-
- * Tidspunktet angir når innholdet i datasettet sist er endret.
- * Angis som tidspunkt (dato alene tolkes som kl. 00:00:00 norsk tid)
- * Tidspunkt angis med xsd:dateTime etter kapittel 5.4 i ISO 8601 utvidet med tidssoner [-]CCYY-MM-DDThh:mm:ss[Z|(+|-)hh:mm]
+ * Angis som tidspunkt (dato alene tolkes som kl. 00:00)
+ * Tidspunktet angir når innholdet i datasettet gjøres tilgjengelig. Dette er ikke alltid  samsvarende med når den enkelte distribusjonen er tilgjengelig. Og heller ikke når beskrivelsen om datasettet utgis (katalogpostens utgivelse).
+ * Tidspunkt angis med xsd:dateTime. Dette inkluderer utvidelser av kapittel 5.4 i ISO 8601 med tidssoner) [-]CCYY-MM-DDThh:mm:ss[Z|(+|-)hh:mm]
 
 .Eksempler
 
 * [*] 01.01.2017 00:00
+----
+<> <http://data.brreg.no/datakatalog/datasett/12>
+     dct:issued “2017-01-01T00:00:00+01:00”^xsd:DateTime .
+----
+
+==== Datasett: versjon [[datasett-versjon]]
+
+[red yellow-background]#<tekst kommer, owl:versionInfo>#
+
+==== Datasett: versjonsnote [[datasett-versjonnote]]
+
+[red yellow-background]#<tekst kommer, adms:versionNotes>#
+
+
+
+
++ - + - + - + - + - + - + - + - + - + - + - + - + - + - + - + -
+
+[red yellow-background]#<resten skal flyttes/oppdateres/slettes>#
+
+==== Datasett: skjermingshjemmel
+
+[red yellow-background]#_NB! denne finnes ikke i v.2_#
+
+.Sammendrag
+
+Angi referanse til relevant lov eller forskrift.
+
+.Anbefalinger
+Dersom datasettet har begrensninger på deling trenger vi å vite hva skjermingen gjelder. Det kan være hjemmel (kilde for påstand) i offentlighetsloven, sikkerhetsloven, beskyttelsesinstruksen eller annet lovverk som ligger til grunn for vurdering av tilgangsnivå.
+
+ * Angi referanse til relevant lov eller forskrift. Helst til lovdata på paragraf-nivå.
+ * Egenskapen er anbefalt dersom «tilgangsnivå» har verdiene «begrenset» eller «ikke-offentlig»
+
+.Eksempler
+
+* [*] Forvaltningsloven, taushetsplikt §13
+* [*]  Offentleglova, Opplysningar som er underlagde teieplikt §13
 
 ----
-<> <http://data.brreg.no/datakatalog/datasett/12>+
+<>   dcatno:legalBasisFor [ .
+     skos:prefLabel “Forvaltningsloven, taushetsplikt §13” ;
+     rdfs:seeAlso <https://lovdata.no/lov/1967-02-10/§13> .
+   ], [
+     skos:prefLabel “Offentliglova, taushetsplikt §13” ;
+     rdfs:seeAlso <https://lovdata.no/lov/1967-02-10/§13> .
+   ] .
 ----
 
-=== Aktualitet
+==== Behandlingsgrunnlag
+
+[red yellow-background]#_NB! denne finnes ikke i v.2_#
+
+.Sammendrag
+Behandlingsgrunnlag knyttes enten til angitt lovhjemmel, samtykke eller nødvendighetsvurdering.
+
+.Anbefalinger
+Etter personopplysningsloven skal det foreligge et grunnlag for behandling av personopplysninger.
+
+ * Dersom et datasett inneholder personopplysninger skal det være et grunnlag for behandlingen.
+ * Behandlingsgrunnlag knyttes til alternativene som finnes i forordningens artikkel 6, 9 eller 10. Angi dette i tekst.
+ * Dersom behandlingsgrunnlaget forutsetter et supplerende rettslig grunnlag, se artikkel 6(3), skal det angis en referanse til dette rettslige grunnlaget. Helst til lovdata på paragraf-nivå.
+
+.Eksempler
+
+----
+<> dcatno:accessRightsComment [
+       skos:prefLabel “Treffe vedtak om tjenestepensjon til i hovedsak statsansatte og (kommunale) lærere”@no ;
+     rdfs:seeAlso <https://lovdata.no/dokument/NL/lov/1949-07-28-26/KAPITTEL_1#§1> .
+] .
+----
+
+
+==== Utleveringshjemmel
+
+[red yellow-background]#_NB! denne finnes ikke i v.2_#
+
+.Sammendrag
+Henvisning til regelverk som begrunner en offentlig virksomhet sin rett eller plikt til å utlevere opplysninger til andre private personer eller juridiske personer.
+
+.Anbefalinger
+Informasjon om utleveringshjemmel gjør det enklere for brukere av datasettet å se om det er nødvendig med egen hjemmel for innhenting eller om de kan få tillatelse til å bruke opplysninger etter søknad til dataeier.
+
+ * Henvisning til regelverk som begrunner en offentlig virksomhet sin rett eller plikt til å utlevere opplysninger til andre private personer eller juridiske personer.
+ * Henvisningen gjøres til lovdata på paragraf-nivå.
+
+.Eksempler
+----
+<>   dcatno:accessRightsComment [
+       skos:prefLabel “behandling av helseopplysninger i nasjonal kjernejournal, personaljournalloven §13”@no ;
+     rdfs:seeAlso <https://lovdata.no/lov/2014-06-20-42/§13> .
+] .
+----
+
+
+
+==== Aktualitet
+
+[red yellow-background]#henvises til DQV-AP-NO#
 
 .Sammendrag
 
@@ -558,26 +871,9 @@ Avvik eller tilleggsopplysninger om “oppdateringsfrekvens” og “sist oppdat
   ] .
 ----
 
-=== I samsvar med standard
+==== Relevans
 
-.Sammendrag
-Angi at et datasett er i samsvar med en standard, spesifikasjon eller implementasjonsregel.
-
-.Anbefalinger
-Det er behov for å vite om et datasett er i henhold til gitt(e) standard(er).
-
- * Benyttes til å angi at et datasett er i samsvar med en standard, spesifikasjon eller implementasjonsregel. Eksempel: Et datasett er i samsvar med SOSI 4.5 som  innholdsstandard.
- * For referanser til maskinlesbare informasjonsmodeller, skal egenskapen “informasjonsmodell benyttes”
-
-.Eksempler
-----
-<> dcat:conformsTo [
-  skos:prefLabel “Produktspesifikasjon NVE flomsoner 1.0”@no
-  rdfs:seeAlso <http://sosi.geonorge.no/Produktspesifikasjoner/Produktspesifikasjon_NVE_Flomsoner_1%200.pdf>
-] .
-----
-
-=== Relevans
+[red yellow-background]#henvises til DQV-AP-NO#
 
 .Sammendrag
 Avvik eller tilleggsopplysninger knyttet til datasettes relevans i ulike brukskontekster
@@ -599,7 +895,9 @@ Avvik eller tilleggsopplysninger knyttet til datasettes relevans i ulike bruksko
 
 ----
 
-=== Kompletthet
+==== Kompletthet
+
+[red yellow-background]#henvises til DQV-AP-NO#
 
 .Sammendrag
 I hvilken grad inneholder datasettet alle objekter som nevnt i formålet.
@@ -641,7 +939,9 @@ Kontakt og reservasjonsregisteret - formål benyttes til varsling og kan benytte
   ] .
 ----
 
-=== Nøyaktighet
+==== Nøyaktighet
+
+[red yellow-background]#henvises til DQV-AP-NO#
 
 .Sammendrag
 I hvilken grad er innholdet i samsvar med formålet
@@ -698,7 +998,9 @@ Askeladden - Riksantikvarens offisielle database over fredete kulturminner og ku
   ] .
 ----
 
-=== Tilgjengelighet
+==== Tilgjengelighet
+
+[red yellow-background]#henvises til DQV-AP-NO#
 
 .Sammendrag
 Avvik eller tilleggsopplysninger knyttet til datasettes tilgjengelighet
@@ -721,7 +1023,9 @@ Avvik eller tilleggsopplysninger knyttet til datasettets tilgjengelighet
     ] .
 ----
 
-=== Informasjonsmodell
+==== Informasjonsmodell
+
+[red yellow-background]#henvises til ModellDCAT-AP-NO#
 
 .Sammendrag
 Refereranse til datasettets informasjonsmodell
@@ -740,136 +1044,11 @@ En eksplisitt referanse til informasjonsmodell
 ----
 
 
-=== Kilde datasett (avledet fra)
-
-.Sammendrag
-Peker til ressurs (datasett eller annet) som helt eller delvis er en kilde for det aktuelle datasettet.
-
-.Anbefalinger
-Peker til en ressurs som er kilde til datasettet
-
- * Peker til ressurs (datasett eller annet) som helt eller delvis er en kilde for det aktuelle datasettet. F.eks. kan et datasett er opprettet basert på data som er hentet fra en nettside, uten at den er definert som et datasett.
- * Dersom et åpent datasett er basert på et annet hvor personopplysninger er fjernet, kan relasjonen brukes.
- * Et datasett som er avledet fra et annet skal ha en referanse til kilde for det aktuelle datasettet.
- * Dersom det er et utvalg fra et annet datasett bør heller relasjonen _del av_ brukes
-
-.Eksempler
-
-----
-<> dcat:source [
-   skos:prefLabel “Det sentrale folkeregisteret”@no ;
-   rdfs:seeAlso <http://brreg.no/catalogs/974761076/datasets/e3fc94e4-cc7e-4290-b479-4e0c99dc6caa> ] .
-----
-
-=== Del av datasett
-
-.Sammendrag
-Der registre oppdeles i mindre datasett skal relasjonen brukes.
-
-.Anbefalinger
-Peker til et datasett som det aktuelle datasettet er en delmengde av av, eller at det er brutt opp i mindre datasett.
-
- * Der registre oppdeles i mindre datasett skal relasjonen brukes. F.eks. er datasettet Underenheter er del av datasettet Enhetsregisteret.
-
-.Eksempler
-
-----
-<> dct:isPartOf [
-   skos:prefLabel “Det sentrale folkeregisteret”@no ;
-   rdfs:seeAlso <http://brreg.no/catalogs/974761076/datasets/e3fc94e4-cc7e-4290-b479-4e0c99dc6caa> ] .
-----
-
-=== Erstattet av datasett
-
-.Sammendrag
-Peker til et datasett som erstatter et aktuelt datasettet
-
-.Anbefalinger
-Peker til et datasett som erstatter et aktuelt datasettet.
-
- * F.eks. kan et kodeverk bli erstattet av en nyere utgave.
-
-.Eksempler
-
-----
-<> dct:isReplacedBy [
-   skos:prefLabel “Bydeler fra 1.1.2004”@no ;
-   rdfs:seeAlso <https://data.norge.no/node/1115> ] .
-----
-
-=== Påkrevd av datasett
-
-.Sammendrag
-Peker til en ressurs som må være tilstede for at datasettet skal kunne produseres
-
-.Anbefalinger
-Peker til en ressurs som må være tilstede for at datasettet skal kunne produseres.
-
- * Peker til ressurs (datasett eller annet) som aktuelt datasett er avhengig av
-
-.Eksempler
-----
-<> dct:isPartOf [
-   skos:prefLabel “Postnummer i Norge”@no ;
-   rdfs:seeAlso <https://data.norge.no/node/1252> ] .
-----
-
-=== Refererer til
-
-.Sammendrag
-Referanse til andre datasett som det kan være nyttig for brukere å være oppmerksom på.
-
-.Anbefalinger
-Referanse til andre datasett som det kan være nyttig for brukere å være oppmerksom på
-
- * Peker til datasett som kan være aktuelt å se i sammenheng med det aktuelle datasettet, f.eks. for Enhetsregisteret supplerende informasjon om Enheter, men ikke direkte relatert.
-
-.Eksempler
-----
-<> dct:references [
-   skos:prefLabel “Register over offentlig støtte”@no ;
-   rdfs:seeAlso <http://brreg.no/catalogs/974760673/datasets/ca04abdd-6327-4833-bd05-7a3dca20e6a5> ] .
-----
-
-=== Relatert
-
-.Sammendrag
-Referanse til andre datasett som gir supplerende informasjon om innholdet.
-
-.Anbefalinger
-En generell relasjon som peker til ressurser som er relatert til datasettet.
-
- * Angi referanser til andre datasett som gir supplerende informasjon om innholdet. Kan f.eks. være å relatere til et annet register.
-
-.Eksempler
-
-----
-<> dct:relation [
-    skos:prefLabel “Det sentrale folkeregisteret”@no ;
-   rdfs:seeAlso <http://brreg.no/catalogs/974761076/datasets/e3fc94e4-cc7e-4290-b479-4e0c99dc6caa> ] .
-----
 
 
-=== Versjon av
+==== Datasett: testdatasett [[datasett-testdatasett]]
 
-.Sammendrag
-Referanse til et datasett som i prinsippet er det samme, men hvor innholdet er blitt oppdatert på bakgrunn av bedret datakvalitet e.l.
-
-.Anbefalinger
-
-Peker til et datasett som det aktuelle datasettet er en versjon av.
-
- * I prinsippet det samme datasettet, men hvor innholdet er blitt oppdatert på bakgrunn av bedret datakvalitet e.l.
- * Peker til en versjon av det aktuelle datasettet kan avledes (har versjon).
-
-.Eksempler
-----
-<> dct:isVersionOf [
-   skos:prefLabel “Bydeler fra 1.1.2004”@no ;
-   rdfs:seeAlso <https://data.norge.no/node/1115> ] .
-----
-
-=== Testdatasett
+[red yellow-background]#NB! Hvorfor kalles dette Testdatasett i forrige versjon av veilederen? Uansett skal dct:type bruke. Sjekk om det er dekket under Datasett: type!#
 
 .Sammendrag
 For å angi at et register eller datasett foreligger som testdata, typisk syntetiske eller anonymiserte, angis dette med relasjonen testdatasett til et annet datasett.
@@ -884,59 +1063,4 @@ For å angi at et register eller datasett foreligger som testdata, typisk syntet
 <> dct:isVersionOf [
    skos:prefLabel “Syntetiske folkeregisteredata”@no ;
    rdfs:seeAlso <http://brreg.no/catalogs/974761076/datasets/e3fc94e4-cc7e-4290-b479-4e0c99dc6caa/> ] .
-----
-
-=== Kontaktpunkt
-
-.Sammendrag
-Angi kontaktinformasjonen som kan brukes ved henvendelser om et datasett.
-
-.Anbefalinger
-Egenskapen kontaktpunkt angis for å komme i dialog med eieren av datasettet.
-
- * Angi kontaktinformasjonen som kan brukes ved henvendelser om et datasett.
- * Vcard https://www.w3.org/TR/vcard-rdf[https://www.w3.org/TR/vcard-rdf] benyttes for å beskrive kontaktpunktet (se anbefaling under hvert Kontaktpunkt-felt)
-
-.Eksempler
-
-* [*] Avdeling Digitalisering
-
-----
-<> <http://data.brreg.no/datakatalog/datasett/12>
-    dcat:contactPoint <http://data.brreg.no/datakatalog/kontaktpunkt/a-7> .
-----
-
-=== Datasettdistribusjon
-
-.Sammendrag
-For å angi hvor man kan få tilgang til datasettet skal det angis ulike distribusjoner.
-
-.Anbefalinger
-For å angi hvor man kan få tilgang til datasettet skal det angis ulike distribusjoner.
-
- * Det angis i utgangspunktet en distribusjon per fil, feed eller API
- * Dersom det er ett API som leverer flere filformater angis det som en distribusjon
-
-.Eksempler
-----
- <> <http://brreg.no/catalogs/974760673/datasets/63086dda-9b72-43f0-bbc2-3ced4bc2edd6>
-    dcat:distribution <http://data.brreg.no/datakatalog/distribusjon/12>
-. # til et beskrivelse av et API
-----
-
-=== Eksempeldata
-
-.Sammendrag
-Benyttes for å gi eksempeldata for et datasett, og hvordan en faktisk distribusjon ser ut.
-
-.Anbefalinger
-Benyttes for å gi eksempeldata for et datasett, og hvordan en faktisk distribusjon ser ut.
- * Dersom datasettet inneholder personopplysninger vil det være nyttig for bruker å se en eksempedata som viser en anonymisert rad i datasettet.
-
-.Eksempler
-
-----
-<> <http://brreg.no/catalogs/974761076/datasets/e3fc94e4-cc7e-4290-b479-4e0c99dc6caa>
-    dcat:distribution <http://data.brreg.no/datakatalog/distribusjon/124312>
-. # til et beskrivelse av en eksempel-distribusjon av folkeregisteret
 ----
