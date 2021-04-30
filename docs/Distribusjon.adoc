@@ -1,4 +1,4 @@
-== Beskrivelse av en distribusjon [[distribusjon]]
+== Beskrivelse av en distribusjon [[beskrivelse-av-distribusjon]]
 
 WARNING: [red yellow-background]#_NB! hele kapittelet er under oppdatering_#
 
