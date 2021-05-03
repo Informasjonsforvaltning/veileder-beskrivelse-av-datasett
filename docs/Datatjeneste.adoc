@@ -1,4 +1,4 @@
-== Beskrivelse av en datatjeneste [[datatjeneste]]
+== Beskrivelse av en datatjeneste [[beskrivelse-av-datatjeneste]]
 
 Nytt i DCAT-AP-NO v.2 er at standarden nå også støtter beskriveser av datatjeneste (aka API), som v.1.x av DCAT-AP-NO ikke gjorde.
 
