@@ -1,0 +1,48 @@
+== Utvalgte temaer [[utvalgte-temaer]]
+
+[red yellow-background]#_<Kapitlet er under utvikling, skal inneholde veiledning rundt noen utvalgte temaer>_#
+
+=== Sammenheng mellom datasett, begrep, API og informasjonsmodeller [[sammenheng]]
+
+[red yellow-background]#_<tekst kommer>_#
+
+=== Beskrivelse av kvalitet [[beskrivelse-av-kvalitet]]
+
+[red yellow-background]#_<tekst kommer>_#
+
+=== Beskrivelse av juridiske rammer [[beskrivelse-av-juss]]
+
+[red yellow-background]#_<tekst kommer>_#
+
+=== Beskrivelse av tidsserie [[beskrivelse-av-tidsserie]]
+
+[red yellow-background]#_<tekst kommer>_#
+
+=== Beskrivelse av åpne data [[beskrivelse-av-åpneData]]
+
+[red yellow-background]#_<tekst kommer>_#
+
+=== Bruk av kontrollerte vokabularer [[bruk-av-kontrollerte-vokabularer]]
+
+[red yellow-background]#_<tekst kommer>_#
+
+=== Om identifikator (`dct:identifer`) [[om-identifikator]]
+
+Identifikatoren til en ressurs er som regel systemgenerert av verktøyet som brukes til å beskrive et datasett, slik at du som vanlig bruker ikke trenger å fylle ut dette feltet manuelt.
+
+Resten av dette avsnittet er primært for deg som skal utvikle/tilpasse verktøystøtte. Beskrivelsen tar utgangspunkt i indikatoren til et datasett [https://data.norge.no/specification/dcat-ap-no/#Datasett-identifikator[Datasett: identifikator]], men den gjelder også for de andre klassene i DCAT-AP-NO der `dct:indikator` brukes.
+
+.Sammendrag
+Identifikatoren til et datasett [https://data.norge.no/specification/dcat-ap-no/#Datasett-identifikator[Datasett: identifikator]] skal være unik og varig. Se https://www.digdir.no/digitale-felleslosninger/peikarar-til-offentlege-ressursar-pa-nett/1492[Forvaltningsstandard for pekere til offentlige ressurser på nett].
+
+.Anbefaling
+
+Subjektet (det første leddet) i en RDF-trippel er per definisjon en identifikator (URI). I en konkret realisering vil instanser av klassen Datasett (`dcat:Dataset`) derfor få en «innebygd» identifikator.
+
+For å ha minst mulig avvik fra EU-standarden som DCAT-AP-NO er basert på, har vi beholdt krav på at `dct:identifier` er obligatorisk for `dcat:Dataset`. `dct:identifier` trenger ikke å inneholde den samme identifikatoren som den innebygde URIen i en trippel, men _når_ det er den samme identifikatoren, anbefales det at hele den innebygde URIen (subjektet i en trippel) kopieres til `dct:identifier`.
+
+.Eksempel i RDF Turtle
+------
+<https://direks.eks/datasets/123> a dcat:Dataset ;
+   dct:identifier "https://direks.eks/datasets/123"^^xsd:anyURI .
+------

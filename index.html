@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="generator" content="Asciidoctor 2.0.12">
+<meta name="generator" content="Asciidoctor 2.0.15">
 <meta name="description" content="">
 <title>Veileder for beskrivelse av datasett</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
@@ -95,9 +95,6 @@ dl dd{margin-bottom:1.25em}
 abbr,acronym{text-transform:uppercase;font-size:90%;color:rgba(0,0,0,.8);border-bottom:1px dotted #ddd;cursor:help}
 abbr{text-transform:none}
 blockquote{margin:0 0 1.25em;padding:.5625em 1.25em 0 1.1875em;border-left:1px solid #ddd}
-blockquote cite{display:block;font-size:.9375em;color:rgba(0,0,0,.6)}
-blockquote cite::before{content:"\2014 \0020"}
-blockquote cite a,blockquote cite a:visited{color:rgba(0,0,0,.6)}
 blockquote,blockquote p{line-height:1.6;color:rgba(0,0,0,.85)}
 @media screen and (min-width:768px){h1,h2,h3,#toctitle,.sidebarblock>.content>.title,h4,h5,h6{line-height:1.2}
 h1{font-size:2.75em}
@@ -262,7 +259,7 @@ pre.pygments .lineno::before{content:"";margin-right:-.125em}
 .quoteblock.excerpt>blockquote,.quoteblock .quoteblock{padding:0 0 .25em 1em;border-left:.25em solid #dddddf}
 .quoteblock.excerpt,.quoteblock .quoteblock{margin-left:0}
 .quoteblock.excerpt blockquote,.quoteblock.excerpt p,.quoteblock .quoteblock blockquote,.quoteblock .quoteblock p{color:inherit;font-size:1.0625rem}
-.quoteblock.excerpt .attribution,.quoteblock .quoteblock .attribution{color:inherit;text-align:left;margin-right:0}
+.quoteblock.excerpt .attribution,.quoteblock .quoteblock .attribution{color:inherit;font-size:.85rem;text-align:left;margin-right:0}
 p.tableblock:last-child{margin-bottom:0}
 td.tableblock>.content{margin-bottom:1.25em;word-wrap:anywhere}
 td.tableblock>.content>:last-child{margin-bottom:-1.25em}
@@ -453,52 +450,70 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#struktur">Struktur</a></li>
 </ul>
 </li>
-<li><a href="#datasett">Beskrivelse av et datasett</a>
+<li><a href="#beskrivelse-av-datasett">Beskrivelse av datasett</a>
 <ul class="sectlevel2">
-<li><a href="#_hvordan_beskrive_et_datasett">Hvordan beskrive et datasett?</a></li>
-<li><a href="#_eier_av_datasettet">Eier av datasettet</a></li>
-<li><a href="#_skaper_av_datasettet">Skaper av datasettet</a></li>
-<li><a href="#_tittel_på_datasett">Tittel på datasett</a></li>
-<li><a href="#_formål">Formål</a></li>
-<li><a href="#_beskrivelse_av_datasett">Beskrivelse av datasett</a></li>
-<li><a href="#_dokumentasjon">Dokumentasjon</a></li>
-<li><a href="#_landingsside">Landingsside</a></li>
-<li><a href="#_tilgangsnivå">Tilgangsnivå</a></li>
-<li><a href="#_skjermingshjemmel">Skjermingshjemmel</a></li>
-<li><a href="#_behandlingsgrunnlag">Behandlingsgrunnlag</a></li>
-<li><a href="#_utleveringshjemmel">Utleveringshjemmel</a></li>
-<li><a href="#_tema">Tema</a></li>
-<li><a href="#_type">Type</a></li>
-<li><a href="#_begrep">Begrep</a></li>
-<li><a href="#_søkeord">Søkeord</a></li>
-<li><a href="#_geografisk_avgrensing">Geografisk avgrensing</a></li>
-<li><a href="#_tidsmessig_avgrensing">Tidsmessig avgrensing</a></li>
-<li><a href="#_utgivelse">Utgivelse</a></li>
-<li><a href="#_språk">Språk</a></li>
-<li><a href="#_opphav">Opphav</a></li>
-<li><a href="#_oppdateringsfrekvens">Oppdateringsfrekvens</a></li>
-<li><a href="#_sist_oppdatert">Sist oppdatert</a></li>
-<li><a href="#_aktualitet">Aktualitet</a></li>
-<li><a href="#_i_samsvar_med_standard">I samsvar med standard</a></li>
-<li><a href="#_relevans">Relevans</a></li>
-<li><a href="#_kompletthet">Kompletthet</a></li>
-<li><a href="#_nøyaktighet">Nøyaktighet</a></li>
-<li><a href="#_tilgjengelighet">Tilgjengelighet</a></li>
-<li><a href="#_informasjonsmodell">Informasjonsmodell</a></li>
-<li><a href="#_kilde_datasett_avledet_fra">Kilde datasett (avledet fra)</a></li>
-<li><a href="#_del_av_datasett">Del av datasett</a></li>
-<li><a href="#_erstattet_av_datasett">Erstattet av datasett</a></li>
-<li><a href="#_påkrevd_av_datasett">Påkrevd av datasett</a></li>
-<li><a href="#_refererer_til">Refererer til</a></li>
-<li><a href="#_relatert">Relatert</a></li>
-<li><a href="#_versjon_av">Versjon av</a></li>
-<li><a href="#_testdatasett">Testdatasett</a></li>
-<li><a href="#_kontaktpunkt">Kontaktpunkt</a></li>
-<li><a href="#_datasettdistribusjon">Datasettdistribusjon</a></li>
-<li><a href="#_eksempeldata">Eksempeldata</a></li>
+<li><a href="#eksempel-datasettbeskrivelse">Eksempel på en datasettbeskrivelse</a></li>
+<li><a href="#datasett-obligatoriske-felter">Obligatoriske felter i en datasettbeskrivelse</a>
+<ul class="sectlevel3">
+<li><a href="#datasett-beskrivelse">Datasett - beskrivelse</a></li>
+<li><a href="#datasett-identifikator">Datasett - identifikator</a></li>
+<li><a href="#datasett-tema">Datasett - tema</a></li>
+<li><a href="#datasett-tittel">Datasett - tittel</a></li>
+<li><a href="#datasett-utgiver">Datasett - utgiver</a></li>
 </ul>
 </li>
-<li><a href="#distribusjon">Beskrivelse av en distribusjon</a>
+<li><a href="#datasett-anbefalte-felter">Anbefalte felter i en datasettbeskrivelse</a>
+<ul class="sectlevel3">
+<li><a href="#datasett-begrep">Datasett - begrep</a></li>
+<li><a href="#datasett-bleGenerertVed">Datasett - ble generert ved</a></li>
+<li><a href="#datasett-datasettdistribusjon">Datasett - datasettdistribusjon</a></li>
+<li><a href="#datasett-dekningsområde">Datasett - dekningsområde</a></li>
+<li><a href="#datasett-emneord">Datasett - emneord</a></li>
+<li><a href="#datasett-følger">Datasett - følger</a></li>
+<li><a href="#datasett-kontaktpunkt">Datasett - kontaktpunkt</a></li>
+<li><a href="#datasett-tidsrom">Datasett - tidsrom</a></li>
+<li><a href="#datasett-tilgangsnivå">Datasett - tilgangsnivå</a></li>
+</ul>
+</li>
+<li><a href="#datasett-valgfrie-felter">Valgfrie felter i en datasettbeskrivelse</a>
+<ul class="sectlevel3">
+<li><a href="#datasett-annenIdentifikator">Datasett - annen identifikator</a></li>
+<li><a href="#datasett-dokumentasjon">Datasett - dokumentasjon</a></li>
+<li><a href="#datasett-eksempeldata">Datasett - eksempeldata</a></li>
+<li><a href="#datasett-endringsdato">Datasett - endringsdato</a></li>
+<li><a href="#datasett-erDelAv">Datasett - er del av</a></li>
+<li><a href="#datasett-erPåkrevdAv">Datasett - er påkrevd av</a></li>
+<li><a href="#Datasett-erReferertAv">Datasett - er referert av</a></li>
+<li><a href="#datasett-erVersjonAv">Datasett - er versjon av</a></li>
+<li><a href="#datasett-erstatter">Datasett - erstatter</a></li>
+<li><a href="#datasett-erstattesAv">Datasett - erstattes av</a></li>
+<li><a href="#datasett-frekvens">Datasett - frekvens</a></li>
+<li><a href="#datasett-harDel">Datasett - har del</a></li>
+<li><a href="#datasett-harKvalitetsNote">Datasett - har kvalitetsnote</a></li>
+<li><a href="#datasett-harMåleresultat">Datasett - har måleresultat</a></li>
+<li><a href="#datasett-harVersjon">Datasett - har versjon</a></li>
+<li><a href="#datasett-iSamsvarMed">Datasett - i samsvar</a></li>
+<li><a href="#datasett-kilde">Datasett - kilde</a></li>
+<li><a href="#datasett-krever">Datasett - krever</a></li>
+<li><a href="#datasett-kvalifisertKreditering">Datasett - kvalifisert kreditering</a></li>
+<li><a href="#datasett-kvalifisertRelasjon">Datasett - kvalifisert relasjon</a></li>
+<li><a href="#datasett-landingsside">Datasett - landingsside</a></li>
+<li><a href="#datasett-opphav">Datasett - opphav</a></li>
+<li><a href="#datasett-produsent">Datasett - produsent</a></li>
+<li><a href="#datasett-referererTil">Datasett - refererer til</a></li>
+<li><a href="#datasett-relatertRessurs">Datasett - relatert ressurs</a></li>
+<li><a href="#datasett-romligOppløsning">Datasett - romlig oppløsning</a></li>
+<li><a href="#datasett-språk">Datasett - språk</a></li>
+<li><a href="#datasett-tidsromsoppløsning">Datasett - tidsromsoppløsning</a></li>
+<li><a href="#datasett-type">Datasett - type</a></li>
+<li><a href="#datasett-utgivelsesdato">Datasett - utgivelsesdato</a></li>
+<li><a href="#datasett-versjon">Datasett - versjon</a></li>
+<li><a href="#datasett-versjonnote">Datasett - versjonsnote</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#beskrivelse-av-distribusjon">Beskrivelse av en distribusjon</a>
 <ul class="sectlevel2">
 <li><a href="#_beskrivelse">Beskrivelse</a></li>
 <li><a href="#_distribusjonstype">Distribusjonstype</a></li>
@@ -506,22 +521,33 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_tilgangslenke">Tilgangslenke</a></li>
 <li><a href="#_nedlastingslenke">Nedlastingslenke</a></li>
 <li><a href="#_i_samsvar_med">I samsvar med</a></li>
-<li><a href="#_dokumentasjon_2">Dokumentasjon</a></li>
-<li><a href="#_utgivelse_2">Utgivelse</a></li>
-<li><a href="#_sist_oppdatert_2">Sist oppdatert</a></li>
+<li><a href="#_dokumentasjon">Dokumentasjon</a></li>
+<li><a href="#_utgivelse">Utgivelse</a></li>
+<li><a href="#_sist_oppdatert">Sist oppdatert</a></li>
 <li><a href="#_lisens">Lisens</a></li>
 </ul>
 </li>
-<li><a href="#datatjeneste">Beskrivelse av en datatjeneste</a></li>
-<li><a href="#datakatalog">Beskrivelse av en datakatalog</a>
+<li><a href="#beskrivelse-av-datatjeneste">Beskrivelse av en datatjeneste</a></li>
+<li><a href="#beskrivelse-av-datakatalog">Beskrivelse av en datakatalog</a>
 <ul class="sectlevel2">
 <li><a href="#_hva_er_en_datakatalog">Hva er en datakatalog?</a></li>
 <li><a href="#_tittel">Tittel</a></li>
 <li><a href="#_beskrivelse_av_katalog">Beskrivelse av katalog</a></li>
 <li><a href="#_datasett">Datasett</a></li>
 <li><a href="#_eier_av_katalog">Eier av katalog</a></li>
-<li><a href="#_utgivelse_3">Utgivelse</a></li>
-<li><a href="#_sist_oppdatert_3">Sist oppdatert</a></li>
+<li><a href="#_utgivelse_2">Utgivelse</a></li>
+<li><a href="#_sist_oppdatert_2">Sist oppdatert</a></li>
+</ul>
+</li>
+<li><a href="#utvalgte-temaer">Utvalgte temaer</a>
+<ul class="sectlevel2">
+<li><a href="#sammenheng">Sammenheng mellom datasett, begrep, API og informasjonsmodeller</a></li>
+<li><a href="#beskrivelse-av-kvalitet">Beskrivelse av kvalitet</a></li>
+<li><a href="#beskrivelse-av-juss">Beskrivelse av juridiske rammer</a></li>
+<li><a href="#beskrivelse-av-tidsserie">Beskrivelse av tidsserie</a></li>
+<li><a href="#beskrivelse-av-åpneData">Beskrivelse av åpne data</a></li>
+<li><a href="#bruk-av-kontrollerte-vokabularer">Bruk av kontrollerte vokabularer</a></li>
+<li><a href="#om-identifikator">Om identifikator (<code>dct:identifer</code>)</a></li>
 </ul>
 </li>
 <li><a href="#_referanser">Referanser</a></li>
@@ -563,8 +589,9 @@ Dersom du finner feil eller mangler i dokumentet, ber vi om at dette meldes inn 
 </div>
 <div class="paragraph">
 <p><strong>Status</strong>: <span class="yellow-background">under utarbeidelse</span><br>
-<strong>Versjon</strong>: 2.0<br>
+<strong>Versjon</strong>: <span class="yellow-background">forberedelse til</span> 2.0<br>
 <strong>Publisert</strong>: <span class="yellow-background">under utarbeidelse</span><br>
+<strong>Oppdatert</strong>: 2021-04-30<br>
 <strong>Gjeldende versjon</strong>: <a href="https://data.norge.no/guide/veileder-beskrivelse-av-datasett/" class="bare">https://data.norge.no/guide/veileder-beskrivelse-av-datasett/</a><br>
 <strong>Forrige versjon</strong>: <a href="https://data.norge.no/guide/veileder-beskrivelse-av-datasett/v1" class="bare">https://data.norge.no/guide/veileder-beskrivelse-av-datasett/v1</a><br>
 <strong>Redaktørens utkast</strong>: <a href="https://informasjonsforvaltning.github.io/veileder-beskrivelse-av-datasett/" class="bare">https://informasjonsforvaltning.github.io/veileder-beskrivelse-av-datasett/</a></p>
@@ -577,13 +604,16 @@ Dersom du finner feil eller mangler i dokumentet, ber vi om at dette meldes inn 
 <div class="sect2">
 <h3 id="hensikt-og-avgrensing"><a class="anchor" href="#hensikt-og-avgrensing"></a>Hensikt og avgrensing</h3>
 <div class="paragraph">
-<p>Denne veilederen skal bidra til bedre beskrivelser av datasettene som forvaltes av en virksomhet. For offentlige virksomheter kan dette være en del av prosessene for å skape orden i eget hus, oppnå mer gjenbruk av data mellom offentlige virksomheter  og å gjøre mer åpne offentlige data tilgjengelig for næringsliv og sivilsamfunn. Se <a href="https://data.norge.no/guide/veileder-orden-i-eget-hus/">Veileder for orden i eget hus</a> for hvordan din virksomhet skaper orden i eget hus, bl.a. hvordan kartlegge hvilke data som skal beskrives.</p>
+<p>Denne veilederen skal bidra til bedre beskrivelser av datasett, datatjenester og datakataloger. For offentlige virksomheter kan dette være en del av prosessene for å skape orden i eget hus, oppnå mer gjenbruk av data mellom offentlige virksomheter  og å gjøre mer åpne offentlige data tilgjengelig for næringsliv og sivilsamfunn. Se <a href="https://data.norge.no/guide/veileder-orden-i-eget-hus/">Veileder for orden i eget hus</a> for hvordan din virksomhet skaper orden i eget hus, bl.a. hvordan kartlegge hvilke data som skal beskrives.</p>
 </div>
 <div class="paragraph">
-<p>Denne veilederen tar utgangspunktet i at din virksomhet har kartlagt hvilke data som skal beskrives. Veilederen skal gi en hjelp i å beskrive data i henhold til forvaltningsstandarden <a href="https://data.norge.no/specification/dcat-ap-no/">DCAT-AP-NO</a>, slik at beskrivelsene kan utnyttes godt av andre.</p>
+<p>Denne veilederen tar utgangspunktet i at din virksomhet har kartlagt hvilke data som skal beskrives. Veilederen skal gi en hjelp i å beskrive datasett og datatjenester i henhold til forvaltningsstandarden <a href="https://data.norge.no/specification/dcat-ap-no/">DCAT-AP-NO v.2</a>, slik at beskrivelsene kan utnyttes godt av andre.</p>
 </div>
 <div class="paragraph">
-<p>Det er ikke et mål for denne veilederen å beskrive alle felter i DCAT-AP-NO, heller ikke teknisk og normativt. For normative beskrivelser av alle feltene i DCAT-AP-NO, se <a href="https://data.norge.no/specification/dcat-ap-no/">DCAT-AP-NO</a> og <a href="https://github.com/Informasjonsforvaltning/dcat-ap-no/tree/develop/shacl">valideringsreglene (shacl)</a>.</p>
+<p>Det er ikke et mål for denne veilederen å beskrive alle felter i DCAT-AP-NO. Gi oss beskjed hvis det er felter som du savner veiledning av, fortrinnsvis meldes inn på <a href="https://github.com/Informasjonsforvaltning/veileder-beskrivelse-av-datasett/issues">Github Issues</a> og konkrete eksempler på data.</p>
+</div>
+<div class="paragraph">
+<p>Denne veilederen er ikke en teknisk og normativ spesifikasjon. For normative beskrivelser av alle feltene i DCAT-AP-NO, se <a href="https://data.norge.no/specification/dcat-ap-no/">DCAT-AP-NO</a> og <a href="https://github.com/Informasjonsforvaltning/dcat-ap-no/tree/develop/shacl">valideringsreglene (shacl)</a>. Ikke alle eksempler i denne veilederen er komplette, heller ikke med tanke på obligatoriske felter.</p>
 </div>
 <div class="paragraph">
 <p>Denne veilederen er ikke en direkte veiledning for bruk av <a href="https://data.norge.no/publishing">registreringsverktøyet i Fellesdatakatalogen</a>.</p>
@@ -592,44 +622,69 @@ Dersom du finner feil eller mangler i dokumentet, ber vi om at dette meldes inn 
 <div class="sect2">
 <h3 id="målgruppe"><a class="anchor" href="#målgruppe"></a>Målgruppe</h3>
 <div class="paragraph">
-<p>Målgruppen for denne veilederen er primært deg som skal beskrive datasett, datatjenester og datakataloger i din virksomhet i henhold til <a href="https://data.norge.no/specification/dcat-ap-no/">DCAT-AP-NO</a>.</p>
+<p>Målgruppen for denne veilederen er primært deg som skal beskrive datasett, datatjenester og datakataloger i din virksomhet i henhold til <a href="https://data.norge.no/specification/dcat-ap-no/">DCAT-AP-NO v.2</a>.</p>
 </div>
 <div class="paragraph">
-<p>Sekundært kan også veilederen brukes av deg som skal utvikle/tilpasse verktøystøtte i virksomhetene for beskrivelser av datasett/datatjenester/datakataloger og/eller eksponering av slike beskrivelser i henhold til <a href="https://data.norge.no/specification/dcat-ap-no/">DCAT-AP-NO</a>.</p>
+<p>Sekundært kan også veilederen brukes av deg som skal utvikle/tilpasse verktøystøtte i virksomhetene for beskrivelser av datasett/datatjenester/datakataloger og/eller eksponering av slike beskrivelser i henhold til <a href="https://data.norge.no/specification/dcat-ap-no/">DCAT-AP-NO v.2</a>.</p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="struktur"><a class="anchor" href="#struktur"></a>Struktur</h3>
 <div class="paragraph">
-<p><span class="red yellow-background"><em>foreløpig tekst</em>:</span></p>
+<p><span class="red yellow-background"><em>foreløpig tekst/struktur</em>:</span></p>
 </div>
 <div class="paragraph">
-<p>Denne veilederen beskriver hvordan du beskriver:</p>
+<p>Denne veilederen beskriver hvordan du beskriver følgende i henhold til <a href="https://data.norge.no/specification/dcat-ap-no/">DCAT-AP-NO v.2</a>:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>et <a href="#datasett">datasett</a></p>
+<p>et datasett (se under <a href="#beskrivelse-av-datasett">Beskrivelse av datasett</a>)</p>
 </li>
 <li>
-<p>en <a href="#distribusjon">distribusjon</a></p>
+<p>en distribusjon (se under <a href="#beskrivelse-av-distribusjon">Beskrivelse av distribusjon</a>)</p>
 </li>
 <li>
-<p>en <a href="#datatjeneste">datatjeneste</a></p>
+<p>en datatjeneste (se under <a href="#beskrivelse-av-datatjeneste">Beskrivelse av datatjeneste</a>)</p>
 </li>
 <li>
-<p>en <a href="#datakatalog">datakatalog</a></p>
-</li>
-<li>
-<p><span class="red yellow-background"><em>muligens et kapittel for egenskaper som inngår i flere klasser?</em></span></p>
+<p>en datakatalog (se under <a href="#beskrivelse-av-datakatalog">Beskrivelse av datakatalog</a>)</p>
 </li>
 </ul>
+</div>
+<div class="paragraph">
+<p>Veilederen inneholder også veiledning ang. noen <a href="#utvalgte-temaer">utvalgte temaer</a> som går på tvers av ovennevnte:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="#sammenheng">Sammenheng mellom datasett, begrep, API og informasjonsmodell</a></p>
+</li>
+<li>
+<p><a href="#beskrivelse-av-juss">Beskrivelse av juridiske rammer</a></p>
+</li>
+<li>
+<p><a href="#beskrivelse-av-kvalitet">Beskrivelse av kvalitet</a></p>
+</li>
+<li>
+<p><a href="#beskrivelse-av-tidsserie">Beskrivelse av tidsserie</a></p>
+</li>
+<li>
+<p><a href="#beskrivelse-av-åpneData">Beskrivelse av åpne data</a></p>
+</li>
+<li>
+<p><a href="#bruk-av-kontrollerte-vokabularer">Bruk av kontrollerte vokabularer</a></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>For bl.a. å unngå eventuell uoverensstemmelse mellom norske navn brukt i denne veilederen og i DCAT-AP-NO, er det fra denne veilederen lenket til DCAT-AP-NO, i hakeparentes (f.eks. [<a href="https://data.norge.no/specification/dcat-ap-no/#Datasett-beskrivelse">Datasett: beskrivelse</a>]). Det er ikke en forutsetning at du må kunne DCAT-AP-NO for å kunne bruke denne veilederen.</p>
 </div>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="datasett"><a class="anchor" href="#datasett"></a>Beskrivelse av et datasett</h2>
+<h2 id="beskrivelse-av-datasett"><a class="anchor" href="#beskrivelse-av-datasett"></a>Beskrivelse av datasett</h2>
 <div class="sectionbody">
 <div class="admonitionblock warning">
 <table>
@@ -638,61 +693,107 @@ Dersom du finner feil eller mangler i dokumentet, ber vi om at dette meldes inn 
 <i class="fa icon-warning" title="Advarsel"></i>
 </td>
 <td class="content">
-<span class="red yellow-background"><em>NB! hele kapittelet er under oppdatering</em></span>
+<span class="red yellow-background"><em>NB! Hele kapittelet er under ferdigstilling.</em></span><br>
+<span class="red yellow-background">Innholdet i kapittelet er forholdsvis komplett.</span>
 </td>
 </tr>
 </table>
 </div>
-<div class="sect2">
-<h3 id="_hvordan_beskrive_et_datasett"><a class="anchor" href="#_hvordan_beskrive_et_datasett"></a>Hvordan beskrive et datasett?</h3>
 <div class="paragraph">
-<p>Denne veilederen beskriver videre hvordan datasett beskrives i henhold til standarden <a href="https://doc.difi.no/dcat-ap-no/">DCAT-AP-NO v.1.1</a>. For å ha med all nødvendig informasjon, er det en del felter som må fylles ut. I det følgende går vi gjennom de enkelte feltene og hvordan disse skal fylles ut.</p>
+<p>Se <a href="https://data.norge.no/guide/veileder-orden-i-eget-hus/">Veileder for orden i eget hus</a> for hvordan din virksomhet kartlegger hvilke datasett som skal beskrives. Denne veilederen beskriver videre hvordan datasett beskrives i henhold til forvaltningsstandarden <a href="https://data.norge.no/specification/dcat-ap-no/">DCAT-AP-NO v.2</a>.</p>
 </div>
 <div class="paragraph">
-<p>Eksempel på en beskrivelse av et datasett:</p>
+<p>For at din beskrivelse av et datasett skal kunne nyttegjøres av andre, er det noen felter som skal/bør/kan fylles ut. I det følgende går vi gjennom de enkelte feltene og hvordan disse skal fylles ut.</p>
+</div>
+<div class="sect2">
+<h3 id="eksempel-datasettbeskrivelse"><a class="anchor" href="#eksempel-datasettbeskrivelse"></a>Eksempel på en datasettbeskrivelse</h3>
+<div class="paragraph">
+<p>Under er et eksempel på en datasettbeskrivelse, med dummydata, hvor felter med * foran er obligatoriske:</p>
 </div>
 <div class="sidebarblock">
 <div class="content">
 <div class="paragraph">
-<p><strong>Tittel</strong>: Partiregisteret<br>
-<strong>Datasetteier</strong>: Brønnøysundregistrene<br>
-<strong>Beskrivelse</strong>: Partiregisteret er et register over politiske parti i Norge. Hovedformålet med registeret er å gi parti anledning til å skaffe seg enerett på partinavn.<br>
-<strong>Sentrale opplysninger i datasettet</strong>: Organisasjonsnummer, Parti, Partinavn, Utøvende organ, Kontaktperson<br>
-<strong>Tema</strong>: Offentlig forvaltning<br>
-<strong>Geografisk omfang</strong>: Norge<br>
-<strong>Oppdateringsfrekvens</strong>: Daglig<br>
-<strong>Tilgangsrettigheter</strong>: Offentlig<br>
-<strong>Språk</strong>: Norsk<br>
-<strong>Kontaktpunkt</strong>: Brønnøysundregistrene, <a href="mailto:partiregisteret@brreg.no">partiregisteret@brreg.no</a><br>
-<strong>Relatert til</strong>: Enhetsregisteret<br>
-<strong>Distribusjon</strong>:<br></p>
+<p>*Tittel [<a href="https://data.norge.no/specification/dcat-ap-no/#Datasett-tittel">Datasett: tittel</a>]: Eksempeldatasett<br>
+*Utgiver [<a href="https://data.norge.no/specification/dcat-ap-no/#Datasett-utgiver">Datasett: utgiver</a>]: Direktoratet for eksempler<br>
+*Beskrivelse [<a href="https://data.norge.no/specification/dcat-ap-no/#Datasett-beskrivelse">Datasett: beskrivelse</a>]: Datasett med eksempeldata.
+Formålet med dette datasettet er å illustrere hvordan et datasett skal/bør/kan beskrives iht. DCAT-AP-NO.<br>
+*Tema [<a href="https://data.norge.no/specification/dcat-ap-no/#Datasett-tema">Datasett: tema</a>]: Offentlig forvaltning<br>
+Begrep [<a href="https://data.norge.no/specification/dcat-ap-no/#Datasett-begrep">Datasett: begrep</a>]: <u>datasett</u>, <u>eksempeldata</u> (med lenker til der begrepene er beskrevet)<br>
+Dekningsområde [<a href="https://data.norge.no/specification/dcat-ap-no/#Datasett-dekningsomr%C3%A5de">Datasett: dekningsområde</a>]: Norge<br>
+Oppdateringsfrekvens [<a href="https://data.norge.no/specification/dcat-ap-no/#Datasett-frekvens">Datasett: frekvens</a>]: Daglig<br>
+Tilgangsnivå [<a href="https://data.norge.no/specification/dcat-ap-no/#Datasett-tilgangsniv%C3%A5">Datasett: tilgangsnivå</a>] : Offentlig<br>
+Språk [<a href="https://data.norge.no/specification/dcat-ap-no/#Datasett-spr%C3%A5k">Datasett: språk</a>]: Norsk bokmål<br>
+Kontaktpunkt [<a href="https://data.norge.no/specification/dcat-ap-no/#Datasett-kontaktpunkt">Datasett: kontaktpunkt</a>]: Direktoratet for eksempler, <a href="mailto:eks@direks.eks">eks@direks.eks</a><br>
+Distribusjon [<a href="https://data.norge.no/specification/dcat-ap-no/#Datasett-datasettdistribusjon">Datasett: datasettdistribusjon</a>]: <u>CSV</u>  (med lenke til csv-filen som inneholder dataene)</p>
 </div>
 </div>
 </div>
 <div class="paragraph">
-<p>Se felles datakatalog for flere eksempler (<a href="https://fellesdatakatalog.brreg.no/">fellesdatakatalog.brreg.no</a>).</p>
+<p>Se ellers <a href="https://data.norge.no/">Felles datakatalog</a> for konkrete eksempler på beskrivelser av virkelige datasett.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_eier_av_datasettet"><a class="anchor" href="#_eier_av_datasettet"></a>Eier av datasettet</h3>
+<h3 id="datasett-obligatoriske-felter"><a class="anchor" href="#datasett-obligatoriske-felter"></a>Obligatoriske felter i en datasettbeskrivelse</h3>
 <div class="paragraph">
-<div class="title">Sammendrag</div>
-<p>Skal peke på en Enhet i Enhetsregisteret.</p>
-</div>
-<div class="paragraph">
-<div class="title">Anbefalinger</div>
-<p>Identifisering av den enheten som er ansvarlig for at datasettet <em>er</em> tilgjengelig, ikke den som faktisk gjør datasettet tilgjengelig. Eier er et obligatorisk felt.</p>
+<p>Som et minimum skal følgende tas med i en datasettbeskrivelse:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>Skal peke på en Enhet (juridisk person, organisasjonsledd, underenhet)</p>
+<p>Datasett - beskrivelse: beskrivelse av datasettet.</p>
 </li>
 <li>
-<p>Det offisielle navnet på virksomheten vil hentes fra Enhetsregisteret, men kortform (f.eks. Difi) kan legges inn av brukeren</p>
+<p>Datasett - identifikator: identifikator til datasettet.</p>
 </li>
 <li>
-<p>Eieren av datasettet forvalter sammensetning av dataene, altså datasettet, og ikke nødvendigvis selve dataene.</p>
+<p>Datasett - tema: tema som datasettet kan sorteres under.</p>
+</li>
+<li>
+<p>Datasett - tittel: navnet på datasettet.</p>
+</li>
+<li>
+<p>Datasett - utgiver: aktør (organisasjon) ansvarlig for å gjøre datasettet tilgjengelig.</p>
+</li>
+</ul>
+</div>
+<div class="sect3">
+<h4 id="datasett-beskrivelse"><a class="anchor" href="#datasett-beskrivelse"></a>Datasett - beskrivelse</h4>
+<div class="paragraph">
+<div class="title">Sammendrag</div>
+<p>Beskrivelsen [<a href="https://data.norge.no/specification/dcat-ap-no/#Datasett-beskrivelse">Datasett: beskrivelse</a>] skal være kortfattet. Hensikten/formålet med datasettet bør komme fram. Hvilke opplysninger som utgjør kjernen i datasettet bør angis. Bruk folkelige ord. Beskriv avgrensninger, hva datasettet ikke inneholder. Begrens bruk av lenker og markup.</p>
+</div>
+<div class="paragraph">
+<div class="title">Anbefalinger</div>
+<p>En kort og presis beskrivelse av datasettet skal gjøre det lett for andre å se hva det inneholder.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Beskrivelsen skal være kortfattet slik at lister over datasett forståes ved å lese de første linjene.</p>
+</li>
+<li>
+<p>Hensikten med datasettet bør komme fram (f.eks. “Løsøreregisteret inneholder tinglyste flyttbare eiendeler”).</p>
+</li>
+<li>
+<p>Beskriv hva datasettet inneholder. Hvilke opplysninger som utgjør kjernen i datasettet bør angis.</p>
+</li>
+<li>
+<p>Feltinnhold skal ikke listes, men listes i <a href="#datasett-emneord">Datasett - emneord</a> eller <a href="#datasett-begrep">Datasett - begrep</a>.</p>
+</li>
+<li>
+<p>Beskrivelsen er ikke en gjentakelse av <a href="#datasett-tittel">Datasett - tittel</a>.</p>
+</li>
+<li>
+<p>Bruk folkelige ord (f.eks. ”Løsøre” må forklares. F.eks. “flyttbare eiendeler (Løsøre)”, ev. bare folkelige uttrykk mens faguttrykket tas med som <a href="#datasett-emneord">Datasett - emneord</a> slik at det gir treff i søk).</p>
+</li>
+<li>
+<p>Beskriv avgrensninger, hva datasettet ikke inneholder, dersom dette kan misforstås ut fra tittelen.</p>
+</li>
+<li>
+<p>Begrens bruk av lenker og markup (formatering) i teksten. Skal man angi språk må teksten formelt sett være fri for lenker og formatering (HTML).</p>
+</li>
+<li>
+<p>Der målform er kjent skal "nb" eller "nn" brukes, "no" brukes ellers.</p>
 </li>
 </ul>
 </div>
@@ -700,33 +801,52 @@ Dersom du finner feil eller mangler i dokumentet, ber vi om at dette meldes inn 
 <div class="title">Eksempler</div>
 <ul class="checklist">
 <li>
-<p><i class="fa fa-check-square-o"></i> Arbeids- og velferdsdirektoratet</p>
+<p><i class="fa fa-square-o"></i> <span class="line-through">“Løsøreregisteret inneholder løsøre med unntak av skip og luftfartøy”</span>
+Et lite folkelig ord (løsøre) er brukt. Avgrensningene her er greie.</p>
+</li>
+<li>
+<p><i class="fa fa-square-o"></i> <span class="line-through">“Løsøreregisteret inneholder tinglyste flyttbare eiendeler som biler og båter”</span>
+Hva som inngår i datasettet er godt beskrevet, men unntakene her er utelatt.</p>
+</li>
+<li>
+<p><i class="fa fa-check-square-o"></i> “Løsøreregisteret inneholder tinglyste flyttbare eiendeler med unntak av skip og luftfartøy”</p>
 </li>
 </ul>
 </div>
 <div class="listingblock">
+<div class="title">Eksempel i RDF Turtle</div>
 <div class="content">
-<pre>&lt;&gt;  dct:publisher &lt;http://data.brreg.no/enhetsregisteret/enhet/889640782&gt; . #NAV</pre>
+<pre>&lt;etDatasett&gt; a dcat:Dataset ;
+  dct:description "Løsøreregisteret inneholder tinglyste flyttbare eiendeler med unntak av skip og luftfartøy"@nb .</pre>
 </div>
 </div>
 </div>
-<div class="sect2">
-<h3 id="_skaper_av_datasettet"><a class="anchor" href="#_skaper_av_datasettet"></a>Skaper av datasettet</h3>
+<div class="sect3">
+<h4 id="datasett-identifikator"><a class="anchor" href="#datasett-identifikator"></a>Datasett - identifikator</h4>
+<div class="paragraph">
+<p>Identifikatoren [<a href="https://data.norge.no/specification/dcat-ap-no/#Datasett-identifikator">Datasett: identifikator</a>] er som regel systemgenerert av verktøyet som brukes til å beskrive et datasett, slik at du som vanlig bruker ikke trenger å fylle ut dette feltet manuelt.</p>
+</div>
+<div class="paragraph">
+<p>For det som skal utvikle/tilpasse verktøystøtte, se under <a href="#om-identifikator">Om identifikator (dct:identifier)</a>.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="datasett-tema"><a class="anchor" href="#datasett-tema"></a>Datasett - tema</h4>
 <div class="paragraph">
 <div class="title">Sammendrag</div>
-<p>Brukes unntaksvis der det er datasett som er satt sammen av data som andre er ansvarlige for</p>
+<p>Minst ett tema [<a href="https://data.norge.no/specification/dcat-ap-no/#Datasett-tema">Datasett: tema</a>] skal velges fra <a href="https://op.europa.eu/s/oZjL">den kontrollerte listen av EU-temaer</a>.</p>
 </div>
 <div class="paragraph">
 <div class="title">Anbefalinger</div>
-<p>Egenskapen angir produsent(er) av datasettet der dette er en annen enn dataeier</p>
+<p>For å kunne sortere datasettet inn under gitte kategorier er det behov for tema</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>Brukes unntaksvis der det er datasett som er satt sammen av data som andre er ansvarlige for</p>
+<p>Ett eller flere temaer skal velges fra <a href="https://op.europa.eu/s/oZjL">den kontrollerte listen av EU-temaer</a>.</p>
 </li>
 <li>
-<p>Skaper vil ikke angis med organisasjonsnummer siden det typisk vil være en sammensatt gruppe.</p>
+<p>Ett eller flere temaer bør velges fra <a href="https://psi.norge.no/los/struktur.html">den norske LOS</a>.</p>
 </li>
 </ul>
 </div>
@@ -734,26 +854,31 @@ Dersom du finner feil eller mangler i dokumentet, ber vi om at dette meldes inn 
 <div class="title">Eksempler</div>
 <ul class="checklist">
 <li>
-<p><i class="fa fa-check-square-o"></i> “Kommunene”</p>
+<p><i class="fa fa-check-square-o"></i> <strong>Helse</strong> (<code>HEAL</code> fra EU-listen)</p>
+</li>
+<li>
+<p><i class="fa fa-check-square-o"></i> <strong>Helsestasjon</strong> (<code>helsestasjon</code> fra LOS)</p>
 </li>
 </ul>
 </div>
 <div class="listingblock">
+<div class="title">Eksempel i RDF Turtle</div>
 <div class="content">
-<pre>&lt;&gt;  &lt;http://data.brreg.no/datakatalog/datasett/12&gt;
-    dct:creator “Kommunene” .</pre>
+<pre>&lt;etDatasett&gt; a dcat:Dataset ;
+  dcat:theme &lt;http://publications.europa.eu/resource/authority/data-theme/HEAL&gt; , # helse
+    &lt;https://psi.norge.no/los/ord/helsestasjon&gt; . # helsestasjon</pre>
 </div>
 </div>
 </div>
-<div class="sect2">
-<h3 id="_tittel_på_datasett"><a class="anchor" href="#_tittel_på_datasett"></a>Tittel på datasett</h3>
+<div class="sect3">
+<h4 id="datasett-tittel"><a class="anchor" href="#datasett-tittel"></a>Datasett - tittel</h4>
 <div class="paragraph">
 <div class="title">Sammendrag</div>
-<p>Tittelen skal være kortfattet, kunne stå alene og gi mening. Organisasjonens navn trenger ikke å være med. Tittelen skal gjenspeile avgrensninger dersom datasettet er avgrenset i populasjonen. Forkortelser skal skrives helt ut.</p>
+<p>Tittelen [<a href="https://data.norge.no/specification/dcat-ap-no/#Datasett-tittel">Datasett: tittel</a>] skal være kortfattet, kunne stå alene og gi mening. Organisasjonens navn trenger ikke å være med. Tittelen skal gjenspeile avgrensninger dersom datasettet er avgrenset i populasjonen. Forkortelser skal skrives helt ut.</p>
 </div>
 <div class="paragraph">
 <div class="title">Anbefalinger</div>
-<p>Datasettet har en tittel slik at det bl.a. kan vises i lister. Tittel er et obligatorisk felt.</p>
+<p>Datasettet har en tittel slik at det bl.a. kan vises i lister.</p>
 </div>
 <div class="ulist">
 <ul>
@@ -767,7 +892,7 @@ Dersom du finner feil eller mangler i dokumentet, ber vi om at dette meldes inn 
 <p>Tittelen skal gjenspeile avgrensninger dersom datasettet er avgrenset i populasjonen -  populasjonen er avgrenset av geografi eller formål, f.eks. “&#8230;&#8203; med støtte i Lånekassen”, “&#8230;&#8203; i Oslo”, “ Folketellingen av 1910”. Der populasjonen ikke er avgrenset angis IKKE dette (f.eks. valgkrets)</p>
 </li>
 <li>
-<p>Forkortelser skal skrives helt ut (DTM10 erstattes av “Digital Terrengmodell 10m oppløsning (DTM10)” . Bruk eventuelt feltet for emneord til forkortelser. Målgruppen er personer som ønsker å finne relevante datasett raskt, unngå derfor interne navn eller forkortelser i tittel. I det offentlige opererer man ofte med flere titler eller navn på ting. Et datasett kan ha et offisielt navn, et kortnavn og en forkortelse. For eksempel: Datasettet “Administrative enheter i Norge” har ABAS som forkortelse. Det er sjelden man bruker den fulle tittelen, så for å gjøre et datasett mest mulig søkbart er det behov for at man kan registrere kortnavn, forkortelser og/eller alternative titler.</p>
+<p>Forkortelser skal skrives helt ut (DTM10 erstattes av “Digital Terrengmodell 10m oppløsning (DTM10)” . Bruk eventuelt <a href="#datasett-emneord">Datasett - emneord</a> til forkortelser. Målgruppen er personer som ønsker å finne relevante datasett raskt, unngå derfor interne navn eller forkortelser i tittel. I det offentlige opererer man ofte med flere titler eller navn på ting. Et datasett kan ha et offisielt navn, et kortnavn og en forkortelse. For eksempel: Datasettet “Administrative enheter i Norge” har ABAS som forkortelse. Det er sjelden man bruker den fulle tittelen, så for å gjøre et datasett mest mulig søkbart er det behov for at man kan registrere kortnavn, forkortelser og/eller alternative titler.</p>
 </li>
 <li>
 <p>Lov- eller forskriftshjemlede navn bør brukes i tittel (f.eks. Jegerregisteret)</p>
@@ -791,27 +916,34 @@ Dersom du finner feil eller mangler i dokumentet, ber vi om at dette meldes inn 
 </li>
 </ul>
 </div>
+<div class="listingblock">
+<div class="title">Eksempel i RDF Turtle</div>
+<div class="content">
+<pre>&lt;etDatasett&gt; a dcat:Dataset ;
+  dct:title "Bomstasjoner i Norge"@nb .</pre>
 </div>
-<div class="sect2">
-<h3 id="_formål"><a class="anchor" href="#_formål"></a>Formål</h3>
+</div>
+</div>
+<div class="sect3">
+<h4 id="datasett-utgiver"><a class="anchor" href="#datasett-utgiver"></a>Datasett - utgiver</h4>
 <div class="paragraph">
 <div class="title">Sammendrag</div>
-<p>Beskrivelsen skal være kortfattet og ikke gjentas i Beskrivelsesfeltet.</p>
+<p>Utgiver [<a href="https://data.norge.no/specification/dcat-ap-no/#Datasett-utgiver">Datasett: utgiver</a>] skal peke på en virksomhet registrert i Enhetsregisteret.</p>
 </div>
 <div class="paragraph">
 <div class="title">Anbefalinger</div>
-<p>En setnings-beskrivelse av formålet til datasettet.</p>
+<p>Identifisering av den aktøren som er ansvarlig for at datasettet <em>er</em> tilgjengelig, ikke den som faktisk gjør datasettet tilgjengelig.</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>Det er formålet for opprettelsen eller at datasettet i det hele tatt eksisterer som skal beskrives her</p>
+<p>Skal peke på en virksomhet (juridisk person, organisasjonsledd, underenhet)</p>
 </li>
 <li>
-<p>Beskrivelsen skal være kortfattet og ikke gjentas i Beskrivelsesfeltet.</p>
+<p>Det offisielle navnet på virksomheten vil hentes fra Enhetsregisteret, men kortform (f.eks. Digdir) kan legges inn av brukeren</p>
 </li>
 <li>
-<p>Dersom datasettet inneholder personopplysninger skal dette feltet brukes for å gjengi det formålet i henhold til personopplysningsloven som ligger til grunn for datasettet.</p>
+<p>Utgiveren av datasettet forvalter sammensetning av dataene, altså datasettet, og ikke nødvendigvis selve dataene.</p>
 </li>
 </ul>
 </div>
@@ -819,57 +951,207 @@ Dersom du finner feil eller mangler i dokumentet, ber vi om at dette meldes inn 
 <div class="title">Eksempler</div>
 <ul class="checklist">
 <li>
-<p><i class="fa fa-check-square-o"></i> Løsøreregisteret er etablert for å tinglyse heftelser (pant) i løsøre, uten tilknytning til fast eiendom</p>
-</li>
-<li>
-<p><i class="fa fa-check-square-o"></i> Kontakt- og reservasjonsregisteret er etablert for at det offentlige skal kunne kommunisere elektronisk med innbyggerne, og benyttes i forbindelse med saksbehandling og utføring av forvaltningsoppgaver for øvrig, og skal benyttes til varsling etter eforvaltningsforskriftens § 8 tredje ledd. Se eforvaltningsforskriften §§ 29-35</p>
+<p><i class="fa fa-check-square-o"></i> Arbeids- og velferdsetaten</p>
 </li>
 </ul>
 </div>
 <div class="listingblock">
+<div class="title">Eksempel i RDF Turtle</div>
 <div class="content">
-<pre>&lt;&gt;  dcatno:objective “Løsøreregisteret er etablert for å tinglyse heftelser (pant) i løsøre, uten tilknytning til fast eiendom”@no .</pre>
+<pre>&lt;etDatasett&gt; a dcat:Dataset ;
+  dct:publisher &lt;https://organization-catalogue.fellesdatakatalog.digdir.no/organizations/889640782&gt; . #NAV</pre>
+</div>
 </div>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_beskrivelse_av_datasett"><a class="anchor" href="#_beskrivelse_av_datasett"></a>Beskrivelse av datasett</h3>
+<h3 id="datasett-anbefalte-felter"><a class="anchor" href="#datasett-anbefalte-felter"></a>Anbefalte felter i en datasettbeskrivelse</h3>
 <div class="paragraph">
-<div class="title">Sammendrag</div>
-<p>Beskrivelsen skal være kortfattet. Hensikten med datasettet bør komme fram. Hvilke opplysninger som utgjør kjernen i datasettet bør angis. Bruk folkelige ord. Beskriv avgrensninger, hva datasettet ikke inneholder. Begrens lenker og markup.</p>
-</div>
-<div class="paragraph">
-<div class="title">Anbefalinger</div>
-<p>En kort og presis beskrivelse av datasettet skal gjøre det lett for andre å se hva det inneholder. Beskrivelse er et obligatorisk felt.</p>
+<p>Følgende opplysninger bør du ta med i en datasettbeskrivelse hvis de finnes:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>Beskrivelsen skal være kortfattet slik at lister over datasett forståes ved å lese de første linjene.</p>
+<p>Datasett - begrep: begrep som er viktig for å forstå og tolke datasettet.</p>
 </li>
 <li>
-<p>Hensikten med datasettet bør komme fram (f.eks. “Løsøreregisteret inneholder tinglyste flyttbare eiendeler”).</p>
+<p>Datasett - ble generert ved: aktivitet ved hvilken datasettet ble generert.</p>
 </li>
 <li>
-<p>Beskriv hva datasettet inneholder. Hvilke opplysninger som utgjør kjernen i datasettet bør angis.</p>
+<p>Datasett - datasettdistribusjon: tilgjengelig distribusjon av datasettet.</p>
 </li>
 <li>
-<p>Feltinnhold skal ikke listes, men listes i emneord eller begreper.</p>
+<p>Datasett - dekningsområde: geografisk område dekket av datasettet.</p>
 </li>
 <li>
-<p>Beskrivelsen er ikke en gjentakelse av tittel</p>
+<p>Datasett - emneord: emneord (søkeord) dekket av datasettet.</p>
 </li>
 <li>
-<p>Bruk folkelige ord (f.eks.”Løsøre” må forklares. F.eks. “flyttbare eiendeler (Løsøre)”, ev. bare folkelige uttrykk mens faguttrykket tas med som stikkord slik at det gir treff i søk)</p>
+<p>Datasett - følger: regelverk som datasettet følger.</p>
 </li>
 <li>
-<p>Beskriv avgrensninger, hva datasettet ikke inneholder, dersom dette kan misforstås ut fra tittelen.</p>
+<p>Datasett - kontaktpunkt: kontaktpunkt ved spørsmål om datasettet.</p>
 </li>
 <li>
-<p>Begrens lenker og markup (formatering) i teksten. Skal man angi språk må teksten formelt sett være fri for lenker og formatering (HTML).</p>
+<p>Datasett - tidsrom: tidsrom dekket av datasettet.</p>
 </li>
 <li>
-<p>Der målform er kjent skal "nb" eller "nn" brukes, "no" brukes ellers.</p>
+<p>Datasett - tilgangsnivå: i hvilken grad datasettet kan bli gjort tilgjengelig.</p>
+</li>
+</ul>
+</div>
+<div class="sect3">
+<h4 id="datasett-begrep"><a class="anchor" href="#datasett-begrep"></a>Datasett - begrep</h4>
+<div class="paragraph">
+<div class="title">Sammendrag</div>
+<p>Innholdstyper i datasettet beskrives med referanse til begreper [<a href="https://data.norge.no/specification/dcat-ap-no/#Datasett-begrep">Datasett: begrep</a>] i begrepskatalog.</p>
+</div>
+<div class="paragraph">
+<div class="title">Anbefalinger</div>
+<p>For å beskrive viktigste typer innhold i datasettet refereres det til begreper i begrepskataloger som også gir mulighet til å utnytte synonymer.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>innholdstyper i datasettet beskrives med referanse til begreper i begrepskatalog</p>
+</li>
+<li>
+<p>dersom det ikke kan benyttes en begrepskatalog brukes <a href="#datasett-emneord">Datasett - emneord</a>.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Et datasett skal lenke til de aktuelle og sentrale begrepene i en begrepskatalog. Ved å henvise til gjennomarbeidede definisjoner som virksomheten selv er ansvarlig for å vedlikeholde, sikrer vi at det er tydelig hvordan et begrep brukt i datasettet skal forstås og at denne forståelsen til en hver tid er riktig og oppdatert. Vi ønsker at alle datasettene skal ha lenker til de aktuelle begrepene i virksomhetens katalog, slik at det er tydelig definert hva begrepene innebærer</p>
+</div>
+<div class="paragraph">
+<p>I <a href="https://www.digdir.no/digitalisering-og-samordning/referansekatalogen-it-standardar/1480">Referansekatalogen</a> finner du relevante <a href="https://www.digdir.no/digitalisering-og-samordning/omgrepsanalyse-og-definisjonsarbeid/1483">forvaltningsstandarder for bruksområdet "Begrepsanalyse og definisjonsarbeid"</a>.</p>
+</div>
+<div class="ulist checklist">
+<div class="title">Eksempler</div>
+<ul class="checklist">
+<li>
+<p><i class="fa fa-check-square-o"></i>  <span class="underline">Løsøre</span>, <span class="underline">Pant</span>, <span class="underline">Tinglysing</span></p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="title">Eksempel i RDF Turtle</div>
+<div class="content">
+<pre>&lt;etDatasett&gt; a dcat:Dataset ;
+  dct:subject &lt;http://brreg.no/begrepskatalog/begep/løsøre&gt;,
+              &lt;http://brreg.no/begrepskatalog/begep/pant&gt;,
+              &lt;http://brreg.no/begrepskatalog/begep/tingslysning&gt; .</pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="datasett-bleGenerertVed"><a class="anchor" href="#datasett-bleGenerertVed"></a>Datasett - ble generert ved</h4>
+<div class="paragraph">
+<div class="title">Sammendag</div>
+<p>For å angi hvilken aktivitet som genererte datasettet [<a href="https://data.norge.no/specification/dcat-ap-no/#Datasett-bleGenerertVed">Datasett: ble generert ved</a>].</p>
+</div>
+<div class="paragraph">
+<div class="title">Anbefalinger</div>
+<p>Det anbefales å bruke en av følgende verdier:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>ved vedtak</code>: datasettet ble generert som et resultat / ifm. et vedtak. Eksempel: skatteoppgjør.</p>
+</li>
+<li>
+<p><code>ved innhenting fra tredjepart</code>: datasettet ble hentet inn fra en tredjepart. Eksempel: preutfylt skattemelding.</p>
+</li>
+<li>
+<p><code>ved innhenting fra brukeren</code>: datasettet ble generert på grunnlag av data fra brukeren. Eksempel: innlevert skattemelding.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>For deg som skal utvikle/tilpasse verktøystøtte: Følgende predefinerte instanser av <code>prov:Activity</code> skal brukes:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>ved vedtak: <code>provno:administrativeDecision</code></p>
+</li>
+<li>
+<p>ved innhenting fra tredjepart: <code>provno:collectingFromThirdparty</code></p>
+</li>
+<li>
+<p>ved innhenting fra brukeren: <code>provno:collectingFromUser</code></p>
+</li>
+</ul>
+</div>
+<div class="ulist checklist">
+<div class="title">Eksempler:</div>
+<ul class="checklist">
+<li>
+<p><i class="fa fa-check-square-o"></i> ved vedtak</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="title">Eksempel i RDF Turtle</div>
+<div class="content">
+<pre>@prefix provno: &lt;https://data.norge.no/vocabulary/provno#&gt; .
+
+&lt;A&gt; a dcat:Dataset ;
+   prov:wasGeneratedBy provno:administrativeDecision .</pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="datasett-datasettdistribusjon"><a class="anchor" href="#datasett-datasettdistribusjon"></a>Datasett - datasettdistribusjon</h4>
+<div class="paragraph">
+<div class="title">Sammendrag</div>
+<p>For å angi hvor man kan få tilgang til datasettet skal det angis ulike distribusjoner [<a href="https://data.norge.no/specification/dcat-ap-no/#Datasett-datasettdistribusjon">Datasett: datasettdistribusjon</a>].</p>
+</div>
+<div class="paragraph">
+<div class="title">Anbefalinger</div>
+<p>For å angi hvor man kan få tilgang til datasettet skal det angis ulike distribusjoner.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Det angis i utgangspunktet en distribusjon per fil, feed eller API</p>
+</li>
+<li>
+<p>Dersom det er ett API som leverer flere filformater angis det som en distribusjon</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="title">Eksempel i RDF Turtle</div>
+<div class="content">
+<pre>&lt;etDatasett&gt; a dcat:Dataset ;
+    dcat:distribution &lt;enDistribusjon&gt; . # refererer til en beskrivelse av en distribusjon</pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="datasett-dekningsområde"><a class="anchor" href="#datasett-dekningsområde"></a>Datasett - dekningsområde</h4>
+<div class="paragraph">
+<div class="title">Sammendrag</div>
+<p>Angi geografisk avgrensning [<a href="https://data.norge.no/specification/dcat-ap-no/#Datasett-dekningsomr%C3%A5de">Datasett: dekningsområde</a>] dersom datasett kun har innhold fra visse områder. Refererer til geografiske områder angitt med URI fra kontrollerte vokabularer.</p>
+</div>
+<div class="paragraph">
+<div class="title">Anbefalinger</div>
+<p>Det er ønskelig å synliggjøre om datasettets utvalg er begrenset til bestemte geografiske områder.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Angi geografisk avgrensning dersom datasett kun har innhold fra visse områder. “Observert hekking av grågås i Oppdal” er datasettets geografiske omfang begrenset til kommunen Oppdal.</p>
+</li>
+<li>
+<p>Minst en av verdiene skal være fra kontrollerte vokabularer <a href="https://op.europa.eu/en/web/eu-vocabularies/dataset/-/resource?uri=http://publications.europa.eu/resource/dataset/continent">Continent</a>, <a href="https://op.europa.eu/en/web/eu-vocabularies/dataset/-/resource?uri=http://publications.europa.eu/resource/dataset/country">Country</a>, <a href="https://op.europa.eu/en/web/eu-vocabularies/dataset/-/resource?uri=http://publications.europa.eu/resource/dataset/place">Place</a> eller <a href="http://sws.geonames.org/">GenNames</a>.</p>
+</li>
+<li>
+<p><a href="https://data.geonorge.no/administrativeEnheter/nasjon/doc/173163">Administrative enheter</a> fra Kartverket bør brukes for å angi geografiske områder i Norge.</p>
+</li>
+<li>
+<p>Flere områder kan angis om relevant.</p>
 </li>
 </ul>
 </div>
@@ -877,30 +1159,427 @@ Dersom du finner feil eller mangler i dokumentet, ber vi om at dette meldes inn 
 <div class="title">Eksempler</div>
 <ul class="checklist">
 <li>
-<p><i class="fa fa-square-o"></i> <span class="line-through">“Løsøreregisteret inneholder løsøre med unntak av skip og luftfartøy”</span>
-Et lite folkelig ord (løsøre) er brukt. Avgrensningene her er greie</p>
+<p><i class="fa fa-check-square-o"></i> <span class="underline">Norge</span> (lenke: <a href="http://publications.europa.eu/resource/authority/country/NOR" class="bare">http://publications.europa.eu/resource/authority/country/NOR</a>)</p>
 </li>
 <li>
-<p><i class="fa fa-square-o"></i> <span class="line-through">“Løsøreregisteret inneholder tinglyste flyttbare eiendeler som biler og båter”</span></p>
+<p><i class="fa fa-check-square-o"></i> <span class="underline">Oppdal</span> (lenke: <a href="https://data.geonorge.no/administrativeEnheter/kommune/id/172879" class="bare">https://data.geonorge.no/administrativeEnheter/kommune/id/172879</a>)</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="title">Eksempel i RDF Turtle</div>
+<div class="content">
+<pre>&lt;etDatasett&gt; a dcat:Dataset ;
+   dct:spatial &lt;http://publications.europa.eu/resource/authority/country/NOR&gt; , # Norge
+      &lt;https://data.geonorge.no/administrativeEnheter/kommune/id/172879&gt; ; # Oppdal
+       .</pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="datasett-emneord"><a class="anchor" href="#datasett-emneord"></a>Datasett - emneord</h4>
+<div class="paragraph">
+<div class="title">Sammendrag</div>
+<p>Angi sentralt innhold i datasettet som ikke ennå har begrepsdefinisjoner som emneord [<a href="https://informasjonsforvaltning.github.io/dcat-ap-no/#Datasett-emneord">Datasett: emneord</a>].</p>
+</div>
+<div class="paragraph">
+<div class="title">Anbefalinger</div>
+<p>Ord og uttrykk som hjelper brukeren til å finne datasettet inkluderes (der det ikke er eksplisitt angitt referanser til begreper)</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Angi synonymer til hjelp i søk</p>
+</li>
+<li>
+<p>Angi sentralt innhold i datasettet som ikke finnes begrepsdefinisjoner for ennå</p>
 </li>
 </ul>
 </div>
 <div class="paragraph">
-<p>Hva som inngår i datasettet er godt beskrevet, men unntakene her er utelatt.</p>
+<p>I noen tilfeller mangler noen av begrepsdefinisjonene som er sentrale for å beskrive datasettet, eller man har et ord som ikke formelt forbindes med datasettet men som man vet at mange likevel bruker. Da kan vi bruke dette feltet for å sørge for at disse emneordene likevel gir treff i søkemotoren.</p>
+</div>
+<div class="ulist checklist">
+<div class="title">Eksempler</div>
+<ul class="checklist">
+<li>
+<p><i class="fa fa-check-square-o"></i> uførepensjon, uførepensjonister, uførereform</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="title">Eksempel i RDF Turtle</div>
+<div class="content">
+<pre>&lt;etDatasett&gt; a dcat:Dataset ;
+  dcat:keyword “uførepensjon”@nb, “uførepensjonister”@nb, “uførereformen”@nb .</pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="datasett-følger"><a class="anchor" href="#datasett-følger"></a>Datasett - følger</h4>
+<div class="paragraph">
+<div class="title">Sammendrag</div>
+<p>Angi referanse til regelverk (inkl. lovhjemmel) som datasettet følger [<a href="https://data.norge.no/specification/dcat-ap-no/#Datasett-f%C3%B8lger">Datasett: følger</a>].</p>
+</div>
+<div class="ulist">
+<div class="title">Anbefalinger</div>
+<ul>
+<li>
+<p>Angi referanse til regelverk som datasettet følger, og derfra ev. referanse til lovhjemmel.</p>
+</li>
+<li>
+<p>For deg som skal utvikle/tilpasse verktøystøtte: det er predefinerte instanser av <code>cpsv:Rule</code> for hhv. skjermingsregel (<code>cpsvno:ruleForNonDisclosure</code>), utleveringsregel (<code>cpsvno:ruleForDisclosure</code>) og behandlingsgrunnlag (<code>cpsvno:ruleForDataProcessing</code>), som bør brukes ved angivelse av de aktuelle typer regelverk.</p>
+</li>
+</ul>
+</div>
+<div class="ulist checklist">
+<div class="title">Eksempler</div>
+<ul class="checklist">
+<li>
+<p><i class="fa fa-check-square-o"></i> Regel for skjerming, med lenke til lovhjemmel.</p>
+</li>
+<li>
+<p><i class="fa fa-check-square-o"></i> Regel for utlevering, med lenke til lovhjemmel.</p>
+</li>
+<li>
+<p><i class="fa fa-check-square-o"></i> Behandlingsgrunnlag, med lenke til lovhjemmel.</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="title">Eksempel i RDF Turtle</div>
+<div class="content">
+<pre>@prefix cpsvno: &lt;https://data.norge.no/vocabulary/cpsvno#&gt; .
+
+&lt;etDatasett&gt; a dcat:Dataset ;
+  cpsv:follows [ a cpsv:Rule ;
+        dct:type cpsvno:ruleForNonDisclosure ; # skjermingsregel
+        cpsv:implements [ a eli:eli:LegalResource ;
+              dct:type &lt;lov&gt; ;
+              rdfs:seeAlso "https://lovdata.no/NL/lov/2016-05-27-14/§3-1" ;
+              dct:title "Skatteforvaltningsloven §3-1"@nb ;
+        ] ;
+      ] , [ a cpsv:Rule ;
+          dct:type cpsvno:ruleForDisclosure ; # utleveringsregel
+          cpsv:implements [ a eli:LegalResource ;
+                dct:type &lt;lov&gt; ;
+                rdfs:seeAlso "https://lovdata.no/NL/lov/2016-05-27-14/§3-3" ;
+                dct:title "Skatteforvaltningsloven §§ 3-3 til 3-9"@nb ;
+          ] ;
+        ] , [ a cpsv:Rule ;
+            dct:type cpsvno:ruleForDataProcessing ; # behandlingsgrunnlag
+            cpsv:implements [ a eli:LegalResource ;
+                dct:type &lt;lov&gt; ;
+                rdfs:seeAlso "https://lovdata.no/NL/lov/2016-05-27-14/§3-3" ;
+                dct:title "Skatteforvaltningsloven §§ 3-3 til 3-9"@nb ;
+            ] ;
+          ] ;
+    .
+
+&lt;lov&gt; a skos:Concept ;
+  skos:prefLabel "lov"@nb ;
+  skos:definition "rettsregler som fastsetter rettigheter og plikter"@nb ;
+  .</pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Merk"></i>
+</td>
+<td class="content">
+Til deg som skal utvikle/tilpasse verktøystøtte: I referanser til Lovdata i RDF-eksemplet ovenfor, er ikke <a href="https://lovdata.no/eli/">ELI-standarden</a> brukt. Dette fordi det p.t. ikke er knyttet funksjonalitet til URI for henvisninger til deler av en lov, f.eks. §3-3. Det vil si at det for øyeblikket er mulig å henvise til deler, men oppslaget vil lede til en hel lov. Se eksempel: <a href="https://lovdata.no/eli/lov/2016/05/27/14/nor/section/3-3" class="bare">https://lovdata.no/eli/lov/2016/05/27/14/nor/section/3-3</a>.
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="datasett-kontaktpunkt"><a class="anchor" href="#datasett-kontaktpunkt"></a>Datasett - kontaktpunkt</h4>
+<div class="paragraph">
+<div class="title">Sammendrag</div>
+<p>Angi kontaktinformasjonen [<a href="https://data.norge.no/specification/dcat-ap-no/#Datasett-kontaktpunkt">Datasett: kontaktpunkt</a>] som kan brukes ved henvendelser om et datasett.</p>
+</div>
+<div class="paragraph">
+<div class="title">Anbefalinger</div>
+<p>Egenskapen kontaktpunkt angis for å komme i dialog med utgiveren av datasettet.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Angi kontaktinformasjonen som kan brukes ved henvendelser om et datasett.</p>
+</li>
+<li>
+<p>Vcard <a href="https://www.w3.org/TR/vcard-rdf">https://www.w3.org/TR/vcard-rdf</a> benyttes for å beskrive kontaktpunktet (se anbefaling under hvert Kontaktpunkt-felt)</p>
+</li>
+<li>
+<p>Vi anbefaler sterkt å bruke organisatoriske enheter og ikke enkeltpersoner som kontaktpunkt.</p>
+</li>
+</ul>
+</div>
+<div class="ulist checklist">
+<div class="title">Eksempler</div>
+<ul class="checklist">
+<li>
+<p><i class="fa fa-check-square-o"></i> Opplysningsavdelingen, Brønnøysundregistrene</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="title">Eksempel i RDF Turtle</div>
+<div class="content">
+<pre>&lt;etDatasett&gt; a dcat:Dataset ;
+   dcat:contactPoint [ a vcard:Organization ;
+      vcard:hasEmail &lt;mailto:OA-fagstillinger@brreg.no&gt; ;
+      vcard:organization-unit  "Opplysningsavdelingen, Brønnøysundregistrene" ;
+      ] .</pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="datasett-tidsrom"><a class="anchor" href="#datasett-tidsrom"></a>Datasett - tidsrom</h4>
+<div class="paragraph">
+<div class="title">Sammendrag</div>
+<p>Angi tidsmessig avgrensning [<a href="https://data.norge.no/specification/dcat-ap-no/#Datasett-tidsrom">Datasett: tidsrom</a>] dersom datasett kun har innhold fra visse perioder.</p>
+</div>
+<div class="paragraph">
+<div class="title">Anbefalinger</div>
+<p>En tidsromsangivelse er nødvendig for datasett hvor innholdet dekker et avgrenset tidsrom.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Angi tidsmessig  avgrensning dersom datasett kun har innhold fra visse perioder. For mange datasett knyttet til registerfunksjoner vil tidsrom være direkte koblet mot oppdateringsfrekvens. For andre datasett vil tidsrom være vesentlig i forhold til forståelse av bruk av dataene, f.eks. folketellinger.</p>
+</li>
+<li>
+<p>Dersom det er angitt en periode med årstall, tolkes dette som fra og med 1. januar første år til og med 31. desember siste år.</p>
+</li>
+<li>
+<p>Ved ett årstall på begynnelse, men ikke angitt slutt, tolkes det at datasettet har data også i en ubestemt fremtid og tilsvarende om startdatoen mangler antas det at det er ikke angitt om datasettet har en start.</p>
+</li>
+<li>
+<p>Dersom datasettet er en av flere i en tidsserie anbefales det at det lages et overordnet datasett for tidsserien uten distribusjoner som peker på hver datasett.</p>
+</li>
+<li>
+<p>Det benyttes tidsstempel for registreringen av første og siste dataelement i datasettet.</p>
+</li>
+<li>
+<p>Det kan angis flere tidsperioder per datasett, men det anbefales at periodene ikke er overlappende.</p>
+</li>
+</ul>
+</div>
+<div class="ulist checklist">
+<div class="title">Eksempler</div>
+<ul class="checklist">
+<li>
+<p><i class="fa fa-check-square-o"></i> “1901”</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="title">Eksempel i RDF Turtle</div>
+<div class="content">
+<pre>&lt;etDatasett&gt; a dcat:Dataset ;
+  dct:temporal  [ a dct:PeriodOfTime ;
+    ot:hasBeginning  [ a ot:Instant ;
+      ot:inXSDDateTime "1901-01-01T00:00:00Z"^^xsd:dateTime ;
+      ] ;
+    owl:hasEnd [ a ot:Instant ;
+      ot:inXSDDateTime "1901-12-31T23:59:59Z"^^xsd:dateTime ;
+      ] ;
+   ] .</pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="datasett-tilgangsnivå"><a class="anchor" href="#datasett-tilgangsnivå"></a>Datasett - tilgangsnivå</h4>
+<div class="paragraph">
+<div class="title">Sammendrag</div>
+<p>Angi om datasettet er offentlig åpne data, eller er helt eller delvis skjermet for innsyn [<a href="https://data.norge.no/specification/dcat-ap-no/#Datasett-tilgangsniv%C3%A5">Datasett: tilgangsnivå</a>].</p>
+</div>
+<div class="paragraph">
+<div class="title">Anbefalinger</div>
+<p>Det er behov for å angi i hvilken grad datasettet kan bli gjort tilgjengelig for allmennheten, uten hensyn til om det er publisert eller ikke.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Angi om datasettet er helt eller delvis skjermet for innsyn, ved å bruke en av verdiene fra EU sitt kontrollerte vokabular <a href="https://op.europa.eu/en/web/eu-vocabularies/dataset/-/resource?uri=http://publications.europa.eu/resource/dataset/access-right">Access right</a>: "offentlig" (<code>PUBLIC</code>), "begrenset offentlighet" (<code>RESTRICTED</code>) eller "unntatt offentlighet" (<code>NON-PUBLIC</code>).</p>
+<div class="ulist">
+<ul>
+<li>
+<p>“Offentlig” brukes når datasettet ikke inneholder begrensede opplysninger og kan legges ut som åpne data, selv om det ikke er laget en løsning for tilgang. Se <a href="https://data.norge.no/guide/veileder-apne-data/">Veileder for tilgjengeliggjøring av åpne data</a>.</p>
+</li>
+<li>
+<p>“Begrenset offentlighet” brukes når tilgangen til opplysningene avhenger av hvilket formål opplysningene er innsamlet til, og hvilken lovhjemmel den som skal bruke dataene har. Begrensningen kan skyldes innhold som personopplysninger. Når noen ønsker å benytte datasettet må man foreta en konkret vurdering av tilgangen.</p>
+</li>
+<li>
+<p>“Unntatt offentlighet” brukes når saksbehandler har med referanse til lov eller forskrift valgt at  datasett (dokumenter eller saksopplysninger) kan unndras fra offentlighet. Typiske eksempler er interne dokumenter, styringsdialog, ansettelser, gradert informasjon, forretningshemmeligheter eller data som andre eier.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Skal gjenspeile det mest begrensede feltet/opplysningen i datasettet.</p>
+</li>
+<li>
+<p>Varianter av datasettet kan være offentlig ved at det utelater de felt som gjør at det opprinnelige datasettet er begrenset teller unntatt offentlighet. (se relasjoner mellom datasett).</p>
+</li>
+<li>
+<p>Ved bruk av verdiene "begrenset offentlighet" og "unntatt offentlighet" er egenskapen <a href="#datasett-følger">Datasett - følger</a> anbefalt.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<div class="title">Eksempler</div>
+<p>Enhetsregisteret (hele):</p>
 </div>
 <div class="ulist checklist">
 <ul class="checklist">
 <li>
-<p><i class="fa fa-check-square-o"></i> “Løsøreregisteret inneholder tinglyste flyttbare eiendeler med unntak av skip og luftfartøy”</p>
+<p><i class="fa fa-check-square-o"></i> begrenset offentlighet</p>
 </li>
 </ul>
 </div>
+<div class="paragraph">
+<p>Enhetsregisteret - Juridisk person (hovedenhet):</p>
+</div>
+<div class="ulist checklist">
+<ul class="checklist">
+<li>
+<p><i class="fa fa-check-square-o"></i> offentlig</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="title">Eksempel i RDF Turtle</div>
+<div class="content">
+<pre>&lt;etDatasett&gt; a dcat:Dataset ;
+  dcat:accessRights &lt;http://publications.europa.eu/resource/authority/access-right/PUBLIC&gt; .</pre>
+</div>
+</div>
+</div>
 </div>
 <div class="sect2">
-<h3 id="_dokumentasjon"><a class="anchor" href="#_dokumentasjon"></a>Dokumentasjon</h3>
+<h3 id="datasett-valgfrie-felter"><a class="anchor" href="#datasett-valgfrie-felter"></a>Valgfrie felter i en datasettbeskrivelse</h3>
+<div class="paragraph">
+<p>I tillegg til obligatoriske (skal brukes) og anbefalte (bør brukes) felter, er det en del felter som er valgfrie (kan brukes) i en datasettbeskrivelse:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Datasett - annen identifikator: sekundær identifikator til datasettet.</p>
+</li>
+<li>
+<p>Datasett - dokumentasjon: referanse til side eller dokument som beskriver datasettet ytterligere.</p>
+</li>
+<li>
+<p>Datasett - eksempeldata: referanse til eksempeldata av datasettet.</p>
+</li>
+<li>
+<p>Datasett - endringsdato: dato for siste oppdatering av datasettet.</p>
+</li>
+<li>
+<p>Datasett - er del av: datasett som dette datasettet er en del av.</p>
+</li>
+<li>
+<p>Datasett - er påkrevd av: datasett som er avhengig av dette datasettet.</p>
+</li>
+<li>
+<p>Datasett - er referert av: datasett som refererer til dette datasettet.</p>
+</li>
+<li>
+<p>Datasett - er versjon av: datasett som dette datasettet er en versjon av.</p>
+</li>
+<li>
+<p>Datasett - erstatter: datasett som dette datasettet erstatter.</p>
+</li>
+<li>
+<p>Datasett - erstattes av: datasett som er erstattet av dette datasettet.</p>
+</li>
+<li>
+<p>Datasett - frekvens: oppdateringsfrekvens av innholdet i datasettet.</p>
+</li>
+<li>
+<p>Datasett - har del: datasett som inngår i dette datasettet.</p>
+</li>
+<li>
+<p>Datasett - har kvalitetsnote: tekstlig beskrivelse av kvalitet på datasettet.</p>
+</li>
+<li>
+<p>Datasett - har måleresultat: kvantifiserbar beskrivelse av kvalitet på datasettet.</p>
+</li>
+<li>
+<p>Datasett - har versjon: datasett som er versjon av dette datasettet.</p>
+</li>
+<li>
+<p>Datasett - i samsvar med: standard/spesifikasjon (inkl. informasjonsmodell) som datasettet er i samsvar med.</p>
+</li>
+<li>
+<p>Datasett - kilde: datasett som dette datasettet er avledet fra.</p>
+</li>
+<li>
+<p>Datasett - krever: datasett som dette datasettet er avhengig av.</p>
+</li>
+<li>
+<p>Datasett - kvalifisert kreditering: aktør som har en eller annen form for ansvar for datasettet.</p>
+</li>
+<li>
+<p>Datasett - kvalifisert relasjon: beslektet ressurs (f.eks. en publikasjon)</p>
+</li>
+<li>
+<p>Datasett - landingsside: nettside som gir tilgang til datasettet, tilleggsinfo om datasettet etc.</p>
+</li>
+<li>
+<p>Datasett - opphav: beskrivelse av endring i eierskap og forvaltning av datasettet.</p>
+</li>
+<li>
+<p>Datasett - produsent: aktør som har produsert datasettet.</p>
+</li>
+<li>
+<p>Datasett - refererer til: en annen ressurs som kan være nyttig for brukere av datasettet å være oppmerksom på.</p>
+</li>
+<li>
+<p>Datasett - relatert ressurs: annen beslektet ressurs.</p>
+</li>
+<li>
+<p>Datasett - romlig oppløsning: minst romlig oppløsning for datasettet.</p>
+</li>
+<li>
+<p>Datasett - språk: språk datasettet er på.</p>
+</li>
+<li>
+<p>Datasett - tidsoppløsning: miste oppløsning i tidsperiode i datasettet.</p>
+</li>
+<li>
+<p>Datasett - type: datasettets type.</p>
+</li>
+<li>
+<p>Datasett - utgivelsesdato: dato for den formelle utgivelsen av datasettet.</p>
+</li>
+<li>
+<p>Datasett - versjon: versjonsnummer eller annen versjonsbetegnelse for datasettet.</p>
+</li>
+<li>
+<p>Datasett - versjonsnote: beskrivelse av forskjellene mellom denne og en tidligere versjon av datasettet.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Ikke alle valgfrie felter er beskrevet i etterfølgende avsnitt. Se under <a href="#hensikt-og-avgrensing">Hensikt og avgrensning</a> for hvordan du kan melde inn behov for beskrivelser.</p>
+</div>
+<div class="sect3">
+<h4 id="datasett-annenIdentifikator"><a class="anchor" href="#datasett-annenIdentifikator"></a>Datasett - annen identifikator</h4>
+<div class="paragraph">
+<p><em>&lt;ikke beskrevet, tilsvarer [<a href="https://data.norge.no/specification/dcat-ap-no/#Datasett-annenIdentifikator">Datasett: annen identifikator</a>]&gt;</em></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="datasett-dokumentasjon"><a class="anchor" href="#datasett-dokumentasjon"></a>Datasett - dokumentasjon</h4>
 <div class="paragraph">
 <div class="title">Sammendrag</div>
-<p>Referanse til en side som inneholder utdypende dokumentasjon om datasettet.</p>
+<p>Referanse til en side som inneholder utdypende dokumentasjon om datasettet [<a href="https://data.norge.no/specification/dcat-ap-no/#Datasett-dokumentasjon">Datasett: dokumentasjon</a>].</p>
 </div>
 <div class="paragraph">
 <div class="title">Anbefalinger</div>
@@ -916,20 +1595,335 @@ Et lite folkelig ord (løsøre) er brukt. Avgrensningene her er greie</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>&lt;&gt; foaf:page
-  &lt;https://confluence.brreg.no/display/DBNPUB/Informasjonsmodell+for+Enhetsregisteret+og+Foretaksregisteret&gt; .</pre>
+<pre>&lt;etDatasett&gt; a dcat:Dataset ;
+  foaf:page &lt;https://confluence.brreg.no/display/DBNPUB/Informasjonsmodell+for+Enhetsregisteret+og+Foretaksregisteret&gt; .</pre>
 </div>
 </div>
 </div>
-<div class="sect2">
-<h3 id="_landingsside"><a class="anchor" href="#_landingsside"></a>Landingsside</h3>
+<div class="sect3">
+<h4 id="datasett-eksempeldata"><a class="anchor" href="#datasett-eksempeldata"></a>Datasett - eksempeldata</h4>
 <div class="paragraph">
 <div class="title">Sammendrag</div>
-<p>Referanse til en side som beskriver datasettetet.</p>
+<p>Benyttes for å gi eksempeldata for et datasett [<a href="https://data.norge.no/specification/dcat-ap-no/#Datasett-eksempeldata">Datasett: eksempeldata</a>], og hvordan en faktisk distribusjon ser ut.</p>
 </div>
 <div class="paragraph">
 <div class="title">Anbefalinger</div>
-<p>Dokumentasjon om datasettet på en landingsside hos datasetteieren som kan beskrive datasettets innhold og struktur, og tilgang. Det anbefales at Dokumentasjon brukes der man refererer til utfyllende dokumentasjon, og Distribusjon benyttes f.eks. når man vil referere til en søkeside.</p>
+<p>Benyttes for å gi eksempeldata for et datasett, og hvordan en faktisk distribusjon ser ut.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Dersom datasettet inneholder personopplysninger vil det være nyttig for bruker å se et eksempedatasett som f.eks. viser en anonymisert rad i datasettet.</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="title">Eksempel i RDF Turtle</div>
+<div class="content">
+<pre>&lt;etDatasett&gt; a dcat:Dataset ;
+  adms:sample &lt;distribusjonAvEksempeldata&gt; .
+
+&lt;distribusjonAvEksempeldata&gt; a dcat:Distribution ;
+  dcat:accessURL &lt;https://eks.direks.eks/datasets/eksempelData1.csv&gt; .</pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="datasett-endringsdato"><a class="anchor" href="#datasett-endringsdato"></a>Datasett - endringsdato</h4>
+<div class="paragraph">
+<div class="title">Sammendrag</div>
+<p>Tidspunktet angir når innholdet i datasettet sist er endret [<a href="https://data.norge.no/specification/dcat-ap-no/#Datasett-endringsdato">Datasett: endringsdato</a>].</p>
+</div>
+<div class="paragraph">
+<div class="title">Anbefalinger</div>
+<p>For å forstå når datasettet sist ble oppdatert angis tidspunkt for siste endring</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Tidspunktet angir når innholdet i datasettet sist er endret.</p>
+</li>
+<li>
+<p>Angis som tidspunkt (dato alene tolkes som kl. 00:00:00 norsk tid).</p>
+</li>
+<li>
+<p>Tidspunkt angis med xsd:data eller xsd:dateTime.</p>
+</li>
+</ul>
+</div>
+<div class="ulist checklist">
+<div class="title">Eksempler</div>
+<ul class="checklist">
+<li>
+<p><i class="fa fa-check-square-o"></i> 01.01.2017</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="title">Eksempel i RDF Turtle</div>
+<div class="content">
+<pre>&lt;etDatasett&gt; a dcat:Dataset ;
+  dct:modified "2017-01-01"^^xsd:date .</pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="datasett-erDelAv"><a class="anchor" href="#datasett-erDelAv"></a>Datasett - er del av</h4>
+<div class="paragraph">
+<div class="title">Sammendrag</div>
+<p>Der et datasett (f.eks. et register) oppdeles i mindre datasett skal relasjonen [<a href="https://data.norge.no/specification/dcat-ap-no/#Datasett-erDelAv">Datasett: er del av</a>] brukes.</p>
+</div>
+<div class="paragraph">
+<div class="title">Anbefalinger</div>
+<p>Peker til et datasett som det aktuelle datasettet er en delmengde av, eller at det er brutt opp i mindre datasett.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Der registre oppdeles i mindre datasett skal relasjonen brukes. F.eks. er datasettet Underenheter er del av datasettet Enhetsregisteret.</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="title">Eksempel i RDF Turtle</div>
+<div class="content">
+<pre>&lt;underenheter&gt; a dcat:Dataset ;
+  dct:isPartOf &lt;enhetsregisteret&gt; .
+
+&lt;enhetsregisteret&gt; a dcat:Dataset .</pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="datasett-erPåkrevdAv"><a class="anchor" href="#datasett-erPåkrevdAv"></a>Datasett - er påkrevd av</h4>
+<div class="paragraph">
+<div class="title">Sammendrag</div>
+<p>Peker til et annet datasett som dette datasettet er nødvendig for [<a href="https://data.norge.no/specification/dcat-ap-no/#Datasett-erP%C3%A5krevdAv">Datasett: er påkrevd av</a>].</p>
+</div>
+<div class="paragraph">
+<div class="title">Anbefalinger</div>
+<p>Peker til et annet datasett som dette datasettet er nødvendig for.</p>
+</div>
+<div class="listingblock">
+<div class="title">Eksempel i RDF Turtle</div>
+<div class="content">
+<pre>&lt;datasettA&gt; a dcat:Dataset ;
+  dct:isRequiredBy &lt;datasettB&gt; .</pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="Datasett-erReferertAv"><a class="anchor" href="#Datasett-erReferertAv"></a>Datasett - er referert av</h4>
+<div class="paragraph">
+<p>Motsatt av <a href="#datasett-referererTil">Datasett - refererer til</a>.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="datasett-erVersjonAv"><a class="anchor" href="#datasett-erVersjonAv"></a>Datasett - er versjon av</h4>
+<div class="paragraph">
+<div class="title">Sammendrag</div>
+<p>Referanse til et datasett som i prinsippet er det samme, men hvor innholdet er blitt oppdatert, f.eks. på bakgrunn av bedret datakvalitet e.l.</p>
+</div>
+<div class="paragraph">
+<div class="title">Anbefalinger</div>
+<p>Peker til et datasett som det aktuelle datasettet er en versjon av.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>I prinsippet det samme datasettet, men hvor innholdet er blitt oppdatert f.eks. på bakgrunn av bedret datakvalitet e.l.</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="title">Eksempel i RDF Turtle</div>
+<div class="content">
+<pre>&lt;etDatasett&gt; a dcat:Dataset ;
+  dct:isVersionOf &lt;forrigeVersjon&gt; .
+
+&lt;forrigeVersjon&gt; a dcat:Dataset .</pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="datasett-erstatter"><a class="anchor" href="#datasett-erstatter"></a>Datasett - erstatter</h4>
+<div class="paragraph">
+<p>Motsatt av <a href="#datasett-erstattesAv">Datasett - erstattes av</a>.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="datasett-erstattesAv"><a class="anchor" href="#datasett-erstattesAv"></a>Datasett - erstattes av</h4>
+<div class="paragraph">
+<div class="title">Sammendrag</div>
+<p>Peker til et datasett som erstatter dette datasettet [<a href="https://data.norge.no/specification/dcat-ap-no/#Datasett-erstattesAv">Datasett: erstattes av</a>].</p>
+</div>
+<div class="paragraph">
+<div class="title">Anbefalinger</div>
+<p>Peker til et datasett som erstatter dette datasettet.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>F.eks. kan et kodeverk bli erstattet av en nyere utgave.</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="title">Eksempel i RDF Turtle</div>
+<div class="content">
+<pre>&lt;etDatasett&gt; a dcat:Dataset ;
+  dct:isReplacedBy &lt;nyUtgave&gt; .
+
+&lt;nyUtgave&gt; a dcat:Dataset .</pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="datasett-frekvens"><a class="anchor" href="#datasett-frekvens"></a>Datasett - frekvens</h4>
+<div class="paragraph">
+<div class="title">Sammendrag</div>
+<p>Beskriv hvor ofte datasettet har nytt innhold [<a href="https://data.norge.no/specification/dcat-ap-no/#Datasett-frekvens">Datasett: frekvens</a>].</p>
+</div>
+<div class="paragraph">
+<div class="title">Anbefalinger</div>
+<p>En angivelse hvor ofte datasettet blir oppdatert.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Beskriv hvor ofte datasettet har nytt innhold. For eksempel oppdateres Enhetsregisteret med nye enheter og sletting av enheter <em>kontinuerlig</em>, mens Inntektsdata fra likningen (Skattemelding) er <em>årlig</em> og Folketelling fra 1910 oppdateres <em>aldri</em>.</p>
+</li>
+<li>
+<p>Begreper (og tilhørende URIer) fra EU sitt kontrollerte vokabular for <a href="https://op.europa.eu/s/o16S">Frequency</a> skal benyttes.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<div class="title">Eksempler</div>
+<p>[*] Daglig</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>&lt;etDatasett&gt; a dcat:Dataset ;
+  dct:accruralPeriodicity &lt;http://publications.europa.eu/resource/authority/frequency/DAILY&gt; .</pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="datasett-harDel"><a class="anchor" href="#datasett-harDel"></a>Datasett - har del</h4>
+<div class="paragraph">
+<p>Motsatt av <a href="#datasett-erDelAv">Datasett - er del av</a>.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="datasett-harKvalitetsNote"><a class="anchor" href="#datasett-harKvalitetsNote"></a>Datasett - har kvalitetsnote</h4>
+<div class="paragraph">
+<p>Se under <a href="#beskrivelse-av-kvalitet">Beskrivelse av kvalitet</a>.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="datasett-harMåleresultat"><a class="anchor" href="#datasett-harMåleresultat"></a>Datasett - har måleresultat</h4>
+<div class="paragraph">
+<p>Se under <a href="#beskrivelse-av-kvalitet">Beskrivelse av kvalitet</a>.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="datasett-harVersjon"><a class="anchor" href="#datasett-harVersjon"></a>Datasett - har versjon</h4>
+<div class="paragraph">
+<p><em>&lt;ikke beskrevet, tilsvarer  [<a href="https://data.norge.no/specification/dcat-ap-no/#Datasett-harVersjon">Datasett: har versjon</a>]&gt;</em></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="datasett-iSamsvarMed"><a class="anchor" href="#datasett-iSamsvarMed"></a>Datasett - i samsvar</h4>
+<div class="paragraph">
+<div class="title">Sammendrag</div>
+<p>Angi at et datasett er i samsvar med [<a href="https://data.norge.no/specification/dcat-ap-no/#Datasett-iSamsvarMed">Datasett: i samsvar med</a>] en standard, spesifikasjon, en informasjonsmodell, en  implementasjonsregel, eller lignende.</p>
+</div>
+<div class="paragraph">
+<div class="title">Anbefalinger</div>
+<p>Det er behov for å vite om et datasett er i henhold til gitt(e) standard(er)/spesifikasjon(er)/o.l.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Benyttes til å angi at et datasett er i samsvar med en standard, spesifikasjon, informasjonsmodell, implementasjonsregel e.l. Eksempel: Et datasett er i samsvar med SOSI 4.5 som  innholdsstandard.</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="title">Eksempel i RDF Turtle</div>
+<div class="content">
+<pre>&lt;etDatasett&gt; a dcat:Dataset ;
+  dcat:conformsTo [ a dct:Standard ;
+  skos:prefLabel “Produktspesifikasjon NVE flomsoner 1.0”@nb ;
+  rdfs:seeAlso &lt;http://sosi.geonorge.no/Produktspesifikasjoner/Produktspesifikasjon_NVE_Flomsoner_1%200.pdf&gt; ;
+  ] .</pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="datasett-kilde"><a class="anchor" href="#datasett-kilde"></a>Datasett - kilde</h4>
+<div class="paragraph">
+<div class="title">Sammendrag</div>
+<p>Peker til et datasett som helt eller delvis er en kilde for det aktuelle datasettet [<a href="https://data.norge.no/specification/dcat-ap-no/#Datasett-kilde">Datasett: kilde</a>].</p>
+</div>
+<div class="paragraph">
+<div class="title">Anbefalinger</div>
+<p>Peker til et datasett som er kilde til datasettet.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Peker til datasettet som helt eller delvis er en kilde for det aktuelle datasettet.</p>
+</li>
+<li>
+<p>Dersom et åpent datasett er basert på et annet hvor personopplysninger er fjernet, kan relasjonen brukes.</p>
+</li>
+<li>
+<p>Et datasett som er avledet fra et annet skal ha en referanse til kilde for det aktuelle datasettet.</p>
+</li>
+<li>
+<p>Dersom det er et utvalg fra et annet datasett bør heller <a href="#datasett-erDelAV">Datasett - er del av</a> brukes.</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="title">Eksempler</div>
+<div class="content">
+<pre>&lt;etDatasett&gt; dcat:Dataset ;
+  dcat:source &lt;kildeDatasett&gt; .
+
+&lt;kildeDatasett&gt; a dcat:Dataset .</pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="datasett-krever"><a class="anchor" href="#datasett-krever"></a>Datasett - krever</h4>
+<div class="paragraph">
+<p>Motsatt av <a href="#datasett-erPåkrevdAv">Datasett: er påkrevd av</a>.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="datasett-kvalifisertKreditering"><a class="anchor" href="#datasett-kvalifisertKreditering"></a>Datasett - kvalifisert kreditering</h4>
+<div class="paragraph">
+<p><em>&lt;ikke beskrevet, tilsvarer [<a href="https://data.norge.no/specification/dcat-ap-no/#Datasett-kvalifisertKreditering">Datasett: kvalifisert kreditering</a>]&gt;</em></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="datasett-kvalifisertRelasjon"><a class="anchor" href="#datasett-kvalifisertRelasjon"></a>Datasett - kvalifisert relasjon</h4>
+<div class="paragraph">
+<p><em>&lt;ikke beskrevet, tilsvarer [<a href="https://data.norge.no/specification/dcat-ap-no/#Datasett-kvalifisertRelasjon">Datasett: kvalifisert relasjon</a>]&gt;</em></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="datasett-landingsside"><a class="anchor" href="#datasett-landingsside"></a>Datasett - landingsside</h4>
+<div class="paragraph">
+<div class="title">Sammendrag</div>
+<p>Referanse til en side som beskriver datasettet [<a href="https://data.norge.no/specification/dcat-ap-no/#Datasett-landingsside">Datasett: landingsside</a>].</p>
+</div>
+<div class="paragraph">
+<div class="title">Anbefalinger</div>
+<p>Dokumentasjon om datasettet på en landingsside som kan beskrive datasettets innhold og struktur, og tilgang. Det anbefales at landingsside brukes der man refererer til utfyllende dokumentasjon, og <a href="#datasett-datasettdistribusjon">Datasett - datasettdistribusjon</a> benyttes f.eks. når man vil referere til en søkeside.</p>
 </div>
 <div class="ulist">
 <ul>
@@ -956,91 +1950,38 @@ Et lite folkelig ord (løsøre) er brukt. Avgrensningene her er greie</p>
 </ul>
 </div>
 <div class="listingblock">
+<div class="title">Eksempel i RDF Turtle</div>
 <div class="content">
-<pre>&lt;&gt; dcat:landingpage
-  &lt;https://confluence.brreg.no/display/DBNPUB/Informasjonsmodell+for+Enhetsregisteret+og+Foretaksregisteret&gt;, &lt;https://www.brreg.no/om-oss/samfunnsoppdraget-vart/registera-vare/einingsregisteret/&gt; .</pre>
+<pre>&lt;etDatasett&gt; a dcat:Dataset ;
+  dcat:landingpage
+    &lt;https://confluence.brreg.no/display/DBNPUB/Informasjonsmodell+for+Enhetsregisteret+og+Foretaksregisteret&gt;,
+    &lt;https://www.brreg.no/om-oss/samfunnsoppdraget-vart/registera-vare/einingsregisteret/&gt; .</pre>
 </div>
 </div>
 </div>
-<div class="sect2">
-<h3 id="_tilgangsnivå"><a class="anchor" href="#_tilgangsnivå"></a>Tilgangsnivå</h3>
+<div class="sect3">
+<h4 id="datasett-opphav"><a class="anchor" href="#datasett-opphav"></a>Datasett - opphav</h4>
+<div class="paragraph">
+<p><em>&lt;ikke beskrevet, tilsvarer [<a href="https://data.norge.no/specification/dcat-ap-no/#Datasett-opphav">Datasett: opphav</a>]&gt;</em></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="datasett-produsent"><a class="anchor" href="#datasett-produsent"></a>Datasett - produsent</h4>
 <div class="paragraph">
 <div class="title">Sammendrag</div>
-<p>Angi om datasettet offentlig åpne data, eller er helt eller delvis skjermet for innsyn.</p>
+<p>Brukes unntaksvis der det er datasettet som er satt sammen av data som andre har produsert [<a href="https://data.norge.no/specification/dcat-ap-no/#Datasett-produsent">Datasett: produsent</a>].</p>
 </div>
 <div class="paragraph">
 <div class="title">Anbefalinger</div>
-<p>Det er behov for å angi i hvilken grad datasettet kan bli gjort tilgjengelig for allmennheten, uten hensyn til om det er publisert eller ikke</p>
+<p>Egenskapen angir produsent(er) av datasettet der dette er en annen enn utgiver (<a href="#datasett-utgiver">Datasett - utgiver</a>).</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p><strong>Angi om datasettet er helt eller delvis skjermet for innsyn</strong>. Offentlig, begrenset offentlighet og unntatt offentlighet.</p>
+<p>Brukes unntaksvis der datasettet er satt sammen av data som andre har produsert.</p>
 </li>
 <li>
-<p><strong>Skal gjenspeile det mest begrensede feltet/opplysningen i datasettet</strong></p>
-</li>
-<li>
-<p>“Offentlig” betyr at datasettet ikke inneholder begrensede opplysninger og kan legges ut som åpne data, selv om det ikke er laget en løsning for tilgang. Se <a href="https://doc.difi.no/data/veileder-apne-data/">Difis veileder for åpne data</a>.</p>
-</li>
-<li>
-<p>“Begrenset offentlighet” betyr at tilgangen til opplysningene avhenger av hvilket formål opplysningene er innsamlet til, og hvilket lovhjemmel den som skal bruke dataene har. Begrensningen kan skyldes innhold som personopplysninger. Når noen ønsker å benytte datasettet må man foreta en konkret vurdering av tilgangen.</p>
-</li>
-<li>
-<p>“Unntatt offentlighet” betyr saksbehandler har med referanse til lov eller forskrift valgt at  datasett (dokumenter eller saksopplysninger) kan unndras fra offentlighet. Typiske eksempler er interne dokumenter, styringsdialog, ansettelser, gradert informasjon, forretningshemmeligheter eller data som andre eier.</p>
-</li>
-<li>
-<p><strong>Varianter av datasettet kan være offentlig<strong></strong> </strong><strong>ved at det utelater de felt som gjør at det opprinnelige datasettet er begrenset teller unntatt offentlighet.</strong> (se relasjoner mellom datasett)</p>
-</li>
-<li>
-<p><strong>Ved bruk av verdiene "begrenset offentlighet" og "unntatt offentlighet" er egenskapen skjermingshjemmel anbefalt</strong></p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<div class="title">Eksempler</div>
-<p>Enhetsregisteret (hele):</p>
-</div>
-<div class="ulist checklist">
-<ul class="checklist">
-<li>
-<p><i class="fa fa-check-square-o"></i> begrenset offentlighet</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>Enhetsregisteret - Juridisk person (hovedenhet)</p>
-</div>
-<div class="ulist checklist">
-<ul class="checklist">
-<li>
-<p><i class="fa fa-check-square-o"></i> offentlig</p>
-</li>
-</ul>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre>&lt;&gt;  dcat:accessRights &lt;http://publications.europa.eu/resource/authority/access-right/PUBLIC&gt;.</pre>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_skjermingshjemmel"><a class="anchor" href="#_skjermingshjemmel"></a>Skjermingshjemmel</h3>
-<div class="paragraph">
-<div class="title">Sammendrag</div>
-<p>Angi referanse til relevant lov eller forskrift.</p>
-</div>
-<div class="paragraph">
-<div class="title">Anbefalinger</div>
-<p>Dersom datasettet har begrensninger på deling trenger vi å vite hva skjermingen gjelder. Det kan være hjemmel (kilde for påstand) i offentlighetsloven, sikkerhetsloven, beskyttelsesinstruksen eller annet lovverk som ligger til grunn for vurdering av tilgangsnivå.</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Angi referanse til relevant lov eller forskrift. Helst til lovdata på paragraf-nivå.</p>
-</li>
-<li>
-<p>Egenskapen er anbefalt dersom «tilgangsnivå» har verdiene «begrenset» eller «ikke-offentlig»</p>
+<p>Der produsent er en sammensatt gruppe, vil det ikke være mulig å bruke organisasjonsnummer. I så fall kan produsent oppgis som en instans av <code>foaf:Agent</code>.</p>
 </li>
 </ul>
 </div>
@@ -1048,976 +1989,53 @@ Et lite folkelig ord (løsøre) er brukt. Avgrensningene her er greie</p>
 <div class="title">Eksempler</div>
 <ul class="checklist">
 <li>
-<p><i class="fa fa-check-square-o"></i> Forvaltningsloven, taushetsplikt §13</p>
-</li>
-<li>
-<p><i class="fa fa-check-square-o"></i>  Offentleglova, Opplysningar som er underlagde teieplikt §13</p>
+<p><i class="fa fa-check-square-o"></i> “Samarbeidskommunene A, B og C”</p>
 </li>
 </ul>
 </div>
 <div class="listingblock">
+<div class="title">Eksempel i RDF Turtle</div>
 <div class="content">
-<pre>&lt;&gt;   dcatno:legalBasisFor [ .
-     skos:prefLabel “Forvaltningsloven, taushetsplikt §13” ;
-     rdfs:seeAlso &lt;https://lovdata.no/lov/1967-02-10/§13&gt; .
-   ], [
-     skos:prefLabel “Offentliglova, taushetsplikt §13” ;
-     rdfs:seeAlso &lt;https://lovdata.no/lov/1967-02-10/§13&gt; .
-   ] .</pre>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_behandlingsgrunnlag"><a class="anchor" href="#_behandlingsgrunnlag"></a>Behandlingsgrunnlag</h3>
-<div class="paragraph">
-<div class="title">Sammendrag</div>
-<p>Behandlingsgrunnlag knyttes enten til angitt lovhjemmel, samtykke eller nødvendighetsvurdering.</p>
-</div>
-<div class="paragraph">
-<div class="title">Anbefalinger</div>
-<p>Etter personopplysningsloven skal det foreligge et grunnlag for behandling av personopplysninger.</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Dersom et datasett inneholder personopplysninger skal det være et grunnlag for behandlingen.</p>
-</li>
-<li>
-<p>Behandlingsgrunnlag knyttes til alternativene som finnes i forordningens artikkel 6, 9 eller 10. Angi dette i tekst.</p>
-</li>
-<li>
-<p>Dersom behandlingsgrunnlaget forutsetter et supplerende rettslig grunnlag, se artikkel 6(3), skal det angis en referanse til dette rettslige grunnlaget. Helst til lovdata på paragraf-nivå.</p>
-</li>
-</ul>
-</div>
-<div class="listingblock">
-<div class="title">Eksempler</div>
-<div class="content">
-<pre>&lt;&gt; dcatno:accessRightsComment [
-       skos:prefLabel “Treffe vedtak om tjenestepensjon til i hovedsak statsansatte og (kommunale) lærere”@no ;
-     rdfs:seeAlso &lt;https://lovdata.no/dokument/NL/lov/1949-07-28-26/KAPITTEL_1#§1&gt; .
-] .</pre>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_utleveringshjemmel"><a class="anchor" href="#_utleveringshjemmel"></a>Utleveringshjemmel</h3>
-<div class="paragraph">
-<div class="title">Sammendrag</div>
-<p>Henvisning til regelverk som begrunner en offentlig virksomhet sin rett eller plikt til å utlevere opplysninger til andre private personer eller juridiske personer.</p>
-</div>
-<div class="paragraph">
-<div class="title">Anbefalinger</div>
-<p>Informasjon om utleveringshjemmel gjør det enklere for brukere av datasettet å se om det er nødvendig med egen hjemmel for innhenting eller om de kan få tillatelse til å bruke opplysninger etter søknad til dataeier.</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Henvisning til regelverk som begrunner en offentlig virksomhet sin rett eller plikt til å utlevere opplysninger til andre private personer eller juridiske personer.</p>
-</li>
-<li>
-<p>Henvisningen gjøres til lovdata på paragraf-nivå.</p>
-</li>
-</ul>
-</div>
-<div class="listingblock">
-<div class="title">Eksempler</div>
-<div class="content">
-<pre>&lt;&gt;   dcatno:accessRightsComment [
-       skos:prefLabel “behandling av helseopplysninger i nasjonal kjernejournal, personaljournalloven §13”@no ;
-     rdfs:seeAlso &lt;https://lovdata.no/lov/2014-06-20-42/§13&gt; .
-] .</pre>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_tema"><a class="anchor" href="#_tema"></a>Tema</h3>
-<div class="paragraph">
-<div class="title">Sammendrag</div>
-<p>Ett eller flere temaer velges fra den kontrollerte listen av EU-temaer</p>
-</div>
-<div class="paragraph">
-<div class="title">Anbefalinger</div>
-<p>For å kunne sortere datasettet inn under gitte kategorier er det behov for tema</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Ett eller flere temaer velges fra <a href="http://publications.europa.eu/mdr/authority/data-theme/index.html">den kontrollerte listen av EU-temaer</a>.</p>
-</li>
-</ul>
-</div>
-<div class="ulist checklist">
-<div class="title">Eksempler</div>
-<ul class="checklist">
-<li>
-<p><i class="fa fa-check-square-o"></i> <strong>Helse</strong> (lenke: <a href="http://publications.europa.eu/mdr/authority/data-theme/HEAL" class="bare">http://publications.europa.eu/mdr/authority/data-theme/HEAL</a>)</p>
-</li>
-</ul>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre>&lt;&gt;  &lt;http://data.brreg.no/datakatalog/datasett/12&gt;
-     dcat:theme &lt;http://publications.europa.eu/mdr/authority/data-theme/HEAL&gt; .</pre>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_type"><a class="anchor" href="#_type"></a>Type</h3>
-<div class="paragraph">
-<div class="title">Sammendrag</div>
-<p>Referanse til en klassifisering av datasettets type innhold. Refererer til EU publication office sine datasett-typer</p>
-</div>
-<div class="paragraph">
-<div class="title">Anbefalinger</div>
-<p>Referanse til en klassifisering av datasettets type innhold. Refererer til EU publication office sine datasett-typer.</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Datasett som anses som å inneholde data angis med “Datasett”</p>
-</li>
-<li>
-<p>Datasett som anses som metadata (f.eks. Kodelister, Taksonomier og Tesauri) skal angis tilsvarende</p>
-</li>
-<li>
-<p>Datasett som anses som testdata angis som “Testdata”</p>
-</li>
-</ul>
-</div>
-<div class="listingblock">
-<div class="title">Eksempler</div>
-<div class="content">
-<pre>&lt;&gt; dct:type &lt;http://publications.europa.eu/resource/authority/dataset-type/CODE_LIST&gt; .
+<pre>&lt;etDatasett&gt; a dcat:Dataset ;
+  dct:creator &lt;samarbeidsKommunene&gt; .
 
-&lt;&gt;  dct:type
-&lt;http://data.brreg.no/datasettype/Datasett&gt; .
-
-&lt;&gt; dct:type
-&lt;http://data.brreg.no/datasettype/TestDatasett&gt; .</pre>
+&lt;samarbeidsKommunene&gt; a foaf:Agent ;
+  foaf:name "Samarbeidskommunene A, B og C" .</pre>
 </div>
 </div>
 </div>
-<div class="sect2">
-<h3 id="_begrep"><a class="anchor" href="#_begrep"></a>Begrep</h3>
+<div class="sect3">
+<h4 id="datasett-referererTil"><a class="anchor" href="#datasett-referererTil"></a>Datasett - refererer til</h4>
 <div class="paragraph">
 <div class="title">Sammendrag</div>
-<p>Innholdstyper i datasettet beskrives med referanse til begreper i begrepskatalog</p>
+<p>Referanse til andre ressurser som det kan være nyttig for brukere å være oppmerksom på [<a href="https://data.norge.no/specification/dcat-ap-no/#Datasett-referererTil">Datasett: refererer til</a>].</p>
 </div>
 <div class="paragraph">
 <div class="title">Anbefalinger</div>
-<p>For å beskrive viktigste typer innhold i datasettet refereres det til begreper i begrepskataloger som også gir mulighet til å utnytte synonymer</p>
+<p>Referanse til andre ressurser som det kan være nyttig for brukere å være oppmerksom på.</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>innholdstyper i datasettet beskrives med referanse til begreper i begrepskatalog</p>
-</li>
-<li>
-<p>dersom det ikke kan benyttes en begrepskatalog brukes emneord.</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>Et datasett skal lenke til de aktuelle og sentrale begrepene i en begrepskatalog. Ved å henvise til gjennomarbeidede definisjoner som virksomheten selv er ansvarlig for å vedlikeholde, sikrer vi at det er tydelig hvordan et begrep brukt i datasettet skal forstås og at denne forståelsen til en hver tid er riktig og oppdatert. Vi ønsker at alle datasettene skal ha lenker til de aktuelle begrepene i virksomhetens katalog, slik at det er tydelig definert hva begrepene innebærer</p>
-</div>
-<div class="paragraph">
-<p>I Referansekatalogen finner du relevante standarder for arbeidet med begrepsdefinisjoner:
-<a href="https://www.difi.no/artikkel/2015/10/begrepsanalyse-og-definisjonsarbeid">https://www.difi.no/artikkel/2015/10/begrepsanalyse-og-definisjonsarbeid</a></p>
-</div>
-<div class="ulist checklist">
-<div class="title">Eksempler</div>
-<ul class="checklist">
-<li>
-<p><i class="fa fa-check-square-o"></i>  <span class="underline">Løsøre</span>, <span class="underline">Pant</span>, <span class="underline">Tinglysing</span></p>
+<p>Peker til ressurser som kan være aktuelt å se i sammenheng med det aktuelle datasettet, f.eks. for Enhetsregisteret supplerende informasjon om Enheter, men ikke direkte relatert.</p>
 </li>
 </ul>
 </div>
 <div class="listingblock">
+<div class="title">Eksempel i RDF Turtle</div>
 <div class="content">
-<pre>&lt;&gt; &lt;http://data.brreg.no/datakatalog/datasett/12&gt;
-    dct:subject &lt;http://brreg.no/begrepskatalog/begep/løsøre&gt;,
-                &lt;http://brreg.no/begrepskatalog/begep/pant&gt;,
-                &lt;http://brreg.no/begrepskatalog/begep/tingslysning&gt; .</pre>
+<pre>&lt;etDatasett&gt; a dcat:Dataset ;
+  dct:references [ a dcat:Resource ;
+    dct:title “Register over offentlig støtte”@nb ;
+    rdfs:seeAlso &lt;http://brreg.no/catalogs/974760673/datasets/ca04abdd-6327-4833-bd05-7a3dca20e6a5&gt; ] .</pre>
 </div>
 </div>
 </div>
-<div class="sect2">
-<h3 id="_søkeord"><a class="anchor" href="#_søkeord"></a>Søkeord</h3>
+<div class="sect3">
+<h4 id="datasett-relatertRessurs"><a class="anchor" href="#datasett-relatertRessurs"></a>Datasett - relatert ressurs</h4>
 <div class="paragraph">
 <div class="title">Sammendrag</div>
-<p>Angi synonymer og andre ord som kan hjelpe i søk. Sentralt innhold i datasettet som ikke ennå har begrepsdefinisjoner.</p>
-</div>
-<div class="paragraph">
-<div class="title">Anbefalinger</div>
-<p>Ord og uttrykk som hjelper brukeren til å finne datasettet inkluderes (der det ikke er eksplisitt angitt referanser til begreper)</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Angi synonymer til hjelp i søk</p>
-</li>
-<li>
-<p>Angi sentralt innhold i datasettet som ikke finnes begrepsdefinisjoner for ennå</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>I noen tilfeller mangler noen av begrepsdefinisjonene som er sentrale for å beskrive datasettet, eller man har et ord som ikke formelt forbindes med datasettet men som man vet at mange likevel bruker. Da kan vi bruke dette feltet for å sørge for at disse søkeordene likevel gir treff i søkemotoren.</p>
-</div>
-<div class="ulist checklist">
-<div class="title">Eksempler</div>
-<ul class="checklist">
-<li>
-<p><i class="fa fa-check-square-o"></i> uførepensjon, uførepensjonister, uførereform</p>
-</li>
-</ul>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre>&lt;http://data.brreg.no/datakatalog/datasett/12&gt;
-     dcat:keyword “uførepensjon”@no, “uførepensjonister”@no, “uførereformen”@no .</pre>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_geografisk_avgrensing"><a class="anchor" href="#_geografisk_avgrensing"></a>Geografisk avgrensing</h3>
-<div class="paragraph">
-<div class="title">Sammendrag</div>
-<p>Angi geografisk avgrensning dersom datasett kun har innhold fra visse områder. Referer til geografiske områder angitt med URI fra Statens Kartverk eller GeoNames</p>
-</div>
-<div class="paragraph">
-<div class="title">Anbefalinger</div>
-<p>Det er ønskelig å synliggjøre om datasettets utvalg er begrenset til bestemte geografiske områder.</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Angi geografisk avgrensning dersom datasett kun har innhold fra visse områder. “Observert hekking av grågås i Oppdal” er datasettets geografiske omfang begrenset til kommunen Oppdal.</p>
-</li>
-<li>
-<p>Benytt eksisterende avgrensninger som kommuner, fylker m.v.</p>
-</li>
-<li>
-<p>Bør referere til geografiske områder angitt. Med URI-er (f.eks. Sentralt Stedsnavnsregister eller Administrative grenser fra Kartverket)</p>
-</li>
-<li>
-<p>Flere områder kan angis om relevant</p>
-</li>
-<li>
-<p>Dersom det finnes en tilsvarende landsdekkende oversikt, bør dette beskrives som et separat datasett, og disse relateres  f.eks. "Observert hekking av grågås i Norge"</p>
-</li>
-</ul>
-</div>
-<div class="ulist checklist">
-<div class="title">Eksempler</div>
-<ul class="checklist">
-<li>
-<p><i class="fa fa-check-square-o"></i> <span class="underline">Oppdal</span> (lenke: <a href="http://data.geonorge.no/administrativeEnheter/kommune/id/172879" class="bare">http://data.geonorge.no/administrativeEnheter/kommune/id/172879</a>)</p>
-</li>
-<li>
-<p><i class="fa fa-check-square-o"></i> <span class="underline">Oppdal</span> (lenke: <a href="http://sws.geonames.org/3143508/" class="bare">http://sws.geonames.org/3143508/</a>)</p>
-</li>
-</ul>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre># eksempel på lenker til EU publication office (SKOS)
-&lt;&gt; dct:spatial &lt;http://publications.europa.eu/resource/authority/country/NOR&gt;
-             a dct:Location, skos:Concept ;
-             skos:prefLabel “Norge”@no .
-
-# eksempel på lenker til GeoNames
-&lt;&gt; dct:spatial &lt;http://sws.geonames.org/3144096/&gt;
-             a gn:Feature ;
-             gn:officalName “Norge”@no .
-
-# eksempel på lenker til Kartverket (kommer)</pre>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_tidsmessig_avgrensing"><a class="anchor" href="#_tidsmessig_avgrensing"></a>Tidsmessig avgrensing</h3>
-<div class="paragraph">
-<div class="title">Sammendrag</div>
-<p>Angi tidsmessig avgrensning dersom datasett kun har innhold fra visse perioder. Dersom det finnes en tilsvarende komplett oversikt, bør også dette beskrives som et eget datasett</p>
-</div>
-<div class="paragraph">
-<div class="title">Anbefalinger</div>
-<p>En tidsromangivelse er nødvendig for datasett hvor innholdet dekker et avgrenset tidsrom.</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Angi tidsmessig  avgrensning dersom datasett kun har innhold fra visse perioder. For mange datasett knyttet til registerfunksjoner vil tidsrom være direkte koblet mot oppdateringsfrekvens. For andre datasett vil tidsrom være vesentlig i forhold til forståelse av bruk av dataene, f.eks folketellinger.</p>
-</li>
-<li>
-<p>Dersom det er angitt en periode med årstall, tolkes dette som fra og med 1. januar første år til og med 31. desember siste år.</p>
-</li>
-<li>
-<p>Ved ett årstall på begynnelse, men ikke angitt slutt, tolkes det at datasettet har data også i en ubestemt fremtid og tilsvarende om startdatoen mangler antas det at det er ikke angitt om datasettet har en start.</p>
-</li>
-<li>
-<p>Dersom det finnes en tilsvarende komplett oversikt, bør også dette beskrives som et eget datasett, og disse relateres.</p>
-</li>
-<li>
-<p>Dersom datasettet er en av flere i en tidsserie anbefales det at det lages et overordnet datasett for tidsserien uten distribusjoner som peker på hver datasett.</p>
-</li>
-<li>
-<p>Det benyttes tidsstempel for registreringen av første og siste dataelement i datasettet.</p>
-</li>
-<li>
-<p>Det kan angis flere tidsperioder per datasett, men det anbefales at periodene ikke er overlappende.</p>
-</li>
-<li>
-<p><em>Relativ avgrensning i tid fra tidspunkt for uttrekk (eksempelvis fra og med dato for forrige påbegynte semester og til og med avslutning av påfølgende semester)</em></p>
-</li>
-</ul>
-</div>
-<div class="ulist checklist">
-<div class="title">Eksempler</div>
-<ul class="checklist">
-<li>
-<p><i class="fa fa-check-square-o"></i> “1901”</p>
-</li>
-</ul>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre>&lt;&gt; &lt;http://data.brreg.no/datakatalog/datasett/12&gt;
-    dct:temporal  [
-        a dct:PeriodOfTime ;
-        ot:hasBeginning  [
-            a ot:Instant ;
-            ot:inXSDDateTime "1901-01-01T00:00:00Z"^^xsd:dateTime
-        ] ;
-        owl:hasEnd [
-            a ot:Instant ;
-           ot:inXSDDateTime  "1901-12-31T00:00:00Z"^^xsd:dateTime
-       ]
-   ] .</pre>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_utgivelse"><a class="anchor" href="#_utgivelse"></a>Utgivelse</h3>
-<div class="paragraph">
-<div class="title">Sammendrag</div>
-<p>Tidspunktet angir når innholdet i datasettet gjøres tilgjengelig.</p>
-</div>
-<div class="paragraph">
-<div class="title">Anbefalinger</div>
-<p>For å forstå når datasettet er operativt og tilgjengelig angis tidspunkt for utgivelse.</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Angis som tidspunkt (dato alene tolkes som kl. 00:00)</p>
-</li>
-<li>
-<p>Tidspunktet angir når innholdet i datasettet gjøres tilgjengelig. Dette er ikke alltid  samsvarende med når den enkelte distribusjonen er tilgjengelig. Og heller ikke når beskrivelsen om datasettet utgis (katalogpostens utgivelse).</p>
-</li>
-<li>
-<p>Tidspunkt angis med xsd:dateTime. Dette inkluderer utvidelser av kapittel 5.4 i ISO 8601 med tidssoner) [-]CCYY-MM-DDThh:mm:ss[Z|(+|-)hh:mm]</p>
-</li>
-</ul>
-</div>
-<div class="ulist checklist">
-<div class="title">Eksempler</div>
-<ul class="checklist">
-<li>
-<p><i class="fa fa-check-square-o"></i> 01.01.2017 00:00</p>
-</li>
-</ul>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre>&lt;&gt; &lt;http://data.brreg.no/datakatalog/datasett/12&gt;
-     dct:issued “2017-01-01T00:00:00+01:00”^xsd:DateTime .</pre>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_språk"><a class="anchor" href="#_språk"></a>Språk</h3>
-<div class="paragraph">
-<div class="title">Sammendrag</div>
-<p>Hovedspråket benyttet i datasettets innhold angis</p>
-</div>
-<div class="paragraph">
-<div class="title">Anbefalinger</div>
-<p>For å forstå hvilket språk innholdet til datasettet har angis dette</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Det er hovedspråket benyttet i datasettets innhold som skal angis</p>
-</li>
-<li>
-<p>Er datasettet uten språklige tekster angis ikke språk</p>
-</li>
-<li>
-<p>Inneholder datasett tekster på flere språk, og det ikke er tydelig hva som er hovedspråket, angis ikke språk</p>
-</li>
-<li>
-<p>Språk angis fra en liste av gyldige språk fra EUs autoritetsliste.</p>
-</li>
-</ul>
-</div>
-<div class="ulist checklist">
-<div class="title">Eksempler</div>
-<ul class="checklist">
-<li>
-<p><i class="fa fa-check-square-o"></i> Norsk</p>
-</li>
-</ul>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre>&lt;&gt; &lt;http://data.brreg.no/datakatalog/datasett/12&gt;
-     dct:language &lt;http://publications.europa.eu/resource/authority/language/NOR&gt; .</pre>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_opphav"><a class="anchor" href="#_opphav"></a>Opphav</h3>
-<div class="paragraph">
-<div class="title">Sammendrag</div>
-<p>Angi om opplysningene i datasettet er resultat av vedtak eller innsamlet fra bruker eller tredjepart</p>
-</div>
-<div class="paragraph">
-<div class="title">Anbefalinger</div>
-<p>Det er behov for en sortering om innholdet er basert på avgjørelse truffet under utøvelse av offentlig myndighet (vedtak) eller er kommer fra andre kilder (bruker eller tredjepart). Vedtak anses å være autoritative kilder for hele forvaltningen.</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Angi om opplysningene i datasettet er resultat av vedtak eller innsamlet fra bruker eller tredjepart</p>
-</li>
-<li>
-<p>Det skal velges en verdi fra et kontrollert vokabular med verdiene Vedtak, Bruker og Tredjepart</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>Enkelte offentlige virksomheter har datasett som innen sitt område eller nasjonalt er å anse autoritative kilder. Eksempler på slike datasett er Enhetsregisteret (ER), Folkeregisteret (DSF), Matrikkelen og Aa-registeret.  Per i dag er de tre første formelle grunndataregistre, men det er flere andre datasett som i større eller mindre grad blir gjenbrukt innenfor sektorer eller generelt innenfor offentlig sektor og resten av samfunnet.</p>
-</div>
-<div class="ulist checklist">
-<div class="title">Eksempler</div>
-<ul class="checklist">
-<li>
-<p><i class="fa fa-check-square-o"></i> Vedtak</p>
-</li>
-</ul>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre>&lt;&gt; dct:provenance &lt;http://data.brreg.no/opphav/vedtak&gt;</pre>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_oppdateringsfrekvens"><a class="anchor" href="#_oppdateringsfrekvens"></a>Oppdateringsfrekvens</h3>
-<div class="paragraph">
-<div class="title">Sammendrag</div>
-<p>Beskriv hvor ofte datasettet har nytt innhold</p>
-</div>
-<div class="paragraph">
-<div class="title">Anbefalinger</div>
-<p>En angivelse hvor ofte datasettet blir oppdatert.</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Beskriv hvor ofte datasettet har nytt innhold. For eksempel oppdateres Enhetsregisteret med nye enheter og sletting av enheter <em>kontinuerlig</em>, mens Inntektsdata fra likningen (Skattemelding) er <em>årlig</em> og Folketelling fra 1910 oppdateres <em>aldri</em>.</p>
-</li>
-<li>
-<p>Begreper (og tilhørende URIer) fra <a href="http://publications.europa.eu/mdr/authority/frequency/index.html">Frequency Name Authority List</a> skal benyttes</p>
-</li>
-</ul>
-</div>
-<div class="listingblock">
-<div class="title">Eksempler</div>
-<div class="content">
-<pre>&lt;&gt; dct:accruralPeriodicity  &lt;http://publications.europa.eu/resource/authority/frequency/MONTHLY&gt;</pre>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_sist_oppdatert"><a class="anchor" href="#_sist_oppdatert"></a>Sist oppdatert</h3>
-<div class="paragraph">
-<div class="title">Sammendrag</div>
-<p>Tidspunktet angir når innholdet i datasettet sist er endret.</p>
-</div>
-<div class="paragraph">
-<div class="title">Anbefalinger</div>
-<p>For å forstå når datasettet sist ble oppdatert angis tidspunkt for siste endring</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Tidspunktet angir når innholdet i datasettet sist er endret.</p>
-</li>
-<li>
-<p>Angis som tidspunkt (dato alene tolkes som kl. 00:00:00 norsk tid)</p>
-</li>
-<li>
-<p>Tidspunkt angis med xsd:dateTime etter kapittel 5.4 i ISO 8601 utvidet med tidssoner [-]CCYY-MM-DDThh:mm:ss[Z|(+|-)hh:mm]</p>
-</li>
-</ul>
-</div>
-<div class="ulist checklist">
-<div class="title">Eksempler</div>
-<ul class="checklist">
-<li>
-<p><i class="fa fa-check-square-o"></i> 01.01.2017 00:00</p>
-</li>
-</ul>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre>&lt;&gt; &lt;http://data.brreg.no/datakatalog/datasett/12&gt;+</pre>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_aktualitet"><a class="anchor" href="#_aktualitet"></a>Aktualitet</h3>
-<div class="paragraph">
-<div class="title">Sammendrag</div>
-<p>Avvik eller tilleggsopplysninger om “oppdateringsfrekvens” og “sist oppdatert”</p>
-</div>
-<div class="paragraph">
-<div class="title">Anbefalinger</div>
-<p>Avvik eller tilleggsopplysninger om “oppdateringsfrekvens” og “sist oppdatert”</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Er opplysninger om “oppdateringsfrekvens” og “sist oppdatert” alltid gyldig? Er det opplysninger i datasettet som har annen oppdateringsfrekvens?</p>
-</li>
-</ul>
-</div>
-<div class="listingblock">
-<div class="title">Eksempler</div>
-<div class="content">
-<pre>&lt;&gt; dqv:hasQualityAnnotation [
-    a dqv:QualityAnnotation ;  # kvalitetsnote
-    dqv:inDimension iso:Currentness ;
-    oa:hasBody [
-       rdf:value=”Enhetsregisteret er kontinuerlig oppdatert, men egenskapen antall ansatte oppdateres månedlig fra Aa-registeret”@no;
-    ] .
-  ] .</pre>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_i_samsvar_med_standard"><a class="anchor" href="#_i_samsvar_med_standard"></a>I samsvar med standard</h3>
-<div class="paragraph">
-<div class="title">Sammendrag</div>
-<p>Angi at et datasett er i samsvar med en standard, spesifikasjon eller implementasjonsregel.</p>
-</div>
-<div class="paragraph">
-<div class="title">Anbefalinger</div>
-<p>Det er behov for å vite om et datasett er i henhold til gitt(e) standard(er).</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Benyttes til å angi at et datasett er i samsvar med en standard, spesifikasjon eller implementasjonsregel. Eksempel: Et datasett er i samsvar med SOSI 4.5 som  innholdsstandard.</p>
-</li>
-<li>
-<p>For referanser til maskinlesbare informasjonsmodeller, skal egenskapen “informasjonsmodell benyttes”</p>
-</li>
-</ul>
-</div>
-<div class="listingblock">
-<div class="title">Eksempler</div>
-<div class="content">
-<pre>&lt;&gt; dcat:conformsTo [
-  skos:prefLabel “Produktspesifikasjon NVE flomsoner 1.0”@no
-  rdfs:seeAlso &lt;http://sosi.geonorge.no/Produktspesifikasjoner/Produktspesifikasjon_NVE_Flomsoner_1%200.pdf&gt;
-] .</pre>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_relevans"><a class="anchor" href="#_relevans"></a>Relevans</h3>
-<div class="paragraph">
-<div class="title">Sammendrag</div>
-<p>Avvik eller tilleggsopplysninger knyttet til datasettes relevans i ulike brukskontekster</p>
-</div>
-<div class="paragraph">
-<div class="title">Anbefalinger</div>
-<p>Avvik eller tilleggsopplysninger knyttet til datasettes relevans i ulike brukskontekster
- * En vurdering om det er bruksområder datasettet er spesielt velegnet eller ikke bør brukes.</p>
-</div>
-<div class="listingblock">
-<div class="title">Eksempler</div>
-<div class="content">
-<pre>&lt;&gt; dcatno:hasQualityAnnotation [
-    a dqv:QualityAnnotation ;
-    dqv:inDimension iso:Relevance ;
-    oa:hasBody [
-       rdf:value=”Enhetsregisterets Næringskode viser enhetenes hovedaktivitet og skal primært dekke statistiske behov for Statistisk sentralbyrå (SSB). Næringskoden er satt ved opprettelse av selskapet, og reflekterer ikke alltid selskapets endrede forretningsmodell.”@no;
-    ] .
-  ] .</pre>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_kompletthet"><a class="anchor" href="#_kompletthet"></a>Kompletthet</h3>
-<div class="paragraph">
-<div class="title">Sammendrag</div>
-<p>I hvilken grad inneholder datasettet alle objekter som nevnt i formålet.</p>
-</div>
-<div class="paragraph">
-<div class="title">Anbefalinger</div>
-<p>I hvilken grad inneholder datasettet forventede opplysninger</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Kompletthet tolkes i forhold til formålet (utvalget)</p>
-</li>
-<li>
-<p>Inneholder datasettet de objekter som nevnt i formålet?</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<div class="title">Eksempler</div>
-<p>Enhetsregisteret - formålet er effektiv utnyttelse og samordning av offentlige opplysninger om juridiske personer, enkeltpersonforetak og andre registreringsenheter</p>
-</div>
-<div class="ulist checklist">
-<ul class="checklist">
-<li>
-<p><i class="fa fa-check-square-o"></i> Enhetsregisteret inneholder ikke slettede selskaper før 1994.</p>
-</li>
-</ul>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre>&lt;&gt; dqv:hasQualityAnnotation [
-    a dqv:QualityAnnotation ;
-    dqv:inDimension iso:Completeness ;
-    oa:hasBody [
-       rdf:value=”Enhetsregisteret inneholder ikke slettede selskaper før 1994.”@no;
-    ] .
-  ] .</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Kontakt og reservasjonsregisteret - formål benyttes til varsling og kan benyttes i forbindelse med saksbehandling og utføring av forvaltningsoppgaver for øvrig</p>
-</div>
-<div class="ulist checklist">
-<ul class="checklist">
-<li>
-<p><i class="fa fa-check-square-o"></i>  Alle innbygger er ikke representert/registrert</p>
-</li>
-</ul>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre>&lt;&gt; dqv:hasQualityAnnotation [
-    a dqv:QualityAnnotation ;
-    dqv:inDimension iso:Completeness ;
-    oa:hasBody [
-       rdf:value=”Alle innbygger er ikke representert/registrert.”@no;
-    ] .
-  ] .</pre>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_nøyaktighet"><a class="anchor" href="#_nøyaktighet"></a>Nøyaktighet</h3>
-<div class="paragraph">
-<div class="title">Sammendrag</div>
-<p>I hvilken grad er innholdet i samsvar med formålet</p>
-</div>
-<div class="paragraph">
-<div class="title">Anbefalinger</div>
-<p>I hvilken grad representerer datasettet korrekt intensjonen som er angitt av dataeier i formålet</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Nøyaktighet skal tolkes i forhold til formålet.</p>
-</li>
-<li>
-<p>Angi om det er begrensninger i forhold til formålet</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<div class="title">Eksempler</div>
-<p>Regnskapsregisteret - Formålet med ordningen er å sikre økonomisk trygghet og effektivitet – mellom selskapene og myndighetene, mellom selskapene og publikum, og ikke minst, selskapene imellom.</p>
-</div>
-<div class="ulist checklist">
-<ul class="checklist">
-<li>
-<p><i class="fa fa-check-square-o"></i> Enhetens regnskap blir ikke kontrollert av Regnskapsregisteret.</p>
-</li>
-</ul>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre>&lt;&gt; dqv:hasQualityAnnotation [
-    a dqv:QualityAnnotation ;
-    dqv:inDimension iso:Accuracy ;
-    oa:motivatedBy dqv:qualityAssessment ;
-    oa:hasBody [
-       rdf:value=”Enhetens regnskap blir ikke kontrollert av Regskapsregistert.”@no;
-    ] .
-    ] .</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Kontakt og reservasjonsregisteret - formål benyttes til varsling og kan benyttes i forbindelse med saksbehandling og utføring av forvaltningsoppgaver for øvrig</p>
-</div>
-<div class="ulist checklist">
-<ul class="checklist">
-<li>
-<p><i class="fa fa-check-square-o"></i> Brukere har selv oppgitt informasjon, sjekkes med SMS.</p>
-</li>
-</ul>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre>&lt;&gt; dqv:hasQualityAnnotation [
-    a dqv:QualityAnnotation ;
-    dqv:inDimension iso:Accuracy ;
-    oa:motivatedBy dqv:qualityAssessment ;
-    oa:hasBody [
-       rdf:value=”Brukere har selv oppgitt informasjon, sjekkes med SMS.”@no;
-    ] .
-  ] .</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Askeladden - Riksantikvarens offisielle database over fredete kulturminner og kulturmiljøer i Norge</p>
-</div>
-<div class="ulist checklist">
-<ul class="checklist">
-<li>
-<p><i class="fa fa-check-square-o"></i> Arkeologiske funn som er registrert før år 2005 har feilmargin på stedfesting på opptil 10 meter. Funn registrert etter 2005 har feilmargin på opptil 0,5 meter</p>
-</li>
-</ul>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre>&lt;&gt; dqv:hasQualityAnnotation [
-    a dqv:QualityAnnotation ;
-    dqv:inDimension iso:Accuracy ;
-    oa:motivatedBy dqv:qualityAssessment ;
-    oa:hasBody [
-       rdf:value=”Arkeologiske funn som er registrert før år 2005 har feilmargin på stedfesting på opptil 10 meter. Funn registrert etter 2005 har feilmargin på opptil 0,5 meter”@no;
-    ] .
-  ] .</pre>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_tilgjengelighet"><a class="anchor" href="#_tilgjengelighet"></a>Tilgjengelighet</h3>
-<div class="paragraph">
-<div class="title">Sammendrag</div>
-<p>Avvik eller tilleggsopplysninger knyttet til datasettes tilgjengelighet</p>
-</div>
-<div class="paragraph">
-<div class="title">Anbefalinger</div>
-<p>Avvik eller tilleggsopplysninger knyttet til datasettets tilgjengelighet</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Tilgjengelighet tolkes i forhold til tilgangsnivå og ev. begrensninger utover det som er angitt i behandlingsgrunnlag, skjermings- og utleveringshjemmel.</p>
-</li>
-<li>
-<p>Dersom datasettet er åpent men mangler distribusjoner bør årsaken angis her.</p>
-</li>
-</ul>
-</div>
-<div class="listingblock">
-<div class="title">Eksempler</div>
-<div class="content">
-<pre>&lt;&gt; dqv:hasQualityAnnotation [
-    a dqv:QualityAnnotation ;
-    dqv:inDimension iso:Availability ;
-    oa:hasBody [
-       rdf:value=”Regnskapsregisteret kan kun hentes ut på forespørsel”@no;
-    ] .
-    ] .</pre>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_informasjonsmodell"><a class="anchor" href="#_informasjonsmodell"></a>Informasjonsmodell</h3>
-<div class="paragraph">
-<div class="title">Sammendrag</div>
-<p>Refereranse til datasettets informasjonsmodell</p>
-</div>
-<div class="paragraph">
-<div class="title">Anbefalinger</div>
-<p>En eksplisitt referanse til informasjonsmodell</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Benyttes til å angi en maskinlesbar referanse til informasjonsmodell.</p>
-</li>
-</ul>
-</div>
-<div class="listingblock">
-<div class="title">Eksempler</div>
-<div class="content">
-<pre>&lt;&gt; dcatno:informationModel [
-   skos:prefLabel “Informasjonsmodell Flomsoner 1.0”@no ;
-   rdfs:seeAlso &lt;https://objektkatalog.geonorge.no/Pakke/Index/EAPK_C8C565A7_B07B_41ec_80B0_1A2EEEBA0C15&gt; ] .</pre>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_kilde_datasett_avledet_fra"><a class="anchor" href="#_kilde_datasett_avledet_fra"></a>Kilde datasett (avledet fra)</h3>
-<div class="paragraph">
-<div class="title">Sammendrag</div>
-<p>Peker til ressurs (datasett eller annet) som helt eller delvis er en kilde for det aktuelle datasettet.</p>
-</div>
-<div class="paragraph">
-<div class="title">Anbefalinger</div>
-<p>Peker til en ressurs som er kilde til datasettet</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Peker til ressurs (datasett eller annet) som helt eller delvis er en kilde for det aktuelle datasettet. F.eks. kan et datasett er opprettet basert på data som er hentet fra en nettside, uten at den er definert som et datasett.</p>
-</li>
-<li>
-<p>Dersom et åpent datasett er basert på et annet hvor personopplysninger er fjernet, kan relasjonen brukes.</p>
-</li>
-<li>
-<p>Et datasett som er avledet fra et annet skal ha en referanse til kilde for det aktuelle datasettet.</p>
-</li>
-<li>
-<p>Dersom det er et utvalg fra et annet datasett bør heller relasjonen <em>del av</em> brukes</p>
-</li>
-</ul>
-</div>
-<div class="listingblock">
-<div class="title">Eksempler</div>
-<div class="content">
-<pre>&lt;&gt; dcat:source [
-   skos:prefLabel “Det sentrale folkeregisteret”@no ;
-   rdfs:seeAlso &lt;http://brreg.no/catalogs/974761076/datasets/e3fc94e4-cc7e-4290-b479-4e0c99dc6caa&gt; ] .</pre>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_del_av_datasett"><a class="anchor" href="#_del_av_datasett"></a>Del av datasett</h3>
-<div class="paragraph">
-<div class="title">Sammendrag</div>
-<p>Der registre oppdeles i mindre datasett skal relasjonen brukes.</p>
-</div>
-<div class="paragraph">
-<div class="title">Anbefalinger</div>
-<p>Peker til et datasett som det aktuelle datasettet er en delmengde av av, eller at det er brutt opp i mindre datasett.</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Der registre oppdeles i mindre datasett skal relasjonen brukes. F.eks. er datasettet Underenheter er del av datasettet Enhetsregisteret.</p>
-</li>
-</ul>
-</div>
-<div class="listingblock">
-<div class="title">Eksempler</div>
-<div class="content">
-<pre>&lt;&gt; dct:isPartOf [
-   skos:prefLabel “Det sentrale folkeregisteret”@no ;
-   rdfs:seeAlso &lt;http://brreg.no/catalogs/974761076/datasets/e3fc94e4-cc7e-4290-b479-4e0c99dc6caa&gt; ] .</pre>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_erstattet_av_datasett"><a class="anchor" href="#_erstattet_av_datasett"></a>Erstattet av datasett</h3>
-<div class="paragraph">
-<div class="title">Sammendrag</div>
-<p>Peker til et datasett som erstatter et aktuelt datasettet</p>
-</div>
-<div class="paragraph">
-<div class="title">Anbefalinger</div>
-<p>Peker til et datasett som erstatter et aktuelt datasettet.</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>F.eks. kan et kodeverk bli erstattet av en nyere utgave.</p>
-</li>
-</ul>
-</div>
-<div class="listingblock">
-<div class="title">Eksempler</div>
-<div class="content">
-<pre>&lt;&gt; dct:isReplacedBy [
-   skos:prefLabel “Bydeler fra 1.1.2004”@no ;
-   rdfs:seeAlso &lt;https://data.norge.no/node/1115&gt; ] .</pre>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_påkrevd_av_datasett"><a class="anchor" href="#_påkrevd_av_datasett"></a>Påkrevd av datasett</h3>
-<div class="paragraph">
-<div class="title">Sammendrag</div>
-<p>Peker til en ressurs som må være tilstede for at datasettet skal kunne produseres</p>
-</div>
-<div class="paragraph">
-<div class="title">Anbefalinger</div>
-<p>Peker til en ressurs som må være tilstede for at datasettet skal kunne produseres.</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Peker til ressurs (datasett eller annet) som aktuelt datasett er avhengig av</p>
-</li>
-</ul>
-</div>
-<div class="listingblock">
-<div class="title">Eksempler</div>
-<div class="content">
-<pre>&lt;&gt; dct:isPartOf [
-   skos:prefLabel “Postnummer i Norge”@no ;
-   rdfs:seeAlso &lt;https://data.norge.no/node/1252&gt; ] .</pre>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_refererer_til"><a class="anchor" href="#_refererer_til"></a>Refererer til</h3>
-<div class="paragraph">
-<div class="title">Sammendrag</div>
-<p>Referanse til andre datasett som det kan være nyttig for brukere å være oppmerksom på.</p>
-</div>
-<div class="paragraph">
-<div class="title">Anbefalinger</div>
-<p>Referanse til andre datasett som det kan være nyttig for brukere å være oppmerksom på</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Peker til datasett som kan være aktuelt å se i sammenheng med det aktuelle datasettet, f.eks. for Enhetsregisteret supplerende informasjon om Enheter, men ikke direkte relatert.</p>
-</li>
-</ul>
-</div>
-<div class="listingblock">
-<div class="title">Eksempler</div>
-<div class="content">
-<pre>&lt;&gt; dct:references [
-   skos:prefLabel “Register over offentlig støtte”@no ;
-   rdfs:seeAlso &lt;http://brreg.no/catalogs/974760673/datasets/ca04abdd-6327-4833-bd05-7a3dca20e6a5&gt; ] .</pre>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_relatert"><a class="anchor" href="#_relatert"></a>Relatert</h3>
-<div class="paragraph">
-<div class="title">Sammendrag</div>
-<p>Referanse til andre datasett som gir supplerende informasjon om innholdet.</p>
+<p>Referanse til andre ressurser som gir supplerende informasjon om innholdet i datasettet.</p>
 </div>
 <div class="paragraph">
 <div class="title">Anbefalinger</div>
@@ -2026,91 +2044,49 @@ Et lite folkelig ord (løsøre) er brukt. Avgrensningene her er greie</p>
 <div class="ulist">
 <ul>
 <li>
-<p>Angi referanser til andre datasett som gir supplerende informasjon om innholdet. Kan f.eks. være å relatere til et annet register.</p>
+<p>Angi referanser til andre ressurser (f.eks. andre datasett) som gir supplerende informasjon om innholdet i dette datasettet. Kan f.eks. være å relatere til et annet register.</p>
 </li>
 </ul>
 </div>
 <div class="listingblock">
-<div class="title">Eksempler</div>
+<div class="title">Eksempel i RDF Turtle</div>
 <div class="content">
-<pre>&lt;&gt; dct:relation [
-    skos:prefLabel “Det sentrale folkeregisteret”@no ;
-   rdfs:seeAlso &lt;http://brreg.no/catalogs/974761076/datasets/e3fc94e4-cc7e-4290-b479-4e0c99dc6caa&gt; ] .</pre>
+<pre>&lt;etDatasett&gt; dcat:Dataset ;
+  dct:relation &lt;relatertDatasett&gt; .
+
+&lt;relatertDatasett&gt; a dcat:Dataset .</pre>
 </div>
 </div>
 </div>
-<div class="sect2">
-<h3 id="_versjon_av"><a class="anchor" href="#_versjon_av"></a>Versjon av</h3>
+<div class="sect3">
+<h4 id="datasett-romligOppløsning"><a class="anchor" href="#datasett-romligOppløsning"></a>Datasett - romlig oppløsning</h4>
+<div class="paragraph">
+<p><em>&lt;ikke beskrevet, tilsvarer [<a href="https://data.norge.no/specification/dcat-ap-no/#Datasett-romligOppl%C3%B8sning">Datasett: romlig oppløsning</a>]&gt;</em></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="datasett-språk"><a class="anchor" href="#datasett-språk"></a>Datasett - språk</h4>
 <div class="paragraph">
 <div class="title">Sammendrag</div>
-<p>Referanse til et datasett som i prinsippet er det samme, men hvor innholdet er blitt oppdatert på bakgrunn av bedret datakvalitet e.l.</p>
+<p>Hovedspråket [<a href="https://data.norge.no/specification/dcat-ap-no/#Datasett-spr%C3%A5k">Datasett: språk</a>] benyttet i datasettets innhold angis.</p>
 </div>
 <div class="paragraph">
 <div class="title">Anbefalinger</div>
-<p>Peker til et datasett som det aktuelle datasettet er en versjon av.</p>
+<p>For å forstå hvilket språk innholdet til datasettet har angis dette.</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>I prinsippet det samme datasettet, men hvor innholdet er blitt oppdatert på bakgrunn av bedret datakvalitet e.l.</p>
+<p>Det er hovedspråket benyttet i datasettets innhold som skal angis.</p>
 </li>
 <li>
-<p>Peker til en versjon av det aktuelle datasettet kan avledes (har versjon).</p>
-</li>
-</ul>
-</div>
-<div class="listingblock">
-<div class="title">Eksempler</div>
-<div class="content">
-<pre>&lt;&gt; dct:isVersionOf [
-   skos:prefLabel “Bydeler fra 1.1.2004”@no ;
-   rdfs:seeAlso &lt;https://data.norge.no/node/1115&gt; ] .</pre>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_testdatasett"><a class="anchor" href="#_testdatasett"></a>Testdatasett</h3>
-<div class="paragraph">
-<div class="title">Sammendrag</div>
-<p>For å angi at et register eller datasett foreligger som testdata, typisk syntetiske eller anonymiserte, angis dette med relasjonen testdatasett til et annet datasett.</p>
-</div>
-<div class="paragraph">
-<div class="title">Anbefalinger</div>
-<p>For å angi at et register eller datasett foreligger som testdata, typisk syntetiske eller anonymiserte, angis dette med relasjonen testdatasett til et annet datasett.</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Peker til datasett som er består av testdata til det aktuelle datasettet</p>
-</li>
-</ul>
-</div>
-<div class="listingblock">
-<div class="title">Eksempler</div>
-<div class="content">
-<pre>&lt;&gt; dct:isVersionOf [
-   skos:prefLabel “Syntetiske folkeregisteredata”@no ;
-   rdfs:seeAlso &lt;http://brreg.no/catalogs/974761076/datasets/e3fc94e4-cc7e-4290-b479-4e0c99dc6caa/&gt; ] .</pre>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_kontaktpunkt"><a class="anchor" href="#_kontaktpunkt"></a>Kontaktpunkt</h3>
-<div class="paragraph">
-<div class="title">Sammendrag</div>
-<p>Angi kontaktinformasjonen som kan brukes ved henvendelser om et datasett.</p>
-</div>
-<div class="paragraph">
-<div class="title">Anbefalinger</div>
-<p>Egenskapen kontaktpunkt angis for å komme i dialog med eieren av datasettet.</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Angi kontaktinformasjonen som kan brukes ved henvendelser om et datasett.</p>
+<p>Er datasettet uten språklige tekster angis ikke språk.</p>
 </li>
 <li>
-<p>Vcard <a href="https://www.w3.org/TR/vcard-rdf">https://www.w3.org/TR/vcard-rdf</a> benyttes for å beskrive kontaktpunktet (se anbefaling under hvert Kontaktpunkt-felt)</p>
+<p>Inneholder datasett tekster på flere språk, og det ikke er tydelig hva som er hovedspråket, angis ikke språk.</p>
+</li>
+<li>
+<p>Språk angis ved å velge fra EUs kontrollerte liste over <a href="https://op.europa.eu/s/o19C">Language</a>.</p>
 </li>
 </ul>
 </div>
@@ -2118,70 +2094,108 @@ Et lite folkelig ord (løsøre) er brukt. Avgrensningene her er greie</p>
 <div class="title">Eksempler</div>
 <ul class="checklist">
 <li>
-<p><i class="fa fa-check-square-o"></i> Avdeling Digitalisering</p>
+<p><i class="fa fa-check-square-o"></i> Norsk bokmål</p>
 </li>
 </ul>
 </div>
 <div class="listingblock">
+<div class="title">Eksempel i RDF Turtle</div>
 <div class="content">
-<pre>&lt;&gt; &lt;http://data.brreg.no/datakatalog/datasett/12&gt;
-    dcat:contactPoint &lt;http://data.brreg.no/datakatalog/kontaktpunkt/a-7&gt; .</pre>
+<pre>&lt;etDatasett&gt; a dcat:Dataset ;
+  dct:language &lt;http://publications.europa.eu/resource/authority/language/NOB&gt; .</pre>
 </div>
 </div>
 </div>
-<div class="sect2">
-<h3 id="_datasettdistribusjon"><a class="anchor" href="#_datasettdistribusjon"></a>Datasettdistribusjon</h3>
+<div class="sect3">
+<h4 id="datasett-tidsromsoppløsning"><a class="anchor" href="#datasett-tidsromsoppløsning"></a>Datasett - tidsromsoppløsning</h4>
+<div class="paragraph">
+<p><em>&lt;ikke beskrevet, tilsvarer [<a href="https://data.norge.no/specification/dcat-ap-no/#Datasett-tidsoppl%C3%B8sning">Datasett: tidsoppløsning</a>]&gt;</em></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="datasett-type"><a class="anchor" href="#datasett-type"></a>Datasett - type</h4>
 <div class="paragraph">
 <div class="title">Sammendrag</div>
-<p>For å angi hvor man kan få tilgang til datasettet skal det angis ulike distribusjoner.</p>
+<p>Referanse til en klassifisering av type innhold i datasettet [<a href="https://data.norge.no/specification/dcat-ap-no/#Datasett-type">Datasett: type</a>].</p>
 </div>
 <div class="paragraph">
 <div class="title">Anbefalinger</div>
-<p>For å angi hvor man kan få tilgang til datasettet skal det angis ulike distribusjoner.</p>
+<p>Referanse til en klassifisering av type innhold i datasettet.</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>Det angis i utgangspunktet en distribusjon per fil, feed eller API</p>
-</li>
-<li>
-<p>Dersom det er ett API som leverer flere filformater angis det som en distribusjon</p>
+<p>EUs kontrollerte vokabular for <a href="https://op.europa.eu/s/o19R">Dataset type</a> bør brukes.</p>
 </li>
 </ul>
 </div>
 <div class="listingblock">
-<div class="title">Eksempler</div>
+<div class="title">Eksempel i RDF Turtle</div>
 <div class="content">
-<pre> &lt;&gt; &lt;http://brreg.no/catalogs/974760673/datasets/63086dda-9b72-43f0-bbc2-3ced4bc2edd6&gt;
-    dcat:distribution &lt;http://data.brreg.no/datakatalog/distribusjon/12&gt;
-. # til et beskrivelse av et API</pre>
+<pre>&lt;ds1&gt; a dcat:Dataset ;
+  dct:type &lt;http://publications.europa.eu/resource/authority/dataset-type/CODE_LIST&gt; . # kodeliste
+
+&lt;ds2&gt; a dcat:Dataset ;
+  dct:type &lt;http://publications.europa.eu/resource/authority/dataset-type/SYNTHETIC_DATA&gt; . # kunstig data
+
+&lt;ds3&gt; a dcat:Dataset ;
+  dct:type &lt;http://publications.europa.eu/resource/authority/dataset-type/TEST_DATA&gt; . # testdata</pre>
 </div>
 </div>
 </div>
-<div class="sect2">
-<h3 id="_eksempeldata"><a class="anchor" href="#_eksempeldata"></a>Eksempeldata</h3>
+<div class="sect3">
+<h4 id="datasett-utgivelsesdato"><a class="anchor" href="#datasett-utgivelsesdato"></a>Datasett - utgivelsesdato</h4>
 <div class="paragraph">
 <div class="title">Sammendrag</div>
-<p>Benyttes for å gi eksempeldata for et datasett, og hvordan en faktisk distribusjon ser ut.</p>
+<p>Tidspunktet angir når innholdet i datasettet gjøres tilgjengelig [<a href="https://data.norge.no/specification/dcat-ap-no/#Datasett-utgivelsesdato">Datasett: utgivelsesdato</a>].</p>
 </div>
 <div class="paragraph">
 <div class="title">Anbefalinger</div>
-<p>Benyttes for å gi eksempeldata for et datasett, og hvordan en faktisk distribusjon ser ut.
- * Dersom datasettet inneholder personopplysninger vil det være nyttig for bruker å se en eksempedata som viser en anonymisert rad i datasettet.</p>
+<p>For å forstå når datasettet er operativt og tilgjengelig angis tidspunkt for utgivelse.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Angi når innholdet i datasettet gjøres tilgjengelig. Dette er ikke alltid  samsvarende med når den enkelte distribusjonen er tilgjengelig. Og heller ikke når beskrivelsen om datasettet utgis (katalogpostens utgivelse).</p>
+</li>
+<li>
+<p>Angis som xsd:date eller xsd:dateTime.</p>
+</li>
+</ul>
+</div>
+<div class="ulist checklist">
+<div class="title">Eksempler</div>
+<ul class="checklist">
+<li>
+<p><i class="fa fa-check-square-o"></i> 01.01.2017</p>
+</li>
+</ul>
 </div>
 <div class="listingblock">
-<div class="title">Eksempler</div>
+<div class="title">Eksempel i RDF Turtle</div>
 <div class="content">
-<pre>&lt;&gt; &lt;http://brreg.no/catalogs/974761076/datasets/e3fc94e4-cc7e-4290-b479-4e0c99dc6caa&gt;
-    dcat:distribution &lt;http://data.brreg.no/datakatalog/distribusjon/124312&gt;
-. # til et beskrivelse av en eksempel-distribusjon av folkeregisteret</pre>
+<pre>&lt;etDatasett&gt; a dcat:Dataset ;
+  dct:issued “2017-01-01”^^xsd:date .</pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="datasett-versjon"><a class="anchor" href="#datasett-versjon"></a>Datasett - versjon</h4>
+<div class="paragraph">
+<p><em>&lt;ikke beskrevet, tilsvarer [<a href="https://data.norge.no/specification/dcat-ap-no/#Datasett-versjon">Datasett: versjon</a>]&gt;</em></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="datasett-versjonnote"><a class="anchor" href="#datasett-versjonnote"></a>Datasett - versjonsnote</h4>
+<div class="paragraph">
+<p><em>&lt;ikke beskrevet, tilsvarer [<a href="https://data.norge.no/specification/dcat-ap-no/#Datasett-versjonsnote">Datasett: versjonsnote</a>]&gt;</em></p>
 </div>
 </div>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="distribusjon"><a class="anchor" href="#distribusjon"></a>Beskrivelse av en distribusjon</h2>
+<h2 id="beskrivelse-av-distribusjon"><a class="anchor" href="#beskrivelse-av-distribusjon"></a>Beskrivelse av en distribusjon</h2>
 <div class="sectionbody">
 <div class="admonitionblock warning">
 <table>
@@ -2417,7 +2431,7 @@ Et lite folkelig ord (løsøre) er brukt. Avgrensningene her er greie</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_dokumentasjon_2"><a class="anchor" href="#_dokumentasjon_2"></a>Dokumentasjon</h3>
+<h3 id="_dokumentasjon"><a class="anchor" href="#_dokumentasjon"></a>Dokumentasjon</h3>
 <div class="paragraph">
 <div class="title">Sammendrag</div>
 <p>Referanse til en side eller et dokument som beskriver og dokumenterer innhold og struktur spesifikk for distribusjonen.</p>
@@ -2435,7 +2449,7 @@ Et lite folkelig ord (løsøre) er brukt. Avgrensningene her er greie</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_utgivelse_2"><a class="anchor" href="#_utgivelse_2"></a>Utgivelse</h3>
+<h3 id="_utgivelse"><a class="anchor" href="#_utgivelse"></a>Utgivelse</h3>
 <div class="paragraph">
 <div class="title">Sammendrag</div>
 <p>Dato/tid når distribusjonen (f.eks. api) først ble publisert i tilknytning til et datasett.</p>
@@ -2460,7 +2474,7 @@ Et lite folkelig ord (løsøre) er brukt. Avgrensningene her er greie</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_sist_oppdatert_2"><a class="anchor" href="#_sist_oppdatert_2"></a>Sist oppdatert</h3>
+<h3 id="_sist_oppdatert"><a class="anchor" href="#_sist_oppdatert"></a>Sist oppdatert</h3>
 <div class="paragraph">
 <div class="title">Sammendrag</div>
 <p>Dato/tid sist distribusjonen (API-et, filen eller feeden) sist ble endret.</p>
@@ -2528,7 +2542,7 @@ Et lite folkelig ord (løsøre) er brukt. Avgrensningene her er greie</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="datatjeneste"><a class="anchor" href="#datatjeneste"></a>Beskrivelse av en datatjeneste</h2>
+<h2 id="beskrivelse-av-datatjeneste"><a class="anchor" href="#beskrivelse-av-datatjeneste"></a>Beskrivelse av en datatjeneste</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Nytt i DCAT-AP-NO v.2 er at standarden nå også støtter beskriveser av datatjeneste (aka API), som v.1.x av DCAT-AP-NO ikke gjorde.</p>
@@ -2539,7 +2553,7 @@ Et lite folkelig ord (løsøre) er brukt. Avgrensningene her er greie</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="datakatalog"><a class="anchor" href="#datakatalog"></a>Beskrivelse av en datakatalog</h2>
+<h2 id="beskrivelse-av-datakatalog"><a class="anchor" href="#beskrivelse-av-datakatalog"></a>Beskrivelse av en datakatalog</h2>
 <div class="sectionbody">
 <div class="admonitionblock warning">
 <table>
@@ -2669,7 +2683,7 @@ Et lite folkelig ord (løsøre) er brukt. Avgrensningene her er greie</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_utgivelse_3"><a class="anchor" href="#_utgivelse_3"></a>Utgivelse</h3>
+<h3 id="_utgivelse_2"><a class="anchor" href="#_utgivelse_2"></a>Utgivelse</h3>
 <div class="paragraph">
 <div class="title">Sammendrag</div>
 <p>Dato/tid katalogen først ble publisert.</p>
@@ -2694,7 +2708,7 @@ Et lite folkelig ord (løsøre) er brukt. Avgrensningene her er greie</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_sist_oppdatert_3"><a class="anchor" href="#_sist_oppdatert_3"></a>Sist oppdatert</h3>
+<h3 id="_sist_oppdatert_2"><a class="anchor" href="#_sist_oppdatert_2"></a>Sist oppdatert</h3>
 <div class="paragraph">
 <div class="title">Sammendrag</div>
 <p>Dato/tid sist katalogen ble endret,. Dette kan være endring av en datasettbeskrivelse, eller andre metadata i katalogen.</p>
@@ -2715,6 +2729,77 @@ Et lite folkelig ord (løsøre) er brukt. Avgrensningene her er greie</p>
 <div class="content">
 <pre>&lt;&gt; &lt;http://brreg.no/catalogs/974760673&gt;
      dct:modified “2017-01-01T00:00:00+01:00”^xsd:DateTime .</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="utvalgte-temaer"><a class="anchor" href="#utvalgte-temaer"></a>Utvalgte temaer</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><span class="red yellow-background"><em>&lt;Kapitlet er under utvikling, skal inneholde veiledning rundt noen utvalgte temaer&gt;</em></span></p>
+</div>
+<div class="sect2">
+<h3 id="sammenheng"><a class="anchor" href="#sammenheng"></a>Sammenheng mellom datasett, begrep, API og informasjonsmodeller</h3>
+<div class="paragraph">
+<p><span class="red yellow-background"><em>&lt;tekst kommer&gt;</em></span></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="beskrivelse-av-kvalitet"><a class="anchor" href="#beskrivelse-av-kvalitet"></a>Beskrivelse av kvalitet</h3>
+<div class="paragraph">
+<p><span class="red yellow-background"><em>&lt;tekst kommer&gt;</em></span></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="beskrivelse-av-juss"><a class="anchor" href="#beskrivelse-av-juss"></a>Beskrivelse av juridiske rammer</h3>
+<div class="paragraph">
+<p><span class="red yellow-background"><em>&lt;tekst kommer&gt;</em></span></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="beskrivelse-av-tidsserie"><a class="anchor" href="#beskrivelse-av-tidsserie"></a>Beskrivelse av tidsserie</h3>
+<div class="paragraph">
+<p><span class="red yellow-background"><em>&lt;tekst kommer&gt;</em></span></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="beskrivelse-av-åpneData"><a class="anchor" href="#beskrivelse-av-åpneData"></a>Beskrivelse av åpne data</h3>
+<div class="paragraph">
+<p><span class="red yellow-background"><em>&lt;tekst kommer&gt;</em></span></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="bruk-av-kontrollerte-vokabularer"><a class="anchor" href="#bruk-av-kontrollerte-vokabularer"></a>Bruk av kontrollerte vokabularer</h3>
+<div class="paragraph">
+<p><span class="red yellow-background"><em>&lt;tekst kommer&gt;</em></span></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="om-identifikator"><a class="anchor" href="#om-identifikator"></a>Om identifikator (<code>dct:identifer</code>)</h3>
+<div class="paragraph">
+<p>Identifikatoren til en ressurs er som regel systemgenerert av verktøyet som brukes til å beskrive et datasett, slik at du som vanlig bruker ikke trenger å fylle ut dette feltet manuelt.</p>
+</div>
+<div class="paragraph">
+<p>Resten av dette avsnittet er primært for deg som skal utvikle/tilpasse verktøystøtte. Beskrivelsen tar utgangspunkt i indikatoren til et datasett [<a href="https://data.norge.no/specification/dcat-ap-no/#Datasett-identifikator">Datasett: identifikator</a>], men den gjelder også for de andre klassene i DCAT-AP-NO der <code>dct:indikator</code> brukes.</p>
+</div>
+<div class="paragraph">
+<div class="title">Sammendrag</div>
+<p>Identifikatoren til et datasett [<a href="https://data.norge.no/specification/dcat-ap-no/#Datasett-identifikator">Datasett: identifikator</a>] skal være unik og varig. Se <a href="https://www.digdir.no/digitale-felleslosninger/peikarar-til-offentlege-ressursar-pa-nett/1492">Forvaltningsstandard for pekere til offentlige ressurser på nett</a>.</p>
+</div>
+<div class="paragraph">
+<div class="title">Anbefaling</div>
+<p>Subjektet (det første leddet) i en RDF-trippel er per definisjon en identifikator (URI). I en konkret realisering vil instanser av klassen Datasett (<code>dcat:Dataset</code>) derfor få en «innebygd» identifikator.</p>
+</div>
+<div class="paragraph">
+<p>For å ha minst mulig avvik fra EU-standarden som DCAT-AP-NO er basert på, har vi beholdt krav på at <code>dct:identifier</code> er obligatorisk for <code>dcat:Dataset</code>. <code>dct:identifier</code> trenger ikke å inneholde den samme identifikatoren som den innebygde URIen i en trippel, men <em>når</em> det er den samme identifikatoren, anbefales det at hele den innebygde URIen (subjektet i en trippel) kopieres til <code>dct:identifier</code>.</p>
+</div>
+<div class="listingblock">
+<div class="title">Eksempel i RDF Turtle</div>
+<div class="content">
+<pre>&lt;https://direks.eks/datasets/123&gt; a dcat:Dataset ;
+   dct:identifier "https://direks.eks/datasets/123"^^xsd:anyURI .</pre>
 </div>
 </div>
 </div>
@@ -2763,7 +2848,7 @@ ga('send', 'pageview');
 </div>
 <div id="footer">
 <div id="footer-text">
-Sist oppdatert 2021-04-14 06:02:56 UTC
+Sist oppdatert 2021-05-03 09:45:36 UTC
 </div>
 </div>
 </body>

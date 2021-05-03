@@ -19,8 +19,9 @@ Dersom du finner feil eller mangler i dokumentet, ber vi om at dette meldes inn 
 
 
 *Status*: [yellow-background]#under utarbeidelse# +
-*Versjon*: 2.0 +
+*Versjon*: [yellow-background]#forberedelse til# 2.0 +
 *Publisert*: [yellow-background]#under utarbeidelse# +
+*Oppdatert*: 2021-04-30 +
 *Gjeldende versjon*: https://data.norge.no/guide/veileder-beskrivelse-av-datasett/ +
 *Forrige versjon*: https://data.norge.no/guide/veileder-beskrivelse-av-datasett/v1 +
 *Redaktørens utkast*: https://informasjonsforvaltning.github.io/veileder-beskrivelse-av-datasett/
@@ -45,6 +46,8 @@ include::Distribusjon.adoc[]
 include::Datatjeneste.adoc[]
 
 include::Datakatalog.adoc[]
+
+include::Utvalgte_temaer.adoc[]
 
 include::Referanser.adoc[]
 
