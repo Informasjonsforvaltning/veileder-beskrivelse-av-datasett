@@ -1,3 +1,4 @@
-*.html
-*.pdf
-*.epub
+index.html
+veileder-beskrivelse-av-datasett.pdf
+*.tmp
+!slash/index.html
