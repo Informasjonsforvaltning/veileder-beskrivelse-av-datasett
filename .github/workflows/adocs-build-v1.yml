@@ -1,9 +1,12 @@
-name: build adocs
+name: build adocs v1
 
 on:
   push:
     branches:
-    - review
+    - v1
+    paths:
+    - docs/**
+
 jobs:
   adoc_build:
     runs-on: ubuntu-18.04
@@ -20,10 +23,12 @@ jobs:
       id: adocbuild_pdf
       uses: avattathil/asciidoctor-action@master
       with:
-          program: "asciidoctor-pdf -D docs -o document.pdf -a lang=nb docs/main.adoc"
+          program: "asciidoctor-pdf -D docs -o veileder-beskrivelse-av-datasett.pdf -a lang=nb docs/main.adoc"
       continue-on-error: true
     - name: Deploy
       uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_branch: html
         publish_dir: ./docs
+        destination_dir: ./v1
