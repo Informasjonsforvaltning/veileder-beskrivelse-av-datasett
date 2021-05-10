@@ -1,9 +1,9 @@
-name: build adocs develop
+name: build adocs v2
 
 on:
   push:
     branches:
-    - develop
+    - v2
     paths:
     - docs/**
 
@@ -29,4 +29,6 @@ jobs:
       uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_branch: html
         publish_dir: ./docs
+        destination_dir: ./v2
