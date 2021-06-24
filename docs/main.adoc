@@ -1,5 +1,5 @@
 include::locale/attributes-nb.adoc[]
-= Veileder for beskrivelse av datasett, datatjeneste og dataktaloger
+= Veileder for beskrivelse av datasett, datatjeneste og datakataloger
 :description:
 :doctype: book
 :docinfo:
