@@ -1,116 +1,347 @@
-== Beskrivelse av en datakatalog [[beskrivelse-av-datakatalog]]
+== Beskrivelse av katalog [[beskrivelse-av-katalog]]
 
-WARNING: [red yellow-background]#_NB! hele kapittelet er under oppdatering_#
+Datasettbeskrivelser fra f.eks. en virksomhet eller et virksomhetsområde kan samles i en datakatalog. Nytt fra v.2.0 av https://data.norge.no/specification/dcat-ap-no/[Standard for beskrivelse av datasett, datatjenester og datakatalog (DCAT-AP-NO)], er _datatjenester_ som også kan samles i en  katalog (f.eks. en API-katalog). Ordet "katalog" brukes derfor videre i dette kapittel.
 
-=== Hva er en datakatalog?
+Hovedhensikten med å beskrive katalogen din er at andre lettere skal kunne forstå hva slags katalog du har.
 
-Datasett fra en virksomhet eller flere virksomheter samles i en datakatalog.
+For at andre lettere skal kunne forstå dine beskrivelser, er det visse spilleregler for hvordan en katalog skal/bør/kan beskrives.
 
-=== Tittel
+Dette kapittelet forklarer hvordan en katalog beskrives i henhold til kravene i https://data.norge.no/specification/dcat-ap-no/[DCAT-AP-NO v.2], dog uten at du må kunne DCAT-AP-NO.
 
-.Sammendrag
+For deg som skal utvikle/tilpasse verktøystøtte for katalogbeskrivelse i henhold til DCAT-AP-NO, inneholder veilederen også en teknisk veiledning bakerst i hvert avsnitt. NB! Bortsett fra det første eksemplet, er ikke alle eksempler i RDF Turle komplette og de kan mangle bl.a. verdier for obligatoriske egenskaper.
 
-Kortfattet om katalogen. Angi, uten å liste, hvilke datasett den omfatter.
 
-.Anbefalinger
 
-Kortfattet om katalogen
+=== Eksempel på en katalogbeskrivelse [[eksempel-katalogbeskrivelse]]
 
- * Angi, uten å liste, hvilke datasett den omfatter,
- * f.eks. datasettene til Brønnøysundregistrene.
+Under er et eksempel på en katalogbeskrivelse, med dummydata, hvor egenskaper med * foran er obligatoriske:
 
-.Eksempler
+*****
+*Tittel: Oversikt over datasett fra Direks +
+*Beskrivelse: Katalogen inneholder beskrivelse av alle datasett som Direktoratet for eksempler forvalter.  +
+*Identifikator: https://data.direks.eks/cat/123 (_NB! dummy-URL som ikke virker_) +
+*Utgiver: Direktoratet for eksempler +
+Datasett: +++<u>Eksempeldatasett</u>+++  (_lenke til beskrivelsen av dette eksempeldatasettet_) +
+Dekningsområde: https://op.europa.eu/s/pirm[Norge]
+*****
 
-----
-<> <http://brreg.no/catalogs/974760673>
-    	a dcat:Catalog ;
-    	dct:title "Datakatalog for REGISTERENHETEN I BRØNNØYSUND"@nb ;
-----
+.Teknisk veiledning
 
-=== Beskrivelse av katalog
+Eksemplet ovenfor i RDF Turtle:
+-----
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <https://data.direks.eks/cat/> .
 
-.Sammendrag
+<https://data.direks.eks/cat/123> a dcat:Catalog ;
+	### obligatoriske egenskaper:
+		dct:title "Oversikt over datasett fra Direks"@nb ;
+		dct:description "Katalogen inneholder beskrivelse av alle datasett som Direktoratet for eksempler forvalter."@nb ;
+		dct:identifier "https://data.direks.eks/cat/123"^^xsd:anyURI ;
+		dct:publisher <https://organization-catalogue.fellesdatakatalog.digdir.no/organizations/999999999> ; # utgiver, med dummy-org.nr.
+	### anbefalte egenskaper:
+		dcat:dataset <https://data.direks.eks/eksempeldata> ; # peker til en datasettbeskrivelse
+		dct:spatial <http://publications.europa.eu/resource/authority/country/NOR> ; # dekningsområde, Norge
+	.
+-----
 
-En kort og presis beskrivelse av datasettet skal gjøre det lett for andre å se hva det inneholder. Beskrivelse er et obligatorisk felt.
 
-.Anbefalinger
+=== Obligatoriske egenskaper i en katalogbeskrivelse [[katalog-obligatoriske-egenskaper]]
 
-En kort og presis beskrivelse av datasettet skal gjøre det lett for andre å se hva det inneholder. Beskrivelse er et obligatorisk felt.
+Som et minimum skal følgende tas med i en katalogbeskrivelse:
 
-.Eksempler
-----
-<> <http://brreg.no/catalogs/974760673>
-    	a          	dcat:Catalog ;
-    	dct:description "Katalog over alle data i Brønnøysundregistrene"@nb ;
-----
+* Katalog - beskrivelse: beskrivelse av innholdet i katalogen.
+* Katalog - identifikator: identifikator til katalogen.
+* Katalog - tittel: navn på katalogen.
+* Katalog - utgiver: aktør ansvarlig for å gjøre katalogen tilgjengelig.
 
-=== Datasett
+==== Katalog - beskrivelse [[katalog-beskrivelse]]
 
-.Sammendrag
-Beskriver datasettene i katalogen. Minst ett datasett er påkrevd.
+// .Anbefalinger
 
-.Anbefalinger
-Beskriver datasettene i katalogen. Minst ett datasett er påkrevd.
-
- * Lenke til alle datasettene
-
-.Eksempler
-----
-<> <http://brreg.no/catalogs/974760673>
-    	 dcat:dataset   <http://brreg.no/catalogs/974760673/datasets/b97e7db3-8e46-4bc4-857e-77d7280b0e9e> , <http://brreg.no/catalogs/974760673/datasets/1ffcb9e4-008b-4333-a372-268f50d01482> , <http://brreg.no/catalogs/974760673/datasets/9922b7df-4fb8-4e1e-8da9-85736e37195f> .
-----
-
-=== Eier av katalog
-
-.Sammendrag
-Identifisering av den enheten som er ansvarlig for katalogen
-
-.Anbefalinger
-Identifisering av den enheten som er ansvarlig for katalogen. Eier er et obligatorisk felt.
-
- * Skal peke på en Enhet (juridisk person, organisasjonsledd, underenhet)
- * Det offisielle navnet på virksomheten vil hentes fra Enhetsregisteret, men kortform (f.eks. Difi) kan legges inn av brukeren
-
-.Eksempler
-* [*] Brønnøysundregistrene
-----
-<> <http://brreg.no/catalogs/974760673>
-     dct:publisher <http://data.brreg.no/enhetsregisteret/enhet/974760673> .
-# brreg
-
-----
-
-=== Utgivelse
-
-.Sammendrag
-Dato/tid katalogen først ble publisert.
-
-.Anbefalinger
-Dato/tid katalogen først ble publisert.
+For at andre skal kunne vite hva slags katalog du har, skal du oppgi en kort og presis beskrivelse av innholdet i katalogen.
 
 .Eksempler
 
-* [*] 01.01.2017 00:00
+* [x]  Katalog over alle data i Brønnøysundregistrene
 
+.Teknisk veiledning
+
+Dette tilsvarer https://data.norge.no/specification/dcat-ap-no/#Katalog-beskrivelse[Katalog: beskrivelse (`dct:description`) i DCAT-AP-NO].
+
+Eksempel i RDF Turtle:
 ----
-<> <http://brreg.no/catalogs/974760673>
-     dct:issued “2017-01-01T00:00:00+01:00”^xsd:DateTime .
+<enKatalog> a dcat:Catalog ;
+	dct:description "Katalog over alle data i Brønnøysundregistrene"@nb .
 ----
 
+==== Katalog - identifikator [[katalog-identifikator]]
 
-=== Sist oppdatert
+Identifikatoren er som regel systemgenerert av verktøyet som brukes til å beskrive/publisere en katalog, slik at du som vanlig bruker ikke trenger å oppgi verdien til denne egenskapen manuelt.
 
-.Sammendrag
-Dato/tid sist katalogen ble endret,. Dette kan være endring av en datasettbeskrivelse, eller andre metadata i katalogen.
+.Teknisk veiledning
+Dette tilsvarer https://data.norge.no/specification/dcat-ap-no/#Katalog-identifikator[Katalog: identifikator (`dct:identifier`) i DCAT-AP-NO], se under <<om-identifikator, Om identifikator (`dct:identifier`)>>.
 
-.Anbefalinger
-Dato/tid sist katalogen ble endret,. Dette kan være endring av en datasettbeskrivelse, eller andre metadata i katalogen.
+==== Katalog - tittel [[katalog-tittel]]
+
+// .Anbefalinger
+
+For at andre lett skal kunne se hva din katalog omhandler, skal du oppgi et kortfattet navn på katalogen.
+
+ * Angi, uten å liste, innhold den omfatter.
 
 .Eksempler
 
-* [*] 01.01.2017 00:00
+* [*] Datakatalog for Brønnøysundregistrene
+
+* [*] Katalog over datatjenester fra Brønnøysundregistrene
+
+.Teknisk veiledning
+
+Dette tilsvarer https://data.norge.no/specification/dcat-ap-no/#Katalog-tittel[Katalog: tittel (`dct:title`) i DCAT-AP-NO].
+
+Eksempel i RDF Turtle:
 
 ----
-<> <http://brreg.no/catalogs/974760673>
-     dct:modified “2017-01-01T00:00:00+01:00”^xsd:DateTime .
+<kat1> a dcat:Catalog ;
+	dct:title "Datakatalog for Brønnøysundregistrene"@nb .
+
+<kat2> a dcat:Catalog ;
+	dct:title "Katalog over datatjenester fra Brønnøysundregistrene"@nb .
 ----
+
+====  Katalog - utgiver [[katalog-utgiver]]
+
+// .Anbefalinger
+
+For at andre skal kunne vite hvem som er aktøren/organisasjonen som er ansvarlig for tilgjengeliggjøring av katalogen, skal utgiver oppgis.
+
+* Skal peke på en aktør (juridisk person, organisasjonsledd, underenhet).
+* For produsent av katalogen, se <<katalog-produsent, Katalog - produsent>>.
+
+.Eksempler
+* [*] Digdir
+
+.Teknisk veiledning
+
+Dette tilsvarer https://data.norge.no/specification/dcat-ap-no/#Katalog-utgiver[Katalog: utgiver (`dct:publisher`) i DCAT-AP-NO].
+
+Eksempel i RDF Turtle:
+----
+<enKatalog> a dcat:Catalog ;
+ dct:publisher <https://organization-catalogue.fellesdatakatalog.digdir.no/organizations/991825827> . # Digdir
+----
+
+=== Anbefalte egenskaper i en katalogbeskrivelse [[katalog-anbefalte-egenskaper]]
+
+Følgende opplysninger bør du ta med i en katalogbeskrivelse hvis de finnes:
+
+* Katalog - datasett: datasettbeskrivelser som er oppført i katalogen.
+* Katalog - dekningsområde: geografisk område som er dekket av katalogen.
+* Katalog - endringsdato: dato for siste oppdatering av katalogen.
+* Katalog - frekvens: oppdateringsfrekvens for katalogen.
+* Katalog - hjemmeside: nettside som fungerer som hovedside for katalogen.
+* Katalog - lisens: lisens som beskriver hvordan katalogen kan viderebrukes.
+* Katalog - opphav: beskrivelse av autentisitet og integritet til innholdet i katalogen.
+* Katalog - språk: språk som brukes i tekstlige beskrivelser av innholdet i katalogen.
+* Katalog - temaer: temaer som er brukt for å klassifisere innholdet i katalogen.
+* Katalog - utgivelsesdato: dato for formell utgivelse (publisering) av katalogen.
+
+==== Katalog - datasett [[katalog-datasett]]
+
+// .Anbefalinger
+Hvis katalogen din er en katalog over datasett, skal  datasettbeskrivelsene inkluderes i katalogen ved å bruke denne egenskapen.
+
+* Egenskapen brukes til å referere til datasettbeskrivelser som er oppført i katalogen.
+
+.Teknisk veiledning
+
+Dette tilsvarer https://data.norge.no/specification/dcat-ap-no/#Katalog-datasett[Katalog: datasett (`dcat:dataset`) i DCAT-AP-NO].
+
+Eksempel i RDF Turtle:
+----
+<enDataKatalog> a dcat:Catalog ;
+	 dcat:dataset <http://brreg.no/catalogs/974760673/datasets/b97e7db3-8e46-4bc4-857e-77d7280b0e9e> ,
+      <http://brreg.no/catalogs/974760673/datasets/1ffcb9e4-008b-4333-a372-268f50d01482> . # peker til to datasettbeskrivelser
+----
+
+==== Katalog - dekningsområde [[katalog-dekningsområde]]
+
+Dersom katalogen kun har innhold fra visse områder, skal avgrensningen oppgis.
+
+Se beskrivelsen av den tilsvarende egenskap for Datasett, <<datasett-dekningsområde, Datasett - dekningsområde>>.
+
+.Teknisk veiledning
+
+Dette tilsvarer https://data.norge.no/specification/dcat-ap-no/#Katalog-dekningsomr%C3%A5de[Katalog: dekningsområde (`dct:spatial`) i DCAT-AP-NO].
+
+==== Katalog - endringsdato [[katalog-endringsdato]]
+
+Dersom katalogens innhold har vært endret, skal dato/tid sist katalogen ble endret oppgis.
+
+Se beskrivelsen av den tilsvarende egenskap for Datasett, <<datasett-endringsdato, Datasett - endringsdato>>.
+
+.Teknisk veiledning
+
+Dette tilsvarer https://data.norge.no/specification/dcat-ap-no/#Katalog-endringsdato[Katalog: endringsdato (`dct:modified`) i DCAT-AP-NO].
+
+==== Katalog - frekvens [[katalog-frekvens]]
+
+Dersom hyppigheten for endring av innholdet i katalogen er kjent, skal den oppgis.
+
+Se beskrivelsen av den tilsvarende egenskap for Datasett, <<datasett-frekvens, Datasett - frekvens>>.
+
+.Teknisk veiledning
+
+Dette tilsvarer https://data.norge.no/specification/dcat-ap-no/#Katalog-frekvens[Katalog: frekvens (`dct:accrualPeriodicity`) i DCAT-AP-NO].
+
+
+==== Katalog - hjemmeside [[katalog-hjemmeside]]
+
+Dersom katalogen har en egen hjemmeside som f.eks. fungerer som en hovedside for katalogen, skal den oppgis.
+
+
+.Teknisk veiledning
+
+Dette tilsvarer https://data.norge.no/specification/dcat-ap-no/#Katalog-hjemmeside[Katalog: hjemmeside (`foaf:homepage`) i DCAT-AP-NO].
+
+Eksempel i RDF Turtle:
+--------
+<enKatalog> a dcat:Catalog ;
+	foaf:homepage <https://data.direks.eks/cat1> . # peker til hovedsiden for katalogen
+--------
+
+
+==== Katalog - lisens [[katalog-lisens]]
+
+Dersom katalogen er knyttet til en lisens som bl.a. beskriver hvordan den kan viderebrukes, skal lisensen oppgis.
+
+Se beskrivelsen av den tilsvarende egenskap for Distribusjon, <<distribusjon-lisens, Distribusjon - lisens>>.
+
+.Teknisk veiledning
+
+Dette tilsvarer https://data.norge.no/specification/dcat-ap-no/#Katalog-lisens[Katalog: lisens (`dct:license`) i DCAT-AP-NO].
+
+==== Katalog - opphav [[katalog-opphav]]
+
+Hvis det er noe med opphav av katalogen og/eller katalogens innhold som potensielle brukere bør vite om, skal det oppgis.
+
+.Eksempler
+* [*] Katalogen ble opprettet og utgitt første gang av Difi som nå heter Digitaliseringsdirektoratet/Digdir
+
+.Teknisk veiledning
+
+Dette tilsvarer https://data.norge.no/specification/dcat-ap-no/#Katalog-opphav[Katalog: opphav (`dct:provenance`) i DCAT-AP-NO].
+
+Eksempel i RDF Turtle:
+-----
+<enKatalog> a dcat:Catalog ;
+	dct:provenance [ a dct:ProvenanceStatement ;
+	rdfs:label "Katalogen ble opprettet og utgitt første gang av Difi som nå heter Digitaliseringsdirektoratet/Digdir"@nb ;
+	] .
+-----
+
+
+==== Katalog - språk [[katalog-språk]]
+
+Språk som brukes i tekstlige metadata som beskriver ressursene i katalogen, bør oppgis.
+
+Se beskrivelsen av den tilsvarende egenskap for Datasett, <<datasett-språk, Datasett - språk>>.
+
+.Teknisk veiledning
+
+Dette tilsvarer https://data.norge.no/specification/dcat-ap-no/#Katalog-spr%C3%A5k[Katalog: språk (`dct:language`) i DCAT-AP-NO].
+
+==== Katalog - temaer [[katalog-temaer]]
+
+Du bør oppgi klassifiseringssystem(er) (f.eks. en taksonomi) som er brukt til å klassifisere innholdet i katalogen din.
+
+* EUs https://op.europa.eu/s/pcuQ[EuroVoc] skal brukes.
+* https://psi.norge.no/los/[LOS] bør brukes.
+
+.Teknisk veiledning
+
+Dette tilsvarer https://data.norge.no/specification/dcat-ap-no/#Katalog-temaer[Katalog: temaer (`dcat:themeTaxonomy`) i DCAT-AP-NO].
+
+Eksempel i RDF Turtle:
+-----
+<enKatalog> a dcat:Catalog ;
+	dcat:themeTaxonomy <http://publications.europa.eu/resource/dataset/eurovoc> , # EuroVoc
+		<https://psi.norge.no/los/> . # LOS
+-----
+
+
+==== Katalog - utgivelsesdato [[katalog-utgivelsesdato]]
+
+Du bør oppgi dato/tid katalogen først ble publisert.
+
+Se beskrivelsen av den tilsvarende egenskap for Datasett, <<datasett-utgivelsesdato, Datasett - utgivelsesdato>>.
+
+.Teknisk veiledning
+
+Dette tilsvarer https://data.norge.no/specification/dcat-ap-no/#Katalog-utgivelsesdato[Katalog: utgivelsesdato (`dct:issued`) i DCAT-AP-NO].
+
+
+=== Valgfrie egenskaper i en katalogbeskrivelse [[katalog-valgfrie-egenskaper]]
+
+I tillegg til obligatoriske (skal brukes) og anbefalte (bør brukes) egenskaper, er det en del egenskaper som er valgfrie (kan brukes) i en katalogbeskrivelse:
+
+* Katalog - datatjeneste: datatjeneste som er oppført i denne katalogen.
+* Katalog - er del av: katalog som denne katalogen fysisk eller logisk er inkludert i.
+* Katalog - har del: katalog som er en del av denne katalogen.
+* Katalog - katalog: annen katalog som er relevant for denne katalogen.
+* Katalog - katalogpost: katalogpost som er oppført i denne katalogen.
+* Katalog - produsent: aktør som er hovedansvarlig for å produsere katalogen.
+* Katalog - rettigheter (brukervilkår): bruksvilkår knyttet til katalogen.
+
+Ikke alle valgfrie egenskaper er beskrevet i etterfølgende avsnitt. Se under <<hensikt-og-avgrensing, Hensikt og avgrensning>> for hvordan du kan melde inn behov for beskrivelser.
+
+==== Katalog - datatjeneste [[katalog-datatjeneste]]
+
+Hvis katalogen din er en katalog over datatjenester (aka APIer), eller datasettene i katalogen din tilbys via datatjenester, skal beskrivelse av datatjenestene inkluderes i katalogen ved å bruke denne egenskapen.
+
+* Egenskapen brukes til å referere til datatjenestebeskrivelser som er oppført i katalogen.
+
+.Teknisk veiledning
+
+Dette tilsvarer https://data.norge.no/specification/dcat-ap-no/#Katalog-datatjeneste[Katalog: datatjeneste (`dcat:service`) i DCAT-AP-NO].
+
+Eksempel i RDF Turtle:
+-----
+<enKatalog> a dcat:Catalog ;
+	dcat:service <https://data.direks.eks/dataService1>,
+		<https://data.direks.eks/dataService2> . # peker til to datatjenester
+-----
+
+==== Katalog - er del av [[katalog-erDelAv]]
+
+_<ikke beskrevet, tilsvarer https://data.norge.no/specification/dcat-ap-no/#Katalog-er-del-av[Katalog: er del av (`dct:isPartOf`) i DCAT-AP-NO]>_
+
+Se beskrivelsen av den tilsvarende egenskapen for Datasett, <<datasett-erDelAv, Datasett - er del av>>.
+
+==== Katalog - har del [[Katalog-harDel]]
+
+Motsatt av <<katalog-erDelAv, Katalog - er del av>>.
+
+_<ikke beskrevet, tilsvarer https://data.norge.no/specification/dcat-ap-no/#Katalog-har-del[Katalog: har del (`dct:hasPart`) i DCAT-AP-NO]>_
+
+==== Katalog - katalog [[katalog-katalog]]
+
+_<ikke beskrevet, tilsvarer https://data.norge.no/specification/dcat-ap-no/#Katalog-katalog[Katalog: katalog (`dcat:catalog`) i DCAT-AP-NO]>_
+
+==== Katalog - katalogpost [[katalog-katalogpost]]
+
+_<ikke beskrevet, tilsvarer https://data.norge.no/specification/dcat-ap-no/#Katalog-katalogpost[Katalog: katalogpost (`dcat:record`) i DCAT-AP-NO]>_
+
+==== Katalog - produsent [[katalog-produsent]]
+
+_<ikke beskrevet, tilsvarer https://data.norge.no/specification/dcat-ap-no/#Katalog-produsent[Katalog: produsent (`dct:creator`) i DCAT-AP-NO]>_
+
+Se beskrivelsen av den tilsvarende egenskap for Datasett, <<datasett-produsent, Datasett - produsent>>.
+
+For utgiver av katalogen, bruk <<katalog-utgiver, Katalog - utgiver>>.
+
+==== Katalog - rettigheter (brukervilkår) [[katalog-rettigheter]]
+
+_<ikke beskrevet, tilsvarer https://data.norge.no/specification/dcat-ap-no/#Katalog-rettigheter[Katalog: rettigheter (brukervilkår) (`dct:rights`) i DCAT-AP-NO]>_

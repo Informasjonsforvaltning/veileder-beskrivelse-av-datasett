@@ -4,11 +4,11 @@
 
 Denne veilederen skal bidra til bedre beskrivelser av datasett, datatjenester og datakataloger. For offentlige virksomheter kan dette være en del av prosessene for å skape orden i eget hus, oppnå mer gjenbruk av data mellom offentlige virksomheter  og å gjøre mer åpne offentlige data tilgjengelig for næringsliv og sivilsamfunn. Se https://data.norge.no/guide/veileder-orden-i-eget-hus/[Veileder for orden i eget hus] for hvordan din virksomhet skaper orden i eget hus, bl.a. hvordan kartlegge hvilke data som skal beskrives.
 
-Denne veilederen tar utgangspunktet i at din virksomhet har kartlagt hvilke data som skal beskrives. Veilederen skal gi en hjelp i å beskrive datasett og datatjenester i henhold til forvaltningsstandarden https://data.norge.no/specification/dcat-ap-no/[DCAT-AP-NO v.2], slik at beskrivelsene kan utnyttes godt av andre.
+Denne veilederen tar utgangspunktet i at din virksomhet har kartlagt hvilke data som skal beskrives. Veilederen skal gi en hjelp i å beskrive datasett og datatjenester i henhold til https://data.norge.no/specification/dcat-ap-no/[Standard for beskrivelse av datasett, datatjenester og datakataloger (DCAT-AP-NO) v.2], slik at beskrivelsene lettere kan forstås og brukes av andre.
 
-Det er ikke et mål for denne veilederen å beskrive alle felter i DCAT-AP-NO. Gi oss beskjed hvis det er felter som du savner veiledning av, fortrinnsvis meldes inn på https://github.com/Informasjonsforvaltning/veileder-beskrivelse-av-datasett/issues[Github Issues] og konkrete eksempler på data.
+Det er ikke et mål for denne veilederen å beskrive alle klasser og egenskaper i DCAT-AP-NO. Gi oss beskjed hvis det er ting som du savner veiledning av, fortrinnsvis meldes inn på https://github.com/Informasjonsforvaltning/veileder-beskrivelse-av-datasett/issues[Github Issues] og konkrete eksempler på data.
 
-Denne veilederen er ikke en teknisk og normativ spesifikasjon. For normative beskrivelser av alle feltene i DCAT-AP-NO, se https://data.norge.no/specification/dcat-ap-no/[DCAT-AP-NO] og https://github.com/Informasjonsforvaltning/dcat-ap-no/tree/develop/shacl[valideringsreglene (shacl)]. Ikke alle eksempler i denne veilederen er komplette, heller ikke med tanke på obligatoriske felter.
+Denne veilederen er ikke en teknisk og normativ spesifikasjon. For normative beskrivelser av alle klasser og egenskaper i DCAT-AP-NO, se https://data.norge.no/specification/dcat-ap-no/[DCAT-AP-NO] og https://github.com/Informasjonsforvaltning/dcat-ap-no/tree/develop/shacl[valideringsreglene (shacl)]. Ikke alle eksempler i denne veilederen er komplette, heller ikke med tanke på obligatoriske egenskaper.
 
 Denne veilederen er ikke en direkte veiledning for bruk av https://data.norge.no/publishing[registreringsverktøyet i Fellesdatakatalogen].
 
@@ -20,33 +20,29 @@ Sekundært kan også veilederen brukes av deg som skal utvikle/tilpasse verktøy
 
 === Struktur [[struktur]]
 
-[red yellow-background]#_foreløpig tekst/struktur_:#
-
 Denne veilederen beskriver hvordan du beskriver følgende i henhold til https://data.norge.no/specification/dcat-ap-no/[DCAT-AP-NO v.2]:
 
 * et datasett (se under <<beskrivelse-av-datasett, Beskrivelse av datasett>>)
 
-* en distribusjon (se under <<beskrivelse-av-distribusjon, Beskrivelse av distribusjon>>)
+* en distribusjon av et datasett (se under <<beskrivelse-av-distribusjon, Beskrivelse av distribusjon>>)
 
 * en datatjeneste (se under <<beskrivelse-av-datatjeneste, Beskrivelse av datatjeneste>>)
 
-* en datakatalog (se under <<beskrivelse-av-datakatalog, Beskrivelse av datakatalog>>)
+* en (data)katalog (se under <<beskrivelse-av-katalog, Beskrivelse av katalog>>)
 
 Veilederen inneholder også veiledning ang. noen <<utvalgte-temaer, utvalgte temaer>> som går på tvers av ovennevnte:
 
-* <<sammenheng, Sammenheng mellom datasett, begrep, API og informasjonsmodell>>
+* <<sammenheng, Sammenheng mellom datasett, distribusjon, datatjeneste, begrep og informasjonsmodell>>
 
 * <<beskrivelse-av-juss, Beskrivelse av juridiske rammer>>
 
 * <<beskrivelse-av-kvalitet, Beskrivelse av kvalitet>>
 
-* <<beskrivelse-av-tidsserie, Beskrivelse av tidsserie>>
+* <<beskrivelse-av-datasettserie, Beskrivelse av tidsserie/datasettserie>>
 
 * <<beskrivelse-av-åpneData, Beskrivelse av åpne data>>
 
 * <<bruk-av-kontrollerte-vokabularer, Bruk av kontrollerte vokabularer>>
 
 
-
-
-For bl.a. å unngå eventuell uoverensstemmelse mellom norske navn brukt i denne veilederen og i DCAT-AP-NO, er det fra denne veilederen lenket til DCAT-AP-NO, i hakeparentes (f.eks. [https://data.norge.no/specification/dcat-ap-no/#Datasett-beskrivelse[Datasett: beskrivelse]]). Det er ikke en forutsetning at du må kunne DCAT-AP-NO for å kunne bruke denne veilederen.
+include::Navnerom.adoc[]
