@@ -1,5 +1,5 @@
-include::locale/attributes.adoc[]
-= Veileder for beskrivelse av datasett
+include::locale/attributes-nb.adoc[]
+= Veileder for beskrivelse av datasett, datatjenester og datakataloger
 :description:
 :doctype: book
 :docinfo:
@@ -7,10 +7,9 @@ include::locale/attributes.adoc[]
 :toc: left
 :toclevels: 3
 :sectanchors:
-:imagesdir: images
-:title-logo-image: image:digitaliseringsdirektoratet.png[pdfwidth=30vw]
+:title-logo-image: images/image:digitaliseringsdirektoratet.png[pdfwidth=30vw]
 
-image::digitaliseringsdirektoratet.png[width=50%, pdfwidth=30vw]
+image::images/digitaliseringsdirektoratet.png[width=50%, pdfwidth=30vw]
 
 include::./shared/download.adoc[]
 
@@ -21,7 +20,7 @@ Dersom du finner feil eller mangler i dokumentet, ber vi om at dette meldes inn 
 *Status*: [yellow-background]#under utarbeidelse# +
 *Versjon*: [yellow-background]#forberedelse til# 2.0 +
 *Publisert*: [yellow-background]#under utarbeidelse# +
-*Oppdatert*: 2021-04-30 +
+*Oppdatert*: 2021-06-24 +
 *Gjeldende versjon*: https://data.norge.no/guide/veileder-beskrivelse-av-datasett/ +
 *Forrige versjon*: https://data.norge.no/guide/veileder-beskrivelse-av-datasett/v1 +
 *Redaktørens utkast*: https://informasjonsforvaltning.github.io/veileder-beskrivelse-av-datasett/
@@ -49,7 +48,7 @@ include::Datakatalog.adoc[]
 
 include::Utvalgte_temaer.adoc[]
 
-include::Referanser.adoc[]
+// include::Referanser.adoc[]
 
 
 
