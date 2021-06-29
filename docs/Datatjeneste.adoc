@@ -4,7 +4,7 @@ Nytt i DCAT-AP-NO v.2 er at standarden nå også støtter beskrivelser av datatj
 
 Datatjeneste (dcat:DataService) brukes til å beskrive en samling av operasjoner som er tilgjengelig via et programmeringsgrensesnitt (API) og som gir tilgang til ett eller flere datasett eller databehandlingsfunksjoner.
 
-=== Eksempel på en datatjenestebeskrivelse
+=== Eksempel på en datatjenestebeskrivelse [[eksempel-datatjeneste]]
 
 Under er et eksempel på en datatjenestebeskrivelse, hvor felter med uthevet skrift er obligatoriske:
 
@@ -21,14 +21,14 @@ https://data.norge.no/specification/dcat-ap-no/#Datatjeneste-utgiver[Utgiver]: D
 
 _Eksempel i RDF Turtle_ [yellow-background]#<kommer...>#
 
-=== Obligatoriske felter i en datatjenestebeskrivelse
+=== Obligatoriske egenskaper i en datatjenestebeskrivelse [[datatjeneste-obligatoriske-egenskaper]]
 Som et minimum skal følgende tas med i en datatjenestebeskrivelse:
 
 * Datatjeneste - endepunktsURL: rotplassering eller primært endepunkt for tjenesten.
 * Datatjeneste - identifikator: identifikator til datatjenesten.
 * Datatjeneste - tittel: navn på datatjenesten.
 
-==== Datatjeneste - endepunktsURL
+==== Datatjeneste - endepunktsURL [[datatjeneste-endepunktsURL]]
 Refererer til rotplassering eller primært endepunkt for tjenesten (en URI) [https://data.norge.no/specification/dcat-ap-no/#Datatjeneste-endepunktsurl[Datatjeneste: endepunktsURL]].
 
 _Eksempel i RDF Turtle_
@@ -37,12 +37,12 @@ _Eksempel i RDF Turtle_
 <> a dcat:DataService ;
   dcat:endpointURL <https://example.org/endpoints> .
 ----
-==== Datatjeneste - identifikator
+==== Datatjeneste - identifikator [[datatjeneste-identifikator]]
 Brukes til å oppgi identifikator til datatjenesten.
 
-Se under [Om identifikator].
+Se under <<om-identifikator, Om identifikator>>.
 
-==== Datatjeneste - tittel
+==== Datatjeneste - tittel [[datatjeneste-tittel]]
 Feltet brukes til å oppgi navnet på datatjenesten. Gjentas hvis navnet er i flere språk.
 
 _Eksempel i RDF Turtle_
@@ -51,7 +51,7 @@ _Eksempel i RDF Turtle_
   dct:title "FDK API endpoints"@en ,
     "FDK API endepunkter"@nb .
 ----
-=== Anbefalte felter i en datatjenestebeskrivelse
+=== Anbefalte egenskaper i en datatjenestebeskrivelse [[datatjeneste-anbefalte-egenskaper]]
 Følgende opplysninger bør du ta med i en datatjenestebeskrivelse hvis de finnes:
 
 * Datatjeneste - emneord: emneord (eller tag) som beskriver datatjenesten.
@@ -62,7 +62,7 @@ Følgende opplysninger bør du ta med i en datatjenestebeskrivelse hvis de finne
 * Datatjeneste - tilgjengeliggjør datasett: datasett som datatjenesten kan distribuere.
 * Datatjeneste - utgiver: aktør (organisasjon) som er ansvarlig for å gjøre datatjenesten tilgjengelig.
 
-==== Datatjeneste - emneord
+==== Datatjeneste - emneord [[datatjeneste-emneord]]
 Inneholder emneord (eller tag) som beskriver datatjenesten https://data.norge.no/specification/dcat-ap-no/#Datatjeneste-emneord[Datatjeneste: emneord].
 Se beskrivelsen av tilsvarende felt i Datasett, https://data.norge.no/specification/dcat-ap-no/#Datasett-emneord[Datatjeneste: emneord].
 
@@ -83,7 +83,7 @@ _Eksempel i RDF Turtle_ +
   dcat:endpointDescription <https://raw.githubusercontent.com/Informasjonsforvaltning/fdk-api-endpoints/master/specification/fdk-api-endpoints.yaml> . # peker til en OpenAPI spesifikasjon av tjenesten
 ----
 
-==== Datatjeneste - format
+==== Datatjeneste - format [[datatjeneste-format]]
 Datatjenestens filformat.
 
 * EUs kontrollerte liste over https://op.europa.eu/s/pcDP[File type] skal brukes.
@@ -94,10 +94,10 @@ _Eksempel i RDF Turtle_ +
   dct:format <http://publications.europa.eu/resource/authority/file-type/JSON_LD> , # JSON-LD
     <http://publications.europa.eu/resource/authority/file-type/RDF_TURTLE> . # RDF Turtle
 ----
-==== Datatjeneste - kontaktpunkt
+==== Datatjeneste - kontaktpunkt [[datatjeneste-kontaktpunkt]]
 Kontaktpunkt med kontaktopplysninger https://data.norge.no/specification/dcat-ap-no/#Datatjeneste-kontaktpunkt[Datatjeneste: kontaktpunkt]. Se ellers beskrivelsen av tilsvarende felt i Datasett, https://data.norge.no/specification/dcat-ap-no/#Datasett-kontaktpunkt[Datasett - kontaktpunkt]. +
 
-==== Datatjeneste - tema
+==== Datatjeneste - tema [[datatjeneste-tema]]
 Tema for datatjenesten. En datatjeneste kan assosieres med flere tema. +
 For å kunne sortere datatjenesten inn under gitte kategorier er det behov for tema.
 
@@ -117,7 +117,7 @@ _Eksempel i RDF Turtle_
   dcat:theme <http://publications.europa.eu/resource/authority/data-theme/HEAL> , # helse
     <https://psi.norge.no/los/ord/helsestasjon> . # helsestasjon (Helse og omsorg -> Helsetjenester -> Helsestasjon)
 ----
-==== Datatjeneste - tilgjengeliggjør datasett
+==== Datatjeneste - tilgjengeliggjør datasett [[datatjeneste-tilgjengeliggjørDatasett]]
 Feltet brukes til å referere til datasett som datatjenesten kan distribuere.
 
 _Eksempel i RDF Turtle_
@@ -127,7 +127,7 @@ _Eksempel i RDF Turtle_
   dcat:servesDataset <https://example.org/dataset/123> ,
     <https://example.org/dataset/456> . # peker til 2 datasett.
 ----
-==== Datatjeneste - utgiver
+==== Datatjeneste - utgiver [[datatjeneste-utgiver]]
 
 Identifisering av den aktøren (organisasjon) som er ansvarlig for å gjøre datatjenesten tilgjengelig.
 
@@ -147,7 +147,7 @@ _Eksempel i RDF Turtle_
   dct:publisher <https://organization-catalogue.fellesdatakatalog.digdir.no/organizations/889640782> . #NAV
 ----
 
-=== Valgfrie felter i en datatjenestebeskrivelse [[datatjeneste-valgfrie-felter]]
+=== Valgfrie egenskaper i en datatjenestebeskrivelse [[datatjeneste-valgfrie-egenskaper]]
 
 I tillegg til obligatoriske (skal brukes) og anbefalte (bør brukes) felter, er det en del felter som er valgfrie (kan brukes) i en datatjenestebeskrivelse:
 
