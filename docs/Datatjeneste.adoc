@@ -1,4 +1,4 @@
-== Beskrivelse av en datatjeneste [[beskrivelse-av-datatjeneste]]
+== Beskrivelse av datatjeneste [[beskrivelse-av-datatjeneste]]
 
 Nytt i DCAT-AP-NO v.2 er at standarden nå også støtter beskrivelser av datatjenester, som v.1.x av DCAT-AP-NO ikke gjorde.
 
@@ -206,7 +206,7 @@ Referanse til lisensen for datasett som datatjenesten realiserer, gjøres tilgje
 * For åpne data skal en av disse tre lisensene benyttes:
 ** Creative Commons Navngivelse 4.0 (CC BY 4.0): `+http://publications.europa.eu/resource/authority/licence/CC_BY_4_0+`
 ** Creative Commons CC0 1.0 Universal (CC0): `+http://publications.europa.eu/resource/authority/licence/CC0+`
-** Norsk lisens for offentlige data (NLOD): `+http://publications.europa.eu/resource/authority/licence/NLOD_2_0+` 
+** Norsk lisens for offentlige data (NLOD): `+http://publications.europa.eu/resource/authority/licence/NLOD_2_0+`
 * Creative Commons-lisensene anbefales for distribusjoner (og datatjenester) med forventet internasjonal bruk.
 
 Se Digdirs  https://data.norge.no/guide/veileder-apne-data/[Veileder for tilgjengeliggjøring av åpne data] for mer informasjon om valg av åpne standardlisenser.

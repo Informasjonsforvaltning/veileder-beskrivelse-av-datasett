@@ -1,4 +1,4 @@
-== Beskrivelse av en distribusjon [[beskrivelse-av-distribusjon]]
+== Beskrivelse av distribusjon [[beskrivelse-av-distribusjon]]
 
 
 En distribusjon er en spesifikk representasjon av et datasett i form av en fil som brukeren kan få tilgang til. Det vanligste scenariet er at et datasett uttrykkes i flere formater, f.eks. både i Excel og CSV. Det kan også være slik at du kan få tilgang til et datasett enten gjennom en nattlig dump eller ved oppslag mot et API. I begge disse to scenariene anser vi at det er et datasett med to forskjellige distribusjoner. Distribusjonene tilsvarer de samme dataene (samme informasjon), men i forskjellige formater eller via forskjellige tilgangsmekanismer.
