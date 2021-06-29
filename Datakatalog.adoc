@@ -21,7 +21,7 @@ Under er et eksempel på en katalogbeskrivelse, med dummydata, hvor egenskaper m
 *Beskrivelse: Katalogen inneholder beskrivelse av alle datasett som Direktoratet for eksempler forvalter.  +
 *Identifikator: https://data.direks.eks/cat/123 (_NB! dummy-URL som ikke virker_) +
 *Utgiver: Direktoratet for eksempler +
-Datasett: +++<u>Eksempeldatasett</u>+++  (_lenke til beskrivelsen av dette eksempeldatasettet_) +
+Datasett: [.underline]#Eksempeldatasett# (_lenke til beskrivelsen av dette eksempeldatasettet_) +
 Dekningsområde: https://op.europa.eu/s/pirm[Norge]
 *****
 
