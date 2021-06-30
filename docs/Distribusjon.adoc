@@ -11,7 +11,7 @@ Merk at den juridiske vurderingen av hvem som kan få tilgang til datasettet gj�
 
 Det er datatilbyders ansvar å vurdere om forskjellige representasjoner kan forstås som distribusjoner av samme datasett, eller distribusjoner av forskjellige datasett.
 
-For deg som skal utvikle/tilpasse verktøystøtte i henhold til DCAT-AP-NO, inneholder veilederen også en teknisk veiledning bakerst i hvert avsnitt. NB! Bortsett fra det første eksemplet, er ikke alle eksempler i RDF Turle komplette og de kan mangle bl.a. verdier for obligatoriske egenskaper.
+For deg som skal utvikle/tilpasse verktøystøtte i henhold til DCAT-AP-NO, inneholder veilederen også en teknisk veiledning bakerst i hvert avsnitt. NB! Bortsett fra det første eksemplet, er ikke alle eksempler i RDF Turtle komplette og de kan mangle bl.a. verdier for obligatoriske egenskaper.
 
 === Eksempel på en beskrivelse av en distribusjon [[eksempel-distribusjon]]
 
@@ -24,7 +24,7 @@ _Eksempel på beskrivelse av en distribusjon hvor *uthevede egenskaper* er  obli
 <<distribusjon-beskrivelse, Beskrivelse>>: Semikolonseparert nedlastbar CSV-fil uten BOM +
 <<distribusjon-format, Format>>: http://publications.europa.eu/resource/authority/file-type/CSV[CSV] +
 <<distribusjon-lisens, Lisens>>: http://publications.europa.eu/resource/authority/licence/CC_BY_4_0[CC BY 4.0] +
-<<distribusjon-nedlastningslenke, Nedlastningslenke>>: +https:/example.org/eksempeldata.csv+ (_NB! dummy-URL som ikke vireker_)
+<<distribusjon-nedlastningslenke, Nedlastningslenke>>: +https:/example.org/eksempeldata.csv+ (_NB! dummy-URL som ikke virker_)
 *****
 
 .Teknisk veiledning
