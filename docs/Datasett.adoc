@@ -13,21 +13,23 @@ For deg som skal utvikle/tilpasse verktøystøtte for datasettbeskrivelse i henh
 
 === Eksempel på en datasettbeskrivelse [[eksempel-datasettbeskrivelse]]
 
-Under er et eksempel på en datasettbeskrivelse, med dummydata, hvor egenskaper med * foran er obligatoriske:
+Under er et eksempel på en datasettbeskrivelse, med dummydata, hvor *uthevede egenskaper* er obligatoriske:
 
 ****
-*Tittel: Eksempeldatasett +
-*Utgiver: Direktoratet for eksempler +
-*Beskrivelse: Datasett med testdata.
+_Eksempel på en datasettbeskrivelse med dummydata, hvor *uthevede egenskaper* er obligatoriske:_
+
+<<datasett-tittel, *Tittel*>>: Eksempeldatasett +
+<<datasett-utgiver, *Utgiver*>>: Direktoratet for eksempler +
+<<datasett-beskrivelse, *Beskrivelse*>>: Datasett med testdata.
 Formålet med dette datasettet er å illustrere hvordan et datasett skal/bør/kan beskrives iht. DCAT-AP-NO. +
-*Tema: https://op.europa.eu/s/pirn[Forvaltning og offentlig sektor] +
-Begrep: https://op.europa.eu/s/piiD[testdata] +
-Dekningsområde: https://op.europa.eu/s/pirm[Norge] +
-Oppdateringsfrekvens: https://op.europa.eu/s/piro[Daglig] +
-Tilgangsnivå: https://op.europa.eu/s/pirq[Offentlig] +
-Distribusjon: https://data.direks.eks/eksempeldata.csv (_NB! dummy-URL som ikke virker_) +
-Kontaktpunkt: Direktoratet for eksempler, eks@direks.eks (_NB! dummy-e-postadresse som ikke virker_) +
-Språk: https://op.europa.eu/s/piq1[Norsk bokmål] +
+<<datasett-tema, *Tema*>>: https://op.europa.eu/s/pirn[Forvaltning og offentlig sektor] +
+<<datasett-begrep, Begrep>>: https://op.europa.eu/s/piiD[testdata] +
+<<datasett-dekningsområde, Dekningsområde>>: https://op.europa.eu/s/pirm[Norge] +
+<<datasett-frekvens, Oppdateringsfrekvens>>: https://op.europa.eu/s/piro[Daglig] +
+<<datasett-tilgangsnivå, Tilgangsnivå>>: https://op.europa.eu/s/pirq[Offentlig] +
+<<datasett-distribusjon, Distribusjon>>: +https://example.org/eksempeldata.csv+ (_NB! dummy-URL som ikke virker_) +
+<<datasett-kontaktpunkt, Kontaktpunkt>>: Direktoratet for eksempler, +data@direks.eks+ (_NB! dummy-e-postadresse som ikke virker_) +
+<<datasett-språk, Språk>>: https://op.europa.eu/s/piq1[Norsk bokmål] +
 ****
 
 .Teknisk veiledning
@@ -38,11 +40,11 @@ Eksemplet ovenfor i RDF Turtle:
 @prefix dct: <http://purl.org/dc/terms/> .
 @prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix : <https://data.direks.eks/> .
+@prefix : <https://example.org/> .
 
-<https://data.direks.eks/eksempeldata> a dcat:Dataset ;
+<https://example.org/eksempeldata> a dcat:Dataset ;
   ### obligatoriske egenskaper:
-    dct:identifier "https://data.direks.eks/eksempeldata"^^xsd:anyURI ; # identifikator
+    dct:identifier "https://example.org/eksempeldata"^^xsd:anyURI ; # identifikator
     dct:title "Eksempeldatasett"@nb ; # tittel
     dct:publisher <https://organization-catalogue.fellesdatakatalog.digdir.no/organizations/999999999> ; # utgiver, med dummy-org.nr.
     dct:description "Datasett med testdata"@nb ;
@@ -60,7 +62,7 @@ Eksemplet ovenfor i RDF Turtle:
        ] ;
   dcat:distribution [ a dcat:Distribution ; # distribusjon, med dummy data
     ### obligatoriske egenskaper:
-      dcat:accessURL <https://data.direks.eks/eksempeldata.csv> ; # tilgangsURL, med dummy URL
+      dcat:accessURL <https://example.org/eksempeldata.csv> ; # tilgangsURL, med dummy URL
     ### anbefalte egenskaper:
       dct:license <http://publications.europa.eu/resource/authority/licence/CC_BY_4_0> ; # lisens
     ] ;
@@ -188,6 +190,8 @@ For at andre lett skal kunne se hvem som er ansvarlig for at datasettet ditt _er
 .Teknisk veiledning
 
 Dette tilsvarer https://data.norge.no/specification/dcat-ap-no/#Datasett-utgiver[Datasett: utgiver (`dct:publisher`) i DCAT-AP-NO].
+
+Inntil https://data.brreg.no  tilbyr gyldig identifikator (`foaf:Agent`), skal følgende mønster benyttes: `+https://organization-catalogue.fellesdatakatalog.digdir.no/organizations/{orgnummer}+`.
 
 Eksempel i RDF Turtle:
 ----
@@ -570,7 +574,7 @@ Eksempel i RDF Turtle:
   adms:sample <distribusjonAvEksempeldata> .
 
 <distribusjonAvEksempeldata> a dcat:Distribution ;
-  dcat:accessURL <https://eks.direks.eks/datasets/eksempelData1.csv> .
+  dcat:accessURL <https://example.org/eksempeldata.csv> .
 ----
 
 ==== Datasett - endringsdato [[datasett-endringsdato]]
