@@ -1,35 +1,55 @@
-include::locale/attributes.adoc[]
-= Veileder for beskrivelse av datasett
+include::locale/attributes-nb.adoc[]
+= Veileder for beskrivelse av datasett, datatjenester og datakataloger
 :description:
 :doctype: book
 :docinfo:
 :icons: font
 :toc: left
+ifdef::backend-pdf[:toc: macro]
 :toclevels: 3
 :sectanchors:
-:imagesdir: images
-:title-logo-image: image:digitaliseringsdirektoratet.png[pdfwidth=30vw]
+:title-logo-image: image:images/digitaliseringsdirektoratet.png[pdfwidth=30vw]
 
-image::digitaliseringsdirektoratet.png[width=50%, pdfwidth=30vw]
-
-Publisert: 2020-03-05
-{description}
-
-IMPORTANT: Denne versjonen av veilederen var utarbeidet for https://data.norge.no/specification/dcat-ap-no/v1.1/[DCAT-AP-NO v.1.1] som er [yellow-background]#under utfasing#. Veilederen vil bli oppdatert for https://data.norge.no/specification/dcat-ap-no/[DCAT-AP-NO v.2.0].
+image::images/digitaliseringsdirektoratet.png[width=50%, pdfwidth=30vw]
 
 include::./shared/download.adoc[]
+
+NOTE: *Innmelding av feil og mangler:* +
+Dersom du finner feil eller mangler i dokumentet, ber vi om at dette meldes inn på https://github.com/Informasjonsforvaltning/veileder-beskrivelse-av-datasett/issues[Github Issues]. Dersom du ikke allerede har bruker på Github kan du opprette bruker gratis.
+
+
+*Status*: Gjeldende +
+*Versjon*: 2.0 +
+*Publisert*: 2019-06-30 +
+*Oppdatert*: 2021-06-30 +
+*Gjeldende versjon*: https://data.norge.no/guide/veileder-beskrivelse-av-datasett/ +
+*Forrige versjon*: https://data.norge.no/guide/veileder-beskrivelse-av-datasett/v1 +
+*Redaktørens utkast*: https://informasjonsforvaltning.github.io/veileder-beskrivelse-av-datasett/
+
+toc::[]
 
 // :leveloffset: +1
 
 // Innhold her.
 include::Innledning.adoc[]
-include::Hva_er_et_datasett.adoc[]
+
+// include::Hva_er_et_datasett.adoc[]
+
 include::Datasett.adoc[]
-include::Enhet.adoc[]
-include::Kontaktpunkt.adoc[]
+
+// include::Enhet.adoc[]
+
+// include::Kontaktpunkt.adoc[]
+
 include::Distribusjon.adoc[]
+
+include::Datatjeneste.adoc[]
+
 include::Datakatalog.adoc[]
-include::Referanser.adoc[]
+
+include::Utvalgte_temaer.adoc[]
+
+// include::Referanser.adoc[]
 
 
 

@@ -1,0 +1,256 @@
+== Utvalgte temaer [[utvalgte-temaer]]
+
+Dette kapittelet inneholder noen utvalgte temaer som forklares nærmere. Se under <<hensikt-og-avgrensing, Hensikt og avgrensning>> for hvordan du kan melde inn behov for temaer som du savner nærmere forklaringer av.
+
+=== Sammenheng mellom datasett, distribusjon, datatjeneste, begrep og informasjonsmodell [[sammenheng]]
+
+.Sammenheng mellom datasett, distribusjon, datatjeneste, begrep og informasjonsmodell
+[link=images/Datasett-begrep-distribusjon-datatjeneste-infomod.png]
+image::images/Datasett-begrep-distribusjon-datatjeneste-infomod.png[]
+
+Figuren over viser sammenhengen mellom datasett, datatjeneste (aka API), begrep og informasjonsmodell:
+
+* Dataene i et datasett (`dcat:Dataset`) kan representere (eller forklares med) et eller flere begreper (`skos:Concept`). Du knytter et begrep (`skos:Concept`) til et datasett (`dcat:Dataset`) ved å bruke egenskapen <<datasett-begrep, Datasett - begrep>> (`dct:subject`) (1).
+
+* Et datasett (`dcat:Dataset`) kan distribueres gjennom en eller flere distribusjoner (`dcat:Distribution`). Du knytter en distribusjon (`dcat:Distribution`) til et datasett (`dcat:Dataset`) ved å bruke egenskapen <<datasett-datasettdistribusjon, Datasett - datasettdistribusjon>> (`dcat:distribution`) (2).
+
+* Tilgangen til en distribusjon (`dcat:Distribution`) kan gis via en eller flere datatjenester (`dcat:DataService`). Du knytter en datatjeneste (`dcat:DataService`) til en distribusjon (`dcat:Distribution`) ved å bruke egenskapen <<distribusjon-tilgangstjeneste, Distribusjon - tilgangstjenesten>> (3).
+
+* Et datasett (`dcat:Dataset`) kan være skapt/vedlikeholdt i samsvar med en eller flere standarder/spesifikasjoner (`dct:Standard`). Du knytter en standard/spesifikasjon (`dct:Standard`) til et datasett (`dcat:Dataset`) ved å bruke egenskapen <<datasett-iSamsvarMed, Datasett - i samsvar med>> (`dct:conformsTo`) (4). Ettersom en informasjonsmodell (`modelldcatno:InformationModel`) iht. https://data.norge.no/specification/modelldcat-ap-no/[Spesifikasjon for beskrivelse av informasjonsmodeller (ModellDCAT-AP-NO)] er en subklasse av `dct:Standard` (5), kan du på denne måten  knytte en informasjonsmodell til et datasett, dvs. en informasjonsmodell som beskriver strukturen av datasettet.
+
+** På tilsvarende måte kan du knytte en informasjonsmodell (`modelldcatno:InformationModel`) til en datatjeneste (`dcat:DataService`) (6), dvs. en informasjonsmodell som beskriver strukturen av data som datatjenesten distribuerer.
+
+** Se https://data.norge.no/specification/modelldcat-ap-no/[Spesifikasjon for beskrivelse av informasjonsmodeller (ModellDCAT-AP-NO)] for hvordan en informasjonsmodell og modellelementer i en informasjonsmodell beskrives.
+
+* En datatjeneste (`dcat:DataService`) kan brukes til å gi tilgang til et eller flere datasett (`dcat:Dataset`). Du knytter et datasett (`dcat:Dataset`) til en datatjeneste (`dcat:DataService`) ved å bruke egenskapen <<datatjeneste-tilgjengeliggjørDatasett, Datatjeneste: tilgjengeliggjør datasett>> (`dcat:servesDataset`) (7).
+
+=== Beskrivelse av kvalitet [[beskrivelse-av-kvalitet]]
+
+Nytt i DCAT-AP-NO v.2 er at den nå benytter https://www.w3.org/TR/vocab-dqv/[DQV (Data Quality Vocabulary) fra W3C] for beskrivelse av kvalitet på f.eks. et datasett. DCAT-AP-NO spesifiserer imidlertid ikke i detalj hvordan klasser og egenskaper fra DQV skal/bør/kan brukes. Det er derfor utarbeidet en https://data.norge.no/specification/dqv-ap-no/[norsk applikasjonsprofil av DQV (DQV-AP-NO)], som supplerer DCAT-AP-NO, hvilket betyr at klasser og egenskaper spesifisert i DQV-AP-NO kan brukes i tillegg til de i DCAT-AP-NO.
+
+Følgende er kun noen eksempler på hvordan DQV-AP-NO brukes til å beskrive kvalitet på f.eks. et datasett.
+
+==== Beskrivelse av kvantifiserbar kvalitet [[beskrivelse-av-kvantifiserbar-kvalitet]]
+
+Ved å bruke egenskapen https://data.norge.no/specification/dqv-ap-no/#Datasett_harM%C3%A5leresultat[Datasett: har måleresultat (`dqv:hasQualityMeasurement`)] kan du knytte et måleresultat (`dqv:QualityMeasurement`) til et datasett (`dcat:Dataset`).
+
+Iht. DQV-AP-NO skal et måleresultat (`dqv:QualityMeasurement`) videre knyttes til ett og bare ett kvalitetsmål (`dqv:Metric`). Det er predefinert et sett med kvalitetsmål og disse bør brukes når relevant. Predefinerte kvalitetsmål finnes på https://data.norge.no/vocabulary/dqvno (i RDF Turtle).
+
+Videre, iht. DQV-AP-NO skal et kvalitetsmål (`dqv:Metric`) knyttes til én og bare én  kvalitetsdeldimensjon (`dvqno:SubDimension`) som igjen skal knyttes til én og bare én kvalitetsdimensjon (`dqv:Dimension`). Ved å bruke predefinerte kvalitetsmål trenger du ikke å oppgi kvalitetsdeldimesjon og kvalitetsdimensjon ettersom de predefinerte kvalitetsmålene er allerede ferdig tilknyttet kvalitetsdeldimesjon og kvalitetsdimensjon.
+
+Eksempler på predefinerte kvalitetsmål, i kvalitetsdeldimensjonen "underdekning" (`dvqno:undercoverage`) som er i kvalitetsdimensjonen "fullstendighet" (`dqvno:completeness`):
+
+* manglende enheter (`dqv:missingObjects`): hvorvidt det mangler enheter i datasettet.
+* antall manglende enheter (`dqvno:numberOfMissigObjects`): antall enheter som ikke er i datasettet men som forventes å være med.
+* andel manglende enheter (`dqvno:rateOfMissingObjects`): antall enheter som mangler i forhold til antall enheter som skulle være med i datasettet.
+
+Se også https://data.norge.no/guide/veileder-kvantifiserbar-kvalitet/[Veileder for beskrivelse av kvalitet på datasett – kvantifiserbar kvalitet].
+
+.Eksempler
+* Manglende enheter: 2
+* Kommentar: To bygninger mangler i datasettet.
+
+.Teknisk veiledning
+
+Eksempel i RDF Turtle:
+-----
+<etDatasett> a dcat:Dataset ; # datasett
+  dqv:hasQualityMeasurement [ a dqv:QualityMeasurement ; # måleresultat
+    dqv:isMeasurementOf dqvno:numberOfMissingObjects ; # antall manglende enheter
+    dqv:value "2"^^xsd:nonNegativeInteger ; # antallet
+    rdfs:comment "To bygninger mangler i datasettet."@nb ; # kommentar
+    ] .
+-----
+
+==== Beskrivelse av kvalitet i form av fritekst [[beskrivelse-av-kvalitet-fritekst]]
+
+Ved å bruke egenskapen https://data.norge.no/specification/dcat-ap-no/#Datasett-harKvalitetsnote[Datasett: har kvalitetsnote] kan du knytte en kvalitetsbeskrivelse i fritekst (`dqv:QualityAnnotation`) til et datasett (`dcat:Dataset`).
+
+Iht. DQV-AP-NO er det anbefalt å knytte en kvalitetsnote (`dqv:QualityAnnotation`) til en eller flere kvalitetsdimensioner (`dqv:Dimension`), ved å bruke egenskapen `dqv:inDimension`. Det er predefinert flere kvalitetsdimensjoner og disse bør brukes når relevant. Predefinerte kvalitetsdimensjoner finnes på https://data.norge.no/vocabulary/dqvno (i RDF Turtle).
+
+.Eksempler
+* Kvalitetsdimensjon: fullstendighet
+* Kvalitetsnote: Det tar i gjennomsnitt 24 dager fra en bygning står ferdig eller er revet til den er innlemmet i eller tatt ut fra datasettet.
+
+.Teknisk veiledning
+
+Iht. DQV-AP-NO skal en kvalitetsnote (`dqv:QualityAnnotation`) alltid ha en `oa:motivatedBy` med verdi `dqv:qualityAssessment` (som er en predefinert instans av `oa:Motivation`). Selve teksten skal oppgis ved å bruke egenskapen `oa:hasBody` som peker til en instans av `oa:TextualBody`.
+
+Eksempel i RDF Turtle:
+-----
+<etDatasett> a dcat:Dataset ; # datasett
+  dqv:hasQualityAnnotation [ a dqv:QualityAnnotation ; # kvalitetsnote
+    oa:motivatedBy dqv:qualityAssessment ; # obligatorisk "motivasjon"
+    dqv:inDimension dqvno:completeness ; # anbefalt kvalitetsdimensjon
+    oa:hasBody [ a oa:TextualBody ; # selve teksten
+      dct:format <http://publications.europa.eu/resource/authority/file-type/TXT> ; # format
+      dct:language <http://publications.europa.eu/resource/authority/language/NOB> ; # språk
+      rdfs:value "Det tar i gjennomsnitt 24 dager fra en bygning står ferdig eller er revet til den er innlemmet i eller tatt ut fra datasettet." ;  # teksten
+      ] ;
+    ] .
+-----
+
+==== Beskrivelse av kvalitet i form av brukertilbakemeldinger [[beskrivelse-av-kvalitet-brukertilbakemelding]]
+
+Iht. DQV-AP-NO er en brukertilbakemelding (`dqv:UserFeedback`) en type kvalitetsnote (`dqv:QualityAnnotation`). Du kan med andre ord knytte en brukertilbakemelding på kvalitet (`dqv:UserQualityFeedback`) til et datasett (`dcat:Dataset`), på tilsvarende måte som  <<beskrivelse-av-kvalitet-fritekst, beskrivelse av kvalitet i form av fritekst>>. Se også <<beskrivelse-av-kvalitet-fritekst, Beskrivelse av kvalitet i form av fritekst>> for obligatoriske og anbefalte krav som også gjelder for brukertilbakemelding (`dqv:UserFeedback`) her.
+
+.Eksempler
+* Kvalitetsdimensjon: fullstendighet
+* Brukertilbakemelding: 24 dagers etterslep er mer enn bra nok for vårt statistiske formål.
+
+.Teknisk veiledning
+
+Eksempel i RDF Turle:
+-----
+<etDatasett> a dcat:Dataset ; # datasett
+  dqv:hasQualityAnnotation [ a dqv:UserQualityFeedback ; # brukertilbakemelding
+    oa:motivatedBy dqv:qualityAssessment ; # obligatorisk "motivasjon"
+    dqv:inDimension dqvno:completeness ; # anbefalt kvalitetsdimensjon
+    oa:hasBody [ a oa:TextualBody ; # selve teksten
+      dct:format <http://publications.europa.eu/resource/authority/file-type/TXT> ; # format
+      dct:language <http://publications.europa.eu/resource/authority/language/NOB> ; # språk
+      rdfs:value "24 dagers etterslep er mer enn bra nok for vårt statistiske formål." ;  # teksten
+      ] ;
+    ] .
+-----
+
+==== Beskrivelse av at et datasett er autoritativt [[beskrivelse-av-kvalitet-autoritativt]]
+
+Iht. DQV-AP-NO er et kvalitetssertifikat (`dqv:QualityCertificate`) en type kvalitetsnote (`dqv:QualityAnnotation`). Du kan med andre ord knytte et kvalitetssertifikat (`dqv:QualityCertificate`) til et datasett (`dcat:Dataset`), på tilsvarende måte som  <<beskrivelse-av-kvalitet-fritekst, beskrivelse av kvalitet i form av fritekst>>. Se også <<beskrivelse-av-kvalitet-fritekst, Beskrivelse av kvalitet i form av fritekst>> for obligatoriske og anbefalte krav som også gjelder for kvalitetssertifikat (`dqv:QualityCertificate`) her.
+
+.Eksempler
+ * Autoritativ kilde: ja
+
+.Teknisk veiledning
+
+Vokabularet https://data.norge.no/vocabulary/dqvno (i RDF) inneholder et predefinert kvalitetssertifikat, `dqvno:isAuthoritative`, som er en "kvalitetsbeskrivelse som uttrykker at noe er autoritativt". Dette predefinerte kvalitetssertifikatet bør du bruke når du ønsker å si at et datasett er autoritativt.
+
+Eksempel i RDF Turtle:
+-----
+<etDatasett> a dcat:Dataset ;
+  dqv:hasQualityAnnotation dqvno:isAuthoritative . # datasettet er autoritativt
+-----
+
+==== Beskrivelse av at kvaliteten er i samsvar med gitt standard/spesifikasjon [[beskrivelse-av-kvalitet-iSamsvarMed]]
+
+Ved å bruke egenskapen <<datasett-iSamsvarMed, Datasett - i samsvar med>> kan du knytte en standard/spesifikasjon (`dct:Standard`) til et datasett (`dcat:Dataset`), for å informere om at datasettet er generert/vedlikeholdt i henhold til gitt(e) standard(er)/spesifikasjon(er).
+
+Se <<datasett-iSamsvarMed, Datasett - i samsvar med>> for hvordan egenskapen brukes.
+
+=== Beskrivelse av juridiske rammer [[beskrivelse-av-juss]]
+
+For å knytte f.eks. en lovhjemmel til et datasett eller en datatjeneste, er det to steg (her under med utgangspunkt i datasett):
+
+. Et datasett (`dcat:Dataset`) kan referere til en eller flere regler (`cpsv:Rule`) ved hjelp av egenskapen https://data.norge.no/specification/dcat-ap-no/#Datasett-f%C3%B8lger[Datasett: følger] (`cpsv:follows`). Vokabularet https://data.norge.no/vocabulary/cpsvno/[cpsvno] inneholder p.t. følgende predefinerte instanser av `cpsv:Rule`, og disse bør brukes når relevant:
+** behandlingsgrunnlag (`cpsvno:ruleForDataProcessing`): regel som regulerer behandling av data, spesielt personopplysninger
+** utleveringsregel (`cpsvno:ruleForDisclosure`): regel som regulerer utlevering av en ressurs (f.eks. et datasett)
+** skjermingsregel (`cpsvno:ruleForNonDisclosure`): regel som regulerer skjerming av en ressurs (f.eks. et datasett)
+. En regel (`cpsv:Rule`) kan referere til en eller flere regulative ressurser (`eli:LegalResource`) ved hjelp av egenskapen https://data.norge.no/specification/dcat-ap-no/#Regel-obligatoriske-egenskaper[Regel: implementerer] (`cpsv:implements`). Et eksempel på en regulativ ressurs er en lovhjemmel.
+** Egenskapen https://data.norge.no/specification/dcat-ap-no/#RegulativRessurs-obligatoriske-egenskaper[Regulativ ressurs: type] (`dct:type`) er iht. DCAT-AP-NO obligatorisk for en regulativ ressurs (`eli:LegalResource`).
+
+.Teknisk veiledning
+Se under <<datasett-følger, Datasett - følger>> for eksempel i RDF Turtle.
+
+=== Beskrivelse av tidsserie/datasettserie [[beskrivelse-av-datasettserie]]
+
+For å beskrive datasett som inneholder en serie av datasett, anbefaler DCAT-AP-NO å bruke egenskapen https://data.norge.no/specification/dcat-ap-no/#Datasett-harDel[Datasett: har del] ("består av", `dct:hasPart`). Den motsatte egenskapen https://data.norge.no/specification/dcat-ap-no/#Datasett-erDelAv[Datasett: er del av] ("inngår i", `dct:isPartOf`) kan brukes til å knytte et datasett til en datasettserie.
+
+.Eksempler
+* Datasettet "årsregnskap" består av datasettene "regnskap2017" og "regnskap2018"
+* Datasettet "regnskap2017" og "regnskap2018" inngår i datasettet "årsregnskap"
+
+.Teknisk veiledning
+
+Eksempel i RDF Turtle:
+-----
+<årsregnskap> a dcat:Dataset ;
+   dct:hasPart <regnskap2017>, <regnskap2018> .
+
+<regnskap2017> a dcat:Dataset ;
+   dct:isPartOf <årsregnskap> ;
+   dct:temporal [a dct:PeriodOfTime ;
+   dcat:startDate "2017-01-01"^^xsd:date ;
+   dcat:endDate "2017-12-31"^^xsd:date ; ] .
+
+<regnskap2018> a dcat:Dataset ;
+   dct:isPartOf <årsregnskap> ;
+   dct:temporal [a dct:PeriodOfTime ;
+   dcat:startDate "2018-01-01"^^xsd:date ;
+   dcat:endDate "2018-12-31"^^xsd:date ; ] .
+-----
+
+NOTE: I skrivende stund holder W3C på å utarbeide v.3.0 av DCAT hvor det skal være en løsning for å kunne beskrive en "Datasettserie" mer presist. Den foreslåtte løsningen p.t. ser ut til å bruke en ny klasse "Datasettserie" (`dcat:DatasetSeries`) som er en subklasse av Datasett (`dcat:Dataset`), og datasettene (`dcat:Dataset`) knyttes til serien (`dcat:DatasetSeries`) ved å bruke en ny egenskap "Datasett - iSerie" (`dcat:inSeries`) som er en subegenskap av `dct:isPartOf`. Det diskuteres p.t. om det også skal innføres en ny egenskap "Datasettserie - seriemedlem" (`dcat:seriesMember`) som er den inverse av egenskapen `dcat:inSeries` og som er en subegenskap av `dct:hasPart`. Løsningen, når den vedtas i W3C og også tas i bruk av EU, er med andre en mer presis måte å bruke klassen Datasett (`dcat:Dataset`) og egenskapen erDelAv (`dct:isPartOf`). Inntil videre bruker vi `dct:isPartOf` eller `dct:hasPart` til å beskrive tidsserier/dataserier, som beskrevet ovenfor.
+
+
+=== Beskrivelse av åpne data [[beskrivelse-av-åpneData]]
+
+Et datasett kan gjøres tilgjengelig via distribusjon(er) og/eller datatjeneste(r). Se ellers under <<sammenheng, Sammenheng mellom datasett, begrep, distribusjon, datatjeneste og informasjonsmodell>> for sammenheng mellom bl.a. datasett (`dcat:Dataset`), distribusjon (`dcat:Distribution`) og datatjeneste (`dcat:DataService`).
+
+==== Åpne data via distribusjon(er) [[åpnedata-via-distribusjon]]
+
+Åpne data kan tilgjengeliggjøres via distribusjoner. For at et datasett (`dcat:Dataset`) skal kunne betraktes som et datasett med åpne data, _skal_ følgende oppfylles:
+
+. Datasettet _skal være offentlig tilgjengelig_. Egenskapen https://data.norge.no/specification/dcat-ap-no/#Datasett-tilgangsniv%C3%A5[Datasett: tilgangsnivå] (`dct:accessRights`) _skal_ med andre ord ha verdi `offentlig` (`http://publications.europa.eu/resource/authority/access-right/PUBLIC`).
+. Datasettet _er gjort tilgjengelig_. Egenskapen https://data.norge.no/specification/dcat-ap-no/#Datasett-datasettdistribusjon[Datasett: datasettdistribusjon] (`dcat:distribution`) _skal_ med andre ord ha minst én verdi, dvs. det skal være minst én distribusjon av datasettet.
+. Datasettet er gjort tilgjengelig med minst én distribusjon som er tilknyttet en _åpen lisens_. Egenskapen https://data.norge.no/specification/dcat-ap-no/#Distribusjon-lisens[Distribusjon: lisens] (`dct:license`) til minst én av distribusjonene (hvis flere distribusjoner) til datasettet _skal_ med andre ord referere til en åpen lisens. Se <<distribusjon-lisens, Distribusjon - lisens>> for mer om åpne lisenser.
+.. Når tilgangen til distribusjonen som er tilknyttet en åpen lisens gis via en eller flere datatjenester (`dcat:DataService`) ved hjelp av egenskapen https://data.norge.no/specification/dcat-ap-no/#Distribusjon-tilganstjeneste[Distribusjon: tilgangstjeneste] (`dcat:accessService`), _skal_ minst én av datatjenestene (hvis flere datatjenester) i tillegg også være tilknyttet en _åpen lisen_. Egenskapen https://data.norge.no/specification/dcat-ap-no/#Datatjeneste-lisens[Datatjeneste: lisens] (`dct:license`) til minst én av datatjenestene (hvis flere) _skal_ med andre ord referere til en _åpen lisens_. Se <<distribusjon-lisens, Distribusjon - lisens>> for mer om åpne lisenser.
+
+Se ellers <<sammenheng, Sammenheng mellom datasett, distribusjon, datatjeneste, begrep og informasjonsmodell>>.
+
+.Teknisk veiledning
+
+Eksempel i RDF Turtle:
+-----
+<etDatasettMedÅpneData> a dcat:Dataset ; # datasett
+   dct:accessRights <http://publications.europa.eu/resource/authority/access-right/PUBLIC> ; # offentlig tilgjengelig (pkt.1)
+   dcat:distribution [ a dcat:Distribution ; # en distribusjon (pkt.2)
+      dct:license <http://publications.europa.eu/resource/authority/licence/CC_BY_4_0> ; # en åpen lisens (pkt.3)
+      dcat:accessService [ a dcat:DataService ; # datatjeneste
+        dct:license <http://publications.europa.eu/resource/authority/licence/CC_BY_4_0> ; # en åpen lisens (pkt.3a)
+        ] ;
+      ] .
+-----
+
+==== Åpne data via datatjeneste (aka API) [[åpnedata-via-datatjeneste]]
+
+En datatjeneste (`dcat:Dataservice`) kan gi tilgang til åpne data. For at en datatjeneste (`dcat:DataService`) skal kunne sies å gi tilgang til datasett (`dcat:Dataset`) med åpne data, _skal_ følgende oppfylles:
+
+. Datatjenesten (`dcat:DataService`) _skal_ tilbys under en _åpen lisens_. Egenskapen https://data.norge.no/specification/dcat-ap-no/#Datatjeneste-lisens[Datatjeneste: lisens] (`dct:license`) _skal_ med andre ord referere til en åpen lisens. Se <<distribusjon-lisens, Distribusjon - lisens>> for mer om åpne lisenser.
+. Datatjenesten _gir_ tilgang til _data_. Egenskapen https://data.norge.no/specification/dcat-ap-no/#Datatjeneste-tilgjengeliggjor-datasett[Datatjeneste: tilgjengeliggjør datasett] (`dcat:servesDataset`) _skal_ med andre ord referere til minst ett datasett (`dcat:Dataset`).
+. _Alle_ (hvis flere) datasett (`dcat:Dataset`) som datatjenesten gir tilgang til, _skal_ være offentlig tilgjengelige. Egenskapen https://data.norge.no/specification/dcat-ap-no/#Datasett-tilgangsniv%C3%A5[Datasett: tilgangsnivå] (`dct:accessRights`) til alle datasettene _skal_ med andre ord ha verdi `offentlig` (`http://publications.europa.eu/resource/authority/access-right/PUBLIC`).
+
+.Teknisk veiledning
+
+Eksempel i RDF Turtle:
+-----
+<enDatatjeneste> a dcat:DataService ; # datatjeneste
+  dct:license <http://publications.europa.eu/resource/authority/licence/CC_BY_4_0> ; # en åpen lisens (pkt.1)
+  dcat:servesDataset [ a dcat:Datasett ; # datasett (pkt.2)
+    dct:accessRights <http://publications.europa.eu/resource/authority/access-right/PUBLIC> ; # offentlig tilgjengelig (pkt.3)
+    ] .
+-----
+
+=== Bruk av kontrollerte vokabularer [[bruk-av-kontrollerte-vokabularer]]
+
+Til flere av egenskaper er det krav til obligatorisk eller anbefalt bruk av kontrollerte vokabularer. Dette betyr at verdiene til de aktuelle egenskapene skal (obligatorisk bruk) eller bør (anbefalt bruk) hentes fra en eller flere av angitte kontrollerte lister. Se https://data.norge.no/specification/dcat-ap-no/#Kontrollerte-vokabularer[Om bruk av kontrollerte vokabularer] i DCAT-AP-NO, for hvilke kontrollerte vokabularer som skal/bør brukes for hvilke egenskaper.
+
+
+=== Om identifikator (`dct:identifer`) [[om-identifikator]]
+
+Identifikatoren til en ressurs (et datasett, en datatjeneste, en katalog osv.) er som regel systemgenerert av verktøystøtte, slik at du som vanlig bruker ikke trenger å fylle ut verdien til denne egenskapen manuelt.
+
+.Teknisk veiledning
+
+Beskrivelsen tar utgangspunkt i indikatoren til et datasett (https://data.norge.no/specification/dcat-ap-no/#Datasett-identifikator[Datasett: identifikator (`dct:identifier`)], men den gjelder også for de andre klassene i DCAT-AP-NO der `dct:identifer` brukes.
+
+Identifikatoren til et datasett [https://data.norge.no/specification/dcat-ap-no/#Datasett-identifikator[Datasett: identifikator]] skal være unik og varig. Se https://www.digdir.no/digitale-felleslosninger/peikarar-til-offentlege-ressursar-pa-nett/1492[Forvaltningsstandard for pekere til offentlige ressurser på nett].
+
+Subjektet (det første leddet) i en RDF-trippel er per definisjon en identifikator (URI). I en konkret realisering vil instanser av klassen Datasett (`dcat:Dataset`) derfor få en «innebygd» identifikator.
+
+For å ha minst mulig avvik fra EU-standarden som DCAT-AP-NO er basert på, har vi beholdt krav på at `dct:identifier` er obligatorisk for `dcat:Dataset`. `dct:identifier` trenger ikke å inneholde den samme identifikatoren som den innebygde URIen i en trippel, men _når_ det er den samme identifikatoren, anbefales det at hele den innebygde URIen (subjektet i en trippel) kopieres til `dct:identifier`.
+
+Eksempel i RDF Turtle:
+------
+<https://data.direks.eks/dataset/123> a dcat:Dataset ;
+   dct:identifier "https://data.direks.eks/dataset/123"^^xsd:anyURI .
+------

@@ -1,0 +1,303 @@
+== Beskrivelse av datatjeneste [[beskrivelse-av-datatjeneste]]
+
+Nytt i DCAT-AP-NO v.2 er at standarden nå også støtter beskrivelser av datatjenester, som v.1.x av DCAT-AP-NO ikke gjorde.
+
+Datatjeneste (`dcat:DataService`) brukes til å beskrive en samling av operasjoner som er tilgjengelig via et programmeringsgrensesnitt (API) og som gir tilgang til ett eller flere datasett eller databehandlingsfunksjoner.
+
+For deg som skal utvikle/tilpasse verktøystøtte i henhold til DCAT-AP-NO, inneholder veilederen også en teknisk veiledning bakerst i hvert avsnitt. NB! Bortsett fra det første eksemplet, er ikke alle eksempler i RDF Turtle komplette og de kan mangle bl.a. verdier for obligatoriske egenskaper.
+
+=== Eksempel på en datatjenestebeskrivelse [[eksempel-datatjeneste]]
+
+Under er et eksempel på en datatjenestebeskrivelse, hvor *uthevede egenskaper* er obligatoriske:
+
+*****
+_Eksempel på en datatjenestebeskrivelse med dummydata, hvor *uthevede egenskaper* er obligatoriske_:
+
+<<datatjeneste-endepunktsURL, *EndepunktsURL*>>: +https://example.org/eksAPI+ (_NB! dummy-URL som ikke virker_) +
+<<datatjeneste-identifikator, *Identifikator*>>: +https://example.org/eksAPI+ (_NB! dummy-URL som ikke virker_)  +
+<<datatjeneste-tittel, *Tittel*>>: REST-API for eksempler +
+<<datatjeneste-endepunktsbeskrivelse, Endepunktsbeskrivelse>>: +https://example.org/eksAPI.json+ (_NB! dummy-URL som ikke virker_) +
+<<datatjeneste-format, Format>>: https://op.europa.eu/s/pkmZ[JSON] +
+<<datatjeneste-utgiver, Utgiver>>: Direktoratet for eksempler
+*****
+
+.Teknisk veiledning
+
+Eksemplet ovenfor i RDF Turtle:
+-----
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <https://example.org/> .
+
+<enDatatjeneste> a dcat:DataService ; # datatjeneste
+  ### obligatoriske egenskaper:
+    dcat:endpointURL <https://example.org/eksAPI> ;
+    dct:identifier "https://example.org/eksAP"^^xsd:anyURI ;
+    dct:title "REST-API for eksempler"@nb ;
+  ### anbefalte egenskaper:
+    dcat:endpointDescription <https://example.org/eksAPI.json> ;
+    dct:format <http://publications.europa.eu/resource/authority/file-type/JSON> ;
+    dct:publisher <https://organization-catalogue.fellesdatakatalog.digdir.no/organizations/999999999> ; # utgiver, med dummy-org.nr.
+  .
+-----
+
+=== Obligatoriske egenskaper i en datatjenestebeskrivelse [[datatjeneste-obligatoriske-egenskaper]]
+Som et minimum skal følgende tas med i en datatjenestebeskrivelse:
+
+* Datatjeneste - endepunktsURL: rotplassering eller primært endepunkt for tjenesten.
+* Datatjeneste - identifikator: identifikator til datatjenesten.
+* Datatjeneste - tittel: navn på datatjenesten.
+
+==== Datatjeneste - endepunktsURL [[datatjeneste-endepunktsURL]]
+Du skal oppgi rotplassering eller primært endepunkt for tjenesten (en URI).
+
+.Teknisk veiledning
+Dette tilsvarer https://data.norge.no/specification/dcat-ap-no/#Datatjeneste-endepunktsurl[Datatjeneste: endepunktsURL (dcat:endpointURL) i DCAT-AP-NO].
+
+Eksempel i RDF Turtle:
+----
+<enDatatjeneste> a dcat:DataService ;
+  dcat:endpointURL <https://example.org/endpoints> .
+----
+
+==== Datatjeneste - identifikator [[datatjeneste-identifikator]]
+Brukes til å oppgi identifikator til datatjenesten.
+
+Se under <<om-identifikator, Om identifikator>>.
+
+.Teknisk veiledning
+Dette tilsvarer https://data.norge.no/specification/dcat-ap-no/#Datatjeneste-identifikator[Datatjeneste: identifikator (dcat:identifier) i DCAT-AP-NO].
+
+==== Datatjeneste - tittel [[datatjeneste-tittel]]
+Du skal oppgi navnet på datatjenesten. Gjentas hvis navnet er i flere språk.
+
+.Teknisk veiledning
+Dette tilsvarer https://data.norge.no/specification/dcat-ap-no/#Datatjeneste-tittel[Datatjeneste: tittel (dct:title) i DCAT-AP-NO].
+
+Eksempel i RDF Turtle:
+----
+<enDatatjeneste> a dcat:DataService ;
+  dct:title "FDK API endpoints"@en ,
+    "FDK API endepunkter"@nb .
+----
+
+=== Anbefalte egenskaper i en datatjenestebeskrivelse [[datatjeneste-anbefalte-egenskaper]]
+Følgende opplysninger bør du ta med i en datatjenestebeskrivelse hvis de finnes:
+
+* Datatjeneste - emneord: emneord (eller tag) som beskriver datatjenesten.
+* Datatjeneste - endepunktsbeskrivelse: beskrivelse av tjenesten.
+* Datatjeneste - format: datatjenestens filformat.
+* Datatjeneste - kontaktpunkt: kontaktpunkt med kontaktopplysninger.
+* Datatjeneste - tema: tema for datatjenesten.
+* Datatjeneste - tilgjengeliggjør datasett: datasett som datatjenesten kan distribuere.
+* Datatjeneste - utgiver: aktør (organisasjon) som er ansvarlig for å gjøre datatjenesten tilgjengelig.
+
+==== Datatjeneste - emneord [[datatjeneste-emneord]]
+Du bør oppgi emneord (eller tag) som beskriver datatjenesten.
+
+Se beskrivelsen av tilsvarende egenskap i Datasett, <<datasett-emneord, Datatsett - emneord>>.
+
+.Teknisk veiledning
+Dette tilsvarer https://data.norge.no/specification/dcat-ap-no/#Datatjeneste-emneord[Datatjeneste: emneord (dcat:keyword) i DCAT-AP-NO].
+
+==== Datatjeneste - endepunktsbeskrivelse [[datatjeneste-endepunktsbeskrivelse]]
+
+Du skal oppgi en beskrivelse av tjenesten.
+
+Brukes primært til å lenke til en formalisert beskrivelse av tjenestene som er tilgjengelige via endepunktene, inkludert deres operasjoner, parametere osv. Beskrivelsen skal gi spesifikke detaljer om de faktiske endepunkt-instansene, mens `dct:conformsTo` brukes til å indikere den generelle standarden eller spesifikasjonen som endepunktene implementerer.
+
+* Lenke til en maskinlesbar formalisert endepunktbeskrivelse, som for eksempel en Open API (Swagger) beskrivelse [https://spec.openapis.org/oas/v3.1.0[OpenAPI]], GraphQL [https://graphql.org/[GraphQL]].
+* Dersom en formalisert beskrivelse ikke er mulig, kan det lenkes til en tekstlig beskrivelse
+
+.Teknisk veiledning
+Dette tilsvarer https://data.norge.no/specification/dcat-ap-no/#Datatjeneste-endepunktsbeskrivelse[Datatjeneste: endepunktsbeskrivelse (dcat:endpointDescription) i DCAT-AP-NO].
+
+Eksempel i RDF Turtle:
+----
+<enDatatjeneste> a dcat:DataService ;
+  dcat:endpointDescription <https://raw.githubusercontent.com/Informasjonsforvaltning/fdk-api-endpoints/master/specification/fdk-api-endpoints.yaml> . # peker til en OpenAPI spesifikasjon av tjenesten
+----
+
+==== Datatjeneste - format [[datatjeneste-format]]
+Datatjenestens filformat.
+
+* EUs kontrollerte liste over https://op.europa.eu/s/pkna[File type] skal brukes.
+
+* Kan gjentas for API-er og sluttbrukerapplikasjoner som leverer data i flere formater.
+
+.Teknisk veiledning
+Dette tilsvarer https://data.norge.no/specification/dcat-ap-no/#Datatjeneste-format[Datatjeneste: format (dct:format) i DCAT-AP-NO].
+
+Eksempel i RDF Turtle:
+----
+<enDatatjeneste> a dcat:DataService ;
+  dct:format <http://publications.europa.eu/resource/authority/file-type/JSON_LD> , # JSON-LD
+    <http://publications.europa.eu/resource/authority/file-type/RDF_TURTLE> . # RDF Turtle
+----
+
+==== Datatjeneste - kontaktpunkt [[datatjeneste-kontaktpunkt]]
+Kontaktpunkt med kontaktopplysninger.
+
+Se beskrivelsen av tilsvarende egenskap i Datasett, <<datasett-kontaktpunkt, Datasett - kontaktpunkt>>.
+
+.Teknisk veiledning
+Dette tilsvarer https://data.norge.no/specification/dcat-ap-no/#Datatjeneste-kontaktpunkt[Datatjeneste: kontaktpunkt (dcat:contactPoint) i DCAT-AP-NO].
+
+==== Datatjeneste - tema [[datatjeneste-tema]]
+Tema for datatjenesten. En datatjeneste kan assosieres med flere tema.
+
+For å kunne sortere datatjenesten inn under gitte kategorier er det behov for tema.
+
+* Ett eller flere temaer skal velges fra https://op.europa.eu/s/oZjL[den kontrollerte listen av EU-temaer].
+
+* Ett eller flere temaer bør velges fra https://psi.norge.no/los/struktur.html[det norske LOS-vokabularet]. Merk at Los har flere nivåer og at de overordnede nivåene er implisitt når en velger tema på nivå 2 og 3 i hierarkiet.
+
+.Eksempler
+
+* [*]  *Helse* (+HEAL+ fra EU-listen)
+* [*]  *Helsestasjon* (+helsestasjon+ fra LOS)
+
+.Teknisk veiledning
+
+Dette tilsvarer https://data.norge.no/specification/dcat-ap-no/#Datatjeneste-tema[Datatjeneste: tema (dcat:theme) i DCAT-AP-NO].
+
+Eksempel i RDF Turtle:
+
+----
+<enDatatjeneste> a dcat:DataService ;
+  dcat:theme <http://publications.europa.eu/resource/authority/data-theme/HEAL> , # helse
+    <https://psi.norge.no/los/ord/helsestasjon> . # helsestasjon (Helse og omsorg -> Helsetjenester -> Helsestasjon)
+----
+
+==== Datatjeneste - tilgjengeliggjør datasett [[datatjeneste-tilgjengeliggjørDatasett]]
+Egenskapen brukes til å referere til datasett som datatjenesten kan distribuere.
+
+.Teknisk veiledning
+Dette tilsvarer https://data.norge.no/specification/dcat-ap-no/#Datatjeneste-tilgjengeliggjor-datasett[Datatjeneste: tilgjengeliggjør datasett (dcat:servesDataset) i DCAT-AP-NO].
+
+Eksempel i RDF Turtle:
+
+----
+<enDatatjeneste> a dcat:DataService ;
+  dcat:servesDataset <https://example.org/dataset/123> ,
+    <https://example.org/dataset/456> . # peker til 2 datasett.
+----
+==== Datatjeneste - utgiver [[datatjeneste-utgiver]]
+
+Den aktøren (organisasjon) som er ansvarlig for å gjøre datatjenesten tilgjengelig.
+
+* Skal peke på en virksomhet (juridisk person, organisasjonsledd, underenhet) som er ansvarlig utgiver - ikke leverandør av tjenesten.
+* Det offisielle navnet på virksomheten vil bli hentet fra Enhetsregisteret, men kortform (f.eks. Digdir) kan legges inn av brukeren.
+* Utgiveren av datasettet forvalter sammensetning av dataene, altså datasettet, og ikke nødvendigvis selve dataene.
+
+.Eksempler
+
+*  Arbeids- og velferdsetaten
+
+.Teknisk veiledning
+
+Dette tilsvarer https://data.norge.no/specification/dcat-ap-no/#Datatjeneste-utgiver[Datatjeneste: utgiver (dct:publisher) i DCAT-AP-NO].
+
+Inntil https://data.brreg.no  tilbyr gyldig identifikator (`foaf:Agent`), skal følgende mønster benyttes: `+https://organization-catalogue.fellesdatakatalog.digdir.no/organizations/{orgnummer}+`.
+
+Eksempel i RDF Turtle:
+----
+<enDatatjeneste> a dcat:DataService ;
+  dct:publisher <https://organization-catalogue.fellesdatakatalog.digdir.no/organizations/889640782> . #NAV
+----
+
+=== Valgfrie egenskaper i en datatjenestebeskrivelse [[datatjeneste-valgfrie-egenskaper]]
+
+I tillegg til obligatoriske (skal brukes) og anbefalte (bør brukes) egenskaper, er det en del egenskaper som er valgfrie (kan brukes) i en datatjenestebeskrivelse:
+
+* Datatjeneste - beskrivelse: fritekstbeskrivelse av datatjenesten.
+* Datatjeneste - dokumentasjon: side eller dokument som beskriver datatjenesten.
+* Datatjeneste - følger: regel som definerer den juridiske rammen for datatjenesten.
+* Datatjeneste - i samsvar med: spesifikasjon eller standard som datatjenesten implementerer.
+* Datatjeneste - landingsside: nettside som gir tilgang til datatjenesten, dens distribusjoner og/eller tilleggsinformasjon.
+* Datatjeneste - lisens: lisensen som datatjenesten blir gjort tilgjengelig under.
+* Datatjeneste - medietype: datatjenestens medietype.
+* Datatjeneste - tilgangsrettigheter: informasjon angående tilgang eller begrensninger basert på personvern, sikkerhet eller andre retningslinjer.
+* Datatjeneste - type: datatjenestens type.
+
+Ikke alle valgfrie egenskaper er beskrevet i etterfølgende avsnitt. Se under <<hensikt-og-avgrensing, Hensikt og avgrensning>> for hvordan du kan melde inn behov for beskrivelser.
+
+==== Datatjeneste - beskrivelse [[datatjeneste-beskrivelse]]
+
+Fritekst-beskrivelse av datatjenesten. Gjentas for flere språkversjoner. Se ellers beskrivelsen av tilsvarende felt i Datasett, <<datasett-beskrivelse, Datasett - beskrivelse>>.
+
+* Kopier gjerne beskrivende informasjon fra dokumentasjonen eller landingssiden
+* Ved behov for formatering av tekst - benytt https://Commonmark.org[CommonMark]
+
+.Teknisk veiledning
+Dette tilsvarer https://data.norge.no/specification/dcat-ap-no/#Datatjeneste-beskrivelse[Datatjeneste: beskrivelse (dct:description) i DCAT-AP-NO].
+
+==== Datatjeneste - dokumentasjon [[datatjeneste-dokumentasjon]]
+
+Referanse til en side eller et dokument som beskriver datatjenesten.
+
+* Siden eller dokumentet som det linkes til bør være en menneskelesbar ressurs, i motsetning til endepunktbeskrivelse som primært er en maskinlesbar ressurs
+* Se også beskrivelsen av <<datatjeneste-landingsside>>, <<datatjeneste-endepunktsbeskrivelse>> og <<datatjeneste-beskrivelse>>.
+
+.Teknisk veiledning
+Dette tilsvarer https://data.norge.no/specification/dcat-ap-no/#Datatjeneste-dokumentasjon[Datatjeneste: dokumentasjon (foaf:page) i DCAT-AP-NO].
+
+==== Datatjeneste - følger [[datatjeneste-følger]]
+
+_<ikke beskrevet, tilsvarer https://data.norge.no/specification/dcat-ap-no/#Datatjeneste-f%C3%B8lger[Datatjeneste: følger (cpsv:follows) i DCAT-AP-NO]>_
+
+Se ellers beskrivelsen av tilsvarende felt i Datasett, <<datasett-følger, Datasett - følger>>.
+
+==== Datatjeneste - i samsvar med [[datatjeneste-iSamsvarMed]]
+
+Referanse til en spesifikasjon eller standard som datatjenesten implementerer.
+
+* En datatjeneste kan være utviklet i samsvar med en eller flere standarder og/eller spesifikasjoner.
+* Du kan knytte en informasjonsmodell til en datatjeneste ved hjelp av denne egenskapen. Se under <<sammenheng, Utvalgte temaer>> for sammenhengen mellom datatjeneste og informasjonsmodell.
+* Vi anbefaler at informasjonsmodellen for endepunktet også inngår som en del av endepunktbeskrivelsen.
+
+.Teknisk veiledning
+Dette tilsvarer https://data.norge.no/specification/dcat-ap-no/#Datatjeneste-i-samsvar-med[Datatjeneste: i samsvar med (dct:conformsTo) i DCAT-AP-NO].
+
+==== Datatjeneste - landingsside [[datatjeneste-landingsside]]
+
+_<ikke beskrevet, tilsvarer https://data.norge.no/specification/dcat-ap-no/#Datatjeneste-landingsside[Datatjeneste: landingsside (dcat:landingPage) i DCAT-AP-NO]>_
+
+Se ellers beskrivelsen av tilsvarende egenskap i Datasett, <<datasett-landingsside, Datasett - landingsside>>.
+
+==== Datatjeneste - lisens [[datatjeneste-lisens]]
+
+Referanse til lisensen for datasett som datatjenesten realiserer, gjøres tilgjengelig under. Lisens er påkrevd for alle åpne offentlige data.
+
+* EUs kontrollerte liste over https://op.europa.eu/s/o8vZ[Licence] skal brukes, dersom lisensen som benyttes finnes på listen.
+* For åpne data skal en av disse tre lisensene benyttes:
+** Creative Commons Navngivelse 4.0 (CC BY 4.0): `+http://publications.europa.eu/resource/authority/licence/CC_BY_4_0+`
+** Creative Commons CC0 1.0 Universal (CC0): `+http://publications.europa.eu/resource/authority/licence/CC0+`
+** Norsk lisens for offentlige data (NLOD): `+http://publications.europa.eu/resource/authority/licence/NLOD_2_0+`
+* Creative Commons-lisensene anbefales for distribusjoner (og datatjenester) med forventet internasjonal bruk.
+
+Se https://data.norge.no/guide/veileder-apne-data/[Veileder for tilgjengeliggjøring av åpne data] for mer informasjon om valg av åpne standardlisenser.
+
+Se ellers beskrivelsen av tilsvarende felt i Distribusjon, <<distribusjon-lisens, Distribusjon - lisens>>.
+
+.Teknisk veiledning
+Dette tilsvarer https://data.norge.no/specification/dcat-ap-no/#Distribusjon-lisens[Distribusjon: lisens (dct:license) i DCAT-AP-NO].
+
+
+==== Datatjeneste - medietype [[datatjeneste-medietype]]
+
+_<ikke beskrevet, tilsvarer https://data.norge.no/specification/dcat-ap-no/#Datatjeneste-medietype[Datatjeneste: medietype (dcat:mediaType) i DCAT-AP-NO]>_
+
+Se beskrivelsen av tilsvarende egenskap i Distribusjon, <<distribusjon-medietype, Distribusjon - medietype>>.
+
+==== Datatjeneste - tilgangsrettigheter [[datatjeneste-tilgangsrettigheter]]
+
+_<ikke beskrevet, tilsvarer https://data.norge.no/specification/dcat-ap-no/#Datatjeneste-tilgangsrettigheter[Datatjeneste: tilgangsrettigheter (dct:accessRights) i DCAT-AP-NO]>_
+
+=== Datatjeneste - type [[datatjeneste-type]]
+
+Referanse til et begrep i en kontrollert liste som identifiserer datatjenestens type, for eksempel https://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceType[Spatial data service type].
+
+.Teknisk veiledning
+Dette tilsvarer https://data.norge.no/specification/dcat-ap-no/#Datatjeneste-type[Datatjeneste: type (dct:type) i DCAT-AP-NO].

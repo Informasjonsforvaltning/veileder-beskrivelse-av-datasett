@@ -1,0 +1,30 @@
+=== Navnerom som er brukt i denne veilederen [[navnerom-brukt-i-veilederen]]
+
+.Teknisk veiledning - Navnerom som er brukt i denne veilederen
+
+[cols="10,45,45"]
+|===
+|*Prefiks* |*Navnerom* |*Forklaring/navn*
+|adms|http://www.w3.org/ns/adms#|https://www.w3.org/TR/vocab-adms/[Asset Description Metadata Schema]
+|cpsv |http://purl.org/vocab/cpsv# |https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/solution/core-public-service-vocabulary[Core Public Service Vocabulary]
+|cpsvno |https://data.norge.no/vocabulary/cpsvno# |https://data.norge.no/vocabulary/cpsvno/#[Norsk applikasjonsprofil av CPSV (CPSV-AP-NO)]
+|dcat|http://www.w3.org/ns/dcat#|https://www.w3.org/TR/vocab-dcat/[Data Catalog Vocabulary]
+|dct|http://purl.org/dc/terms/|https://www.dublincore.org/specifications/dublin-core/dcmi-terms/[DCMI Metadata Terms]
+|dqv |http://www.w3.org/ns/dqv# |https://www.w3.org/TR/vocab-dqv/[Data Quality Vocabulary]
+|dqvno |https://data.norge.no/vocabulary/dqvno# |https://data.norge.no/specification/dqv-ap-no/[Norsk applikasjonsprofil av DQV (Data Quality Vocabulary)]
+|eli |http://data.europa.eu/eli/ontology# |https://ec.europa.eu/isa2/solutions/european-legislation-identifier-eli_en[European Legislation Identifier]
+|foaf|http://xmlns.com/foaf/0.1/|http://xmlns.com/foaf/spec/[FOAF Vocabulary]
+|locn|http://www.w3.org/ns/locn#|https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/solution/core-location-vocabulary[Core Location Vocabulary]
+|modelldcatno|https://data.norge.no/vocabulary/modelldcatno#|https://data.norge.no/specification/modelldcat-ap-no/[Spesifikasjon for beskrivelse av informasjonsmodeller (ModellDCAT-AP-NO)]
+|oa |https://www.w3.org/TR/annotation-vocab/# |https://www.w3.org/ns/oa[Web Annotation Ontology]
+|odrl | http://www.w3.org/ns/odrl/2/ | https://www.w3.org/TR/odrl/[The Open Digital Rights Language (ODRL)]
+|owl|http://www.w3.org/2002/07/owl#|https://www.w3.org/TR/owl-features/[OWL Web Ontology Language]
+|prov |http://www.w3.org/ns/prov# |https://www.w3.org/TR/prov-o/[PROV-O: The PROV Ontology]
+|provno |https://data.norge.no/vocabulary/provno# |Norsk applikasjonsprofil av PROV-O
+|rdfs |http://www.w3.org/2000/01/rdf-schema#|https://www.w3.org/2001/sw/RDFCore/Schema/200212bwm/[RDF Vocabulary Description Language 1.0: RDF Schema]
+|skos|http://www.w3.org/2004/02/skos/core#|https://www.w3.org/TR/skos-reference/[SKOS Simple Knowledge Organization System]
+|time |https://www.w3.org/2006/time |https://www.w3.org/TR/owl-time/[Time Ontology in OWL]
+|vcard |http://www.w3.org/2006/vcard/ns# |https://www.w3.org/TR/vcard-rdf/[vCard Ontology]
+|xkos |http://rdf-vocabulary.ddialliance.org/xkos# |https://rdf-vocabulary.ddialliance.org/xkos.html[An SKOS extension for representing statistical classifications]
+|xsd |http://www.w3.org/2001/XMLSchema# |https://www.w3.org/TR/xmlschema-2/[XML Schema Part 2: Datatypes Second Edition]
+|===
