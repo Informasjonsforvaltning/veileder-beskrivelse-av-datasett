@@ -17,6 +17,7 @@
 |locn|http://www.w3.org/ns/locn#|https://joinup.ec.europa.eu/collection/semantic-interoperability-community-semic/solution/core-location-vocabulary[Core Location Vocabulary]
 |modelldcatno|https://data.norge.no/vocabulary/modelldcatno#|https://data.norge.no/specification/modelldcat-ap-no/[Spesifikasjon for beskrivelse av informasjonsmodeller (ModellDCAT-AP-NO)]
 |oa |https://www.w3.org/TR/annotation-vocab/# |https://www.w3.org/ns/oa[Web Annotation Ontology]
+|odrl | http://www.w3.org/ns/odrl/2/ | https://www.w3.org/TR/odrl/[The Open Digital Rights Language (ODRL)]
 |owl|http://www.w3.org/2002/07/owl#|https://www.w3.org/TR/owl-features/[OWL Web Ontology Language]
 |prov |http://www.w3.org/ns/prov# |https://www.w3.org/TR/prov-o/[PROV-O: The PROV Ontology]
 |provno |https://data.norge.no/vocabulary/provno# |Norsk applikasjonsprofil av PROV-O

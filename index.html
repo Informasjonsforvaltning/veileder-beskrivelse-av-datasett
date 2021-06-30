@@ -583,6 +583,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#datatjeneste-iSamsvarMed">Datatjeneste - i samsvar med</a></li>
 <li><a href="#datatjeneste-landingsside">Datatjeneste - landingsside</a></li>
 <li><a href="#datatjeneste-lisens">Datatjeneste - lisens</a></li>
+<li><a href="#datatjeneste-medietype">Datatjeneste - medietype</a></li>
 <li><a href="#datatjeneste-tilgangsrettigheter">Datatjeneste - tilgangsrettigheter</a></li>
 </ul>
 </li>
@@ -688,10 +689,10 @@ Dersom du finner feil eller mangler i dokumentet, ber vi om at dette meldes inn 
 </table>
 </div>
 <div class="paragraph">
-<p><strong>Status</strong>: <span class="yellow-background">under utarbeidelse</span><br>
-<strong>Versjon</strong>: <span class="yellow-background">forberedelse til</span> 2.0<br>
-<strong>Publisert</strong>: <span class="yellow-background">under utarbeidelse</span><br>
-<strong>Oppdatert</strong>: 2021-06-29<br>
+<p><strong>Status</strong>: Gjeldende<br>
+<strong>Versjon</strong>: 2.0<br>
+<strong>Publisert</strong>: 2019-06-30<br>
+<strong>Oppdatert</strong>: 2021-06-30<br>
 <strong>Gjeldende versjon</strong>: <a href="https://data.norge.no/guide/veileder-beskrivelse-av-datasett/" class="bare">https://data.norge.no/guide/veileder-beskrivelse-av-datasett/</a><br>
 <strong>Forrige versjon</strong>: <a href="https://data.norge.no/guide/veileder-beskrivelse-av-datasett/v1" class="bare">https://data.norge.no/guide/veileder-beskrivelse-av-datasett/v1</a><br>
 <strong>Redaktørens utkast</strong>: <a href="https://informasjonsforvaltning.github.io/veileder-beskrivelse-av-datasett/" class="bare">https://informasjonsforvaltning.github.io/veileder-beskrivelse-av-datasett/</a></p>
@@ -852,6 +853,11 @@ Dersom du finner feil eller mangler i dokumentet, ber vi om at dette meldes inn 
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.w3.org/ns/oa">Web Annotation Ontology</a></p></td>
 </tr>
 <tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">odrl</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://www.w3.org/ns/odrl/2/" class="bare">http://www.w3.org/ns/odrl/2/</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.w3.org/TR/odrl/">The Open Digital Rights Language (ODRL)</a></p></td>
+</tr>
+<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">owl</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="http://www.w3.org/2002/07/owl#" class="bare">http://www.w3.org/2002/07/owl#</a></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.w3.org/TR/owl-features/">OWL Web Ontology Language</a></p></td>
@@ -917,28 +923,31 @@ Dersom du finner feil eller mangler i dokumentet, ber vi om at dette meldes inn 
 <p>Dette kapittelet forklarer hvordan et datasett beskrives i henhold til kravene i forvaltningsstandarden <a href="https://data.norge.no/specification/dcat-ap-no/">DCAT-AP-NO v.2</a>, dog uten at du må kunne DCAT-AP-NO.</p>
 </div>
 <div class="paragraph">
-<p>For deg som skal utvikle/tilpasse verktøystøtte for datasettbeskrivelse i henhold til DCAT-AP-NO, inneholder veilederen også en teknisk veiledning bakerst i hvert avsnitt. NB! Bortsett fra det første eksemplet, er ikke alle eksempler i RDF Turle komplette og de kan mangle bl.a. verdier for obligatoriske egenskaper.</p>
+<p>For deg som skal utvikle/tilpasse verktøystøtte for datasettbeskrivelse i henhold til DCAT-AP-NO, inneholder veilederen også en teknisk veiledning bakerst i hvert avsnitt. NB! Bortsett fra det første eksemplet, er ikke alle eksempler i RDF Turtle komplette og de kan mangle bl.a. verdier for obligatoriske egenskaper.</p>
 </div>
 <div class="sect2">
 <h3 id="eksempel-datasettbeskrivelse"><a class="anchor" href="#eksempel-datasettbeskrivelse"></a>Eksempel på en datasettbeskrivelse</h3>
 <div class="paragraph">
-<p>Under er et eksempel på en datasettbeskrivelse, med dummydata, hvor egenskaper med * foran er obligatoriske:</p>
+<p>Under er et eksempel på en datasettbeskrivelse, med dummydata, hvor <strong>uthevede egenskaper</strong> er obligatoriske:</p>
 </div>
 <div class="sidebarblock">
 <div class="content">
 <div class="paragraph">
-<p>*Tittel: Eksempeldatasett<br>
-*Utgiver: Direktoratet for eksempler<br>
-*Beskrivelse: Datasett med testdata.
+<p><em>Eksempel på en datasettbeskrivelse med dummydata, hvor <strong>uthevede egenskaper</strong> er obligatoriske:</em></p>
+</div>
+<div class="paragraph">
+<p><a href="#datasett-tittel"><strong>Tittel</strong></a>: Eksempeldatasett<br>
+<a href="#datasett-utgiver"><strong>Utgiver</strong></a>: Direktoratet for eksempler<br>
+<a href="#datasett-beskrivelse"><strong>Beskrivelse</strong></a>: Datasett med testdata.
 Formålet med dette datasettet er å illustrere hvordan et datasett skal/bør/kan beskrives iht. DCAT-AP-NO.<br>
-*Tema: <a href="https://op.europa.eu/s/pirn">Forvaltning og offentlig sektor</a><br>
-Begrep: <a href="https://op.europa.eu/s/piiD">testdata</a><br>
-Dekningsområde: <a href="https://op.europa.eu/s/pirm">Norge</a><br>
-Oppdateringsfrekvens: <a href="https://op.europa.eu/s/piro">Daglig</a><br>
-Tilgangsnivå: <a href="https://op.europa.eu/s/pirq">Offentlig</a><br>
-Distribusjon: <a href="https://data.direks.eks/eksempeldata.csv" class="bare">https://data.direks.eks/eksempeldata.csv</a> (<em>NB! dummy-URL som ikke virker</em>)<br>
-Kontaktpunkt: Direktoratet for eksempler, <a href="mailto:eks@direks.eks">eks@direks.eks</a> (<em>NB! dummy-e-postadresse som ikke virker</em>)<br>
-Språk: <a href="https://op.europa.eu/s/piq1">Norsk bokmål</a><br></p>
+<a href="#datasett-tema"><strong>Tema</strong></a>: <a href="https://op.europa.eu/s/pirn">Forvaltning og offentlig sektor</a><br>
+<a href="#datasett-begrep">Begrep</a>: <a href="https://op.europa.eu/s/piiD">testdata</a><br>
+<a href="#datasett-dekningsområde">Dekningsområde</a>: <a href="https://op.europa.eu/s/pirm">Norge</a><br>
+<a href="#datasett-frekvens">Oppdateringsfrekvens</a>: <a href="https://op.europa.eu/s/piro">Daglig</a><br>
+<a href="#datasett-tilgangsnivå">Tilgangsnivå</a>: <a href="https://op.europa.eu/s/pirq">Offentlig</a><br>
+<a href="#datasett-distribusjon">Distribusjon</a>: https://example.org/eksempeldata.csv (<em>NB! dummy-URL som ikke virker</em>)<br>
+<a href="#datasett-kontaktpunkt">Kontaktpunkt</a>: Direktoratet for eksempler, data@direks.eks (<em>NB! dummy-e-postadresse som ikke virker</em>)<br>
+<a href="#datasett-språk">Språk</a>: <a href="https://op.europa.eu/s/piq1">Norsk bokmål</a><br></p>
 </div>
 </div>
 </div>
@@ -952,11 +961,11 @@ Språk: <a href="https://op.europa.eu/s/piq1">Norsk bokmål</a><br></p>
 @prefix dct: &lt;http://purl.org/dc/terms/&gt; .
 @prefix vcard: &lt;http://www.w3.org/2006/vcard/ns#&gt; .
 @prefix xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt; .
-@prefix : &lt;https://data.direks.eks/&gt; .
+@prefix : &lt;https://example.org/&gt; .
 
-&lt;https://data.direks.eks/eksempeldata&gt; a dcat:Dataset ;
+&lt;https://example.org/eksempeldata&gt; a dcat:Dataset ;
   ### obligatoriske egenskaper:
-    dct:identifier "https://data.direks.eks/eksempeldata"^^xsd:anyURI ; # identifikator
+    dct:identifier "https://example.org/eksempeldata"^^xsd:anyURI ; # identifikator
     dct:title "Eksempeldatasett"@nb ; # tittel
     dct:publisher &lt;https://organization-catalogue.fellesdatakatalog.digdir.no/organizations/999999999&gt; ; # utgiver, med dummy-org.nr.
     dct:description "Datasett med testdata"@nb ;
@@ -974,7 +983,7 @@ Språk: <a href="https://op.europa.eu/s/piq1">Norsk bokmål</a><br></p>
        ] ;
   dcat:distribution [ a dcat:Distribution ; # distribusjon, med dummy data
     ### obligatoriske egenskaper:
-      dcat:accessURL &lt;https://data.direks.eks/eksempeldata.csv&gt; ; # tilgangsURL, med dummy URL
+      dcat:accessURL &lt;https://example.org/eksempeldata.csv&gt; ; # tilgangsURL, med dummy URL
     ### anbefalte egenskaper:
       dct:license &lt;http://publications.europa.eu/resource/authority/licence/CC_BY_4_0&gt; ; # lisens
     ] ;
@@ -1204,6 +1213,9 @@ Hva som inngår i datasettet er godt beskrevet, men unntakene her er utelatt.</p
 <div class="paragraph">
 <div class="title">Teknisk veiledning</div>
 <p>Dette tilsvarer <a href="https://data.norge.no/specification/dcat-ap-no/#Datasett-utgiver">Datasett: utgiver (<code>dct:publisher</code>) i DCAT-AP-NO</a>.</p>
+</div>
+<div class="paragraph">
+<p>Inntil <a href="https://data.brreg.no" class="bare">https://data.brreg.no</a>  tilbyr gyldig identifikator (<code>foaf:Agent</code>), skal følgende mønster benyttes: <code>https://organization-catalogue.fellesdatakatalog.digdir.no/organizations/{orgnummer}</code>.</p>
 </div>
 <div class="paragraph">
 <p>Eksempel i RDF Turtle:</p>
@@ -1878,7 +1890,7 @@ Hva som inngår i datasettet er godt beskrevet, men unntakene her er utelatt.</p
   adms:sample &lt;distribusjonAvEksempeldata&gt; .
 
 &lt;distribusjonAvEksempeldata&gt; a dcat:Distribution ;
-  dcat:accessURL &lt;https://eks.direks.eks/datasets/eksempelData1.csv&gt; .</pre>
+  dcat:accessURL &lt;https://example.org/eksempeldata.csv&gt; .</pre>
 </div>
 </div>
 </div>
@@ -2484,32 +2496,57 @@ Hva som inngår i datasettet er godt beskrevet, men unntakene her er utelatt.</p
 <p>Et datasett kan altså ha flere distribusjoner, men alle distribusjonene skal i prinsippet inneholde samme informasjon. I de fleste tilfeller vil transformasjoner til ulike formater være tapsløse, og dermed fullt ut informasjonsmessig likeverdige. Mindre grad av informasjonstap mellom formater kan oppstå, men dette kan likevel representeres som ulike distribusjoner av samme datasett. I slike tilfeller kan en vurdere å bruke <a href="#distribusjon-beskrivelse">Distribusjon - beskrivelse</a> for å synliggjøre dette.</p>
 </div>
 <div class="paragraph">
-<p>Datasett som tilbys som filnedlasting kan beskrives utelukkende ved hjelp av egenskapene for distribusjons-klassen. Distribusjoner som tilbys via en datatjeneste skal fra og med versjon 2.x benytte datatjeneste-klassen for å beskrive tjenesten. Når samme datasett er tilgjengelig både som en fil og via et API, beskrives filen som en distribusjon og API-et som en datatjeneste. Relasjonen mellom distribusjonen og datatjenesten uttrykkes gjennom egenskapen dcat:accessService (og relasjonen mellom datatjenesten og datasettet uttrykkes med dcat:servesDataset). Se <a href="#utvalgte-temaer">Utvalgte temaer</a> for mer informasjon om forholdet mellom datasett, distribusjon og datatjeneste.</p>
+<p>Datasett som tilbys som filnedlasting kan beskrives utelukkende ved hjelp av egenskapene for distribusjons-klassen. Distribusjoner som tilbys via en datatjeneste skal fra og med versjon 2.0 benytte datatjeneste-klassen for å beskrive tjenesten. Når samme datasett er tilgjengelig både som en fil og via et API, beskrives filen som en distribusjon og API-et som en datatjeneste. Relasjonen mellom distribusjonen og datatjenesten uttrykkes gjennom egenskapen <a href="#distribusjon-tilgangstjeneste">Distribusjon - tilgangstjeneste</a>. Se under <a href="#utvalgte-temaer">Utvalgte temaer</a> for mer informasjon om forholdet mellom datasett, distribusjon og datatjeneste.</p>
 </div>
 <div class="paragraph">
-<p>Merk at den juridiske vurderingen av hvem som kan få tilgang til datasettet gjøres på datasett-nivå (datasett: tilgangsnivå), mens bruksavtaler for data er knyttet leveransene av data – altså distribusjoner og datatjenester. En kan tilby det samme datasettet under ulike bruksvilkår ved å opprette flere distribusjoner med ulike lisenser/bruksvilkår. Det er krav om bruk av standardiserte bruksavtaler i form av åpne standardlisenser for åpne data som tilbys fra det offentlige (se under [Beskrivelse av åpne data]).</p>
+<p>Merk at den juridiske vurderingen av hvem som kan få tilgang til datasettet gjøres på datasett-nivå (<a href="#datasett-tilgangsnivå">Datasett - tilgangsnivå</a>), mens bruksavtaler for data er knyttet leveransene av data – altså distribusjoner og datatjenester. En kan tilby det samme datasettet under ulike bruksvilkår ved å opprette flere distribusjoner med ulike lisenser/bruksvilkår. Det er krav om bruk av standardiserte bruksavtaler i form av åpne standardlisenser for åpne data som tilbys fra det offentlige (se under <a href="#beskrivelse-av-åpneData">Beskrivelse av åpne data</a>).</p>
 </div>
 <div class="paragraph">
 <p>Det er datatilbyders ansvar å vurdere om forskjellige representasjoner kan forstås som distribusjoner av samme datasett, eller distribusjoner av forskjellige datasett.</p>
 </div>
+<div class="paragraph">
+<p>For deg som skal utvikle/tilpasse verktøystøtte i henhold til DCAT-AP-NO, inneholder veilederen også en teknisk veiledning bakerst i hvert avsnitt. NB! Bortsett fra det første eksemplet, er ikke alle eksempler i RDF Turtle komplette og de kan mangle bl.a. verdier for obligatoriske egenskaper.</p>
+</div>
 <div class="sect2">
 <h3 id="eksempel-distribusjon"><a class="anchor" href="#eksempel-distribusjon"></a>Eksempel på en beskrivelse av en distribusjon</h3>
 <div class="paragraph">
-<p>Under er et eksempel på en beskrivelse av en distribusjon, hvor uthevede felter er  obligatoriske:</p>
+<p>Under er et eksempel på en beskrivelse av en distribusjon, hvor <strong>uthevede egenskaper</strong> er  obligatoriske:</p>
 </div>
 <div class="sidebarblock">
 <div class="content">
 <div class="paragraph">
-<p><a href="https://data.norge.no/specification/dcat-ap-no/#Distribusjon-tilgangsurl"><strong>TilgangsURL</strong></a>: https://example.org/eksempel-1<br>
-<a href="https://data.norge.no/specification/dcat-ap-no/#Distribusjon-beskrivelse">Beskrivelse</a>: Semikolonseparert nedlastbar CSV-fil uten BOM<br>
-<a href="https://data.norge.no/specification/dcat-ap-no/#Distribusjon-format">Format</a>: http://publications.europa.eu/resource/authority/file-type/CSV<br>
-<a href="https://data.norge.no/specification/dcat-ap-no/#Distribusjon-lisens">Lisens</a>: http://publications.europa.eu/resource/authority/licence/CC_BY_4_0<br>
-<a href="https://data.norge.no/specification/dcat-ap-no/#Distribusjon-nedlastningslenke">Nedlastningslenke</a>: https://example.org/lastned/eksempel-1.csv<br></p>
+<p><em>Eksempel på beskrivelse av en distribusjon hvor <strong>uthevede egenskaper</strong> er  obligatoriske:</em></p>
+</div>
+<div class="paragraph">
+<p><a href="#distribusjon-tilgangsURL"><strong>TilgangsURL</strong></a>: https://example.org/eksempeldata (<em>NB! dummy-URL som ikke virker</em>)<br>
+<a href="#distribusjon-beskrivelse">Beskrivelse</a>: Semikolonseparert nedlastbar CSV-fil uten BOM<br>
+<a href="#distribusjon-format">Format</a>: <a href="http://publications.europa.eu/resource/authority/file-type/CSV">CSV</a><br>
+<a href="#distribusjon-lisens">Lisens</a>: <a href="http://publications.europa.eu/resource/authority/licence/CC_BY_4_0">CC BY 4.0</a><br>
+<a href="#distribusjon-nedlastningslenke">Nedlastningslenke</a>: https:/example.org/eksempeldata.csv (<em>NB! dummy-URL som ikke virker</em>)</p>
 </div>
 </div>
 </div>
 <div class="paragraph">
-<p><em>Eksempel i RDF Turtle</em> <span class="yellow-background">&lt;kommer &#8230;&#8203;&gt;</span></p>
+<div class="title">Teknisk veiledning</div>
+<p>Eksemplet ovenfor i RDF Turtle:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>@prefix dcat: &lt;http://www.w3.org/ns/dcat#&gt; .
+@prefix dct: &lt;http://purl.org/dc/terms/&gt; .
+@prefix : &lt;https://example.org/&gt; .
+
+&lt;eksempelDistribusjon&gt; a dcat:Distribution ; # distribusjon
+  ### obligatoriske egenskaper
+    dcat:accessURL &lt;https://example.org/eksempeldata&gt; ;
+  ### anbefalte egenskaper:
+    dct:description "Semikolonseparert nedlastbar CSV-fil uten BOM"@nb ;
+    dct:format &lt;http://publications.europa.eu/resource/authority/file-type/CSV&gt; ;
+    dct:license &lt;http://publications.europa.eu/resource/authority/licence/CC_BY_4_0&gt; ;
+  ### valgfrie egenskaper:
+    dcat:downloadURL &lt;https://example.org/eksempeldata.csv&gt; ;
+  .</pre>
+</div>
 </div>
 </div>
 <div class="sect2">
@@ -2527,7 +2564,7 @@ Hva som inngår i datasettet er godt beskrevet, men unntakene her er utelatt.</p
 <div class="sect3">
 <h4 id="distribusjon-tilgangsURL"><a class="anchor" href="#distribusjon-tilgangsURL"></a>Distribusjon - tilgangsURL</h4>
 <div class="paragraph">
-<p>Nettadresse (URL) <a href="https://data.norge.no/specification/dcat-ap-no/#Distribusjon-tilgangsurl">Distribusjon: tilgangsURL</a> som gir tilgang til en distribusjon av datasettet. Kan også peke til en nettside som gir informasjon om hvordan en kan få tilgang til datasettet.</p>
+<p>Du skal oppgi nettadresse (URL) som gir tilgang til en distribusjon av datasettet. Kan også peke til en nettside som gir informasjon om hvordan en kan få tilgang til datasettet.</p>
 </div>
 <div class="ulist">
 <ul>
@@ -2540,12 +2577,16 @@ Hva som inngår i datasettet er godt beskrevet, men unntakene her er utelatt.</p
 </ul>
 </div>
 <div class="paragraph">
-<p><em>Eksempel i RDF Turtle</em></p>
+<div class="title">Teknisk veiledning</div>
+<p>Dette tilsvarer <a href="https://data.norge.no/specification/dcat-ap-no/#Distribusjon-tilgangsurl">Distribusjon: tilgangsURL (dcat:accessService) i DCAT-AP-NO</a>.</p>
+</div>
+<div class="paragraph">
+<p>Eksempel i RDF Turtle:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>&lt;&gt; a dcat:Dataset ;
-  dcat:distribution [ a dcat:Distribution ;
+<pre>&lt;etDatasett&gt; a dcat:Dataset ;
+  dcat:distribution [ a dcat:Distribution ; # distribusjon
     dcat:accessURL &lt; https://example.org/eksempel-1 &gt; ] .</pre>
 </div>
 </div>
@@ -2578,7 +2619,7 @@ Hva som inngår i datasettet er godt beskrevet, men unntakene her er utelatt.</p
 <div class="sect3">
 <h4 id="distribusjon-beskrivelse"><a class="anchor" href="#distribusjon-beskrivelse"></a>Distribusjon - beskrivelse</h4>
 <div class="paragraph">
-<p>Kort fritekstbeskrivelse av distribusjonen [<a href="https://data.norge.no/specification/dcat-ap-no/#Distribusjon-beskrivelse">Distribusjon: beskrivelse</a>]. Denne kan gjentas for flere språk.</p>
+<p>For at andre skal kunne vite hva distribusjonen gir, bør du ta med en kort fritekstbeskrivelse av distribusjonen. Denne kan gjentas for flere språk.</p>
 </div>
 <div class="ulist">
 <ul>
@@ -2593,42 +2634,41 @@ Hva som inngår i datasettet er godt beskrevet, men unntakene her er utelatt.</p
 </li>
 </ul>
 </div>
-<div class="paragraph">
-<p><em>Eksempler</em></p>
-</div>
-<div class="paragraph">
-<p>Eksempler, to distribusjoner:</p>
-</div>
-<div class="ulist">
-<ul>
+<div class="ulist checklist">
+<div class="title">Eksempler</div>
+<ul class="checklist">
 <li>
-<p> “Semikolonseparert CSV uten Byte Order Mark (BOM)”</p>
+<p><i class="fa fa-check-square-o"></i> “Semikolonseparert CSV uten Byte Order Mark (BOM)”</p>
 </li>
 <li>
-<p> “JSON-format via data.brreg.no. Oppdateres kontinuerlig”</p>
+<p><i class="fa fa-check-square-o"></i> “JSON-format via data.brreg.no. Oppdateres kontinuerlig”</p>
 </li>
 </ul>
 </div>
 <div class="paragraph">
-<p><em>Eksempel i RDF Turtle</em></p>
+<div class="title">Teknisk veiledning</div>
+<p>Dette tilsvarer <a href="https://data.norge.no/specification/dcat-ap-no/#Distribusjon-beskrivelse">Distribusjon: beskrivelse (dct:description) i DCAT-AP-NO</a>.</p>
+</div>
+<div class="paragraph">
+<p>Eksempel i RDF Turtle:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>&lt;&gt; a dcat:Dataset ; # datasett
-  dcat:distribution [ a dcat:Distribution ; # distribusjon 1
-    dct:description "Semikolonseparert CSV uten Byte Order Mark (BOM)"@nb, "Semicolon-separated CSV without Byte Order Mark (BOM)."@en ] ,
-      [ a dcat:Distribution ; # distribusjon 2
-        dct:description "JSON-format via data.brreg.no. Oppdateres kontinuerlig."@nb , "JSON-format via data.brreg.no."@en ] .</pre>
+<pre>&lt;etDatasett&gt; a dcat:Dataset ; # datasett
+  dcat:distribution # to distribusjoner
+    [ a dcat:Distribution ; # distribusjon 1
+      dct:description "Semikolonseparert CSV uten Byte Order Mark (BOM)"@nb, "Semicolon-separated CSV without Byte Order Mark (BOM)."@en ;
+    ] ,
+    [ a dcat:Distribution ; # distribusjon 2
+      dct:description "JSON-format via data.brreg.no. Oppdateres kontinuerlig."@nb , "JSON-format via data.brreg.no. Continuously updated."@en ;
+    ] .</pre>
 </div>
 </div>
 </div>
 <div class="sect3">
 <h4 id="distribusjon-format"><a class="anchor" href="#distribusjon-format"></a>Distribusjon - format</h4>
 <div class="paragraph">
-<p>En maskinlesbar verdi som entydig identifiserer hvilke(t) format(er) datasettet er gjort tilgjengelig som [<a href="https://data.norge.no/specification/dcat-ap-no/#Distribusjon-format">Distribusjon: format</a>].</p>
-</div>
-<div class="paragraph">
-<p>Hver distribusjon har format for utveksling som bør oppgis.</p>
+<p>Hver distribusjon har format for utveksling som bør oppgis, dvs. en maskinlesbar verdi som entydig identifiserer hvilke(t) format(er) datasettet er gjort tilgjengelig som.</p>
 </div>
 <div class="ulist">
 <ul>
@@ -2636,20 +2676,24 @@ Hva som inngår i datasettet er godt beskrevet, men unntakene her er utelatt.</p
 <p>Det skal angis filtype (f.eks. CSV, JSON) ved å benytte URI-er fra EUs kontrollerte liste over <a href="https://op.europa.eu/s/o8vN">File type</a>.</p>
 </li>
 <li>
-<p>Primært bør en opprette en distribusjon for hvert filformat.  Flere formater kan likvel benyttes ved hjelp av kommaseparerte verdier</p>
+<p>Primært bør en opprette en distribusjon for hvert filformat.  Flere formater kan likevel benyttes ved hjelp av kommaseparerte verdier</p>
 </li>
 <li>
-<p>Merk at det kun er mulig å oppgi en [<a href="https://data.norge.no/specification/dcat-ap-no/#Distribusjon-nedlastningslenke">Distribusjon: nedlastingslenke</a>] pr distribusjon. Nedlastingslenke kan dermed ikke brukes i kombinasjon med at en oppgir flere filformater for samme distribusjon</p>
+<p>Merk at det kun er mulig å oppgi en [<a href="https://data.norge.no/specification/dcat-ap-no/#Distribusjon-nedlastningslenke">Distribusjon: nedlastingslenke</a>] pr. distribusjon. Nedlastingslenke kan dermed ikke brukes i kombinasjon med at en oppgir flere filformater for samme distribusjon</p>
 </li>
 </ul>
 </div>
 <div class="paragraph">
-<p><em>Eksempel i RDF Turtle</em></p>
+<div class="title">Teknisk veiledning</div>
+<p>Dette tilsvarer <a href="https://data.norge.no/specification/dcat-ap-no/#Distribusjon-format">Distribusjon: format (dct:format) i DCAT-AP-NO</a>.</p>
+</div>
+<div class="paragraph">
+<p>Eksempel i RDF Turtle:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>&lt;&gt; a dcat:Dataset ;
-  dcat:distribution [ a dcat:Distribution ;
+<pre>&lt;etDatasett&gt; a dcat:Dataset ; # datasett
+  dcat:distribution [ a dcat:Distribution ; # distribusjon
     dcat:accessURL &lt;https://example.org/datasets/001&gt; ;
     dct:description "Nedlastbar fil i CSV-format"@nb ;
     dct:format &lt;http://publications.europa.eu/resource/authority/file-type/CSV&gt; ;
@@ -2660,7 +2704,7 @@ Hva som inngår i datasettet er godt beskrevet, men unntakene her er utelatt.</p
 <div class="sect3">
 <h4 id="distribusjon-lisens"><a class="anchor" href="#distribusjon-lisens"></a>Distribusjon - lisens</h4>
 <div class="paragraph">
-<p>Referanse til lisensen som datasettet gjøres tilgjengelig under [<a href="https://data.norge.no/specification/dcat-ap-no/#Distribusjon-lisens">Distribusjon: lisens</a>]. Lisens er påkrevd for alle åpne offentlige data.</p>
+<p>Lisens er påkrevd for alle åpne offentlige data. Du bør ellers også oppgi lisens hvis datasettet er gjort tilgjengelig under gitt lisens.</p>
 </div>
 <div class="ulist">
 <ul>
@@ -2689,24 +2733,25 @@ Hva som inngår i datasettet er godt beskrevet, men unntakene her er utelatt.</p
 </ul>
 </div>
 <div class="paragraph">
-<p>Se Digdirs  <a href="https://data.norge.no/guide/veileder-apne-data/">Veileder for tilgjengeliggjøring av åpne data</a> for mer informasjon om valg av åpne standardlisenser.</p>
+<p>Se <a href="https://data.norge.no/guide/veileder-apne-data/">Veileder for tilgjengeliggjøring av åpne data</a> for mer informasjon om valg av åpne standardlisenser.</p>
 </div>
 <div class="paragraph">
-<p><em>Eksempel i RDF Turtle</em></p>
+<div class="title">Teknisk veiledning</div>
+<p>Dette tilsvarer <a href="https://data.norge.no/specification/dcat-ap-no/#Distribusjon-lisens">Distribusjon: lisens (dct:license) i DCAT-AP-NO</a>.</p>
+</div>
+<div class="paragraph">
+<p>Eksempel i RDF Turtle:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>&lt;&gt; a dcat:Dataset ;
-  dcat:distribution [ a dcat:Distribution ;
+<pre>&lt;etDatasett&gt; a dcat:Dataset ; # datasett
+  dcat:distribution [ a dcat:Distribution ; # distribusjon
     dct:license &lt;http://publications.europa.eu/resource/authority/licence/CC_BY_4_0&gt; ] .</pre>
 </div>
 </div>
 </div>
 <div class="sect3">
 <h4 id="distribusjon-status"><a class="anchor" href="#distribusjon-status"></a>Distribusjon - status</h4>
-<div class="paragraph">
-<p>Angir distribusjonens modenhet [<a href="https://data.norge.no/specification/dcat-ap-no/#Distribusjon-status">Distribusjon: status</a>].<br></p>
-</div>
 <div class="paragraph">
 <p>Distribusjonens modenhet er viktig å vite for å kunne vurdere om/når en skal benytte seg distribusjonen. Den bør derfor oppgis.</p>
 </div>
@@ -2734,21 +2779,22 @@ Hva som inngår i datasettet er godt beskrevet, men unntakene her er utelatt.</p
 </ul>
 </div>
 <div class="paragraph">
-<p><em>Eksempel i RDF Turtle</em></p>
+<div class="title">Teknisk veiledning</div>
+<p>Dette tilsvarer <a href="https://data.norge.no/specification/dcat-ap-no/#Distribusjon-status">Distribusjon: status (adms:status) i DCAT-AP-NO</a>.</p>
+</div>
+<div class="paragraph">
+<p>Eksempel i RDF Turtle:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>&lt;&gt; a dcat:Dataset ;
-  dcat:distribution [ a dcat:Distribution ;
+<pre>&lt;etDatasett&gt; a dcat:Dataset ; # datasett
+  dcat:distribution [ a dcat:Distribution ; # distribusjon
     adms:status &lt;http://purl.org/adms/status/Completed&gt; ] .</pre>
 </div>
 </div>
 </div>
 <div class="sect3">
 <h4 id="distribusjon-tilgjengelighet"><a class="anchor" href="#distribusjon-tilgjengelighet"></a>Distribusjon - tilgjengelighet</h4>
-<div class="paragraph">
-<p>Angir hvor lenge det er planlagt å holde distribusjonen tilgjengelig [<a href="https://data.norge.no/specification/dcat-ap-no/#Distribusjon-tilgjengelighet">Distribusjon: tilgjengelighet</a>].</p>
-</div>
 <div class="paragraph">
 <p>Det er viktig å vite hvor lenge distribusjonen er planlagt tilgjengelig for å kunne vurdere om en skal benytte seg distribusjonen. Den bør derfor oppgis.</p>
 </div>
@@ -2776,12 +2822,16 @@ Hva som inngår i datasettet er godt beskrevet, men unntakene her er utelatt.</p
 </ul>
 </div>
 <div class="paragraph">
-<p><em>Eksempel i RDF Turtle</em></p>
+<div class="title">Teknisk veiledning</div>
+<p>Dette tilsvarer <a href="https://data.norge.no/specification/dcat-ap-no/#Distribusjon-tilgjengelighet">Distribusjon: tilgjengelighet (dcatap:availability) i DCAT-AP-NO</a>.</p>
+</div>
+<div class="paragraph">
+<p>Eksempel i RDF Turtle:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>&lt;&gt; a dcat:Dataset ;
-  dcat:distribution [ a dcat:Distribution ;
+<pre>&lt;etDatasett&gt; a dcat:Dataset ; # datasett
+  dcat:distribution [ a dcat:Distribution ; # distribusjon
     dcatap:availability &lt;http://data.europa.eu/r5r/availability/stable&gt; ] .</pre>
 </div>
 </div>
@@ -2790,7 +2840,7 @@ Hva som inngår i datasettet er godt beskrevet, men unntakene her er utelatt.</p
 <div class="sect2">
 <h3 id="distribusjon-valgfrie-egenskaper"><a class="anchor" href="#distribusjon-valgfrie-egenskaper"></a>Valgfrie egenskaper i beskrivelse av en distribusjon</h3>
 <div class="paragraph">
-<p>I tillegg til obligatoriske (skal brukes) og anbefalte (bør brukes) felter, er det en del felter som er valgfrie (kan brukes) i beskrivelse av en distribusjon:</p>
+<p>I tillegg til obligatoriske (skal brukes) og anbefalte (bør brukes) egenskaper, er det en del egenskaper som er valgfrie (kan brukes) i beskrivelse av en distribusjon:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -2843,23 +2893,29 @@ Hva som inngår i datasettet er godt beskrevet, men unntakene her er utelatt.</p
 <p>Distribusjon - tittel: navn på distribusjonen.</p>
 </li>
 <li>
-<p>Distribusjon - utgivelsesdato: dato for formell utgivelse/publisering av distribusjonen.
-Ikke alle valgfrie felter er beskrevet i etterfølgende avsnitt. Se under <a href="#Hensikt og avgrensning">[Hensikt og avgrensning]</a> for hvordan du kan melde inn behov for beskrivelser.</p>
+<p>Distribusjon - utgivelsesdato: dato for formell utgivelse/publisering av distribusjonen.</p>
 </li>
 </ul>
+</div>
+<div class="paragraph">
+<p>Ikke alle valgfrie egenskaper er beskrevet i etterfølgende avsnitt. Se under <a href="#hensikt-og-avgrensing">Hensikt og avgrensning</a> for hvordan du kan melde inn behov for beskrivelser.</p>
 </div>
 <div class="sect3">
 <h4 id="distribusjon-dokumentasjon"><a class="anchor" href="#distribusjon-dokumentasjon"></a>Distribusjon - dokumentasjon</h4>
 <div class="paragraph">
-<p>Referanse til en side eller et dokument som beskriver og dokumenterer innhold og struktur som er spesifikk for distribusjonen [<a href="https://data.norge.no/specification/dcat-ap-no/#Distribusjon-dokumentasjon">Distribusjon: dokumentasjon</a>].</p>
+<p>Du kan bruke denne egenskap til å oppgi referanse til en side eller et dokument som beskriver og dokumenterer innhold og struktur som er spesifikk for distribusjonen.</p>
 </div>
 <div class="paragraph">
-<p><em>Eksempel i RDF Turtle</em></p>
+<div class="title">Teknisk veiledning</div>
+<p>Dette tilsvarer <a href="https://data.norge.no/specification/dcat-ap-no/#Distribusjon-dokumentasjon">Distribusjon: dokumentasjon (foaf:page) i DCAT-AP-NO</a>.</p>
+</div>
+<div class="paragraph">
+<p>Eksempel i RDF Turtle:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>&lt;&gt; a dcat:Dataset ;
-  dcat:distribution [ a dcat:Distribution ;
+<pre>&lt;etDatasett&gt; a dcat:Dataset ; # datasett
+  dcat:distribution [ a dcat:Distribution ; # distribusjon
     foaf:page &lt;https://confluence.brreg.no/display/DBNPUB/API&gt; ] .</pre>
 </div>
 </div>
@@ -2867,32 +2923,34 @@ Ikke alle valgfrie felter er beskrevet i etterfølgende avsnitt. Se under <a hr
 <div class="sect3">
 <h4 id="distribusjon-endringsdato"><a class="anchor" href="#distribusjon-endringsdato"></a>Distribusjon - endringsdato</h4>
 <div class="paragraph">
-<p>Dato/tid sist distribusjonen sist ble endret [<a href="https://data.norge.no/specification/dcat-ap-no/#Distribusjon-endringsdato">Distribusjon: endringsdato</a>].</p>
+<p>Dato/tid sist distribusjonen sist ble endret.</p>
 </div>
 <div class="ulist">
+<div class="title">Eksempler</div>
 <ul>
 <li>
-<p>Angis som dato (xsd:date) eller tidspunkt (xsd:dateTime).</p>
+<p>  01.01.2017</p>
 </li>
 </ul>
 </div>
 <div class="paragraph">
-<p><em>Eksempler</em></p>
+<div class="title">Teknisk veiledning</div>
+<p>Dette tilsvarer  <a href="https://data.norge.no/specification/dcat-ap-no/#Distribusjon-endringsdato">Distribusjon: endringsdato (dct:modified) i DCAT-AP-NO</a>.</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>  Angivelse av 01.01.2017 -</p>
+<p>Angis som dato (<code>xsd:date</code>) eller tidspunkt (<code>xsd:dateTime</code>).</p>
 </li>
 </ul>
 </div>
 <div class="paragraph">
-<p><em>eksempel i RDF Turtle</em> :</p>
+<p>Eksempel i RDF Turtle:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>&lt;&gt; a dcat:Dataset ;
-  dcat:distribution [ a dcat:Distribution ;
+<pre>&lt;etDatasett&gt; a dcat:Dataset ; # Datasett
+  dcat:distribution [ a dcat:Distribution ; # distribusjon
     dct:modified "2017-01-01"^^xsd:date ] .</pre>
 </div>
 </div>
@@ -2900,21 +2958,25 @@ Ikke alle valgfrie felter er beskrevet i etterfølgende avsnitt. Se under <a hr
 <div class="sect3">
 <h4 id="distribusjon-filstørrelse"><a class="anchor" href="#distribusjon-filstørrelse"></a>Distribusjon - filstørrelse</h4>
 <div class="paragraph">
-<p><em>&lt;ikke beskrevet, tilsvarer [<a href="https://data.norge.no/specification/dcat-ap-no/#Distribusjon-filst%C3%B8rrelse">Distribusjon: filstørrelse</a>]&gt;</em></p>
+<p><em>&lt;ikke beskrevet, tilsvarer <a href="https://data.norge.no/specification/dcat-ap-no/#Distribusjon-filst%C3%B8rrelse">Distribusjon: filstørrelse (dcat:byteSize) i DCAT-AP-NO</a>&gt;</em></p>
 </div>
 </div>
 <div class="sect3">
 <h4 id="distribusjon-iSamsvarMed"><a class="anchor" href="#distribusjon-iSamsvarMed"></a>Distribusjon - i samsvar med</h4>
 <div class="paragraph">
-<p>Benyttes for å angi et etablert skjema som distribusjonen er i samsvar med [<a href="https://data.norge.no/specification/dcat-ap-no/#Distribusjon-i-samsvar-med">Distribusjon: i samsvar med</a>], for eksempel et XSD-dokument.</p>
+<p>Benyttes for å angi et etablert skjema som distribusjonen er i samsvar med, for eksempel et XSD-dokument.</p>
 </div>
 <div class="paragraph">
-<p><em>Eksempel i RDF Turtle</em></p>
+<div class="title">Teknisk veiledning</div>
+<p>Dette tilsvarer <a href="https://data.norge.no/specification/dcat-ap-no/#Distribusjon-i-samsvar-med">Distribusjon: i samsvar med (dct:conformsTo) i DCAT-AP-NO</a>.</p>
+</div>
+<div class="paragraph">
+<p>Eksempel i RDF Turtle:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>&lt;&gt; a dcat:Dataset ;
-  dcat:distribution [ a dcat:Distribution ;
+<pre>&lt;etDatasett&gt; a dcat:Dataset ; # datasett
+  dcat:distribution [ a dcat:Distribution ; # distribusjon
     dct:conformsTo &lt;https://data.norge.no/informationmodels/c23f625f-a654-3462-805e-74408cb5367a&gt; ] .</pre>
 </div>
 </div>
@@ -2922,7 +2984,7 @@ Ikke alle valgfrie felter er beskrevet i etterfølgende avsnitt. Se under <a hr
 <div class="sect3">
 <h4 id="distribusjon-komprimeringsformat"><a class="anchor" href="#distribusjon-komprimeringsformat"></a>Distribusjon - komprimeringsformat</h4>
 <div class="paragraph">
-<p><em>&lt;ikke beskrevet, tilsvarer [<a href="https://data.norge.no/specification/dcat-ap-no/#Distribusjon-komprimeringsformat">Distribusjon: komprimeringsformat</a>]&gt;</em></p>
+<p><em>&lt;ikke beskrevet, tilsvarer <a href="https://data.norge.no/specification/dcat-ap-no/#Distribusjon-komprimeringsformat">Distribusjon: komprimeringsformat (dcat:compressFormat) i DCAT-AP-NO</a>&gt;</em></p>
 </div>
 </div>
 <div class="sect3">
@@ -2936,13 +2998,18 @@ Ikke alle valgfrie felter er beskrevet i etterfølgende avsnitt. Se under <a hr
 <p>Angivelse av Distribusjon: medietype er et valgfritt alternativ til å benytte Distribusjon: format. Kun formater som inngår i IANAs register er lovlige verdier.</p>
 </li>
 <li>
-<p>Vi fraråder å angi format både ved hjelp av [<a href="https://data.norge.no/specification/dcat-ap-no/#Distribusjon-medietype">Distribusjon: medietype</a>] og [<a href="https://data.norge.no/specification/dcat-ap-no/#Distribusjon-format">Distribusjon: format</a>] for en og samme distribusjon</p>
+<p>Vi fraråder å angi format både ved hjelp av <a href="#distribusjon-medietype">Distribusjon - medietype</a> og <a href="#distribusjon-format">Distribusjon - format</a> for en og samme distribusjon.</p>
 </li>
 <li>
-<p>Vi fraråder å angi flere medietyper for en og samme distribusjon ettersom du kun kan oppgi én nedlastningslenke pr distribusjon. Opprett heller nye distribusjoner for hvert format/medietype og oppgi nedlastingslenke for hver distribusjon.</p>
+<p>Vi fraråder å angi flere medietyper for en og samme distribusjon ettersom du kun kan oppgi én nedlastningslenke pr. distribusjon. Opprett heller nye distribusjoner for hvert format/medietype og oppgi nedlastingslenke for hver distribusjon.</p>
 </li>
+</ul>
+</div>
+<div class="ulist">
+<div class="title">Teknisk veiledning</div>
+<ul>
 <li>
-<p>Benytt fullstendige https-identifikatorer: <code>https://www.iana.org/assignments/media-types/text/csv</code>, ikke <code>text/csv</code>)</p>
+<p>Benytt fullstendige https-identifikatorer, f.eks. <code>https://www.iana.org/assignments/media-types/text/csv</code>, og ikke <code>text/csv</code>.</p>
 </li>
 </ul>
 </div>
@@ -2950,18 +3017,26 @@ Ikke alle valgfrie felter er beskrevet i etterfølgende avsnitt. Se under <a hr
 <div class="sect3">
 <h4 id="distribusjon-nedlastningslenke"><a class="anchor" href="#distribusjon-nedlastningslenke"></a>Distribusjon - nedlastningslenke</h4>
 <div class="paragraph">
-<p>Direktelenke til en nedlastbar fil i et gitt format [<a href="https://data.norge.no/specification/dcat-ap-no/#Distribusjon-nedlastningslenke">Distribusjon: nedlastningslenke</a>].</p>
+<p>Nedlastingslenken er en type tilgangs-url som peker direkte til en fil som lastes ned lokalt.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Dersom nedlastningslenken er den eneste tilgjengelige lenken for distribusjonen av datasettet, <em>skal</em> denne dupliseres i det obligatoriske feltet <a href="#distribusjon-tilgangsURL">Distribusjon - tilgangsURL</a>.</p>
+</li>
+</ul>
 </div>
 <div class="paragraph">
-<p>Nedlastingslenken er en type tilgangs-url som peker direkte til en fil som lastes ned lokalt. Dersom nedlastningslenken er den eneste tilgjengelige lenken for distribusjonen av datasettet, skal denne dupliseres i det obligatoriske feltet <a href="#Dataset - tilgangsURL">[Dataset - tilgangsURL]</a>.</p>
+<div class="title">Teknisk veiledning</div>
+<p>Dette tilsvarer <a href="https://data.norge.no/specification/dcat-ap-no/#Distribusjon-nedlastningslenke">Distribusjon: nedlastningslenke (dcat:downloadURL) i DCAT-AP-NO</a>.</p>
 </div>
 <div class="paragraph">
-<p><em>Eksempel i RDF Turtle</em></p>
+<p>Eksempel i RDF Turtle:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>&lt;&gt; a dcat:Dataset ;
-  dcat:distribution [ a dcat:Distribution ;
+<pre>&lt;etDatasett&gt; a dcat:Dataset ; # datasett
+  dcat:distribution [ a dcat:Distribution ; # distribusjon
     dcat:downloadURL &lt; https://data.ssb.no/api/klass/v1//versions/683.csv&gt; ] .</pre>
 </div>
 </div>
@@ -2969,59 +3044,64 @@ Ikke alle valgfrie felter er beskrevet i etterfølgende avsnitt. Se under <a hr
 <div class="sect3">
 <h4 id="distribusjon-pakkeformat"><a class="anchor" href="#distribusjon-pakkeformat"></a>Distribusjon - pakkeformat</h4>
 <div class="paragraph">
-<p><em>&lt;ikke beskrevet, tilsvarer [<a href="https://data.norge.no/specification/dcat-ap-no/#Distribusjon-pakkeformat">Distribusjon: pakkeformat</a>]&gt;</em></p>
+<p><em>&lt;ikke beskrevet, tilsvarer <a href="https://data.norge.no/specification/dcat-ap-no/#Distribusjon-pakkeformat">Distribusjon: pakkeformat (dcat:packageFormat) i DCAT-AP-NO</a>&gt;</em></p>
 </div>
 </div>
 <div class="sect3">
 <h4 id="distribusjon-policy"><a class="anchor" href="#distribusjon-policy"></a>Distribusjon - policy</h4>
 <div class="paragraph">
-<p><em>&lt;ikke beskrevet, tilsvarer [<a href="https://data.norge.no/specification/dcat-ap-no/#Distribusjon-policy">Distribusjon: policy</a>]&gt;</em></p>
+<p><em>&lt;ikke beskrevet, tilsvarer <a href="https://data.norge.no/specification/dcat-ap-no/#Distribusjon-policy">Distribusjon: policy (odrl:hasPolicy) i DCAT-AP-NO</a>&gt;</em></p>
 </div>
 </div>
 <div class="sect3">
 <h4 id="distribusjon-rettigheter"><a class="anchor" href="#distribusjon-rettigheter"></a>Distribusjon - rettigheter</h4>
 <div class="paragraph">
-<p><em>&lt;ikke beskrevet, tilsvarer [<a href="https://data.norge.no/specification/dcat-ap-no/#Distribusjon-rettigheter">Distribusjon: rettigheter</a>]&gt;</em></p>
+<p><em>&lt;ikke beskrevet, tilsvarer <a href="https://data.norge.no/specification/dcat-ap-no/#Distribusjon-rettigheter">Distribusjon: rettigheter  (dct:rights) i DCAT-AP-NO</a>&gt;</em></p>
 </div>
 </div>
 <div class="sect3">
 <h4 id="distribusjon-romligOppløsning"><a class="anchor" href="#distribusjon-romligOppløsning"></a>Distribusjon - romlig oppløsning</h4>
 <div class="paragraph">
-<p><em>&lt;ikke beskrevet, tilsvarer [<a href="https://data.norge.no/specification/dcat-ap-no/#Distribusjon-romlig-oppl%C3%B8sning">Distribusjon: romlig oppløsning</a>]&gt;</em></p>
+<p><em>&lt;ikke beskrevet, tilsvarer <a href="https://data.norge.no/specification/dcat-ap-no/#Distribusjon-romlig-oppl%C3%B8sning">Distribusjon: romlig oppløsning (dcat:spatialResolutionInMeters) i DCAT-AP-NO</a>&gt;</em></p>
 </div>
 </div>
 <div class="sect3">
 <h4 id="distribusjon-sjekksum"><a class="anchor" href="#distribusjon-sjekksum"></a>Distribusjon - sjekksum</h4>
 <div class="paragraph">
-<p><em>&lt;ikke beskrevet, tilsvarer [<a href="https://data.norge.no/specification/dcat-ap-no/#Distribusjon-sjekksum">Distribusjon: sjekksum</a>]&gt;</em></p>
+<p><em>&lt;ikke beskrevet, tilsvarer <a href="https://data.norge.no/specification/dcat-ap-no/#Distribusjon-sjekksum">Distribusjon: sjekksum (spdx:checksum) i DCAT-AP-NO</a>&gt;</em></p>
 </div>
 </div>
 <div class="sect3">
 <h4 id="distribusjon-språk"><a class="anchor" href="#distribusjon-språk"></a>Distribusjon - språk</h4>
 <div class="paragraph">
-<p><em>&lt;ikke beskrevet, tilsvarer [<a href="https://data.norge.no/specification/dcat-ap-no/#Distribusjon-spr%C3%A5k">Distribusjon: språk</a>]&gt;</em></p>
+<p><em>&lt;ikke beskrevet, tilsvarer <a href="https://data.norge.no/specification/dcat-ap-no/#Distribusjon-spr%C3%A5k">Distribusjon: språk (dct:language) i DCAT-AP-NO</a>&gt;</em></p>
 </div>
 <div class="paragraph">
-<p>Se tilsvarende eksempel under <a href="#Datasett språk">[Datasett språk]</a> i denne veilederen for hvordan språk angis i RDF Turtle.</p>
+<div class="title">Teknisk veiledning</div>
+<p>Se tilsvarende eksempel under <a href="#datasett-språk">Datasett språk</a> i denne veilederen for hvordan språk angis i RDF Turtle.</p>
 </div>
 </div>
 <div class="sect3">
 <h4 id="distribusjon-tidsoppløsning"><a class="anchor" href="#distribusjon-tidsoppløsning"></a>Distribusjon - tidsoppløsning</h4>
 <div class="paragraph">
-<p><em>&lt;ikke beskrevet, tilsvarer [<a href="https://data.norge.no/specification/dcat-ap-no/#_distribusjon_tidsoppl%C3%B8sning_dcattemporalresolution">Distribusjon: tidsoppløsning</a>]&gt;</em></p>
+<p><em>&lt;ikke beskrevet, tilsvarer <a href="https://data.norge.no/specification/dcat-ap-no/#_distribusjon_tidsoppl%C3%B8sning_dcattemporalresolution">Distribusjon: tidsoppløsning (dcat:temporalResolution) i DCAT-AP-NO</a>&gt;</em></p>
 </div>
 </div>
 <div class="sect3">
 <h4 id="distribusjon-tilgangstjeneste"><a class="anchor" href="#distribusjon-tilgangstjeneste"></a>Distribusjon - tilgangstjeneste</h4>
 <div class="paragraph">
-<p>Angir datatjenesten som gir tilgang til distribusjonen [<a href="https://data.norge.no/specification/dcat-ap-no/#Distribusjon-tilganstjeneste">Distribusjon: tilgangstjeneste</a>].</p>
+<p>Angir datatjenesten som gir tilgang til distribusjonen.</p>
 </div>
 <div class="paragraph">
-<p><em>Eksempel i RDF Turtle</em></p>
+<div class="title">Teknisk veiledning</div>
+<p>Tilsvarer <a href="https://data.norge.no/specification/dcat-ap-no/#Distribusjon-tilganstjeneste">Distribusjon: tilgangstjeneste (dcat:accessService) i DCAT-AP-NO</a>.</p>
+</div>
+<div class="paragraph">
+<p>Eksempel i RDF Turtle:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>&lt;&gt; a dcat:Dataset ; # datasett
+<pre>&lt;etDatasett&gt; a dcat:Dataset ; # datasett
   dcat:distribution [ a dcat:Distribution ; # distribusjon
     dcat:accessService &lt;https://data.brreg.no/enhetsregisteret/api&gt; ] . # datatjeneste/API</pre>
 </div>
@@ -3030,28 +3110,20 @@ Ikke alle valgfrie felter er beskrevet i etterfølgende avsnitt. Se under <a hr
 <div class="sect3">
 <h4 id="distribusjon-tittel"><a class="anchor" href="#distribusjon-tittel"></a>Distribusjon - tittel</h4>
 <div class="paragraph">
-<p><em>&lt;ikke beskrevet, tilsvarer [<a href="https://data.norge.no/specification/dcat-ap-no/#Distribusjon-tittel">Distribusjon: tittel</a>]&gt;</em></p>
+<p><em>&lt;ikke beskrevet, tilsvarer <a href="https://data.norge.no/specification/dcat-ap-no/#Distribusjon-tittel">Distribusjon: tittel (dct:title) i DCAT-AP-NO</a>&gt;</em></p>
 </div>
 <div class="paragraph">
+<div class="title">Teknisk veiledning</div>
 <p>Se tilsvarende eksempel under <a href="#datasett-tittel">Datasett - tittel</a> i denne veilederen for hvordan tittel angis i RDF Turtle.</p>
 </div>
 </div>
 <div class="sect3">
 <h4 id="distribusjon-utgivelsesdato"><a class="anchor" href="#distribusjon-utgivelsesdato"></a>Distribusjon - utgivelsesdato</h4>
 <div class="paragraph">
-<p>Dato/tid når distribusjonen først ble publisert i tilknytning til et datasett [<a href="https://data.norge.no/specification/dcat-ap-no/#Distribusjon-utgivelsesdato">Distribusjon: utgivelsesdato</a>].</p>
+<p>Dato/tid når distribusjonen først ble publisert i tilknytning til et datasett.</p>
 </div>
 <div class="ulist">
-<ul>
-<li>
-<p>Oppgis som dato (xsd:date) eller tidspunkt (xsd:dateTime).</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p><em>Eksempler</em></p>
-</div>
-<div class="ulist">
+<div class="title">Eksempler</div>
 <ul>
 <li>
 <p> 01.01.2017</p>
@@ -3059,12 +3131,23 @@ Ikke alle valgfrie felter er beskrevet i etterfølgende avsnitt. Se under <a hr
 </ul>
 </div>
 <div class="paragraph">
-<p><em>Eksempel i RDF Turtle</em></p>
+<div class="title">Teknisk veiledning</div>
+<p>Dette tilsvarer <a href="https://data.norge.no/specification/dcat-ap-no/#Distribusjon-utgivelsesdato">Distribusjon: utgivelsesdato (dct:issued) i DCAT-AP-NO</a>.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Oppgis som dato (<code>xsd:date</code>) eller tidspunkt (<code>xsd:dateTime</code>).</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Eksempel i RDF Turtle:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>&lt;&gt; a dcat:Dataset ;
-  dcat:distribution [ a dcat:Distribution ;
+<pre>&lt;etDatasett&gt; a dcat:Dataset ; # datasett
+  dcat:distribution [ a dcat:Distribution ; # distribusjon
     dct:issued "2017-01-01"^xsd:date ] .</pre>
 </div>
 </div>
@@ -3079,30 +3162,53 @@ Ikke alle valgfrie felter er beskrevet i etterfølgende avsnitt. Se under <a hr
 <p>Nytt i DCAT-AP-NO v.2 er at standarden nå også støtter beskrivelser av datatjenester, som v.1.x av DCAT-AP-NO ikke gjorde.</p>
 </div>
 <div class="paragraph">
-<p>Datatjeneste (dcat:DataService) brukes til å beskrive en samling av operasjoner som er tilgjengelig via et programmeringsgrensesnitt (API) og som gir tilgang til ett eller flere datasett eller databehandlingsfunksjoner.</p>
+<p>Datatjeneste (<code>dcat:DataService</code>) brukes til å beskrive en samling av operasjoner som er tilgjengelig via et programmeringsgrensesnitt (API) og som gir tilgang til ett eller flere datasett eller databehandlingsfunksjoner.</p>
+</div>
+<div class="paragraph">
+<p>For deg som skal utvikle/tilpasse verktøystøtte i henhold til DCAT-AP-NO, inneholder veilederen også en teknisk veiledning bakerst i hvert avsnitt. NB! Bortsett fra det første eksemplet, er ikke alle eksempler i RDF Turtle komplette og de kan mangle bl.a. verdier for obligatoriske egenskaper.</p>
 </div>
 <div class="sect2">
 <h3 id="eksempel-datatjeneste"><a class="anchor" href="#eksempel-datatjeneste"></a>Eksempel på en datatjenestebeskrivelse</h3>
 <div class="paragraph">
-<p>Under er et eksempel på en datatjenestebeskrivelse, hvor felter med uthevet skrift er obligatoriske:</p>
+<p>Under er et eksempel på en datatjenestebeskrivelse, hvor <strong>uthevede egenskaper</strong> er obligatoriske:</p>
 </div>
 <div class="sidebarblock">
 <div class="content">
 <div class="paragraph">
-<p><strong>Eksempel på en datatjenestebeskrivelse</strong>:<br></p>
+<p><em>Eksempel på en datatjenestebeskrivelse med dummydata, hvor <strong>uthevede egenskaper</strong> er obligatoriske</em>:</p>
 </div>
 <div class="paragraph">
-<p><a href="https://data.norge.no/specification/dcat-ap-no/#Datatjeneste-endepunktsurl"><strong>EndepunktsURL</strong></a>: https://example.org/endpoints<br>
-<a href="https://data.norge.no/specification/dcat-ap-no/#Datatjeneste-identifikator"><strong>Identifikator</strong></a>: https://example.org/dataservices/9564be66-5543-36b6-9a4d-150b94e4e03b<br>
-<a href="https://data.norge.no/specification/dcat-ap-no/#Datatjeneste-tittel"><strong>Tittel</strong></a>: REST-API for eksempler<br>
-<a href="https://data.norge.no/specification/dcat-ap-no/#Datatjeneste-endepunktsbeskrivelse">Endepunktsbeskrivelse</a>: Lenke til beskrivelse eller tekst inn her???<br>
-<a href="https://data.norge.no/specification/dcat-ap-no/#Datatjeneste-format">Format</a>: JSON<br>
-<a href="https://data.norge.no/specification/dcat-ap-no/#Datatjeneste-utgiver">Utgiver</a>: Digitaliseringsdirektoratet</p>
+<p><a href="#datatjeneste-endepunktsURL"><strong>EndepunktsURL</strong></a>: https://example.org/eksAPI (<em>NB! dummy-URL som ikke virker</em>)<br>
+<a href="#datatjeneste-identifikator"><strong>Identifikator</strong></a>: https://example.org/eksAPI (<em>NB! dummy-URL som ikke virker</em>) <br>
+<a href="#datatjeneste-tittel"><strong>Tittel</strong></a>: REST-API for eksempler<br>
+<a href="#datatjeneste-endepunktsbeskrivelse">Endepunktsbeskrivelse</a>: https://example.org/eksAPI.json (<em>NB! dummy-URL som ikke virker</em>)<br>
+<a href="#datatjeneste-format">Format</a>: <a href="https://op.europa.eu/s/pkmZ">JSON</a><br>
+<a href="#datatjeneste-utgiver">Utgiver</a>: Direktoratet for eksempler</p>
 </div>
 </div>
 </div>
 <div class="paragraph">
-<p><em>Eksempel i RDF Turtle</em> <span class="yellow-background">&lt;kommer&#8230;&#8203;&gt;</span></p>
+<div class="title">Teknisk veiledning</div>
+<p>Eksemplet ovenfor i RDF Turtle:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>@prefix dcat: &lt;http://www.w3.org/ns/dcat#&gt; .
+@prefix dct: &lt;http://purl.org/dc/terms/&gt; .
+@prefix xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt; .
+@prefix : &lt;https://example.org/&gt; .
+
+&lt;enDatatjeneste&gt; a dcat:DataService ; # datatjeneste
+  ### obligatoriske egenskaper:
+    dcat:endpointURL &lt;https://example.org/eksAPI&gt; ;
+    dct:identifier "https://example.org/eksAP"^^xsd:anyURI ;
+    dct:title "REST-API for eksempler"@nb ;
+  ### anbefalte egenskaper:
+    dcat:endpointDescription &lt;https://example.org/eksAPI.json&gt; ;
+    dct:format &lt;http://publications.europa.eu/resource/authority/file-type/JSON&gt; ;
+    dct:publisher &lt;https://organization-catalogue.fellesdatakatalog.digdir.no/organizations/999999999&gt; ; # utgiver, med dummy-org.nr.
+  .</pre>
+</div>
 </div>
 </div>
 <div class="sect2">
@@ -3126,14 +3232,18 @@ Ikke alle valgfrie felter er beskrevet i etterfølgende avsnitt. Se under <a hr
 <div class="sect3">
 <h4 id="datatjeneste-endepunktsURL"><a class="anchor" href="#datatjeneste-endepunktsURL"></a>Datatjeneste - endepunktsURL</h4>
 <div class="paragraph">
-<p>Refererer til rotplassering eller primært endepunkt for tjenesten (en URI) [<a href="https://data.norge.no/specification/dcat-ap-no/#Datatjeneste-endepunktsurl">Datatjeneste: endepunktsURL</a>].</p>
+<p>Du skal oppgi rotplassering eller primært endepunkt for tjenesten (en URI).</p>
 </div>
 <div class="paragraph">
-<p><em>Eksempel i RDF Turtle</em></p>
+<div class="title">Teknisk veiledning</div>
+<p>Dette tilsvarer <a href="https://data.norge.no/specification/dcat-ap-no/#Datatjeneste-endepunktsurl">Datatjeneste: endepunktsURL (dcat:endpointURL) i DCAT-AP-NO</a>.</p>
+</div>
+<div class="paragraph">
+<p>Eksempel i RDF Turtle:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>&lt;&gt; a dcat:DataService ;
+<pre>&lt;enDatatjeneste&gt; a dcat:DataService ;
   dcat:endpointURL &lt;https://example.org/endpoints&gt; .</pre>
 </div>
 </div>
@@ -3146,18 +3256,26 @@ Ikke alle valgfrie felter er beskrevet i etterfølgende avsnitt. Se under <a hr
 <div class="paragraph">
 <p>Se under <a href="#om-identifikator">Om identifikator</a>.</p>
 </div>
+<div class="paragraph">
+<div class="title">Teknisk veiledning</div>
+<p>Dette tilsvarer <a href="https://data.norge.no/specification/dcat-ap-no/#Datatjeneste-identifikator">Datatjeneste: identifikator (dcat:identifier) i DCAT-AP-NO</a>.</p>
+</div>
 </div>
 <div class="sect3">
 <h4 id="datatjeneste-tittel"><a class="anchor" href="#datatjeneste-tittel"></a>Datatjeneste - tittel</h4>
 <div class="paragraph">
-<p>Feltet brukes til å oppgi navnet på datatjenesten. Gjentas hvis navnet er i flere språk.</p>
+<p>Du skal oppgi navnet på datatjenesten. Gjentas hvis navnet er i flere språk.</p>
 </div>
 <div class="paragraph">
-<p><em>Eksempel i RDF Turtle</em></p>
+<div class="title">Teknisk veiledning</div>
+<p>Dette tilsvarer <a href="https://data.norge.no/specification/dcat-ap-no/#Datatjeneste-tittel">Datatjeneste: tittel (dct:title) i DCAT-AP-NO</a>.</p>
+</div>
+<div class="paragraph">
+<p>Eksempel i RDF Turtle:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>&lt;&gt; a dcat:DataService ;
+<pre>&lt;enDatatjeneste&gt; a dcat:DataService ;
   dct:title "FDK API endpoints"@en ,
     "FDK API endepunkter"@nb .</pre>
 </div>
@@ -3197,14 +3315,20 @@ Ikke alle valgfrie felter er beskrevet i etterfølgende avsnitt. Se under <a hr
 <div class="sect3">
 <h4 id="datatjeneste-emneord"><a class="anchor" href="#datatjeneste-emneord"></a>Datatjeneste - emneord</h4>
 <div class="paragraph">
-<p>Inneholder emneord (eller tag) som beskriver datatjenesten <a href="https://data.norge.no/specification/dcat-ap-no/#Datatjeneste-emneord">Datatjeneste: emneord</a>.
-Se beskrivelsen av tilsvarende felt i Datasett, <a href="https://data.norge.no/specification/dcat-ap-no/#Datasett-emneord">Datatjeneste: emneord</a>.</p>
+<p>Du bør oppgi emneord (eller tag) som beskriver datatjenesten.</p>
+</div>
+<div class="paragraph">
+<p>Se beskrivelsen av tilsvarende egenskap i Datasett, <a href="#datasett-emneord">Datatsett - emneord</a>.</p>
+</div>
+<div class="paragraph">
+<div class="title">Teknisk veiledning</div>
+<p>Dette tilsvarer <a href="https://data.norge.no/specification/dcat-ap-no/#Datatjeneste-emneord">Datatjeneste: emneord (dcat:keyword) i DCAT-AP-NO</a>.</p>
 </div>
 </div>
 <div class="sect3">
 <h4 id="datatjeneste-endepunktsbeskrivelse"><a class="anchor" href="#datatjeneste-endepunktsbeskrivelse"></a>Datatjeneste - endepunktsbeskrivelse</h4>
 <div class="paragraph">
-<p>Beskrivelse av tjenesten [<a href="https://data.norge.no/specification/dcat-ap-no/#Datatjeneste-endepunktsbeskrivelse">Datatjeneste: endepunktsbeskrivelse</a>].</p>
+<p>Du skal oppgi en beskrivelse av tjenesten.</p>
 </div>
 <div class="paragraph">
 <p>Brukes primært til å lenke til en formalisert beskrivelse av tjenestene som er tilgjengelige via endepunktene, inkludert deres operasjoner, parametere osv. Beskrivelsen skal gi spesifikke detaljer om de faktiske endepunkt-instansene, mens <code>dct:conformsTo</code> brukes til å indikere den generelle standarden eller spesifikasjonen som endepunktene implementerer.</p>
@@ -3212,7 +3336,7 @@ Se beskrivelsen av tilsvarende felt i Datasett, <a href="https://data.norge.no/s
 <div class="ulist">
 <ul>
 <li>
-<p>Lenke til en maskinlesbar formalisert endepunktbeskrivelse, som for eksempel en Open API (Swagger) beskrivelse [<a href="https://eur03.safelinks.protection.outlook.com/?url=https%3A%2F%2Fwww.w3.org%2FTR%2Fvocab-dcat-2%2F%23bib-openapi&amp;data=04%7C01%7C%7Cefe2137342004d9c6ffb08d93a04785b%7C008e560f08af4ceca056b35447503991%7C1%7C0%7C637604613147600182%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C1000&amp;sdata=EwlvzY76t%2FcuW%2Ff0y8FYiImKU2eMo75ZxvYyBM2SYXg%3D&amp;reserved=0">OpenAPI</a>], GraphQL [<a href="https://graphql.org/">GraphQL</a>].</p>
+<p>Lenke til en maskinlesbar formalisert endepunktbeskrivelse, som for eksempel en Open API (Swagger) beskrivelse [<a href="https://spec.openapis.org/oas/v3.1.0">OpenAPI</a>], GraphQL [<a href="https://graphql.org/">GraphQL</a>].</p>
 </li>
 <li>
 <p>Dersom en formalisert beskrivelse ikke er mulig, kan det lenkes til en tekstlig beskrivelse</p>
@@ -3220,11 +3344,15 @@ Se beskrivelsen av tilsvarende felt i Datasett, <a href="https://data.norge.no/s
 </ul>
 </div>
 <div class="paragraph">
-<p><em>Eksempel i RDF Turtle</em><br></p>
+<div class="title">Teknisk veiledning</div>
+<p>Dette tilsvarer <a href="https://data.norge.no/specification/dcat-ap-no/#Datatjeneste-endepunktsbeskrivelse">Datatjeneste: endepunktsbeskrivelse (dcat:endpointDescription) i DCAT-AP-NO</a>.</p>
+</div>
+<div class="paragraph">
+<p>Eksempel i RDF Turtle:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>&lt;&gt; a dcat:DataService ;
+<pre>&lt;enDatatjeneste&gt; a dcat:DataService ;
   dcat:endpointDescription &lt;https://raw.githubusercontent.com/Informasjonsforvaltning/fdk-api-endpoints/master/specification/fdk-api-endpoints.yaml&gt; . # peker til en OpenAPI spesifikasjon av tjenesten</pre>
 </div>
 </div>
@@ -3237,17 +3365,23 @@ Se beskrivelsen av tilsvarende felt i Datasett, <a href="https://data.norge.no/s
 <div class="ulist">
 <ul>
 <li>
-<p>EUs kontrollerte liste over <a href="https://op.europa.eu/s/pcDP">File type</a> skal brukes.</p>
+<p>EUs kontrollerte liste over <a href="https://op.europa.eu/s/pkna">File type</a> skal brukes.</p>
 </li>
 <li>
-<p>Kan gjentas for API-er og sluttbrukerapplikasjoner som leverer data i flere formater.
-<em>Eksempel i RDF Turtle</em><br></p>
+<p>Kan gjentas for API-er og sluttbrukerapplikasjoner som leverer data i flere formater.</p>
 </li>
 </ul>
 </div>
+<div class="paragraph">
+<div class="title">Teknisk veiledning</div>
+<p>Dette tilsvarer <a href="https://data.norge.no/specification/dcat-ap-no/#Datatjeneste-format">Datatjeneste: format (dct:format) i DCAT-AP-NO</a>.</p>
+</div>
+<div class="paragraph">
+<p>Eksempel i RDF Turtle:</p>
+</div>
 <div class="listingblock">
 <div class="content">
-<pre>&lt;&gt; a dcat:DataService ;
+<pre>&lt;enDatatjeneste&gt; a dcat:DataService ;
   dct:format &lt;http://publications.europa.eu/resource/authority/file-type/JSON_LD&gt; , # JSON-LD
     &lt;http://publications.europa.eu/resource/authority/file-type/RDF_TURTLE&gt; . # RDF Turtle</pre>
 </div>
@@ -3256,14 +3390,23 @@ Se beskrivelsen av tilsvarende felt i Datasett, <a href="https://data.norge.no/s
 <div class="sect3">
 <h4 id="datatjeneste-kontaktpunkt"><a class="anchor" href="#datatjeneste-kontaktpunkt"></a>Datatjeneste - kontaktpunkt</h4>
 <div class="paragraph">
-<p>Kontaktpunkt med kontaktopplysninger <a href="https://data.norge.no/specification/dcat-ap-no/#Datatjeneste-kontaktpunkt">Datatjeneste: kontaktpunkt</a>. Se ellers beskrivelsen av tilsvarende felt i Datasett, <a href="https://data.norge.no/specification/dcat-ap-no/#Datasett-kontaktpunkt">Datasett - kontaktpunkt</a>.<br></p>
+<p>Kontaktpunkt med kontaktopplysninger.</p>
+</div>
+<div class="paragraph">
+<p>Se beskrivelsen av tilsvarende egenskap i Datasett, <a href="#datasett-kontaktpunkt">Datasett - kontaktpunkt</a>.</p>
+</div>
+<div class="paragraph">
+<div class="title">Teknisk veiledning</div>
+<p>Dette tilsvarer <a href="https://data.norge.no/specification/dcat-ap-no/#Datatjeneste-kontaktpunkt">Datatjeneste: kontaktpunkt (dcat:contactPoint) i DCAT-AP-NO</a>.</p>
 </div>
 </div>
 <div class="sect3">
 <h4 id="datatjeneste-tema"><a class="anchor" href="#datatjeneste-tema"></a>Datatjeneste - tema</h4>
 <div class="paragraph">
-<p>Tema for datatjenesten. En datatjeneste kan assosieres med flere tema.<br>
-For å kunne sortere datatjenesten inn under gitte kategorier er det behov for tema.</p>
+<p>Tema for datatjenesten. En datatjeneste kan assosieres med flere tema.</p>
+</div>
+<div class="paragraph">
+<p>For å kunne sortere datatjenesten inn under gitte kategorier er det behov for tema.</p>
 </div>
 <div class="ulist">
 <ul>
@@ -3275,25 +3418,27 @@ For å kunne sortere datatjenesten inn under gitte kategorier er det behov for t
 </li>
 </ul>
 </div>
-<div class="paragraph">
-<p><em>Eksempler</em></p>
-</div>
-<div class="ulist">
-<ul>
+<div class="ulist checklist">
+<div class="title">Eksempler</div>
+<ul class="checklist">
 <li>
-<p> <strong>Helse</strong> (HEAL fra EU-listen)</p>
+<p><i class="fa fa-check-square-o"></i>  <strong>Helse</strong> (HEAL fra EU-listen)</p>
 </li>
 <li>
-<p> <strong>Helsestasjon</strong> (helsestasjon fra LOS)</p>
+<p><i class="fa fa-check-square-o"></i>  <strong>Helsestasjon</strong> (helsestasjon fra LOS)</p>
 </li>
 </ul>
 </div>
 <div class="paragraph">
-<p><em>Eksempel i RDF Turtle</em></p>
+<div class="title">Teknisk veiledning</div>
+<p>Dette tilsvarer <a href="https://data.norge.no/specification/dcat-ap-no/#Datatjeneste-tema">Datatjeneste: tema (dcat:theme) i DCAT-AP-NO</a>.</p>
+</div>
+<div class="paragraph">
+<p>Eksempel i RDF Turtle:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>&lt;&gt; a dcat:DataService ;
+<pre>&lt;enDatatjeneste&gt; a dcat:DataService ;
   dcat:theme &lt;http://publications.europa.eu/resource/authority/data-theme/HEAL&gt; , # helse
     &lt;https://psi.norge.no/los/ord/helsestasjon&gt; . # helsestasjon (Helse og omsorg -&gt; Helsetjenester -&gt; Helsestasjon)</pre>
 </div>
@@ -3302,14 +3447,18 @@ For å kunne sortere datatjenesten inn under gitte kategorier er det behov for t
 <div class="sect3">
 <h4 id="datatjeneste-tilgjengeliggjørDatasett"><a class="anchor" href="#datatjeneste-tilgjengeliggjørDatasett"></a>Datatjeneste - tilgjengeliggjør datasett</h4>
 <div class="paragraph">
-<p>Feltet brukes til å referere til datasett som datatjenesten kan distribuere.</p>
+<p>Egenskapen brukes til å referere til datasett som datatjenesten kan distribuere.</p>
 </div>
 <div class="paragraph">
-<p><em>Eksempel i RDF Turtle</em></p>
+<div class="title">Teknisk veiledning</div>
+<p>Dette tilsvarer <a href="https://data.norge.no/specification/dcat-ap-no/#Datatjeneste-tilgjengeliggjor-datasett">Datatjeneste: tilgjengeliggjør datasett (dcat:servesDataset) i DCAT-AP-NO</a>.</p>
+</div>
+<div class="paragraph">
+<p>Eksempel i RDF Turtle:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>&lt;&gt; a dcat:DataService ;
+<pre>&lt;enDatatjeneste&gt; a dcat:DataService ;
   dcat:servesDataset &lt;https://example.org/dataset/123&gt; ,
     &lt;https://example.org/dataset/456&gt; . # peker til 2 datasett.</pre>
 </div>
@@ -3318,7 +3467,7 @@ For å kunne sortere datatjenesten inn under gitte kategorier er det behov for t
 <div class="sect3">
 <h4 id="datatjeneste-utgiver"><a class="anchor" href="#datatjeneste-utgiver"></a>Datatjeneste - utgiver</h4>
 <div class="paragraph">
-<p>Identifisering av den aktøren (organisasjon) som er ansvarlig for å gjøre datatjenesten tilgjengelig.</p>
+<p>Den aktøren (organisasjon) som er ansvarlig for å gjøre datatjenesten tilgjengelig.</p>
 </div>
 <div class="ulist">
 <ul>
@@ -3329,15 +3478,12 @@ For å kunne sortere datatjenesten inn under gitte kategorier er det behov for t
 <p>Det offisielle navnet på virksomheten vil bli hentet fra Enhetsregisteret, men kortform (f.eks. Digdir) kan legges inn av brukeren.</p>
 </li>
 <li>
-<p>Utgiveren av datasettet forvalter sammensetning av dataene, altså datasettet, og ikke nødvendigvis selve dataene.
-Inntil <a href="https://data.brreg.no" class="bare">https://data.brreg.no</a>  tilbyr gyldig identifator (foaf:Agent), skal følgende mønster benyttes: <code>https://organization-catalogue.fellesdatakatalog.digdir.no/organizations/{orgnummer}</code></p>
+<p>Utgiveren av datasettet forvalter sammensetning av dataene, altså datasettet, og ikke nødvendigvis selve dataene.</p>
 </li>
 </ul>
 </div>
-<div class="paragraph">
-<p><em>Eksempler</em></p>
-</div>
 <div class="ulist">
+<div class="title">Eksempler</div>
 <ul>
 <li>
 <p> Arbeids- og velferdsetaten</p>
@@ -3345,11 +3491,18 @@ Inntil <a href="https://data.brreg.no" class="bare">https://data.brreg.no</a>  t
 </ul>
 </div>
 <div class="paragraph">
-<p><em>Eksempel i RDF Turtle</em></p>
+<div class="title">Teknisk veiledning</div>
+<p>Dette tilsvarer <a href="https://data.norge.no/specification/dcat-ap-no/#Datatjeneste-utgiver">Datatjeneste: utgiver (dct:publisher) i DCAT-AP-NO</a>.</p>
+</div>
+<div class="paragraph">
+<p>Inntil <a href="https://data.brreg.no" class="bare">https://data.brreg.no</a>  tilbyr gyldig identifikator (<code>foaf:Agent</code>), skal følgende mønster benyttes: <code>https://organization-catalogue.fellesdatakatalog.digdir.no/organizations/{orgnummer}</code>.</p>
+</div>
+<div class="paragraph">
+<p>Eksempel i RDF Turtle:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre>&lt;&gt; a dcat:DataService ;
+<pre>&lt;enDatatjeneste&gt; a dcat:DataService ;
   dct:publisher &lt;https://organization-catalogue.fellesdatakatalog.digdir.no/organizations/889640782&gt; . #NAV</pre>
 </div>
 </div>
@@ -3358,7 +3511,7 @@ Inntil <a href="https://data.brreg.no" class="bare">https://data.brreg.no</a>  t
 <div class="sect2">
 <h3 id="datatjeneste-valgfrie-egenskaper"><a class="anchor" href="#datatjeneste-valgfrie-egenskaper"></a>Valgfrie egenskaper i en datatjenestebeskrivelse</h3>
 <div class="paragraph">
-<p>I tillegg til obligatoriske (skal brukes) og anbefalte (bør brukes) felter, er det en del felter som er valgfrie (kan brukes) i en datatjenestebeskrivelse:</p>
+<p>I tillegg til obligatoriske (skal brukes) og anbefalte (bør brukes) egenskaper, er det en del egenskaper som er valgfrie (kan brukes) i en datatjenestebeskrivelse:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -3381,6 +3534,9 @@ Inntil <a href="https://data.brreg.no" class="bare">https://data.brreg.no</a>  t
 <p>Datatjeneste - lisens: lisensen som datatjenesten blir gjort tilgjengelig under.</p>
 </li>
 <li>
+<p>Datatjeneste - medietype: datatjenestens medietype.</p>
+</li>
+<li>
 <p>Datatjeneste - tilgangsrettigheter: informasjon angående tilgang eller begrensninger basert på personvern, sikkerhet eller andre retningslinjer.</p>
 </li>
 <li>
@@ -3389,7 +3545,7 @@ Inntil <a href="https://data.brreg.no" class="bare">https://data.brreg.no</a>  t
 </ul>
 </div>
 <div class="paragraph">
-<p>Ikke alle valgfrie felter er beskrevet i etterfølgende avsnitt. Se under <a href="#hensikt-og-avgrensing">Hensikt og avgrensning</a> for hvordan du kan melde inn behov for beskrivelser.</p>
+<p>Ikke alle valgfrie egenskaper er beskrevet i etterfølgende avsnitt. Se under <a href="#hensikt-og-avgrensing">Hensikt og avgrensning</a> for hvordan du kan melde inn behov for beskrivelser.</p>
 </div>
 <div class="sect3">
 <h4 id="datatjeneste-beskrivelse"><a class="anchor" href="#datatjeneste-beskrivelse"></a>Datatjeneste - beskrivelse</h4>
@@ -3405,6 +3561,10 @@ Inntil <a href="https://data.brreg.no" class="bare">https://data.brreg.no</a>  t
 <p>Ved behov for formatering av tekst - benytt <a href="https://Commonmark.org">CommonMark</a></p>
 </li>
 </ul>
+</div>
+<div class="paragraph">
+<div class="title">Teknisk veiledning</div>
+<p>Dette tilsvarer <a href="https://data.norge.no/specification/dcat-ap-no/#Datatjeneste-beskrivelse">Datatjeneste: beskrivelse (dct:description) i DCAT-AP-NO</a>.</p>
 </div>
 </div>
 <div class="sect3">
@@ -3422,11 +3582,15 @@ Inntil <a href="https://data.brreg.no" class="bare">https://data.brreg.no</a>  t
 </li>
 </ul>
 </div>
+<div class="paragraph">
+<div class="title">Teknisk veiledning</div>
+<p>Dette tilsvarer <a href="https://data.norge.no/specification/dcat-ap-no/#Datatjeneste-dokumentasjon">Datatjeneste: dokumentasjon (foaf:page) i DCAT-AP-NO</a>.</p>
+</div>
 </div>
 <div class="sect3">
 <h4 id="datatjeneste-følger"><a class="anchor" href="#datatjeneste-følger"></a>Datatjeneste - følger</h4>
 <div class="paragraph">
-<p><em>&lt;ikke beskrevet, tilsvarer [<a href="https://data.norge.no/specification/dcat-ap-no/#Datatjeneste-f%C3%B8lger">Datatjeneste: følger</a>]&gt;</em></p>
+<p><em>&lt;ikke beskrevet, tilsvarer <a href="https://data.norge.no/specification/dcat-ap-no/#Datatjeneste-f%C3%B8lger">Datatjeneste: følger (cpsv:follows) i DCAT-AP-NO</a>&gt;</em></p>
 </div>
 <div class="paragraph">
 <p>Se ellers beskrivelsen av tilsvarende felt i Datasett, <a href="#datasett-følger">Datasett - følger</a>.</p>
@@ -3443,27 +3607,31 @@ Inntil <a href="https://data.brreg.no" class="bare">https://data.brreg.no</a>  t
 <p>En datatjeneste kan være utviklet i samsvar med en eller flere standarder og/eller spesifikasjoner.</p>
 </li>
 <li>
-<p>Du kan knytte en informasjonsmodell (<code>modelldcatno:InformationModel</code>) til en datatjeneste ved hjelp av dette feltet.</p>
+<p>Du kan knytte en informasjonsmodell til en datatjeneste ved hjelp av denne egenskapen. Se under <a href="#sammenheng">Utvalgte temaer</a> for sammenhengen mellom datatjeneste og informasjonsmodell.</p>
 </li>
 <li>
-<p>Vi anbefaler at informasjonsmodellen for endepunktet også inngår som en del av endepunktbeskrivelsen</p>
+<p>Vi anbefaler at informasjonsmodellen for endepunktet også inngår som en del av endepunktbeskrivelsen.</p>
 </li>
 </ul>
+</div>
+<div class="paragraph">
+<div class="title">Teknisk veiledning</div>
+<p>Dette tilsvarer <a href="https://data.norge.no/specification/dcat-ap-no/#Datatjeneste-i-samsvar-med">Datatjeneste: i samsvar med (dct:conformsTo) i DCAT-AP-NO</a>.</p>
 </div>
 </div>
 <div class="sect3">
 <h4 id="datatjeneste-landingsside"><a class="anchor" href="#datatjeneste-landingsside"></a>Datatjeneste - landingsside</h4>
 <div class="paragraph">
-<p><em>&lt;ikke beskrevet, tilsvarer [<a href="https://data.norge.no/specification/dcat-ap-no/#Datatjeneste-landingsside">Datatjeneste: landingsside</a>]&gt;</em></p>
+<p><em>&lt;ikke beskrevet, tilsvarer <a href="https://data.norge.no/specification/dcat-ap-no/#Datatjeneste-landingsside">Datatjeneste: landingsside (dcat:landingPage) i DCAT-AP-NO</a>&gt;</em></p>
 </div>
 <div class="paragraph">
-<p>Se ellers beskrivelsen av tilsvarende felt i Datasett, <a href="#datasett-landingsside">Datasett - landingsside</a>.</p>
+<p>Se ellers beskrivelsen av tilsvarende egenskap i Datasett, <a href="#datasett-landingsside">Datasett - landingsside</a>.</p>
 </div>
 </div>
 <div class="sect3">
 <h4 id="datatjeneste-lisens"><a class="anchor" href="#datatjeneste-lisens"></a>Datatjeneste - lisens</h4>
 <div class="paragraph">
-<p>Referanse til lisensen for datasett som datatjenesten realiserer, gjøres tilgjengelig under [<a href="https://data.norge.no/specification/dcat-ap-no/#Distribusjon-lisens">Distribusjon: lisens</a>]. Lisens er påkrevd for alle åpne offentlige data.</p>
+<p>Referanse til lisensen for datasett som datatjenesten realiserer, gjøres tilgjengelig under. Lisens er påkrevd for alle åpne offentlige data.</p>
 </div>
 <div class="ulist">
 <ul>
@@ -3492,23 +3660,40 @@ Inntil <a href="https://data.brreg.no" class="bare">https://data.brreg.no</a>  t
 </ul>
 </div>
 <div class="paragraph">
-<p>Se Digdirs  <a href="https://data.norge.no/guide/veileder-apne-data/">Veileder for tilgjengeliggjøring av åpne data</a> for mer informasjon om valg av åpne standardlisenser.</p>
+<p>Se <a href="https://data.norge.no/guide/veileder-apne-data/">Veileder for tilgjengeliggjøring av åpne data</a> for mer informasjon om valg av åpne standardlisenser.</p>
 </div>
 <div class="paragraph">
 <p>Se ellers beskrivelsen av tilsvarende felt i Distribusjon, <a href="#distribusjon-lisens">Distribusjon - lisens</a>.</p>
+</div>
+<div class="paragraph">
+<div class="title">Teknisk veiledning</div>
+<p>Dette tilsvarer <a href="https://data.norge.no/specification/dcat-ap-no/#Distribusjon-lisens">Distribusjon: lisens (dct:license) i DCAT-AP-NO</a>.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="datatjeneste-medietype"><a class="anchor" href="#datatjeneste-medietype"></a>Datatjeneste - medietype</h4>
+<div class="paragraph">
+<p><em>&lt;ikke beskrevet, tilsvarer <a href="https://data.norge.no/specification/dcat-ap-no/#Datatjeneste-medietype">Datatjeneste: medietype (dcat:mediaType) i DCAT-AP-NO</a>&gt;</em></p>
+</div>
+<div class="paragraph">
+<p>Se beskrivelsen av tilsvarende egenskap i Distribusjon, <a href="#distribusjon-medietype">Distribusjon - medietype</a>.</p>
 </div>
 </div>
 <div class="sect3">
 <h4 id="datatjeneste-tilgangsrettigheter"><a class="anchor" href="#datatjeneste-tilgangsrettigheter"></a>Datatjeneste - tilgangsrettigheter</h4>
 <div class="paragraph">
-<p><em>&lt;ikke beskrevet, tilsvarer [<a href="https://data.norge.no/specification/dcat-ap-no/#Datatjeneste-tilgangsrettigheter">Datatjeneste: tilgangsrettigheter</a>]&gt;</em></p>
+<p><em>&lt;ikke beskrevet, tilsvarer <a href="https://data.norge.no/specification/dcat-ap-no/#Datatjeneste-tilgangsrettigheter">Datatjeneste: tilgangsrettigheter (dct:accessRights) i DCAT-AP-NO</a>&gt;</em></p>
 </div>
 </div>
 </div>
 <div class="sect2">
 <h3 id="datatjeneste-type"><a class="anchor" href="#datatjeneste-type"></a>Datatjeneste - type</h3>
 <div class="paragraph">
-<p><a href="https://data.norge.no/specification/dcat-ap-no/#Datatjeneste-type">Datatjeneste: type</a> er referanse til et begrep i en kontrollert liste som identifiserer datatjenestens type, for eksempel <a href="https://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceType" class="bare">https://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceType</a></p>
+<p>Referanse til et begrep i en kontrollert liste som identifiserer datatjenestens type, for eksempel <a href="https://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceType">Spatial data service type</a>.</p>
+</div>
+<div class="paragraph">
+<div class="title">Teknisk veiledning</div>
+<p>Dette tilsvarer <a href="https://data.norge.no/specification/dcat-ap-no/#Datatjeneste-type">Datatjeneste: type (dct:type) i DCAT-AP-NO</a>.</p>
 </div>
 </div>
 </div>
@@ -3529,7 +3714,7 @@ Inntil <a href="https://data.brreg.no" class="bare">https://data.brreg.no</a>  t
 <p>Dette kapittelet forklarer hvordan en katalog beskrives i henhold til kravene i <a href="https://data.norge.no/specification/dcat-ap-no/">DCAT-AP-NO v.2</a>, dog uten at du må kunne DCAT-AP-NO.</p>
 </div>
 <div class="paragraph">
-<p>For deg som skal utvikle/tilpasse verktøystøtte for katalogbeskrivelse i henhold til DCAT-AP-NO, inneholder veilederen også en teknisk veiledning bakerst i hvert avsnitt. NB! Bortsett fra det første eksemplet, er ikke alle eksempler i RDF Turle komplette og de kan mangle bl.a. verdier for obligatoriske egenskaper.</p>
+<p>For deg som skal utvikle/tilpasse verktøystøtte for katalogbeskrivelse i henhold til DCAT-AP-NO, inneholder veilederen også en teknisk veiledning bakerst i hvert avsnitt. NB! Bortsett fra det første eksemplet, er ikke alle eksempler i RDF Turtle komplette og de kan mangle bl.a. verdier for obligatoriske egenskaper.</p>
 </div>
 <div class="sect2">
 <h3 id="eksempel-katalogbeskrivelse"><a class="anchor" href="#eksempel-katalogbeskrivelse"></a>Eksempel på en katalogbeskrivelse</h3>
@@ -3539,12 +3724,15 @@ Inntil <a href="https://data.brreg.no" class="bare">https://data.brreg.no</a>  t
 <div class="sidebarblock">
 <div class="content">
 <div class="paragraph">
-<p>*Tittel: Oversikt over datasett fra Direks<br>
-*Beskrivelse: Katalogen inneholder beskrivelse av alle datasett som Direktoratet for eksempler forvalter. <br>
-*Identifikator: <a href="https://data.direks.eks/cat/123" class="bare">https://data.direks.eks/cat/123</a> (<em>NB! dummy-URL som ikke virker</em>)<br>
-*Utgiver: Direktoratet for eksempler<br>
-Datasett: <span class="underline">Eksempeldatasett</span> (<em>lenke til beskrivelsen av dette eksempeldatasettet</em>)<br>
-Dekningsområde: <a href="https://op.europa.eu/s/pirm">Norge</a></p>
+<p><em>Eksempel på en katalogbeskrivelse med dummydata, hvor <strong>uthevede egenskaper</strong> er obligatoriske:</em></p>
+</div>
+<div class="paragraph">
+<p><a href="#katalog-tittel"><strong>Tittel</strong></a>: Oversikt over datasett fra Direks<br>
+<a href="#katalog-beskrivelse"><strong>Beskrivelse</strong></a>: Katalogen inneholder beskrivelse av alle datasett som Direktoratet for eksempler forvalter. <br>
+<a href="#katalog-identifikator"><strong>Identifikator</strong></a>: https://example.org/cat/123 (<em>NB! dummy-URL som ikke virker</em>)<br>
+<a href="#katalog-utgiver"><strong>Utgiver</strong></a>: Direktoratet for eksempler<br>
+<a href="#katalog-datasett">Datasett</a>: <span class="underline">Eksempeldatasett</span> (<em>lenke til beskrivelsen av dette eksempeldatasettet</em>)<br>
+<a href="#katalog-dekningsområde">Dekningsområde</a>: <a href="https://op.europa.eu/s/pirm">Norge</a></p>
 </div>
 </div>
 </div>
@@ -3557,16 +3745,16 @@ Dekningsområde: <a href="https://op.europa.eu/s/pirm">Norge</a></p>
 <pre>@prefix dcat: &lt;http://www.w3.org/ns/dcat#&gt; .
 @prefix dct: &lt;http://purl.org/dc/terms/&gt; .
 @prefix xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt; .
-@prefix : &lt;https://data.direks.eks/cat/&gt; .
+@prefix : &lt;https://dexample.org/&gt; .
 
-&lt;https://data.direks.eks/cat/123&gt; a dcat:Catalog ;
+&lt;https://example.org/cat/123&gt; a dcat:Catalog ;
 	### obligatoriske egenskaper:
 		dct:title "Oversikt over datasett fra Direks"@nb ;
 		dct:description "Katalogen inneholder beskrivelse av alle datasett som Direktoratet for eksempler forvalter."@nb ;
-		dct:identifier "https://data.direks.eks/cat/123"^^xsd:anyURI ;
+		dct:identifier "https://example.org/cat/123"^^xsd:anyURI ;
 		dct:publisher &lt;https://organization-catalogue.fellesdatakatalog.digdir.no/organizations/999999999&gt; ; # utgiver, med dummy-org.nr.
 	### anbefalte egenskaper:
-		dcat:dataset &lt;https://data.direks.eks/eksempeldata&gt; ; # peker til en datasettbeskrivelse
+		dcat:dataset &lt;https://example.org/eksempeldata&gt; ; # peker til en datasettbeskrivelse
 		dct:spatial &lt;http://publications.europa.eu/resource/authority/country/NOR&gt; ; # dekningsområde, Norge
 	.</pre>
 </div>
@@ -3696,6 +3884,9 @@ Dekningsområde: <a href="https://op.europa.eu/s/pirm">Norge</a></p>
 <div class="paragraph">
 <div class="title">Teknisk veiledning</div>
 <p>Dette tilsvarer <a href="https://data.norge.no/specification/dcat-ap-no/#Katalog-utgiver">Katalog: utgiver (<code>dct:publisher</code>) i DCAT-AP-NO</a>.</p>
+</div>
+<div class="paragraph">
+<p>Inntil <a href="https://data.brreg.no" class="bare">https://data.brreg.no</a>  tilbyr gyldig identifikator (<code>foaf:Agent</code>), skal følgende mønster benyttes: <code>https://organization-catalogue.fellesdatakatalog.digdir.no/organizations/{orgnummer}</code>.</p>
 </div>
 <div class="paragraph">
 <p>Eksempel i RDF Turtle:</p>
@@ -3828,7 +4019,7 @@ Dekningsområde: <a href="https://op.europa.eu/s/pirm">Norge</a></p>
 <div class="listingblock">
 <div class="content">
 <pre>&lt;enKatalog&gt; a dcat:Catalog ;
-	foaf:homepage &lt;https://data.direks.eks/cat1&gt; . # peker til hovedsiden for katalogen</pre>
+	foaf:homepage &lt;https://example.org/cat1&gt; . # peker til hovedsiden for katalogen</pre>
 </div>
 </div>
 </div>
@@ -3986,8 +4177,8 @@ Dekningsområde: <a href="https://op.europa.eu/s/pirm">Norge</a></p>
 <div class="listingblock">
 <div class="content">
 <pre>&lt;enKatalog&gt; a dcat:Catalog ;
-	dcat:service &lt;https://data.direks.eks/dataService1&gt;,
-		&lt;https://data.direks.eks/dataService2&gt; . # peker til to datatjenester</pre>
+	dcat:service &lt;https://example.org/dataService1&gt;,
+		&lt;https://example.org/dataService2&gt; . # peker til to datatjenester</pre>
 </div>
 </div>
 </div>
@@ -4062,7 +4253,7 @@ Dekningsområde: <a href="https://op.europa.eu/s/pirm">Norge</a></p>
 <div class="ulist">
 <ul>
 <li>
-<p>Dataene i et datasett (<code>dcat:Dataset</code>) kan reprsentere (eller forklares med) et eller flere begreper (<code>skos:Concept</code>). Du knytter et begrep (<code>skos:Concept</code>) til et datasett (<code>dcat:Dataset</code>) ved å bruke egenskapen <a href="#datasett-begrep">Datasett - begrep</a> (<code>dct:subject</code>) (1).</p>
+<p>Dataene i et datasett (<code>dcat:Dataset</code>) kan representere (eller forklares med) et eller flere begreper (<code>skos:Concept</code>). Du knytter et begrep (<code>skos:Concept</code>) til et datasett (<code>dcat:Dataset</code>) ved å bruke egenskapen <a href="#datasett-begrep">Datasett - begrep</a> (<code>dct:subject</code>) (1).</p>
 </li>
 <li>
 <p>Et datasett (<code>dcat:Dataset</code>) kan distribueres gjennom en eller flere distribusjoner (<code>dcat:Distribution</code>). Du knytter en distribusjon (<code>dcat:Distribution</code>) til et datasett (<code>dcat:Dataset</code>) ved å bruke egenskapen <a href="#datasett-datasettdistribusjon">Datasett - datasettdistribusjon</a> (<code>dcat:distribution</code>) (2).</p>
@@ -4084,7 +4275,7 @@ Dekningsområde: <a href="https://op.europa.eu/s/pirm">Norge</a></p>
 </div>
 </li>
 <li>
-<p>En datatjeneste (<code>dcat:DataService</code>) kan brukes til å gi tilgang til et eller flere datasett (<code>dcat:Dataset</code>). Du knytter et datasett (<code>dcat:Dataset</code>) til en datatjeneste (<code>dcat:DataService</code>) ved å bruke egenskapen <a href="https://data.norge.no/specification/dcat-ap-no/#Datatjeneste-tilgjengeliggjor-datasett">Datatjeneste: tilgjengeliggjør datasett</a> (<code>dcat:servesDataset</code>) (7).</p>
+<p>En datatjeneste (<code>dcat:DataService</code>) kan brukes til å gi tilgang til et eller flere datasett (<code>dcat:Dataset</code>). Du knytter et datasett (<code>dcat:Dataset</code>) til en datatjeneste (<code>dcat:DataService</code>) ved å bruke egenskapen <a href="#datatjeneste-tilgjengeliggjørDatasett">Datatjeneste: tilgjengeliggjør datasett</a> (<code>dcat:servesDataset</code>) (7).</p>
 </li>
 </ul>
 </div>
@@ -4490,7 +4681,7 @@ ga('send', 'pageview');
 </div>
 <div id="footer">
 <div id="footer-text">
-Sist oppdatert 2021-06-29 14:26:21 UTC
+Sist oppdatert 2021-06-30 13:47:07 UTC
 </div>
 </div>
 </body>
