@@ -1,4 +1,4 @@
-== Beskrivelse av datasett [[beskrivelse-av-datasett]]
+== Beskrivelse av datasett [[beskrivelse-av-datasett]] 
 
 Se https://data.norge.no/guide/veileder-orden-i-eget-hus/[Veileder for orden i eget hus] for hvordan din virksomhet kartlegger hvilke datasett som skal beskrives.
 
