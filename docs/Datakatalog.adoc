@@ -17,12 +17,14 @@ For deg som skal utvikle/tilpasse verktøystøtte for katalogbeskrivelse i henho
 Under er et eksempel på en katalogbeskrivelse, med dummydata, hvor egenskaper med * foran er obligatoriske:
 
 *****
-*Tittel: Oversikt over datasett fra Direks +
-*Beskrivelse: Katalogen inneholder beskrivelse av alle datasett som Direktoratet for eksempler forvalter.  +
-*Identifikator: https://data.direks.eks/cat/123 (_NB! dummy-URL som ikke virker_) +
-*Utgiver: Direktoratet for eksempler +
-Datasett: [.underline]#Eksempeldatasett# (_lenke til beskrivelsen av dette eksempeldatasettet_) +
-Dekningsområde: https://op.europa.eu/s/pirm[Norge]
+_Eksempel på en katalogbeskrivelse med dummydata, hvor *uthevede egenskaper* er obligatoriske:_
+
+<<katalog-tittel, *Tittel*>>: Oversikt over datasett fra Direks +
+<<katalog-beskrivelse, *Beskrivelse*>>: Katalogen inneholder beskrivelse av alle datasett som Direktoratet for eksempler forvalter.  +
+<<katalog-identifikator, *Identifikator*>>: +https://example.org/cat/123+ (_NB! dummy-URL som ikke virker_) +
+<<katalog-utgiver, *Utgiver*>>: Direktoratet for eksempler +
+<<katalog-datasett, Datasett>>: [.underline]#Eksempeldatasett# (_lenke til beskrivelsen av dette eksempeldatasettet_) +
+<<katalog-dekningsområde, Dekningsområde>>: https://op.europa.eu/s/pirm[Norge]
 *****
 
 .Teknisk veiledning
@@ -32,16 +34,16 @@ Eksemplet ovenfor i RDF Turtle:
 @prefix dcat: <http://www.w3.org/ns/dcat#> .
 @prefix dct: <http://purl.org/dc/terms/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix : <https://data.direks.eks/cat/> .
+@prefix : <https://dexample.org/> .
 
-<https://data.direks.eks/cat/123> a dcat:Catalog ;
+<https://example.org/cat/123> a dcat:Catalog ;
 	### obligatoriske egenskaper:
 		dct:title "Oversikt over datasett fra Direks"@nb ;
 		dct:description "Katalogen inneholder beskrivelse av alle datasett som Direktoratet for eksempler forvalter."@nb ;
-		dct:identifier "https://data.direks.eks/cat/123"^^xsd:anyURI ;
+		dct:identifier "https://example.org/cat/123"^^xsd:anyURI ;
 		dct:publisher <https://organization-catalogue.fellesdatakatalog.digdir.no/organizations/999999999> ; # utgiver, med dummy-org.nr.
 	### anbefalte egenskaper:
-		dcat:dataset <https://data.direks.eks/eksempeldata> ; # peker til en datasettbeskrivelse
+		dcat:dataset <https://example.org/eksempeldata> ; # peker til en datasettbeskrivelse
 		dct:spatial <http://publications.europa.eu/resource/authority/country/NOR> ; # dekningsområde, Norge
 	.
 -----
@@ -127,6 +129,8 @@ For at andre skal kunne vite hvem som er aktøren/organisasjonen som er ansvarli
 
 Dette tilsvarer https://data.norge.no/specification/dcat-ap-no/#Katalog-utgiver[Katalog: utgiver (`dct:publisher`) i DCAT-AP-NO].
 
+Inntil https://data.brreg.no  tilbyr gyldig identifikator (`foaf:Agent`), skal følgende mønster benyttes: `+https://organization-catalogue.fellesdatakatalog.digdir.no/organizations/{orgnummer}+`.
+
 Eksempel i RDF Turtle:
 ----
 <enKatalog> a dcat:Catalog ;
@@ -209,7 +213,7 @@ Dette tilsvarer https://data.norge.no/specification/dcat-ap-no/#Katalog-hjemmesi
 Eksempel i RDF Turtle:
 --------
 <enKatalog> a dcat:Catalog ;
-	foaf:homepage <https://data.direks.eks/cat1> . # peker til hovedsiden for katalogen
+	foaf:homepage <https://example.org/cat1> . # peker til hovedsiden for katalogen
 --------
 
 
@@ -310,8 +314,8 @@ Dette tilsvarer https://data.norge.no/specification/dcat-ap-no/#Katalog-datatjen
 Eksempel i RDF Turtle:
 -----
 <enKatalog> a dcat:Catalog ;
-	dcat:service <https://data.direks.eks/dataService1>,
-		<https://data.direks.eks/dataService2> . # peker til to datatjenester
+	dcat:service <https://example.org/dataService1>,
+		<https://example.org/dataService2> . # peker til to datatjenester
 -----
 
 ==== Katalog - er del av [[katalog-erDelAv]]
