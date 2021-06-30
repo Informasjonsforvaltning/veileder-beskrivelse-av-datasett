@@ -4,6 +4,8 @@ Nytt i DCAT-AP-NO v.2 er at standarden nå også støtter beskrivelser av datatj
 
 Datatjeneste (`dcat:DataService`) brukes til å beskrive en samling av operasjoner som er tilgjengelig via et programmeringsgrensesnitt (API) og som gir tilgang til ett eller flere datasett eller databehandlingsfunksjoner.
 
+For deg som skal utvikle/tilpasse verktøystøtte i henhold til DCAT-AP-NO, inneholder veilederen også en teknisk veiledning bakerst i hvert avsnitt. NB! Bortsett fra det første eksemplet, er ikke alle eksempler i RDF Turtle komplette og de kan mangle bl.a. verdier for obligatoriske egenskaper.
+
 === Eksempel på en datatjenestebeskrivelse [[eksempel-datatjeneste]]
 
 Under er et eksempel på en datatjenestebeskrivelse, hvor *uthevede egenskaper* er obligatoriske:
