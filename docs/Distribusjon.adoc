@@ -5,26 +5,47 @@ En distribusjon er en spesifikk representasjon av et datasett i form av en fil s
 
 Et datasett kan altså ha flere distribusjoner, men alle distribusjonene skal i prinsippet inneholde samme informasjon. I de fleste tilfeller vil transformasjoner til ulike formater være tapsløse, og dermed fullt ut informasjonsmessig likeverdige. Mindre grad av informasjonstap mellom formater kan oppstå, men dette kan likevel representeres som ulike distribusjoner av samme datasett. I slike tilfeller kan en vurdere å bruke <<distribusjon-beskrivelse>> for å synliggjøre dette.
 
-Datasett som tilbys som filnedlasting kan beskrives utelukkende ved hjelp av egenskapene for distribusjons-klassen. Distribusjoner som tilbys via en datatjeneste skal fra og med versjon 2.x benytte datatjeneste-klassen for å beskrive tjenesten. Når samme datasett er tilgjengelig både som en fil og via et API, beskrives filen som en distribusjon og API-et som en datatjeneste. Relasjonen mellom distribusjonen og datatjenesten uttrykkes gjennom egenskapen dcat:accessService (og relasjonen mellom datatjenesten og datasettet uttrykkes med dcat:servesDataset). Se <<Utvalgte temaer>> for mer informasjon om forholdet mellom datasett, distribusjon og datatjeneste.
+Datasett som tilbys som filnedlasting kan beskrives utelukkende ved hjelp av egenskapene for distribusjons-klassen. Distribusjoner som tilbys via en datatjeneste skal fra og med versjon 2.0 benytte datatjeneste-klassen for å beskrive tjenesten. Når samme datasett er tilgjengelig både som en fil og via et API, beskrives filen som en distribusjon og API-et som en datatjeneste. Relasjonen mellom distribusjonen og datatjenesten uttrykkes gjennom egenskapen <<distribusjon-tilgangstjeneste, Distribusjon - tilgangstjeneste>>. Se under <<utvalgte-temaer, Utvalgte temaer>> for mer informasjon om forholdet mellom datasett, distribusjon og datatjeneste.
 
-Merk at den juridiske vurderingen av hvem som kan få tilgang til datasettet gjøres på datasett-nivå (datasett: tilgangsnivå), mens bruksavtaler for data er knyttet leveransene av data – altså distribusjoner og datatjenester. En kan tilby det samme datasettet under ulike bruksvilkår ved å opprette flere distribusjoner med ulike lisenser/bruksvilkår. Det er krav om bruk av standardiserte bruksavtaler i form av åpne standardlisenser for åpne data som tilbys fra det offentlige (se under [Beskrivelse av åpne data]).
+Merk at den juridiske vurderingen av hvem som kan få tilgang til datasettet gjøres på datasett-nivå (<<datasett-tilgangsnivå, Datasett - tilgangsnivå>>), mens bruksavtaler for data er knyttet leveransene av data – altså distribusjoner og datatjenester. En kan tilby det samme datasettet under ulike bruksvilkår ved å opprette flere distribusjoner med ulike lisenser/bruksvilkår. Det er krav om bruk av standardiserte bruksavtaler i form av åpne standardlisenser for åpne data som tilbys fra det offentlige (se under <<beskrivelse-av-åpneData, Beskrivelse av åpne data>>).
 
 Det er datatilbyders ansvar å vurdere om forskjellige representasjoner kan forstås som distribusjoner av samme datasett, eller distribusjoner av forskjellige datasett.
 
+For deg som skal utvikle/tilpasse verktøystøtte i henhold til DCAT-AP-NO, inneholder veilederen også en teknisk veiledning bakerst i hvert avsnitt. NB! Bortsett fra det første eksemplet, er ikke alle eksempler i RDF Turtle komplette og de kan mangle bl.a. verdier for obligatoriske egenskaper.
 
 === Eksempel på en beskrivelse av en distribusjon [[eksempel-distribusjon]]
 
-Under er et eksempel på en beskrivelse av en distribusjon, hvor uthevede felter er  obligatoriske:
+Under er et eksempel på en beskrivelse av en distribusjon, hvor *uthevede egenskaper* er  obligatoriske:
 
 *****
-https://data.norge.no/specification/dcat-ap-no/#Distribusjon-tilgangsurl[*TilgangsURL*]: +https://example.org/eksempel-1+ +
-https://data.norge.no/specification/dcat-ap-no/#Distribusjon-beskrivelse[Beskrivelse]: Semikolonseparert nedlastbar CSV-fil uten BOM +
-https://data.norge.no/specification/dcat-ap-no/#Distribusjon-format[Format]: +http://publications.europa.eu/resource/authority/file-type/CSV+ +
-https://data.norge.no/specification/dcat-ap-no/#Distribusjon-lisens[Lisens]: +http://publications.europa.eu/resource/authority/licence/CC_BY_4_0+ +
-https://data.norge.no/specification/dcat-ap-no/#Distribusjon-nedlastningslenke[Nedlastningslenke]: +https://example.org/lastned/eksempel-1.csv+ +
+_Eksempel på beskrivelse av en distribusjon hvor *uthevede egenskaper* er  obligatoriske:_
+
+<<distribusjon-tilgangsURL, *TilgangsURL*>>: +https://example.org/eksempeldata+ (_NB! dummy-URL som ikke virker_) +
+<<distribusjon-beskrivelse, Beskrivelse>>: Semikolonseparert nedlastbar CSV-fil uten BOM +
+<<distribusjon-format, Format>>: http://publications.europa.eu/resource/authority/file-type/CSV[CSV] +
+<<distribusjon-lisens, Lisens>>: http://publications.europa.eu/resource/authority/licence/CC_BY_4_0[CC BY 4.0] +
+<<distribusjon-nedlastningslenke, Nedlastningslenke>>: +https:/example.org/eksempeldata.csv+ (_NB! dummy-URL som ikke virker_)
 *****
 
-_Eksempel i RDF Turtle_ [yellow-background]#<kommer ...>#
+.Teknisk veiledning
+
+Eksemplet ovenfor i RDF Turtle:
+-----
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix : <https://example.org/> .
+
+<eksempelDistribusjon> a dcat:Distribution ; # distribusjon
+  ### obligatoriske egenskaper
+    dcat:accessURL <https://example.org/eksempeldata> ;
+  ### anbefalte egenskaper:
+    dct:description "Semikolonseparert nedlastbar CSV-fil uten BOM"@nb ;
+    dct:format <http://publications.europa.eu/resource/authority/file-type/CSV> ;
+    dct:license <http://publications.europa.eu/resource/authority/licence/CC_BY_4_0> ;
+  ### valgfrie egenskaper:
+    dcat:downloadURL <https://example.org/eksempeldata.csv> ;
+  .
+-----
 
 === Obligatoriske egenskaper i beskrivelse av en distribusjon [[distribusjon-obligatoriske-egenskaper]]
 Som minimum skal følgende tas med i beskrivelsen av en distribusjon:
@@ -33,15 +54,18 @@ Som minimum skal følgende tas med i beskrivelsen av en distribusjon:
 
 ==== Distribusjon - tilgangsURL [[distribusjon-tilgangsURL]]
 
-Nettadresse (URL) https://data.norge.no/specification/dcat-ap-no/#Distribusjon-tilgangsurl[Distribusjon: tilgangsURL] som gir tilgang til en distribusjon av datasettet. Kan også peke til en nettside som gir informasjon om hvordan en kan få tilgang til datasettet.
+Du skal oppgi nettadresse (URL) som gir tilgang til en distribusjon av datasettet. Kan også peke til en nettside som gir informasjon om hvordan en kan få tilgang til datasettet.
 
 * skal primært benyttes for å peke til en nettside med informasjon om hvordan man får tilgang til distribusjonen.
 * dersom en direktelenke til en fil er den eneste tilgjengelige URL-en, skal denne benyttes (denne dupliseres da fra Distribusjon: nedlastningslenke).
 
-_Eksempel i RDF Turtle_
+.Teknisk veiledning
+Dette tilsvarer https://data.norge.no/specification/dcat-ap-no/#Distribusjon-tilgangsurl[Distribusjon: tilgangsURL (dcat:accessService) i DCAT-AP-NO].
+
+Eksempel i RDF Turtle:
 ----
-<> a dcat:Dataset ;
-  dcat:distribution [ a dcat:Distribution ;
+<etDatasett> a dcat:Dataset ;
+  dcat:distribution [ a dcat:Distribution ; # distribusjon
     dcat:accessURL < https://example.org/eksempel-1 > ] .
 ----
 
@@ -55,44 +79,49 @@ Følgende opplysninger bør du ta med i beskrivelsen av en distribusjon:
 * Distribusjon - tilgjengelighet: hvor lenge det er planlagt å holde distribusjonen tilgjengelig.
 
 ==== Distribusjon - beskrivelse [[distribusjon-beskrivelse]]
-Kort fritekstbeskrivelse av distribusjonen [https://data.norge.no/specification/dcat-ap-no/#Distribusjon-beskrivelse[Distribusjon: beskrivelse]]. Denne kan gjentas for flere språk.
+For at andre skal kunne vite hva distribusjonen gir, bør du ta med en kort fritekstbeskrivelse av distribusjonen. Denne kan gjentas for flere språk.
 
 * Legge gjerne vekt på å beskrive det som skiller det ulike distribusjonene fra hverandre, selv om dette overlapper med informasjonen som er oppgitt i dedikerte egenskaper
 * Fritekstbeskrivelser av distribusjoner erstatter ikke behovet for strukturerte metadata (som for eksempel formater og oppdateringsfrekvens).
 * Alle fritekstbeskrivelser bør tilbys på engelsk i tillegg til norsk
 
-_Eksempler_
+.Eksempler
 
-Eksempler, to distribusjoner:
+* [*] “Semikolonseparert CSV uten Byte Order Mark (BOM)”
+* [*] “JSON-format via data.brreg.no. Oppdateres kontinuerlig”
 
-*  “Semikolonseparert CSV uten Byte Order Mark (BOM)”
-*  “JSON-format via data.brreg.no. Oppdateres kontinuerlig”
+.Teknisk veiledning
+Dette tilsvarer https://data.norge.no/specification/dcat-ap-no/#Distribusjon-beskrivelse[Distribusjon: beskrivelse (dct:description) i DCAT-AP-NO].
 
-_Eksempel i RDF Turtle_
+Eksempel i RDF Turtle:
 
 ----
-<> a dcat:Dataset ; # datasett
-  dcat:distribution [ a dcat:Distribution ; # distribusjon 1
-    dct:description "Semikolonseparert CSV uten Byte Order Mark (BOM)"@nb, "Semicolon-separated CSV without Byte Order Mark (BOM)."@en ] ,
-      [ a dcat:Distribution ; # distribusjon 2
-        dct:description "JSON-format via data.brreg.no. Oppdateres kontinuerlig."@nb , "JSON-format via data.brreg.no."@en ] .
+<etDatasett> a dcat:Dataset ; # datasett
+  dcat:distribution # to distribusjoner
+    [ a dcat:Distribution ; # distribusjon 1
+      dct:description "Semikolonseparert CSV uten Byte Order Mark (BOM)"@nb, "Semicolon-separated CSV without Byte Order Mark (BOM)."@en ;
+    ] ,
+    [ a dcat:Distribution ; # distribusjon 2
+      dct:description "JSON-format via data.brreg.no. Oppdateres kontinuerlig."@nb , "JSON-format via data.brreg.no. Continuously updated."@en ;
+    ] .
 ----
 
 ==== Distribusjon - format [[distribusjon-format]]
 
-En maskinlesbar verdi som entydig identifiserer hvilke(t) format(er) datasettet er gjort tilgjengelig som [https://data.norge.no/specification/dcat-ap-no/#Distribusjon-format[Distribusjon: format]].
-
-Hver distribusjon har format for utveksling som bør oppgis.
+Hver distribusjon har format for utveksling som bør oppgis, dvs. en maskinlesbar verdi som entydig identifiserer hvilke(t) format(er) datasettet er gjort tilgjengelig som.
 
 * Det skal angis filtype (f.eks. CSV, JSON) ved å benytte URI-er fra EUs kontrollerte liste over https://op.europa.eu/s/o8vN[File type].
-* Primært bør en opprette en distribusjon for hvert filformat.  Flere formater kan likvel benyttes ved hjelp av kommaseparerte verdier
-* Merk at det kun er mulig å oppgi en [https://data.norge.no/specification/dcat-ap-no/#Distribusjon-nedlastningslenke[Distribusjon: nedlastingslenke]] pr distribusjon. Nedlastingslenke kan dermed ikke brukes i kombinasjon med at en oppgir flere filformater for samme distribusjon
+* Primært bør en opprette en distribusjon for hvert filformat.  Flere formater kan likevel benyttes ved hjelp av kommaseparerte verdier
+* Merk at det kun er mulig å oppgi en [https://data.norge.no/specification/dcat-ap-no/#Distribusjon-nedlastningslenke[Distribusjon: nedlastingslenke]] pr. distribusjon. Nedlastingslenke kan dermed ikke brukes i kombinasjon med at en oppgir flere filformater for samme distribusjon
 
-_Eksempel i RDF Turtle_
+.Teknisk veiledning
+Dette tilsvarer https://data.norge.no/specification/dcat-ap-no/#Distribusjon-format[Distribusjon: format (dct:format) i DCAT-AP-NO].
+
+Eksempel i RDF Turtle:
 
 ----
-<> a dcat:Dataset ;
-  dcat:distribution [ a dcat:Distribution ;
+<etDatasett> a dcat:Dataset ; # datasett
+  dcat:distribution [ a dcat:Distribution ; # distribusjon
     dcat:accessURL <https://example.org/datasets/001> ;
     dct:description "Nedlastbar fil i CSV-format"@nb ;
     dct:format <http://publications.europa.eu/resource/authority/file-type/CSV> ;
@@ -102,7 +131,7 @@ _Eksempel i RDF Turtle_
 
 ==== Distribusjon - lisens [[distribusjon-lisens]]
 
-Referanse til lisensen som datasettet gjøres tilgjengelig under [https://data.norge.no/specification/dcat-ap-no/#Distribusjon-lisens[Distribusjon: lisens]]. Lisens er påkrevd for alle åpne offentlige data.
+Lisens er påkrevd for alle åpne offentlige data. Du bør ellers også oppgi lisens hvis datasettet er gjort tilgjengelig under gitt lisens.
 
 * EUs kontrollerte liste over https://op.europa.eu/s/o8vZ[Licence] skal brukes, dersom lisensen som benyttes finnes på listen.
 * For åpne data skal en av disse tre lisensene benyttes:
@@ -112,20 +141,21 @@ Referanse til lisensen som datasettet gjøres tilgjengelig under [https://data.n
 
 * Creative Commons-lisensene anbefales for distribusjoner (og datatjenester) med forventet internasjonal bruk.
 
-Se Digdirs  https://data.norge.no/guide/veileder-apne-data/[Veileder for tilgjengeliggjøring av åpne data] for mer informasjon om valg av åpne standardlisenser.
+Se https://data.norge.no/guide/veileder-apne-data/[Veileder for tilgjengeliggjøring av åpne data] for mer informasjon om valg av åpne standardlisenser.
 
-_Eksempel i RDF Turtle_
+.Teknisk veiledning
+
+Dette tilsvarer https://data.norge.no/specification/dcat-ap-no/#Distribusjon-lisens[Distribusjon: lisens (dct:license) i DCAT-AP-NO].
+
+Eksempel i RDF Turtle:
 
 ----
-<> a dcat:Dataset ;
-  dcat:distribution [ a dcat:Distribution ;
+<etDatasett> a dcat:Dataset ; # datasett
+  dcat:distribution [ a dcat:Distribution ; # distribusjon
     dct:license <http://publications.europa.eu/resource/authority/licence/CC_BY_4_0> ] .
 ----
 
 ==== Distribusjon - status [[distribusjon-status]]
-
-Angir distribusjonens modenhet [https://data.norge.no/specification/dcat-ap-no/#Distribusjon-status[Distribusjon: status]]. +
-
 
 Distribusjonens modenhet er viktig å vite for å kunne vurdere om/når en skal benytte seg distribusjonen. Den bør derfor oppgis.
 
@@ -135,16 +165,19 @@ Distribusjonens modenhet er viktig å vite for å kunne vurdere om/når en skal 
 ** Under utvikling: `+http://purl.org/adms/status/UnderDevelopment+`
 ** Trukket tilbake: `+http://purl.org/adms/status/Withdrawn+`
 
-_Eksempel i RDF Turtle_
+.Teknisk veiledning
+Dette tilsvarer https://data.norge.no/specification/dcat-ap-no/#Distribusjon-status[Distribusjon: status (adms:status) i DCAT-AP-NO].
+
+Eksempel i RDF Turtle:
 
 ----
-<> a dcat:Dataset ;
-  dcat:distribution [ a dcat:Distribution ;
+<etDatasett> a dcat:Dataset ; # datasett
+  dcat:distribution [ a dcat:Distribution ; # distribusjon
     adms:status <http://purl.org/adms/status/Completed> ] .
 ----
+
 ==== Distribusjon - tilgjengelighet [[distribusjon-tilgjengelighet]]
 
-Angir hvor lenge det er planlagt å holde distribusjonen tilgjengelig [https://data.norge.no/specification/dcat-ap-no/#Distribusjon-tilgjengelighet[Distribusjon: tilgjengelighet]].
 
 Det er viktig å vite hvor lenge distribusjonen er planlagt tilgjengelig for å kunne vurdere om en skal benytte seg distribusjonen. Den bør derfor oppgis.
 
@@ -154,18 +187,21 @@ Det er viktig å vite hvor lenge distribusjonen er planlagt tilgjengelig for å 
 ** Tilgjengelig: `+http://data.europa.eu/r5r/availability/available+`
 ** Stabil: `+http://data.europa.eu/r5r/availability/stable+`
 
-_Eksempel i RDF Turtle_
+.Teknisk veiledning
+Dette tilsvarer https://data.norge.no/specification/dcat-ap-no/#Distribusjon-tilgjengelighet[Distribusjon: tilgjengelighet (dcatap:availability) i DCAT-AP-NO].
+
+Eksempel i RDF Turtle:
 
 ----
-<> a dcat:Dataset ;
-  dcat:distribution [ a dcat:Distribution ;
+<etDatasett> a dcat:Dataset ; # datasett
+  dcat:distribution [ a dcat:Distribution ; # distribusjon
     dcatap:availability <http://data.europa.eu/r5r/availability/stable> ] .
 ----
 
 
 === Valgfrie egenskaper i beskrivelse av en distribusjon [[distribusjon-valgfrie-egenskaper]]
 
-I tillegg til obligatoriske (skal brukes) og anbefalte (bør brukes) felter, er det en del felter som er valgfrie (kan brukes) i beskrivelse av en distribusjon:
+I tillegg til obligatoriske (skal brukes) og anbefalte (bør brukes) egenskaper, er det en del egenskaper som er valgfrie (kan brukes) i beskrivelse av en distribusjon:
 
 * Distribusjon - dokumentasjon: en side eller et dokument som beskriver distribusjonen.
 * Distribusjon - endringsdato: dato for siste endring av distribusjonen.
@@ -184,137 +220,163 @@ I tillegg til obligatoriske (skal brukes) og anbefalte (bør brukes) felter, er 
 * Distribusjon - tilgangstjeneste: datatjeneste som gir tilgang til distribusjonen.
 * Distribusjon - tittel: navn på distribusjonen.
 * Distribusjon - utgivelsesdato: dato for formell utgivelse/publisering av distribusjonen.
-Ikke alle valgfrie felter er beskrevet i etterfølgende avsnitt. Se under <<Hensikt og avgrensning>> for hvordan du kan melde inn behov for beskrivelser.
+
+Ikke alle valgfrie egenskaper er beskrevet i etterfølgende avsnitt. Se under <<hensikt-og-avgrensing, Hensikt og avgrensning>> for hvordan du kan melde inn behov for beskrivelser.
 
 ==== Distribusjon - dokumentasjon [[distribusjon-dokumentasjon]]
 
-Referanse til en side eller et dokument som beskriver og dokumenterer innhold og struktur som er spesifikk for distribusjonen [https://data.norge.no/specification/dcat-ap-no/#Distribusjon-dokumentasjon[Distribusjon: dokumentasjon]].
+Du kan bruke denne egenskap til å oppgi referanse til en side eller et dokument som beskriver og dokumenterer innhold og struktur som er spesifikk for distribusjonen.
 
-_Eksempel i RDF Turtle_
+.Teknisk veiledning
+Dette tilsvarer https://data.norge.no/specification/dcat-ap-no/#Distribusjon-dokumentasjon[Distribusjon: dokumentasjon (foaf:page) i DCAT-AP-NO].
+
+Eksempel i RDF Turtle:
 
 ----
-<> a dcat:Dataset ;
-  dcat:distribution [ a dcat:Distribution ;
+<etDatasett> a dcat:Dataset ; # datasett
+  dcat:distribution [ a dcat:Distribution ; # distribusjon
     foaf:page <https://confluence.brreg.no/display/DBNPUB/API> ] .
 ----
 
 ==== Distribusjon - endringsdato [[distribusjon-endringsdato]]
 
-Dato/tid sist distribusjonen sist ble endret [https://data.norge.no/specification/dcat-ap-no/#Distribusjon-endringsdato[Distribusjon: endringsdato]].
+Dato/tid sist distribusjonen sist ble endret.
 
 
-* Angis som dato (+xsd:date+) eller tidspunkt (+xsd:dateTime+).
+.Eksempler
 
-_Eksempler_
+*   01.01.2017
 
-*   Angivelse av 01.01.2017 -
+.Teknisk veiledning
+Dette tilsvarer  https://data.norge.no/specification/dcat-ap-no/#Distribusjon-endringsdato[Distribusjon: endringsdato (dct:modified) i DCAT-AP-NO].
 
-_eksempel i RDF Turtle_ :
+* Angis som dato (`xsd:date`) eller tidspunkt (`xsd:dateTime`).
+
+Eksempel i RDF Turtle:
 ----
-<> a dcat:Dataset ;
-  dcat:distribution [ a dcat:Distribution ;
+<etDatasett> a dcat:Dataset ; # Datasett
+  dcat:distribution [ a dcat:Distribution ; # distribusjon
     dct:modified "2017-01-01"^^xsd:date ] .
 ----
+
 ==== Distribusjon - filstørrelse [[distribusjon-filstørrelse]]
 
-_<ikke beskrevet, tilsvarer [https://data.norge.no/specification/dcat-ap-no/#Distribusjon-filst%C3%B8rrelse[Distribusjon: filstørrelse]]>_
+_<ikke beskrevet, tilsvarer https://data.norge.no/specification/dcat-ap-no/#Distribusjon-filst%C3%B8rrelse[Distribusjon: filstørrelse (dcat:byteSize) i DCAT-AP-NO]>_
 
 ==== Distribusjon - i samsvar med [[distribusjon-iSamsvarMed]]
 
-Benyttes for å angi et etablert skjema som distribusjonen er i samsvar med [https://data.norge.no/specification/dcat-ap-no/#Distribusjon-i-samsvar-med[Distribusjon: i samsvar med]], for eksempel et XSD-dokument.
+Benyttes for å angi et etablert skjema som distribusjonen er i samsvar med, for eksempel et XSD-dokument.
 
-_Eksempel i RDF Turtle_
+.Teknisk veiledning
+Dette tilsvarer https://data.norge.no/specification/dcat-ap-no/#Distribusjon-i-samsvar-med[Distribusjon: i samsvar med (dct:conformsTo) i DCAT-AP-NO].
+
+Eksempel i RDF Turtle:
 
 ----
-<> a dcat:Dataset ;
-  dcat:distribution [ a dcat:Distribution ;
+<etDatasett> a dcat:Dataset ; # datasett
+  dcat:distribution [ a dcat:Distribution ; # distribusjon
     dct:conformsTo <https://data.norge.no/informationmodels/c23f625f-a654-3462-805e-74408cb5367a> ] .
 ----
 
 ==== Distribusjon - komprimeringsformat [[distribusjon-komprimeringsformat]]
 
-_<ikke beskrevet, tilsvarer [https://data.norge.no/specification/dcat-ap-no/#Distribusjon-komprimeringsformat[Distribusjon: komprimeringsformat]]>_
+_<ikke beskrevet, tilsvarer https://data.norge.no/specification/dcat-ap-no/#Distribusjon-komprimeringsformat[Distribusjon: komprimeringsformat (dcat:compressFormat) i DCAT-AP-NO]>_
 
 ==== Distribusjon - medietype [[distribusjon-medietype]]
 
 Angivelse av medietypen for distribusjonen slik den er definert i IANAs register over medietyper.
 
 * Angivelse av Distribusjon: medietype er et valgfritt alternativ til å benytte Distribusjon: format. Kun formater som inngår i IANAs register er lovlige verdier.
-* Vi fraråder å angi format både ved hjelp av [https://data.norge.no/specification/dcat-ap-no/#Distribusjon-medietype[Distribusjon: medietype]] og [https://data.norge.no/specification/dcat-ap-no/#Distribusjon-format[Distribusjon: format]] for en og samme distribusjon
-* Vi fraråder å angi flere medietyper for en og samme distribusjon ettersom du kun kan oppgi én nedlastningslenke pr distribusjon. Opprett heller nye distribusjoner for hvert format/medietype og oppgi nedlastingslenke for hver distribusjon.
-* Benytt fullstendige https-identifikatorer: `+https://www.iana.org/assignments/media-types/text/csv+`, ikke `text/csv`)
+* Vi fraråder å angi format både ved hjelp av <<distribusjon-medietype, Distribusjon - medietype>> og <<distribusjon-format, Distribusjon - format>> for en og samme distribusjon.
+* Vi fraråder å angi flere medietyper for en og samme distribusjon ettersom du kun kan oppgi én nedlastningslenke pr. distribusjon. Opprett heller nye distribusjoner for hvert format/medietype og oppgi nedlastingslenke for hver distribusjon.
+
+.Teknisk veiledning
+
+* Benytt fullstendige https-identifikatorer, f.eks. `+https://www.iana.org/assignments/media-types/text/csv+`, og ikke `text/csv`.
 
 
 ==== Distribusjon - nedlastningslenke [[distribusjon-nedlastningslenke]]
 
-Direktelenke til en nedlastbar fil i et gitt format [https://data.norge.no/specification/dcat-ap-no/#Distribusjon-nedlastningslenke[Distribusjon: nedlastningslenke]].
+Nedlastingslenken er en type tilgangs-url som peker direkte til en fil som lastes ned lokalt.
 
-Nedlastingslenken er en type tilgangs-url som peker direkte til en fil som lastes ned lokalt. Dersom nedlastningslenken er den eneste tilgjengelige lenken for distribusjonen av datasettet, skal denne dupliseres i det obligatoriske feltet <<Dataset - tilgangsURL>>.
+* Dersom nedlastningslenken er den eneste tilgjengelige lenken for distribusjonen av datasettet, _skal_ denne dupliseres i det obligatoriske feltet <<distribusjon-tilgangsURL, Distribusjon - tilgangsURL>>.
 
-_Eksempel i RDF Turtle_
+.Teknisk veiledning
+Dette tilsvarer https://data.norge.no/specification/dcat-ap-no/#Distribusjon-nedlastningslenke[Distribusjon: nedlastningslenke (dcat:downloadURL) i DCAT-AP-NO].
+
+Eksempel i RDF Turtle:
 
 ----
-<> a dcat:Dataset ;
-  dcat:distribution [ a dcat:Distribution ;
+<etDatasett> a dcat:Dataset ; # datasett
+  dcat:distribution [ a dcat:Distribution ; # distribusjon
     dcat:downloadURL < https://data.ssb.no/api/klass/v1//versions/683.csv> ] .
 ----
 
 ==== Distribusjon - pakkeformat [[distribusjon-pakkeformat]]
 
-_<ikke beskrevet, tilsvarer [https://data.norge.no/specification/dcat-ap-no/#Distribusjon-pakkeformat[Distribusjon: pakkeformat]]>_
+_<ikke beskrevet, tilsvarer https://data.norge.no/specification/dcat-ap-no/#Distribusjon-pakkeformat[Distribusjon: pakkeformat (dcat:packageFormat) i DCAT-AP-NO]>_
 
 ==== Distribusjon - policy [[distribusjon-policy]]
-_<ikke beskrevet, tilsvarer [https://data.norge.no/specification/dcat-ap-no/#Distribusjon-policy[Distribusjon: policy]]>_
+_<ikke beskrevet, tilsvarer https://data.norge.no/specification/dcat-ap-no/#Distribusjon-policy[Distribusjon: policy (odrl:hasPolicy) i DCAT-AP-NO]>_
 
 ==== Distribusjon - rettigheter [[distribusjon-rettigheter]]
-_<ikke beskrevet, tilsvarer [https://data.norge.no/specification/dcat-ap-no/#Distribusjon-rettigheter[Distribusjon: rettigheter]]>_
+_<ikke beskrevet, tilsvarer https://data.norge.no/specification/dcat-ap-no/#Distribusjon-rettigheter[Distribusjon: rettigheter  (dct:rights) i DCAT-AP-NO]>_
 
 ==== Distribusjon - romlig oppløsning [[distribusjon-romligOppløsning]]
-_<ikke beskrevet, tilsvarer [https://data.norge.no/specification/dcat-ap-no/#Distribusjon-romlig-oppl%C3%B8sning[Distribusjon: romlig oppløsning]]>_
+_<ikke beskrevet, tilsvarer https://data.norge.no/specification/dcat-ap-no/#Distribusjon-romlig-oppl%C3%B8sning[Distribusjon: romlig oppløsning (dcat:spatialResolutionInMeters) i DCAT-AP-NO]>_
 
 ==== Distribusjon - sjekksum [[distribusjon-sjekksum]]
 
-_<ikke beskrevet, tilsvarer [https://data.norge.no/specification/dcat-ap-no/#Distribusjon-sjekksum[Distribusjon: sjekksum]]>_
+_<ikke beskrevet, tilsvarer https://data.norge.no/specification/dcat-ap-no/#Distribusjon-sjekksum[Distribusjon: sjekksum (spdx:checksum) i DCAT-AP-NO]>_
 
 ==== Distribusjon - språk [[distribusjon-språk]]
 
-_<ikke beskrevet, tilsvarer [https://data.norge.no/specification/dcat-ap-no/#Distribusjon-spr%C3%A5k[Distribusjon: språk]]>_
+_<ikke beskrevet, tilsvarer https://data.norge.no/specification/dcat-ap-no/#Distribusjon-spr%C3%A5k[Distribusjon: språk (dct:language) i DCAT-AP-NO]>_
 
-Se tilsvarende eksempel under <<Datasett språk>> i denne veilederen for hvordan språk angis i RDF Turtle.
+.Teknisk veiledning
+Se tilsvarende eksempel under <<datasett-språk, Datasett språk>> i denne veilederen for hvordan språk angis i RDF Turtle.
 
 ==== Distribusjon - tidsoppløsning [[distribusjon-tidsoppløsning]]
-_<ikke beskrevet, tilsvarer [https://data.norge.no/specification/dcat-ap-no/#_distribusjon_tidsoppl%C3%B8sning_dcattemporalresolution[Distribusjon: tidsoppløsning]]>_
+_<ikke beskrevet, tilsvarer https://data.norge.no/specification/dcat-ap-no/#_distribusjon_tidsoppl%C3%B8sning_dcattemporalresolution[Distribusjon: tidsoppløsning (dcat:temporalResolution) i DCAT-AP-NO]>_
 
 ==== Distribusjon - tilgangstjeneste [[distribusjon-tilgangstjeneste]]
 
-Angir datatjenesten som gir tilgang til distribusjonen [https://data.norge.no/specification/dcat-ap-no/#Distribusjon-tilganstjeneste[Distribusjon: tilgangstjeneste]].
+Angir datatjenesten som gir tilgang til distribusjonen.
 
-_Eksempel i RDF Turtle_
+.Teknisk veiledning
+Tilsvarer https://data.norge.no/specification/dcat-ap-no/#Distribusjon-tilganstjeneste[Distribusjon: tilgangstjeneste (dcat:accessService) i DCAT-AP-NO].
+
+Eksempel i RDF Turtle:
 ----
-<> a dcat:Dataset ; # datasett
+<etDatasett> a dcat:Dataset ; # datasett
   dcat:distribution [ a dcat:Distribution ; # distribusjon
     dcat:accessService <https://data.brreg.no/enhetsregisteret/api> ] . # datatjeneste/API
 ----
 
 ==== Distribusjon - tittel [[distribusjon-tittel]]
-_<ikke beskrevet, tilsvarer [https://data.norge.no/specification/dcat-ap-no/#Distribusjon-tittel[Distribusjon: tittel]]>_
+_<ikke beskrevet, tilsvarer https://data.norge.no/specification/dcat-ap-no/#Distribusjon-tittel[Distribusjon: tittel (dct:title) i DCAT-AP-NO]>_
 
-Se tilsvarende eksempel under <<Datasett - tittel>> i denne veilederen for hvordan tittel angis i RDF Turtle.
+.Teknisk veiledning
+Se tilsvarende eksempel under <<datasett-tittel, Datasett - tittel>> i denne veilederen for hvordan tittel angis i RDF Turtle.
 
 ==== Distribusjon - utgivelsesdato [[distribusjon-utgivelsesdato]]
 
-Dato/tid når distribusjonen først ble publisert i tilknytning til et datasett [https://data.norge.no/specification/dcat-ap-no/#Distribusjon-utgivelsesdato[Distribusjon: utgivelsesdato]].
+Dato/tid når distribusjonen først ble publisert i tilknytning til et datasett.
 
-* Oppgis som dato (+xsd:date+) eller tidspunkt (+xsd:dateTime+).
-
-_Eksempler_
+.Eksempler
 
 *  01.01.2017
 
-_Eksempel i RDF Turtle_
+
+.Teknisk veiledning
+Dette tilsvarer https://data.norge.no/specification/dcat-ap-no/#Distribusjon-utgivelsesdato[Distribusjon: utgivelsesdato (dct:issued) i DCAT-AP-NO].
+
+* Oppgis som dato (`xsd:date`) eller tidspunkt (`xsd:dateTime`).
+
+Eksempel i RDF Turtle:
 
 ----
-<> a dcat:Dataset ;
-  dcat:distribution [ a dcat:Distribution ;
+<etDatasett> a dcat:Dataset ; # datasett
+  dcat:distribution [ a dcat:Distribution ; # distribusjon
     dct:issued "2017-01-01"^xsd:date ] .
 ----
