@@ -8,7 +8,7 @@ For at andre lettere skal kunne forstå dine beskrivelser, er det visse spillere
 
 Dette kapittelet forklarer hvordan en katalog beskrives i henhold til kravene i https://data.norge.no/specification/dcat-ap-no/[DCAT-AP-NO v.2], dog uten at du må kunne DCAT-AP-NO.
 
-For deg som skal utvikle/tilpasse verktøystøtte for katalogbeskrivelse i henhold til DCAT-AP-NO, inneholder veilederen også en teknisk veiledning bakerst i hvert avsnitt. NB! Bortsett fra det første eksemplet, er ikke alle eksempler i RDF Turle komplette og de kan mangle bl.a. verdier for obligatoriske egenskaper.
+For deg som skal utvikle/tilpasse verktøystøtte for katalogbeskrivelse i henhold til DCAT-AP-NO, inneholder veilederen også en teknisk veiledning bakerst i hvert avsnitt. NB! Bortsett fra det første eksemplet, er ikke alle eksempler i RDF Turtle komplette og de kan mangle bl.a. verdier for obligatoriske egenskaper.
 
 
 
