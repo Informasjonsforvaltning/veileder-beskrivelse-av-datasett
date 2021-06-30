@@ -10,7 +10,7 @@ image::images/Datasett-begrep-distribusjon-datatjeneste-infomod.png[]
 
 Figuren over viser sammenhengen mellom datasett, datatjeneste (aka API), begrep og informasjonsmodell:
 
-* Dataene i et datasett (`dcat:Dataset`) kan reprsentere (eller forklares med) et eller flere begreper (`skos:Concept`). Du knytter et begrep (`skos:Concept`) til et datasett (`dcat:Dataset`) ved å bruke egenskapen <<datasett-begrep, Datasett - begrep>> (`dct:subject`) (1).
+* Dataene i et datasett (`dcat:Dataset`) kan representere (eller forklares med) et eller flere begreper (`skos:Concept`). Du knytter et begrep (`skos:Concept`) til et datasett (`dcat:Dataset`) ved å bruke egenskapen <<datasett-begrep, Datasett - begrep>> (`dct:subject`) (1).
 
 * Et datasett (`dcat:Dataset`) kan distribueres gjennom en eller flere distribusjoner (`dcat:Distribution`). Du knytter en distribusjon (`dcat:Distribution`) til et datasett (`dcat:Dataset`) ved å bruke egenskapen <<datasett-datasettdistribusjon, Datasett - datasettdistribusjon>> (`dcat:distribution`) (2).
 
@@ -22,7 +22,7 @@ Figuren over viser sammenhengen mellom datasett, datatjeneste (aka API), begrep 
 
 ** Se https://data.norge.no/specification/modelldcat-ap-no/[Spesifikasjon for beskrivelse av informasjonsmodeller (ModellDCAT-AP-NO)] for hvordan en informasjonsmodell og modellelementer i en informasjonsmodell beskrives.
 
-* En datatjeneste (`dcat:DataService`) kan brukes til å gi tilgang til et eller flere datasett (`dcat:Dataset`). Du knytter et datasett (`dcat:Dataset`) til en datatjeneste (`dcat:DataService`) ved å bruke egenskapen https://data.norge.no/specification/dcat-ap-no/#Datatjeneste-tilgjengeliggjor-datasett[Datatjeneste: tilgjengeliggjør datasett] (`dcat:servesDataset`) (7).
+* En datatjeneste (`dcat:DataService`) kan brukes til å gi tilgang til et eller flere datasett (`dcat:Dataset`). Du knytter et datasett (`dcat:Dataset`) til en datatjeneste (`dcat:DataService`) ved å bruke egenskapen <<datatjeneste-tilgjengeliggjørDatasett, Datatjeneste: tilgjengeliggjør datasett>> (`dcat:servesDataset`) (7).
 
 === Beskrivelse av kvalitet [[beskrivelse-av-kvalitet]]
 
