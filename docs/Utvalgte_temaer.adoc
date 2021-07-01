@@ -251,6 +251,6 @@ For å ha minst mulig avvik fra EU-standarden som DCAT-AP-NO er basert på, har 
 
 Eksempel i RDF Turtle:
 ------
-<https://data.direks.eks/dataset/123> a dcat:Dataset ;
-   dct:identifier "https://data.direks.eks/dataset/123"^^xsd:anyURI .
+<https://example.org/dataset/123> a dcat:Dataset ;
+   dct:identifier "https://example.org/dataset/123"^^xsd:anyURI .
 ------
