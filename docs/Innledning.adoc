@@ -6,7 +6,7 @@ Denne veilederen skal bidra til bedre beskrivelser av datasett, datatjenester og
 
 Denne veilederen tar utgangspunktet i at din virksomhet har kartlagt hvilke data som skal beskrives. Veilederen skal gi en hjelp i å beskrive datasett og datatjenester i henhold til https://data.norge.no/specification/dcat-ap-no/[Standard for beskrivelse av datasett, datatjenester og datakataloger (DCAT-AP-NO) v.2], slik at beskrivelsene lettere kan forstås og brukes av andre.
 
-Det er ikke et mål for denne veilederen å beskrive alle klasser og egenskaper i DCAT-AP-NO. Gi oss beskjed hvis det er ting som du savner veiledning av, fortrinnsvis meldes inn på https://github.com/Informasjonsforvaltning/veileder-beskrivelse-av-datasett/issues[Github Issues] og konkrete eksempler på data.
+Det er ikke et mål for denne veilederen å beskrive alle klasser og egenskaper i DCAT-AP-NO. Gi oss beskjed hvis det er ting som du savner veiledning av, fortrinnsvis meldes inn på https://github.com/Informasjonsforvaltning/veileder-beskrivelse-av-datasett/issues[Github Issues] og med konkrete eksempler på data.
 
 Denne veilederen er ikke en teknisk og normativ spesifikasjon. For normative beskrivelser av alle klasser og egenskaper i DCAT-AP-NO, se https://data.norge.no/specification/dcat-ap-no/[DCAT-AP-NO] og https://github.com/Informasjonsforvaltning/dcat-ap-no/tree/develop/shacl[valideringsreglene (shacl)]. Ikke alle eksempler i denne veilederen er komplette, heller ikke med tanke på obligatoriske egenskaper.
 
