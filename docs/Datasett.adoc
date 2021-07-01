@@ -83,7 +83,7 @@ Som et minimum skal følgende tas med i en datasettbeskrivelse:
 
 // .Anbefalinger
 
-For at andre skal kunne vite hva slags datasett du har, skal du oppgi en kort og presis beskrivelse av datasettet .
+For at andre skal kunne vite hva slags datasett du har, skal du oppgi en kort og presis beskrivelse av datasettet.
 
  * Beskrivelsen skal være kortfattet slik at lister over datasett forståes ved å lese de første linjene.
  * Hensikten med datasettet bør komme fram (f.eks. “Løsøreregisteret inneholder tinglyste flyttbare eiendeler”).
@@ -136,7 +136,7 @@ For å kunne sortere datasettet inn under gitte kategorier er det nødvendig å 
 * [*] *Helse* (`HEAL` fra EU-listen)
 * [*] *Helsestasjon* (`helsestasjon` fra LOS)
 
-.Tekinisk veiledning
+.Teknisk veiledning
 Dette tilsvarer https://data.norge.no/specification/dcat-ap-no/#Datasett-tema[Datasett: tema (`dcat:theme`) i DCAT-AP-NO].
 
 Eksempel i RDF Turtle:
@@ -677,7 +677,7 @@ Brukes til å referere til et datasett som erstatter dette datasettet.
 
  * F.eks. kan et kodeverk bli erstattet av en nyere utgave.
 
-.Teknis veiledning
+.Teknisk veiledning
 
 Dette tilsvarer https://data.norge.no/specification/dcat-ap-no/#Datasett-erstattesAv[Datasett: erstattes av (`dct:isReplacedBy`) i DCAT-AP-NO].
 
