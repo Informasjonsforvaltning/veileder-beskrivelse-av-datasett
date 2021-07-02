@@ -692,7 +692,7 @@ Dersom du finner feil eller mangler i dokumentet, ber vi om at dette meldes inn 
 <p><strong>Status</strong>: Gjeldende<br>
 <strong>Versjon</strong>: 2.0<br>
 <strong>Publisert</strong>: 2019-06-30<br>
-<strong>Oppdatert</strong>: 2021-07-01<br>
+<strong>Oppdatert</strong>: 2021-07-02<br>
 <strong>Gjeldende versjon</strong>: <a href="https://data.norge.no/guide/veileder-beskrivelse-av-datasett/" class="bare">https://data.norge.no/guide/veileder-beskrivelse-av-datasett/</a><br>
 <strong>Forrige versjon</strong>: <a href="https://data.norge.no/guide/veileder-beskrivelse-av-datasett/v1" class="bare">https://data.norge.no/guide/veileder-beskrivelse-av-datasett/v1</a><br>
 <strong>Redaktørens utkast</strong>: <a href="https://informasjonsforvaltning.github.io/veileder-beskrivelse-av-datasett/" class="bare">https://informasjonsforvaltning.github.io/veileder-beskrivelse-av-datasett/</a></p>
@@ -1146,7 +1146,7 @@ Hva som inngår i datasettet er godt beskrevet, men unntakene her er utelatt.</p
 <p>Organisasjonens navn trenger ikke å være med, med mindre det er spesielt relevant for datasettets innholdsmessige utvalg.</p>
 </li>
 <li>
-<p>Tittelen skal gjenspeile avgrensninger dersom datasettet er avgrenset i populasjonen -  populasjonen er avgrenset av geografi eller formål, f.eks. “&#8230;&#8203; med støtte i Lånekassen”, “&#8230;&#8203; i Oslo”, “ Folketellingen av 1910”. Der populasjonen ikke er avgrenset angis IKKE dette (f.eks. valgkrets)</p>
+<p>Tittelen skal gjenspeile avgrensninger dersom datasettet er avgrenset i populasjonen -  populasjonen er avgrenset av geografi eller formål, f.eks. “&#8230;&#8203; med støtte i Lånekassen”, “&#8230;&#8203; i Oslo”, “Folketellingen av 1910”. Der populasjonen ikke er avgrenset angis IKKE dette (f.eks. valgkrets)</p>
 </li>
 <li>
 <p>Forkortelser skal skrives helt ut (DTM10 erstattes av “Digital Terrengmodell 10m oppløsning (DTM10)” . Bruk eventuelt <a href="#datasett-emneord">Datasett - emneord</a> til forkortelser. Målgruppen er personer som ønsker å finne relevante datasett raskt, unngå derfor interne navn eller forkortelser i tittel. I det offentlige opererer man ofte med flere titler eller navn på ting. Et datasett kan ha et offisielt navn, et kortnavn og en forkortelse. For eksempel: Datasettet “Administrative enheter i Norge” har ABAS som forkortelse. Det er sjelden man bruker den fulle tittelen, så for å gjøre et datasett mest mulig søkbart er det behov for at man kan registrere kortnavn, forkortelser og/eller alternative titler.</p>
@@ -1632,7 +1632,7 @@ Hva som inngår i datasettet er godt beskrevet, men unntakene her er utelatt.</p
 <p>Ved ett årstall på begynnelse, men ikke angitt slutt, tolkes det at datasettet har data også i en ubestemt fremtid og tilsvarende om startdatoen mangler antas det at det er ikke angitt om datasettet har en start.</p>
 </li>
 <li>
-<p>Dersom datasettet er en av flere i en tidsserie anbefales det at det lages et overordnet datasett for tidsserien uten distribusjoner som peker på hver datasett.</p>
+<p>Dersom datasettet er en av flere i en tidsserie anbefales det at det lages et overordnet datasett for tidsserien uten distribusjoner som peker på hvert datasett.</p>
 </li>
 <li>
 <p>Det benyttes tidsstempel for registreringen av første og siste dataelement i datasettet.</p>
@@ -2006,7 +2006,7 @@ Hva som inngår i datasettet er godt beskrevet, men unntakene her er utelatt.</p
 </div>
 <div class="paragraph">
 <div class="title">Teknisk veiledning</div>
-<p>Tilsvarer <a href="https://data.norge.no/specification/dcat-ap-no/#Datasett-erVersjonAv">Datasett: er versjon av (<code>dct:isVersionOf</code>) i DCAT-AP-NO</a>.</p>
+<p>Dette tilsvarer <a href="https://data.norge.no/specification/dcat-ap-no/#Datasett-erVersjonAv">Datasett: er versjon av (<code>dct:isVersionOf</code>) i DCAT-AP-NO</a>.</p>
 </div>
 <div class="paragraph">
 <p>Eksempel i RDF Turtle:</p>
@@ -2105,7 +2105,8 @@ Hva som inngår i datasettet er godt beskrevet, men unntakene her er utelatt.</p
 <p>Se under <a href="#beskrivelse-av-kvalitet">Beskrivelse av kvalitet</a>.</p>
 </div>
 <div class="paragraph">
-<p><em>&lt;tilsvarer <a href="https://data.norge.no/specification/dcat-ap-no/#Datasett-harKvalitetsnote">Datasett: har kvalitetsnote (<code>dqv:hasQualityAnnotation</code>) i DCAT-AP-NO</a>&gt;</em></p>
+<div class="title">Teknisk veiledning</div>
+<p>Dette tilsvarer <a href="https://data.norge.no/specification/dcat-ap-no/#Datasett-harKvalitetsnote">Datasett: har kvalitetsnote (<code>dqv:hasQualityAnnotation</code>) i DCAT-AP-NO</a>.</p>
 </div>
 </div>
 <div class="sect3">
@@ -2114,7 +2115,8 @@ Hva som inngår i datasettet er godt beskrevet, men unntakene her er utelatt.</p
 <p>Se under <a href="#beskrivelse-av-kvalitet">Beskrivelse av kvalitet</a>.</p>
 </div>
 <div class="paragraph">
-<p><em>&lt;tilsvarer <a href="https://data.norge.no/specification/dcat-ap-no/#Datasett-harM%C3%A5leresultat">Datasett: har måleresultat (<code>dqv:hasQualityMeasurement</code>) i DCAT-AP-NO</a>&gt;</em></p>
+<div class="title">Teknisk veiledning</div>
+<p>Dette tilsvarer <a href="https://data.norge.no/specification/dcat-ap-no/#Datasett-harM%C3%A5leresultat">Datasett: har måleresultat (<code>dqv:hasQualityMeasurement</code>) i DCAT-AP-NO</a>.</p>
 </div>
 </div>
 <div class="sect3">
@@ -3094,7 +3096,7 @@ Hva som inngår i datasettet er godt beskrevet, men unntakene her er utelatt.</p
 </div>
 <div class="paragraph">
 <div class="title">Teknisk veiledning</div>
-<p>Tilsvarer <a href="https://data.norge.no/specification/dcat-ap-no/#Distribusjon-tilganstjeneste">Distribusjon: tilgangstjeneste (dcat:accessService) i DCAT-AP-NO</a>.</p>
+<p>Dette tilsvarer <a href="https://data.norge.no/specification/dcat-ap-no/#Distribusjon-tilganstjeneste">Distribusjon: tilgangstjeneste (dcat:accessService) i DCAT-AP-NO</a>.</p>
 </div>
 <div class="paragraph">
 <p>Eksempel i RDF Turtle:</p>
@@ -3258,7 +3260,7 @@ Hva som inngår i datasettet er godt beskrevet, men unntakene her er utelatt.</p
 </div>
 <div class="paragraph">
 <div class="title">Teknisk veiledning</div>
-<p>Dette tilsvarer <a href="https://data.norge.no/specification/dcat-ap-no/#Datatjeneste-identifikator">Datatjeneste: identifikator (dcat:identifier) i DCAT-AP-NO</a>.</p>
+<p>Dette tilsvarer <a href="https://data.norge.no/specification/dcat-ap-no/#Datatjeneste-identifikator">Datatjeneste: identifikator (dct:identifier) i DCAT-AP-NO</a>.</p>
 </div>
 </div>
 <div class="sect3">
@@ -3318,7 +3320,7 @@ Hva som inngår i datasettet er godt beskrevet, men unntakene her er utelatt.</p
 <p>Du bør oppgi emneord (eller tag) som beskriver datatjenesten.</p>
 </div>
 <div class="paragraph">
-<p>Se beskrivelsen av tilsvarende egenskap i Datasett, <a href="#datasett-emneord">Datatsett - emneord</a>.</p>
+<p>Se beskrivelsen av tilsvarende egenskap i Datasett, <a href="#datasett-emneord">Datasett - emneord</a>.</p>
 </div>
 <div class="paragraph">
 <div class="title">Teknisk veiledning</div>
@@ -4297,7 +4299,7 @@ Hva som inngår i datasettet er godt beskrevet, men unntakene her er utelatt.</p
 <p>Iht. DQV-AP-NO skal et måleresultat (<code>dqv:QualityMeasurement</code>) videre knyttes til ett og bare ett kvalitetsmål (<code>dqv:Metric</code>). Det er predefinert et sett med kvalitetsmål og disse bør brukes når relevant. Predefinerte kvalitetsmål finnes på <a href="https://data.norge.no/vocabulary/dqvno" class="bare">https://data.norge.no/vocabulary/dqvno</a> (i RDF Turtle).</p>
 </div>
 <div class="paragraph">
-<p>Videre, iht. DQV-AP-NO skal et kvalitetsmål (<code>dqv:Metric</code>) knyttes til én og bare én  kvalitetsdeldimensjon (<code>dvqno:SubDimension</code>) som igjen skal knyttes til én og bare én kvalitetsdimensjon (<code>dqv:Dimension</code>). Ved å bruke predefinerte kvalitetsmål trenger du ikke å oppgi kvalitetsdeldimesjon og kvalitetsdimensjon ettersom de predefinerte kvalitetsmålene er allerede ferdig tilknyttet kvalitetsdeldimesjon og kvalitetsdimensjon.</p>
+<p>Videre, iht. DQV-AP-NO skal et kvalitetsmål (<code>dqv:Metric</code>) knyttes til én og bare én  kvalitetsdeldimensjon (<code>dvqno:SubDimension</code>) som igjen skal knyttes til én og bare én kvalitetsdimensjon (<code>dqv:Dimension</code>). Ved å bruke predefinerte kvalitetsmål trenger du ikke å oppgi kvalitetsdeldimensjon og kvalitetsdimensjon ettersom de predefinerte kvalitetsmålene er allerede ferdig tilknyttet kvalitetsdeldimensjon og kvalitetsdimensjon.</p>
 </div>
 <div class="paragraph">
 <p>Eksempler på predefinerte kvalitetsmål, i kvalitetsdeldimensjonen "underdekning" (<code>dvqno:undercoverage</code>) som er i kvalitetsdimensjonen "fullstendighet" (<code>dqvno:completeness</code>):</p>
@@ -4379,7 +4381,7 @@ Hva som inngår i datasettet er godt beskrevet, men unntakene her er utelatt.</p
     oa:hasBody [ a oa:TextualBody ; # selve teksten
       dct:format &lt;http://publications.europa.eu/resource/authority/file-type/TXT&gt; ; # format
       dct:language &lt;http://publications.europa.eu/resource/authority/language/NOB&gt; ; # språk
-      rdfs:value "Det tar i gjennomsnitt 24 dager fra en bygning står ferdig eller er revet til den er innlemmet i eller tatt ut fra datasettet." ;  # teksten
+      rdfs:value "Det tar i gjennomsnitt 24 dager fra en bygning står ferdig eller er revet til den er innlemmet i eller tatt ut fra datasettet."@nb ;  # teksten
       ] ;
     ] .</pre>
 </div>
@@ -4414,7 +4416,7 @@ Hva som inngår i datasettet er godt beskrevet, men unntakene her er utelatt.</p
     oa:hasBody [ a oa:TextualBody ; # selve teksten
       dct:format &lt;http://publications.europa.eu/resource/authority/file-type/TXT&gt; ; # format
       dct:language &lt;http://publications.europa.eu/resource/authority/language/NOB&gt; ; # språk
-      rdfs:value "24 dagers etterslep er mer enn bra nok for vårt statistiske formål." ;  # teksten
+      rdfs:value "24 dagers etterslep er mer enn bra nok for vårt statistiske formål."@nb ;  # teksten
       ] ;
     ] .</pre>
 </div>
@@ -4681,7 +4683,7 @@ ga('send', 'pageview');
 </div>
 <div id="footer">
 <div id="footer-text">
-Sist oppdatert 2021-07-01 12:20:39 UTC
+Sist oppdatert 2021-07-02 08:36:22 UTC
 </div>
 </div>
 </body>
