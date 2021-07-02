@@ -344,7 +344,7 @@ _<ikke beskrevet, tilsvarer https://data.norge.no/specification/dcat-ap-no/#_dis
 Angir datatjenesten som gir tilgang til distribusjonen.
 
 .Teknisk veiledning
-Tilsvarer https://data.norge.no/specification/dcat-ap-no/#Distribusjon-tilganstjeneste[Distribusjon: tilgangstjeneste (dcat:accessService) i DCAT-AP-NO].
+Dette tilsvarer https://data.norge.no/specification/dcat-ap-no/#Distribusjon-tilganstjeneste[Distribusjon: tilgangstjeneste (dcat:accessService) i DCAT-AP-NO].
 
 Eksempel i RDF Turtle:
 ----
