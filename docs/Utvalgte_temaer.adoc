@@ -36,7 +36,7 @@ Ved å bruke egenskapen https://data.norge.no/specification/dqv-ap-no/#Datasett_
 
 Iht. DQV-AP-NO skal et måleresultat (`dqv:QualityMeasurement`) videre knyttes til ett og bare ett kvalitetsmål (`dqv:Metric`). Det er predefinert et sett med kvalitetsmål og disse bør brukes når relevant. Predefinerte kvalitetsmål finnes på https://data.norge.no/vocabulary/dqvno (i RDF Turtle).
 
-Videre, iht. DQV-AP-NO skal et kvalitetsmål (`dqv:Metric`) knyttes til én og bare én  kvalitetsdeldimensjon (`dvqno:SubDimension`) som igjen skal knyttes til én og bare én kvalitetsdimensjon (`dqv:Dimension`). Ved å bruke predefinerte kvalitetsmål trenger du ikke å oppgi kvalitetsdeldimesjon og kvalitetsdimensjon ettersom de predefinerte kvalitetsmålene er allerede ferdig tilknyttet kvalitetsdeldimesjon og kvalitetsdimensjon.
+Videre, iht. DQV-AP-NO skal et kvalitetsmål (`dqv:Metric`) knyttes til én og bare én  kvalitetsdeldimensjon (`dvqno:SubDimension`) som igjen skal knyttes til én og bare én kvalitetsdimensjon (`dqv:Dimension`). Ved å bruke predefinerte kvalitetsmål trenger du ikke å oppgi kvalitetsdeldimensjon og kvalitetsdimensjon ettersom de predefinerte kvalitetsmålene er allerede ferdig tilknyttet kvalitetsdeldimensjon og kvalitetsdimensjon.
 
 Eksempler på predefinerte kvalitetsmål, i kvalitetsdeldimensjonen "underdekning" (`dvqno:undercoverage`) som er i kvalitetsdimensjonen "fullstendighet" (`dqvno:completeness`):
 
@@ -85,7 +85,7 @@ Eksempel i RDF Turtle:
     oa:hasBody [ a oa:TextualBody ; # selve teksten
       dct:format <http://publications.europa.eu/resource/authority/file-type/TXT> ; # format
       dct:language <http://publications.europa.eu/resource/authority/language/NOB> ; # språk
-      rdfs:value "Det tar i gjennomsnitt 24 dager fra en bygning står ferdig eller er revet til den er innlemmet i eller tatt ut fra datasettet." ;  # teksten
+      rdfs:value "Det tar i gjennomsnitt 24 dager fra en bygning står ferdig eller er revet til den er innlemmet i eller tatt ut fra datasettet."@nb ;  # teksten
       ] ;
     ] .
 -----
@@ -109,7 +109,7 @@ Eksempel i RDF Turle:
     oa:hasBody [ a oa:TextualBody ; # selve teksten
       dct:format <http://publications.europa.eu/resource/authority/file-type/TXT> ; # format
       dct:language <http://publications.europa.eu/resource/authority/language/NOB> ; # språk
-      rdfs:value "24 dagers etterslep er mer enn bra nok for vårt statistiske formål." ;  # teksten
+      rdfs:value "24 dagers etterslep er mer enn bra nok for vårt statistiske formål."@nb ;  # teksten
       ] ;
     ] .
 -----

@@ -67,7 +67,7 @@ Brukes til å oppgi identifikator til datatjenesten.
 Se under <<om-identifikator, Om identifikator>>.
 
 .Teknisk veiledning
-Dette tilsvarer https://data.norge.no/specification/dcat-ap-no/#Datatjeneste-identifikator[Datatjeneste: identifikator (dcat:identifier) i DCAT-AP-NO].
+Dette tilsvarer https://data.norge.no/specification/dcat-ap-no/#Datatjeneste-identifikator[Datatjeneste: identifikator (dct:identifier) i DCAT-AP-NO].
 
 ==== Datatjeneste - tittel [[datatjeneste-tittel]]
 Du skal oppgi navnet på datatjenesten. Gjentas hvis navnet er i flere språk.
@@ -96,7 +96,7 @@ Følgende opplysninger bør du ta med i en datatjenestebeskrivelse hvis de finne
 ==== Datatjeneste - emneord [[datatjeneste-emneord]]
 Du bør oppgi emneord (eller tag) som beskriver datatjenesten.
 
-Se beskrivelsen av tilsvarende egenskap i Datasett, <<datasett-emneord, Datatsett - emneord>>.
+Se beskrivelsen av tilsvarende egenskap i Datasett, <<datasett-emneord, Datasett - emneord>>.
 
 .Teknisk veiledning
 Dette tilsvarer https://data.norge.no/specification/dcat-ap-no/#Datatjeneste-emneord[Datatjeneste: emneord (dcat:keyword) i DCAT-AP-NO].
