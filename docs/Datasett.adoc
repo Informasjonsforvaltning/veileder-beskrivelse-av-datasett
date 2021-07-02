@@ -154,7 +154,7 @@ For at andre lett skal kunne se hva datasettet ditt omhandler når datasettet f.
 
 * Tittelen skal være kortfattet, kunne stå alene og gi mening.
  * Organisasjonens navn trenger ikke å være med, med mindre det er spesielt relevant for datasettets innholdsmessige utvalg.
- * Tittelen skal gjenspeile avgrensninger dersom datasettet er avgrenset i populasjonen -  populasjonen er avgrenset av geografi eller formål, f.eks. “... med støtte i Lånekassen”, “... i Oslo”, “ Folketellingen av 1910”. Der populasjonen ikke er avgrenset angis IKKE dette (f.eks. valgkrets)
+ * Tittelen skal gjenspeile avgrensninger dersom datasettet er avgrenset i populasjonen -  populasjonen er avgrenset av geografi eller formål, f.eks. “... med støtte i Lånekassen”, “... i Oslo”, “Folketellingen av 1910”. Der populasjonen ikke er avgrenset angis IKKE dette (f.eks. valgkrets)
  * Forkortelser skal skrives helt ut (DTM10 erstattes av “Digital Terrengmodell 10m oppløsning (DTM10)” . Bruk eventuelt <<datasett-emneord, Datasett - emneord>> til forkortelser. Målgruppen er personer som ønsker å finne relevante datasett raskt, unngå derfor interne navn eller forkortelser i tittel. I det offentlige opererer man ofte med flere titler eller navn på ting. Et datasett kan ha et offisielt navn, et kortnavn og en forkortelse. For eksempel: Datasettet “Administrative enheter i Norge” har ABAS som forkortelse. Det er sjelden man bruker den fulle tittelen, så for å gjøre et datasett mest mulig søkbart er det behov for at man kan registrere kortnavn, forkortelser og/eller alternative titler.
  * Lov- eller forskriftshjemlede navn bør brukes i tittel (f.eks. Jegerregisteret)
 
@@ -441,7 +441,7 @@ _Hvis_ innholdet i et datasett dekker et avgrenset tidsrom, skal dette opplyses 
  * Angi tidsmessig  avgrensning dersom datasett kun har innhold fra visse perioder. For mange datasett knyttet til registerfunksjoner vil tidsrom være direkte koblet mot oppdateringsfrekvens. For andre datasett vil tidsrom være vesentlig i forhold til forståelse av bruk av dataene, f.eks. folketellinger.
  * Dersom det er angitt en periode med årstall, tolkes dette som fra og med 1. januar første år til og med 31. desember siste år.
  * Ved ett årstall på begynnelse, men ikke angitt slutt, tolkes det at datasettet har data også i en ubestemt fremtid og tilsvarende om startdatoen mangler antas det at det er ikke angitt om datasettet har en start.
- * Dersom datasettet er en av flere i en tidsserie anbefales det at det lages et overordnet datasett for tidsserien uten distribusjoner som peker på hver datasett.
+ * Dersom datasettet er en av flere i en tidsserie anbefales det at det lages et overordnet datasett for tidsserien uten distribusjoner som peker på hvert datasett.
  * Det benyttes tidsstempel for registreringen av første og siste dataelement i datasettet.
  * Det kan angis flere tidsperioder per datasett, men det anbefales at periodene ikke er overlappende.
 
@@ -654,7 +654,7 @@ Brukes til å referere til et annet datasett som det aktuelle datasettet er en v
 
 .Teknisk veiledning
 
-Tilsvarer https://data.norge.no/specification/dcat-ap-no/#Datasett-erVersjonAv[Datasett: er versjon av (`dct:isVersionOf`) i DCAT-AP-NO].
+Dette tilsvarer https://data.norge.no/specification/dcat-ap-no/#Datasett-erVersjonAv[Datasett: er versjon av (`dct:isVersionOf`) i DCAT-AP-NO].
 
 Eksempel i RDF Turtle:
 ----
@@ -721,13 +721,16 @@ _<ikke beskrevet, tilsvarer https://data.norge.no/specification/dcat-ap-no/#Data
 
 Se under <<beskrivelse-av-kvalitet, Beskrivelse av kvalitet>>.
 
-_<tilsvarer https://data.norge.no/specification/dcat-ap-no/#Datasett-harKvalitetsnote[Datasett: har kvalitetsnote (`dqv:hasQualityAnnotation`) i DCAT-AP-NO]>_
+.Teknisk veiledning
+Dette tilsvarer https://data.norge.no/specification/dcat-ap-no/#Datasett-harKvalitetsnote[Datasett: har kvalitetsnote (`dqv:hasQualityAnnotation`) i DCAT-AP-NO].
 
 ==== Datasett - har måleresultat [[datasett-harMåleresultat]]
 
 Se under <<beskrivelse-av-kvalitet, Beskrivelse av kvalitet>>.
 
-_<tilsvarer https://data.norge.no/specification/dcat-ap-no/#Datasett-harM%C3%A5leresultat[Datasett: har måleresultat (`dqv:hasQualityMeasurement`) i DCAT-AP-NO]>_
+.Teknisk veiledning
+
+Dette tilsvarer https://data.norge.no/specification/dcat-ap-no/#Datasett-harM%C3%A5leresultat[Datasett: har måleresultat (`dqv:hasQualityMeasurement`) i DCAT-AP-NO].
 
 ==== Datasett - har versjon [[datasett-harVersjon]]
 
