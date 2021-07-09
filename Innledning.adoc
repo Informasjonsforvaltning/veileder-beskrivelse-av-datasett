@@ -20,7 +20,7 @@ Sekundært kan også veilederen brukes av deg som skal utvikle/tilpasse verktøy
 
 === Struktur [[struktur]]
 
-Denne veilederen beskriver hvordan du beskriver følgende i henhold til https://data.norge.no/specification/dcat-ap-no/[DCAT-AP-NO v.2]:
+Denne veilederen forklarer hvordan du beskriver følgende i henhold til https://data.norge.no/specification/dcat-ap-no/[DCAT-AP-NO v.2]:
 
 * et datasett (se under <<beskrivelse-av-datasett, Beskrivelse av datasett>>)
 
@@ -44,5 +44,6 @@ Veilederen inneholder også veiledning ang. noen <<utvalgte-temaer, utvalgte tem
 
 * <<bruk-av-kontrollerte-vokabularer, Bruk av kontrollerte vokabularer>>
 
+* <<om-identifikator, Om identifikator (`dct:identifer`)>>
 
 include::Navnerom.adoc[]

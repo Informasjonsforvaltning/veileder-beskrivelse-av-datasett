@@ -692,7 +692,7 @@ Dersom du finner feil eller mangler i dokumentet, ber vi om at dette meldes inn 
 <p><strong>Status</strong>: Gjeldende<br>
 <strong>Versjon</strong>: 2.0<br>
 <strong>Publisert</strong>: 2019-06-30<br>
-<strong>Oppdatert</strong>: 2021-07-02<br>
+<strong>Oppdatert</strong>: 2021-07-09<br>
 <strong>Gjeldende versjon</strong>: <a href="https://data.norge.no/guide/veileder-beskrivelse-av-datasett/" class="bare">https://data.norge.no/guide/veileder-beskrivelse-av-datasett/</a><br>
 <strong>Forrige versjon</strong>: <a href="https://data.norge.no/guide/veileder-beskrivelse-av-datasett/v1" class="bare">https://data.norge.no/guide/veileder-beskrivelse-av-datasett/v1</a><br>
 <strong>Redaktørens utkast</strong>: <a href="https://informasjonsforvaltning.github.io/veileder-beskrivelse-av-datasett/" class="bare">https://informasjonsforvaltning.github.io/veileder-beskrivelse-av-datasett/</a></p>
@@ -733,7 +733,7 @@ Dersom du finner feil eller mangler i dokumentet, ber vi om at dette meldes inn 
 <div class="sect2">
 <h3 id="struktur"><a class="anchor" href="#struktur"></a>Struktur</h3>
 <div class="paragraph">
-<p>Denne veilederen beskriver hvordan du beskriver følgende i henhold til <a href="https://data.norge.no/specification/dcat-ap-no/">DCAT-AP-NO v.2</a>:</p>
+<p>Denne veilederen forklarer hvordan du beskriver følgende i henhold til <a href="https://data.norge.no/specification/dcat-ap-no/">DCAT-AP-NO v.2</a>:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -773,6 +773,9 @@ Dersom du finner feil eller mangler i dokumentet, ber vi om at dette meldes inn 
 </li>
 <li>
 <p><a href="#bruk-av-kontrollerte-vokabularer">Bruk av kontrollerte vokabularer</a></p>
+</li>
+<li>
+<p><a href="#om-identifikator">Om identifikator (<code>dct:identifer</code>)</a></p>
 </li>
 </ul>
 </div>
@@ -1032,22 +1035,19 @@ Formålet med dette datasettet er å illustrere hvordan et datasett skal/bør/ka
 <p>Beskriv hva datasettet inneholder. Hvilke opplysninger som utgjør kjernen i datasettet bør angis.</p>
 </li>
 <li>
-<p>Feltinnhold skal ikke listes, men listes i <a href="#datasett-emneord">Datasett - emneord</a> eller <a href="#datasett-begrep">Datasett - begrep</a>.</p>
+<p>Feltinnhold skal ikke listes her i beskrivelsen, men i <a href="#datasett-emneord">Datasett - emneord</a> eller <a href="#datasett-begrep">Datasett - begrep</a>.</p>
 </li>
 <li>
 <p>Beskrivelsen er ikke en gjentakelse av <a href="#datasett-tittel">Datasett - tittel</a>.</p>
 </li>
 <li>
-<p>Bruk folkelige ord (f.eks. ”Løsøre” må forklares. F.eks. “flyttbare eiendeler (Løsøre)”, ev. bare folkelige uttrykk mens faguttrykket tas med som <a href="#datasett-emneord">Datasett - emneord</a> slik at det gir treff i søk).</p>
+<p>Bruk folkelige ord (f.eks. “Løsøre” forklares som “flyttbare eiendeler (Løsøre)”, ev. bare folkelige uttrykk mens faguttrykket tas med som <a href="#datasett-emneord">Datasett - emneord</a> slik at det gir treff i søk).</p>
 </li>
 <li>
 <p>Beskriv avgrensninger, hva datasettet ikke inneholder, dersom dette kan misforstås ut fra tittelen.</p>
 </li>
 <li>
 <p>Begrens bruk av lenker og markup (formatering) i teksten. Skal man angi språk må teksten formelt sett være fri for lenker og formatering (HTML).</p>
-</li>
-<li>
-<p>Der målform er kjent skal "nb" eller "nn" brukes, "no" brukes ellers.</p>
 </li>
 </ul>
 </div>
@@ -1070,6 +1070,13 @@ Hva som inngår i datasettet er godt beskrevet, men unntakene her er utelatt.</p
 <div class="paragraph">
 <div class="title">Teknisk veiledning</div>
 <p>Dette tilsvarer <a href="https://data.norge.no/specification/dcat-ap-no/#Datasett-beskrivelse">Datasett: beskrivelse (<code>dct:description</code>) i DCAT-AP-NO</a>.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Der målform er kjent skal språkkoden "nb" (bokmål) eller "nn" (nynorsk) brukes, "no" (norsk) brukes ellers.</p>
+</li>
+</ul>
 </div>
 <div class="paragraph">
 <p>Eksempel i RDF Turtle:</p>
@@ -1099,7 +1106,7 @@ Hva som inngår i datasettet er godt beskrevet, men unntakene her er utelatt.</p
 <div class="ulist">
 <ul>
 <li>
-<p>Ett eller flere temaer skal velges fra <a href="https://op.europa.eu/s/oZjL">den kontrollerte listen av EU-temaer</a>.</p>
+<p>Ett eller flere temaer skal velges fra <a href="https://op.europa.eu/s/oZjL">EUs kontrollerte liste over temaer</a>.</p>
 </li>
 <li>
 <p>Ett eller flere temaer bør velges fra <a href="https://psi.norge.no/los/struktur.html">den norske LOS</a>.</p>
@@ -1215,7 +1222,7 @@ Hva som inngår i datasettet er godt beskrevet, men unntakene her er utelatt.</p
 <p>Dette tilsvarer <a href="https://data.norge.no/specification/dcat-ap-no/#Datasett-utgiver">Datasett: utgiver (<code>dct:publisher</code>) i DCAT-AP-NO</a>.</p>
 </div>
 <div class="paragraph">
-<p>Inntil <a href="https://data.brreg.no" class="bare">https://data.brreg.no</a>  tilbyr gyldig identifikator (<code>foaf:Agent</code>), skal følgende mønster benyttes: <code>https://organization-catalogue.fellesdatakatalog.digdir.no/organizations/{orgnummer}</code>.</p>
+<p>Inntil <a href="https://data.brreg.no" class="bare">https://data.brreg.no</a> tilbyr RDF-baserte metadata basert på organisasjonsnummeret (orgnummer), skal følgende mønster benyttes: <code>https://organization-catalogue.fellesdatakatalog.digdir.no/organizations/{orgnummer}</code>.</p>
 </div>
 <div class="paragraph">
 <p>Eksempel i RDF Turtle:</p>
@@ -1272,10 +1279,10 @@ Hva som inngår i datasettet er godt beskrevet, men unntakene her er utelatt.</p
 <div class="ulist">
 <ul>
 <li>
-<p>innholdstyper i datasettet beskrives med referanse til begreper i begrepskatalog</p>
+<p>Innholdstyper i datasettet beskrives med referanse til begreper i begrepskatalog.</p>
 </li>
 <li>
-<p>dersom det ikke kan benyttes en begrepskatalog brukes <a href="#datasett-emneord">Datasett - emneord</a>.</p>
+<p>Dersom det ikke kan benyttes en begrepskatalog brukes <a href="#datasett-emneord">Datasett - emneord</a>.</p>
 </li>
 </ul>
 </div>
@@ -1352,7 +1359,7 @@ Hva som inngår i datasettet er godt beskrevet, men unntakene her er utelatt.</p
 <p>ved vedtak: <code>provno:administrativeDecision</code></p>
 </li>
 <li>
-<p>ved innhenting fra tredjepart: <code>provno:collectingFromThirdparty</code></p>
+<p>ved innhenting fra tredjepart: <code>provno:collectingFromThirdParty</code></p>
 </li>
 <li>
 <p>ved innhenting fra brukeren: <code>provno:collectingFromUser</code></p>
@@ -1366,7 +1373,7 @@ Hva som inngår i datasettet er godt beskrevet, men unntakene her er utelatt.</p
 <div class="content">
 <pre>@prefix provno: &lt;https://data.norge.no/vocabulary/provno#&gt; .
 
-&lt;A&gt; a dcat:Dataset ;
+&lt;etDatasett&gt; a dcat:Dataset ;
    prov:wasGeneratedBy provno:administrativeDecision . # vedtak</pre>
 </div>
 </div>
@@ -1462,9 +1469,6 @@ Hva som inngår i datasettet er godt beskrevet, men unntakene her er utelatt.</p
 <p>Angi sentralt innhold i datasettet som ikke finnes begrepsdefinisjoner for ennå</p>
 </li>
 </ul>
-</div>
-<div class="paragraph">
-<p>I noen tilfeller mangler noen av begrepsdefinisjonene som er sentrale for å beskrive datasettet, eller du har et ord som ikke formelt forbindes med datasettet men som du vet at mange likevel bruker. Da kan du bruke denne egenskapen til å sørge for at disse emneordene likevel gir treff i søkemotoren.</p>
 </div>
 <div class="ulist checklist">
 <div class="title">Eksempler</div>
@@ -1632,7 +1636,7 @@ Hva som inngår i datasettet er godt beskrevet, men unntakene her er utelatt.</p
 <p>Ved ett årstall på begynnelse, men ikke angitt slutt, tolkes det at datasettet har data også i en ubestemt fremtid og tilsvarende om startdatoen mangler antas det at det er ikke angitt om datasettet har en start.</p>
 </li>
 <li>
-<p>Dersom datasettet er en av flere i en tidsserie anbefales det at det lages et overordnet datasett for tidsserien uten distribusjoner som peker på hvert datasett.</p>
+<p>Dersom datasettet er en av flere i en tidsserie anbefales det at det lages et overordnet datasett for tidsserien uten distribusjoner som peker på hvert datasett. Se også under <a href="#beskrivelse-av-datasettserie">Beskrivelse av tidsserie/datasettserie</a>.</p>
 </li>
 <li>
 <p>Det benyttes tidsstempel for registreringen av første og siste dataelement i datasettet.</p>
@@ -1681,7 +1685,7 @@ Hva som inngår i datasettet er godt beskrevet, men unntakene her er utelatt.</p
 <p>Skal gjenspeile det mest begrensede feltet/opplysningen i datasettet.</p>
 </li>
 <li>
-<p>Varianter av datasettet kan være offentlig ved at det utelater de felt som gjør at det opprinnelige datasettet er begrenset teller unntatt offentlighet. (se relasjoner mellom datasett).</p>
+<p>Varianter av datasettet kan være offentlig ved at det utelater de felt som gjør at det opprinnelige datasettet er begrenset teller unntatt offentlighet.</p>
 </li>
 <li>
 <p>Ved bruk av verdiene "begrenset offentlighet" og "unntatt offentlighet" er egenskapen <a href="#datasett-følger">Datasett - følger</a> anbefalt.</p>
@@ -1904,9 +1908,6 @@ Hva som inngår i datasettet er godt beskrevet, men unntakene her er utelatt.</p
 <li>
 <p>Tidspunktet angir når innholdet i datasettet sist er endret.</p>
 </li>
-<li>
-<p>Angis som dato (<code>xsd:date</code>) eller tidspunkt (<code>xsd:dateTime</code>).</p>
-</li>
 </ul>
 </div>
 <div class="ulist checklist">
@@ -1920,6 +1921,13 @@ Hva som inngår i datasettet er godt beskrevet, men unntakene her er utelatt.</p
 <div class="paragraph">
 <div class="title">Teknisk veiledning</div>
 <p>Dette tilsvarer <a href="https://data.norge.no/specification/dcat-ap-no/#Datasett-endringsdato">Datasett: endringsdato (<code>dct:modified</code>) i DCAT-AP-NO</a>.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Angis som dato (<code>xsd:date</code>) eller tidspunkt (<code>xsd:dateTime</code>).</p>
+</li>
+</ul>
 </div>
 <div class="paragraph">
 <p>Eksempel i RDF Turtle:</p>
@@ -2072,9 +2080,13 @@ Hva som inngår i datasettet er godt beskrevet, men unntakene her er utelatt.</p
 </li>
 </ul>
 </div>
-<div class="paragraph">
+<div class="ulist checklist">
 <div class="title">Eksempler</div>
-<p>[*] Daglig</p>
+<ul class="checklist">
+<li>
+<p><i class="fa fa-check-square-o"></i> Daglig</p>
+</li>
+</ul>
 </div>
 <div class="paragraph">
 <div class="title">Teknisk veiledning</div>
@@ -2129,6 +2141,9 @@ Hva som inngår i datasettet er godt beskrevet, men unntakene her er utelatt.</p
 <h4 id="datasett-iSamsvarMed"><a class="anchor" href="#datasett-iSamsvarMed"></a>Datasett - i samsvar med</h4>
 <div class="paragraph">
 <p>Brukes til å beskrive at et datasett er i henhold til gitt(e) standard(er)/spesifikasjon(er)/informasjonsmodell(er)/o.l.</p>
+</div>
+<div class="paragraph">
+<p>Se under <a href="#sammenheng">Sammenheng mellom datasett &#8230;&#8203; og informasjonsmodell</a> for knytting av informasjonsmodell til datasett.</p>
 </div>
 <div class="paragraph">
 <div class="title">Eksempler</div>
@@ -2261,7 +2276,6 @@ Hva som inngår i datasettet er godt beskrevet, men unntakene her er utelatt.</p
 <div class="sect3">
 <h4 id="datasett-produsent"><a class="anchor" href="#datasett-produsent"></a>Datasett - produsent</h4>
 <div class="paragraph">
-<div class="title">Anbefalinger</div>
 <p>Brukes til å angi produsent(er) av datasettet der dette er en annen enn utgiver (<a href="#datasett-utgiver">Datasett - utgiver</a>).</p>
 </div>
 <div class="ulist">
@@ -2292,9 +2306,9 @@ Hva som inngår i datasettet er godt beskrevet, men unntakene her er utelatt.</p
 <div class="listingblock">
 <div class="content">
 <pre>&lt;etDatasett&gt; a dcat:Dataset ;
-  dct:creator &lt;samarbeidsKommunene&gt; .
+  dct:creator &lt;samarbeidskommunene&gt; .
 
-&lt;samarbeidsKommunene&gt; a foaf:Agent ;
+&lt;samarbeidskommunene&gt; a foaf:Agent ;
   foaf:name "Samarbeidskommunene A, B og C" .</pre>
 </div>
 </div>
@@ -2681,7 +2695,7 @@ Hva som inngår i datasettet er godt beskrevet, men unntakene her er utelatt.</p
 <p>Primært bør en opprette en distribusjon for hvert filformat.  Flere formater kan likevel benyttes ved hjelp av kommaseparerte verdier</p>
 </li>
 <li>
-<p>Merk at det kun er mulig å oppgi en [<a href="https://data.norge.no/specification/dcat-ap-no/#Distribusjon-nedlastningslenke">Distribusjon: nedlastingslenke</a>] pr. distribusjon. Nedlastingslenke kan dermed ikke brukes i kombinasjon med at en oppgir flere filformater for samme distribusjon</p>
+<p>Merk at det kun er mulig å oppgi en <a href="#distribusjon-nedlastningslenke">Distribusjon - nedlastningslenke</a> pr. distribusjon. nedlastningslenke kan dermed ikke brukes i kombinasjon med at en oppgir flere filformater for samme distribusjon</p>
 </li>
 </ul>
 </div>
@@ -2865,7 +2879,7 @@ Hva som inngår i datasettet er godt beskrevet, men unntakene her er utelatt.</p
 <p>Distribusjon - medietype: medietype av distribusjonen.</p>
 </li>
 <li>
-<p>Distribusjon - nedlastingslenke: direktelenke (URL) til en nedlastbar fil i et gitt format.</p>
+<p>Distribusjon - nedlastningslenke: direktelenke (URL) til en nedlastbar fil i et gitt format.</p>
 </li>
 <li>
 <p>Distribusjon - pakkeformat: formatet til filen der en eller flere datafiler er gruppert sammen, f.eks. for å gjøre det mulig å laste ned et sett relaterte filer.</p>
@@ -3003,7 +3017,7 @@ Hva som inngår i datasettet er godt beskrevet, men unntakene her er utelatt.</p
 <p>Vi fraråder å angi format både ved hjelp av <a href="#distribusjon-medietype">Distribusjon - medietype</a> og <a href="#distribusjon-format">Distribusjon - format</a> for en og samme distribusjon.</p>
 </li>
 <li>
-<p>Vi fraråder å angi flere medietyper for en og samme distribusjon ettersom du kun kan oppgi én nedlastningslenke pr. distribusjon. Opprett heller nye distribusjoner for hvert format/medietype og oppgi nedlastingslenke for hver distribusjon.</p>
+<p>Vi fraråder å angi flere medietyper for en og samme distribusjon ettersom du kun kan oppgi én nedlastningslenke pr. distribusjon. Opprett heller nye distribusjoner for hvert format/medietype og oppgi nedlastningslenke for hver distribusjon.</p>
 </li>
 </ul>
 </div>
@@ -3019,7 +3033,7 @@ Hva som inngår i datasettet er godt beskrevet, men unntakene her er utelatt.</p
 <div class="sect3">
 <h4 id="distribusjon-nedlastningslenke"><a class="anchor" href="#distribusjon-nedlastningslenke"></a>Distribusjon - nedlastningslenke</h4>
 <div class="paragraph">
-<p>Nedlastingslenken er en type tilgangs-url som peker direkte til en fil som lastes ned lokalt.</p>
+<p>Nedlastningslenken er en type tilgangs-url som peker direkte til en fil som lastes ned lokalt.</p>
 </div>
 <div class="ulist">
 <ul>
@@ -4646,10 +4660,10 @@ I skrivende stund holder W3C på å utarbeide v.3.0 av DCAT hvor det skal være 
 </div>
 <div class="paragraph">
 <div class="title">Teknisk veiledning</div>
-<p>Beskrivelsen tar utgangspunkt i indikatoren til et datasett (<a href="https://data.norge.no/specification/dcat-ap-no/#Datasett-identifikator">Datasett: identifikator (<code>dct:identifier</code>)</a>, men den gjelder også for de andre klassene i DCAT-AP-NO der <code>dct:identifer</code> brukes.</p>
+<p>Beskrivelsen tar utgangspunkt i indikatoren til et datasett (tilsvarende <a href="https://data.norge.no/specification/dcat-ap-no/#Datasett-identifikator">Datasett: identifikator (<code>dct:identifier</code>) i DCAT-AP-NO)</a>, men den gjelder også for de andre klassene i DCAT-AP-NO der <code>dct:identifier</code> brukes.</p>
 </div>
 <div class="paragraph">
-<p>Identifikatoren til et datasett [<a href="https://data.norge.no/specification/dcat-ap-no/#Datasett-identifikator">Datasett: identifikator</a>] skal være unik og varig. Se <a href="https://www.digdir.no/digitale-felleslosninger/peikarar-til-offentlege-ressursar-pa-nett/1492">Forvaltningsstandard for pekere til offentlige ressurser på nett</a>.</p>
+<p>Identifikatoren til et datasett skal være unik og varig. Se <a href="https://www.digdir.no/digitale-felleslosninger/peikarar-til-offentlege-ressursar-pa-nett/1492">Forvaltningsstandard for pekere til offentlige ressurser på nett</a>.</p>
 </div>
 <div class="paragraph">
 <p>Subjektet (det første leddet) i en RDF-trippel er per definisjon en identifikator (URI). I en konkret realisering vil instanser av klassen Datasett (<code>dcat:Dataset</code>) derfor få en «innebygd» identifikator.</p>
@@ -4683,7 +4697,7 @@ ga('send', 'pageview');
 </div>
 <div id="footer">
 <div id="footer-text">
-Sist oppdatert 2021-07-02 07:59:41 UTC
+Sist oppdatert 2021-07-09 17:56:47 UTC
 </div>
 </div>
 </body>
