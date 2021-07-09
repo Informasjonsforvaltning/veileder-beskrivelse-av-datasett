@@ -88,12 +88,11 @@ For at andre skal kunne vite hva slags datasett du har, skal du oppgi en kort og
  * Beskrivelsen skal være kortfattet slik at lister over datasett forståes ved å lese de første linjene.
  * Hensikten med datasettet bør komme fram (f.eks. “Løsøreregisteret inneholder tinglyste flyttbare eiendeler”).
  * Beskriv hva datasettet inneholder. Hvilke opplysninger som utgjør kjernen i datasettet bør angis.
- * Feltinnhold skal ikke listes, men listes i <<datasett-emneord, Datasett - emneord>> eller <<datasett-begrep, Datasett - begrep>>.
+ * Feltinnhold skal ikke listes her i beskrivelsen, men i <<datasett-emneord, Datasett - emneord>> eller <<datasett-begrep, Datasett - begrep>>.
  * Beskrivelsen er ikke en gjentakelse av <<datasett-tittel, Datasett - tittel>>.
- * Bruk folkelige ord (f.eks. ”Løsøre” må forklares. F.eks. “flyttbare eiendeler (Løsøre)”, ev. bare folkelige uttrykk mens faguttrykket tas med som <<datasett-emneord, Datasett - emneord>> slik at det gir treff i søk).
+ * Bruk folkelige ord (f.eks. “Løsøre” forklares som “flyttbare eiendeler (Løsøre)”, ev. bare folkelige uttrykk mens faguttrykket tas med som <<datasett-emneord, Datasett - emneord>> slik at det gir treff i søk).
  * Beskriv avgrensninger, hva datasettet ikke inneholder, dersom dette kan misforstås ut fra tittelen.
  * Begrens bruk av lenker og markup (formatering) i teksten. Skal man angi språk må teksten formelt sett være fri for lenker og formatering (HTML).
- * Der målform er kjent skal "nb" eller "nn" brukes, "no" brukes ellers.
 
 .Eksempler
 
@@ -107,6 +106,8 @@ Hva som inngår i datasettet er godt beskrevet, men unntakene her er utelatt.
 
 .Teknisk veiledning
 Dette tilsvarer https://data.norge.no/specification/dcat-ap-no/#Datasett-beskrivelse[Datasett: beskrivelse (`dct:description`) i DCAT-AP-NO].
+
+* Der målform er kjent skal språkkoden "nb" (bokmål) eller "nn" (nynorsk) brukes, "no" (norsk) brukes ellers.
 
 Eksempel i RDF Turtle:
 ----
@@ -127,7 +128,7 @@ Dette tilsvarer https://data.norge.no/specification/dcat-ap-no/#Datasett-identif
 
 For å kunne sortere datasettet inn under gitte kategorier er det nødvendig å tilordne "tema" til datasettet.
 
- * Ett eller flere temaer skal velges fra https://op.europa.eu/s/oZjL[den kontrollerte listen av EU-temaer].
+ * Ett eller flere temaer skal velges fra https://op.europa.eu/s/oZjL[EUs kontrollerte liste over temaer].
 
  * Ett eller flere temaer bør velges fra https://psi.norge.no/los/struktur.html[den norske LOS].
 
@@ -191,7 +192,7 @@ For at andre lett skal kunne se hvem som er ansvarlig for at datasettet ditt _er
 
 Dette tilsvarer https://data.norge.no/specification/dcat-ap-no/#Datasett-utgiver[Datasett: utgiver (`dct:publisher`) i DCAT-AP-NO].
 
-Inntil https://data.brreg.no  tilbyr gyldig identifikator (`foaf:Agent`), skal følgende mønster benyttes: `+https://organization-catalogue.fellesdatakatalog.digdir.no/organizations/{orgnummer}+`.
+Inntil https://data.brreg.no tilbyr RDF-baserte metadata basert på organisasjonsnummeret (orgnummer), skal følgende mønster benyttes: `+https://organization-catalogue.fellesdatakatalog.digdir.no/organizations/{orgnummer}+`.
 
 Eksempel i RDF Turtle:
 ----
@@ -221,8 +222,8 @@ Følgende opplysninger bør du ta med i en datasettbeskrivelse hvis de finnes:
 
 For at andre lett skal kunne forstå typer innhold i datasettet ditt, skal du knyttet datasettet til relevante begrepsdefinisjoner _hvis_ de finnes.
 
- * innholdstyper i datasettet beskrives med referanse til begreper i begrepskatalog
- * dersom det ikke kan benyttes en begrepskatalog brukes <<datasett-emneord, Datasett - emneord>>.
+ * Innholdstyper i datasettet beskrives med referanse til begreper i begrepskatalog.
+ * Dersom det ikke kan benyttes en begrepskatalog brukes <<datasett-emneord, Datasett - emneord>>.
 
 
 .Eksempler
@@ -268,14 +269,14 @@ Dette tilsvarer https://data.norge.no/specification/dcat-ap-no/#Datasett-bleGene
 Følgende predefinerte instanser av `prov:Activity` skal brukes:
 
 * ved vedtak: `provno:administrativeDecision`
-* ved innhenting fra tredjepart: `provno:collectingFromThirdparty`
+* ved innhenting fra tredjepart: `provno:collectingFromThirdParty`
 * ved innhenting fra brukeren: `provno:collectingFromUser`
 
 Eksempel i RDF Turtle:
 ----
 @prefix provno: <https://data.norge.no/vocabulary/provno#> .
 
-<A> a dcat:Dataset ;
+<etDatasett> a dcat:Dataset ;
    prov:wasGeneratedBy provno:administrativeDecision . # vedtak
 ----
 
@@ -332,8 +333,6 @@ Ord og uttrykk som hjelper brukeren til å finne datasettet og som ikke kan knyt
 
  * Angi synonymer til hjelp i søk
  * Angi sentralt innhold i datasettet som ikke finnes begrepsdefinisjoner for ennå
-
-I noen tilfeller mangler noen av begrepsdefinisjonene som er sentrale for å beskrive datasettet, eller du har et ord som ikke formelt forbindes med datasettet men som du vet at mange likevel bruker. Da kan du bruke denne egenskapen til å sørge for at disse emneordene likevel gir treff i søkemotoren.
 
 .Eksempler
 
@@ -441,7 +440,7 @@ _Hvis_ innholdet i et datasett dekker et avgrenset tidsrom, skal dette opplyses 
  * Angi tidsmessig  avgrensning dersom datasett kun har innhold fra visse perioder. For mange datasett knyttet til registerfunksjoner vil tidsrom være direkte koblet mot oppdateringsfrekvens. For andre datasett vil tidsrom være vesentlig i forhold til forståelse av bruk av dataene, f.eks. folketellinger.
  * Dersom det er angitt en periode med årstall, tolkes dette som fra og med 1. januar første år til og med 31. desember siste år.
  * Ved ett årstall på begynnelse, men ikke angitt slutt, tolkes det at datasettet har data også i en ubestemt fremtid og tilsvarende om startdatoen mangler antas det at det er ikke angitt om datasettet har en start.
- * Dersom datasettet er en av flere i en tidsserie anbefales det at det lages et overordnet datasett for tidsserien uten distribusjoner som peker på hvert datasett.
+ * Dersom datasettet er en av flere i en tidsserie anbefales det at det lages et overordnet datasett for tidsserien uten distribusjoner som peker på hvert datasett. Se også under <<beskrivelse-av-datasettserie, Beskrivelse av tidsserie/datasettserie>>.
  * Det benyttes tidsstempel for registreringen av første og siste dataelement i datasettet.
  * Det kan angis flere tidsperioder per datasett, men det anbefales at periodene ikke er overlappende.
 
@@ -473,7 +472,7 @@ Uansett om datasettet ditt er gjort tilgjengelig eller ikke, bør du oppgi i hvi
 
  * Skal gjenspeile det mest begrensede feltet/opplysningen i datasettet.
 
- * Varianter av datasettet kan være offentlig ved at det utelater de felt som gjør at det opprinnelige datasettet er begrenset teller unntatt offentlighet. (se relasjoner mellom datasett).
+ * Varianter av datasettet kan være offentlig ved at det utelater de felt som gjør at det opprinnelige datasettet er begrenset teller unntatt offentlighet.
  * Ved bruk av verdiene "begrenset offentlighet" og "unntatt offentlighet" er egenskapen <<datasett-følger, Datasett - følger>> anbefalt.
 
 .Eksempler
@@ -584,7 +583,6 @@ Eksempel i RDF Turtle:
 For at andre skal kunne vite når datasettet sist ble oppdatert angis tidspunkt for siste endring.
 
  * Tidspunktet angir når innholdet i datasettet sist er endret.
- * Angis som dato (`xsd:date`) eller tidspunkt (`xsd:dateTime`).
 
 .Eksempler
 
@@ -593,6 +591,8 @@ For at andre skal kunne vite når datasettet sist ble oppdatert angis tidspunkt 
 .Teknisk veiledning
 
 Dette tilsvarer https://data.norge.no/specification/dcat-ap-no/#Datasett-endringsdato[Datasett: endringsdato (`dct:modified`) i DCAT-AP-NO].
+
+* Angis som dato (`xsd:date`) eller tidspunkt (`xsd:dateTime`).
 
 Eksempel i RDF Turtle:
 ----
@@ -699,7 +699,7 @@ Brukes til å beskrive hvor ofte datasettet blir oppdatert.
 
 .Eksempler
 
-[*] Daglig
+* [*] Daglig
 
 .Teknisk veiledning
 
@@ -742,6 +742,7 @@ _<ikke beskrevet, tilsvarer  https://data.norge.no/specification/dcat-ap-no/#Dat
 
 Brukes til å beskrive at et datasett er i henhold til gitt(e) standard(er)/spesifikasjon(er)/informasjonsmodell(er)/o.l.
 
+Se under <<sammenheng, Sammenheng mellom datasett ... og informasjonsmodell>> for knytting av informasjonsmodell til datasett.
 
 .Eksempler
 
@@ -828,8 +829,6 @@ _<ikke beskrevet, tilsvarer https://data.norge.no/specification/dcat-ap-no/#Data
 
 ==== Datasett - produsent [[datasett-produsent]]
 
-.Anbefalinger
-
 Brukes til å angi produsent(er) av datasettet der dette er en annen enn utgiver (<<datasett-utgiver, Datasett - utgiver>>).
 
  * Brukes unntaksvis der datasettet er satt sammen av data som andre har produsert.
@@ -846,9 +845,9 @@ Dette tilsvarer https://data.norge.no/specification/dcat-ap-no/#Datasett-produse
 Eksempel i RDF Turtle:
 ----
 <etDatasett> a dcat:Dataset ;
-  dct:creator <samarbeidsKommunene> .
+  dct:creator <samarbeidskommunene> .
 
-<samarbeidsKommunene> a foaf:Agent ;
+<samarbeidskommunene> a foaf:Agent ;
   foaf:name "Samarbeidskommunene A, B og C" .
 ----
 
