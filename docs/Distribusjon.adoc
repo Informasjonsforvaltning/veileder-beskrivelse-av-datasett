@@ -112,7 +112,7 @@ Hver distribusjon har format for utveksling som bør oppgis, dvs. en maskinlesba
 
 * Det skal angis filtype (f.eks. CSV, JSON) ved å benytte URI-er fra EUs kontrollerte liste over https://op.europa.eu/s/o8vN[File type].
 * Primært bør en opprette en distribusjon for hvert filformat.  Flere formater kan likevel benyttes ved hjelp av kommaseparerte verdier
-* Merk at det kun er mulig å oppgi en [https://data.norge.no/specification/dcat-ap-no/#Distribusjon-nedlastningslenke[Distribusjon: nedlastingslenke]] pr. distribusjon. Nedlastingslenke kan dermed ikke brukes i kombinasjon med at en oppgir flere filformater for samme distribusjon
+* Merk at det kun er mulig å oppgi en <<distribusjon-nedlastningslenke, Distribusjon - nedlastningslenke>> pr. distribusjon. nedlastningslenke kan dermed ikke brukes i kombinasjon med at en oppgir flere filformater for samme distribusjon
 
 .Teknisk veiledning
 Dette tilsvarer https://data.norge.no/specification/dcat-ap-no/#Distribusjon-format[Distribusjon: format (dct:format) i DCAT-AP-NO].
@@ -209,7 +209,7 @@ I tillegg til obligatoriske (skal brukes) og anbefalte (bør brukes) egenskaper,
 * Distribusjon - i samsvar med: et etablert skjema som distribusjonen er i samsvar med.
 * Distribusjon - komprimeringsformat: komprimeringsformatet for distribusjonen som dataene er i dersom de er i en komprimert form, f.eks. for å redusere størrelsen på den nedlastbare filen.
 * Distribusjon - medietype: medietype av distribusjonen.
-* Distribusjon - nedlastingslenke: direktelenke (URL) til en nedlastbar fil i et gitt format.
+* Distribusjon - nedlastningslenke: direktelenke (URL) til en nedlastbar fil i et gitt format.
 * Distribusjon - pakkeformat: formatet til filen der en eller flere datafiler er gruppert sammen, f.eks. for å gjøre det mulig å laste ned et sett relaterte filer.
 * Distribusjon - policy: policyen som uttrykker rettighetene knyttet til distribusjonen hvis de bruker ODRL-vokabularet.
 * Distribusjon - rettigheter: rettigheter knyttet til distribusjonen.
@@ -288,7 +288,7 @@ Angivelse av medietypen for distribusjonen slik den er definert i IANAs register
 
 * Angivelse av Distribusjon: medietype er et valgfritt alternativ til å benytte Distribusjon: format. Kun formater som inngår i IANAs register er lovlige verdier.
 * Vi fraråder å angi format både ved hjelp av <<distribusjon-medietype, Distribusjon - medietype>> og <<distribusjon-format, Distribusjon - format>> for en og samme distribusjon.
-* Vi fraråder å angi flere medietyper for en og samme distribusjon ettersom du kun kan oppgi én nedlastningslenke pr. distribusjon. Opprett heller nye distribusjoner for hvert format/medietype og oppgi nedlastingslenke for hver distribusjon.
+* Vi fraråder å angi flere medietyper for en og samme distribusjon ettersom du kun kan oppgi én nedlastningslenke pr. distribusjon. Opprett heller nye distribusjoner for hvert format/medietype og oppgi nedlastningslenke for hver distribusjon.
 
 .Teknisk veiledning
 
@@ -297,7 +297,7 @@ Angivelse av medietypen for distribusjonen slik den er definert i IANAs register
 
 ==== Distribusjon - nedlastningslenke [[distribusjon-nedlastningslenke]]
 
-Nedlastingslenken er en type tilgangs-url som peker direkte til en fil som lastes ned lokalt.
+Nedlastningslenken er en type tilgangs-url som peker direkte til en fil som lastes ned lokalt.
 
 * Dersom nedlastningslenken er den eneste tilgjengelige lenken for distribusjonen av datasettet, _skal_ denne dupliseres i det obligatoriske feltet <<distribusjon-tilgangsURL, Distribusjon - tilgangsURL>>.
 
