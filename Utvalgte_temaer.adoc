@@ -241,9 +241,9 @@ Identifikatoren til en ressurs (et datasett, en datatjeneste, en katalog osv.) e
 
 .Teknisk veiledning
 
-Beskrivelsen tar utgangspunkt i indikatoren til et datasett (https://data.norge.no/specification/dcat-ap-no/#Datasett-identifikator[Datasett: identifikator (`dct:identifier`)], men den gjelder også for de andre klassene i DCAT-AP-NO der `dct:identifer` brukes.
+Beskrivelsen tar utgangspunkt i indikatoren til et datasett (tilsvarende https://data.norge.no/specification/dcat-ap-no/#Datasett-identifikator[Datasett: identifikator (`dct:identifier`) i DCAT-AP-NO)], men den gjelder også for de andre klassene i DCAT-AP-NO der `dct:identifier` brukes.
 
-Identifikatoren til et datasett [https://data.norge.no/specification/dcat-ap-no/#Datasett-identifikator[Datasett: identifikator]] skal være unik og varig. Se https://www.digdir.no/digitale-felleslosninger/peikarar-til-offentlege-ressursar-pa-nett/1492[Forvaltningsstandard for pekere til offentlige ressurser på nett].
+Identifikatoren til et datasett skal være unik og varig. Se https://www.digdir.no/digitale-felleslosninger/peikarar-til-offentlege-ressursar-pa-nett/1492[Forvaltningsstandard for pekere til offentlige ressurser på nett].
 
 Subjektet (det første leddet) i en RDF-trippel er per definisjon en identifikator (URI). I en konkret realisering vil instanser av klassen Datasett (`dcat:Dataset`) derfor få en «innebygd» identifikator.
 
