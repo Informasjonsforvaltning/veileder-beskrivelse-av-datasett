@@ -1,0 +1,47 @@
+name: build adocs and publish v2 to production
+
+on:
+  push:
+    branches:
+      - v2
+    paths:
+      - docs/**
+  workflow_dispatch:
+
+jobs:
+  adoc_build:
+    runs-on: ubuntu-latest
+    name: asciidoctor build
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+        with:
+          ref: v2
+
+      - name: Build html
+        id: adocbuild
+        uses: avattathil/asciidoctor-action@master
+        with:
+          program: "asciidoctor -D docs -o index.html -a lang=nb docs/main.adoc"
+
+      - name: Build pdf
+        id: adocbuild_pdf
+        uses: avattathil/asciidoctor-action@master
+        with:
+          program: "asciidoctor-pdf -D docs -o files/veileder-beskrivelse-av-datasett.pdf -a lang=nb docs/main.adoc"
+        continue-on-error: true
+
+      - name: Upload rdf to static-rdf-server
+        uses: Informasjonsforvaltning/upload-files-to-static-rdf-server-action@v3.1.0
+        id: upload-rdf
+        with:
+          ontology-type: "guide"
+          ontology: "veileder-beskrivelse-av-datasett"
+          host: "https://fellesdatakatalog.digdir.no"
+          api-key: ${{ secrets.STATIC_RDF_SERVER_API_KEY }}
+          files: |
+            docs/index.html text/html nb
+            docs/files/veileder-beskrivelse-av-datasett.pdf application/pdf nb files/veileder-beskrivelse-av-datasett.pdf
+            docs/images/digitaliseringsdirektoratet.png image/png nb images/digitaliseringsdirektoratet.png
+            docs/images/Datasett-begrep-distribusjon-datatjeneste-infomod.png image/png nb images/Datasett-begrep-distribusjon-datatjeneste-infomod.png
