@@ -1,4 +1,4 @@
-name: build adocs and publish v2 to production
+name: build adocs and publish v2 to staging
 
 on:
   push:
@@ -38,8 +38,8 @@ jobs:
         with:
           ontology-type: "guide"
           ontology: "veileder-beskrivelse-av-datasett"
-          host: "https://fellesdatakatalog.digdir.no"
-          api-key: ${{ secrets.STATIC_RDF_SERVER_API_KEY }}
+          host: "https://staging.fellesdatakatalog.digdir.no"
+          api-key: ${{ secrets.STATIC_RDF_SERVER_API_KEY_STAGING }}
           files: |
             docs/index.html text/html nb
             docs/files/veileder-beskrivelse-av-datasett.pdf application/pdf nb files/veileder-beskrivelse-av-datasett.pdf
