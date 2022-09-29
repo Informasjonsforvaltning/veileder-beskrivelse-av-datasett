@@ -1,4 +1,4 @@
-name: build adocs and publish v1 to production
+name: build adocs and publish v1 to staging
 
 on:
   push:
