@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="generator" content="Asciidoctor 2.0.17">
+<meta name="generator" content="Asciidoctor 2.0.23">
 <meta name="description" content="">
 <title>Veileder for beskrivelse av datasett, datatjenester og datakataloger</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
@@ -85,10 +85,10 @@ code{font-family:"Droid Sans Mono","DejaVu Sans Mono",monospace;font-weight:400;
 ul,ol,dl{line-height:1.6;margin-bottom:1.25em;list-style-position:outside;font-family:inherit}
 ul,ol{margin-left:1.5em}
 ul li ul,ul li ol{margin-left:1.25em;margin-bottom:0}
-ul.square li ul,ul.circle li ul,ul.disc li ul{list-style:inherit}
-ul.square{list-style-type:square}
 ul.circle{list-style-type:circle}
 ul.disc{list-style-type:disc}
+ul.square{list-style-type:square}
+ul.circle ul:not([class]),ul.disc ul:not([class]),ul.square ul:not([class]){list-style:inherit}
 ol li ul,ol li ol{margin-left:1.25em;margin-bottom:0}
 dl dt{margin-bottom:.3125em;font-weight:bold}
 dl dd{margin-bottom:1.25em}
@@ -141,7 +141,7 @@ p a>code:hover{color:rgba(0,0,0,.9)}
 #content::before{content:none}
 #header>h1:first-child{color:rgba(0,0,0,.85);margin-top:2.25rem;margin-bottom:0}
 #header>h1:first-child+#toc{margin-top:8px;border-top:1px solid #dddddf}
-#header>h1:only-child,body.toc2 #header>h1:nth-last-child(2){border-bottom:1px solid #dddddf;padding-bottom:8px}
+#header>h1:only-child{border-bottom:1px solid #dddddf;padding-bottom:8px}
 #header .details{border-bottom:1px solid #dddddf;line-height:1.45;padding-top:.25em;padding-bottom:.25em;padding-left:.25em;color:rgba(0,0,0,.6);display:flex;flex-flow:row wrap}
 #header .details span:first-child{margin-left:-.125em}
 #header .details span.email a{color:rgba(0,0,0,.85)}
@@ -163,6 +163,7 @@ p a>code:hover{color:rgba(0,0,0,.9)}
 #toctitle{color:#7a2518;font-size:1.2em}
 @media screen and (min-width:768px){#toctitle{font-size:1.375em}
 body.toc2{padding-left:15em;padding-right:0}
+body.toc2 #header>h1:nth-last-child(2){border-bottom:1px solid #dddddf;padding-bottom:8px}
 #toc.toc2{margin-top:0!important;background:#f8f8f7;position:fixed;width:15em;left:0;top:0;border-right:1px solid #e7e7e9;border-top-width:0!important;border-bottom-width:0!important;z-index:1000;padding:1.25em 1em;height:100%;overflow:auto}
 #toc.toc2 #toctitle{margin-top:0;margin-bottom:.8rem;font-size:1.2em}
 #toc.toc2>ul{font-size:.9em;margin-bottom:0}
@@ -209,13 +210,10 @@ table.tableblock.fit-content>caption.title{white-space:nowrap;width:0}
 .admonitionblock>table td.content{padding-left:1.125em;padding-right:1.25em;border-left:1px solid #dddddf;color:rgba(0,0,0,.6);word-wrap:anywhere}
 .admonitionblock>table td.content>:last-child>:last-child{margin-bottom:0}
 .exampleblock>.content{border:1px solid #e6e6e6;margin-bottom:1.25em;padding:1.25em;background:#fff;border-radius:4px}
-.exampleblock>.content>:first-child{margin-top:0}
-.exampleblock>.content>:last-child{margin-bottom:0}
 .sidebarblock{border:1px solid #dbdbd6;margin-bottom:1.25em;padding:1.25em;background:#f3f3f2;border-radius:4px}
-.sidebarblock>:first-child{margin-top:0}
-.sidebarblock>:last-child{margin-bottom:0}
 .sidebarblock>.content>.title{color:#7a2518;margin-top:0;text-align:center}
-.exampleblock>.content>:last-child>:last-child,.exampleblock>.content .olist>ol>li:last-child>:last-child,.exampleblock>.content .ulist>ul>li:last-child>:last-child,.exampleblock>.content .qlist>ol>li:last-child>:last-child,.sidebarblock>.content>:last-child>:last-child,.sidebarblock>.content .olist>ol>li:last-child>:last-child,.sidebarblock>.content .ulist>ul>li:last-child>:last-child,.sidebarblock>.content .qlist>ol>li:last-child>:last-child{margin-bottom:0}
+.exampleblock>.content>:first-child,.sidebarblock>.content>:first-child{margin-top:0}
+.exampleblock>.content>:last-child,.exampleblock>.content>:last-child>:last-child,.exampleblock>.content .olist>ol>li:last-child>:last-child,.exampleblock>.content .ulist>ul>li:last-child>:last-child,.exampleblock>.content .qlist>ol>li:last-child>:last-child,.sidebarblock>.content>:last-child,.sidebarblock>.content>:last-child>:last-child,.sidebarblock>.content .olist>ol>li:last-child>:last-child,.sidebarblock>.content .ulist>ul>li:last-child>:last-child,.sidebarblock>.content .qlist>ol>li:last-child>:last-child{margin-bottom:0}
 .literalblock pre,.listingblock>.content>pre{border-radius:4px;overflow-x:auto;padding:1em;font-size:.8125em}
 @media screen and (min-width:768px){.literalblock pre,.listingblock>.content>pre{font-size:.90625em}}
 @media screen and (min-width:1280px){.literalblock pre,.listingblock>.content>pre{font-size:1em}}
@@ -331,7 +329,7 @@ a.image{text-decoration:none;display:inline-block}
 a.image object{pointer-events:none}
 sup.footnote,sup.footnoteref{font-size:.875em;position:static;vertical-align:super}
 sup.footnote a,sup.footnoteref a{text-decoration:none}
-sup.footnote a:active,sup.footnoteref a:active{text-decoration:underline}
+sup.footnote a:active,sup.footnoteref a:active,#footnotes .footnote a:first-of-type:active{text-decoration:underline}
 #footnotes{padding-top:.75em;padding-bottom:.75em;margin-bottom:.625em}
 #footnotes hr{width:20%;min-width:6.25em;margin:-.25em 0 .75em;border-width:1px 0 0}
 #footnotes .footnote{padding:0 .375em 0 .225em;line-height:1.3334;font-size:.875em;margin-left:1.2em;margin-bottom:.2em}
@@ -394,7 +392,7 @@ b.conum *{color:inherit!important}
 dt,th.tableblock,td.content,div.footnote{text-rendering:optimizeLegibility}
 h1,h2,p,td.content,span.alt,summary{letter-spacing:-.01em}
 p strong,td.content strong,div.footnote strong{letter-spacing:-.005em}
-p,blockquote,dt,td.content,span.alt,summary{font-size:1.0625rem}
+p,blockquote,dt,td.content,td.hdlist1,span.alt,summary{font-size:1.0625rem}
 p{margin-bottom:1.25rem}
 .sidebarblock p,.sidebarblock dt,.sidebarblock td.content,p.tableblock{font-size:1em}
 .exampleblock>.content{background:#fffef7;border-color:#e0e0dc;box-shadow:0 1px 4px #e0e0dc}
@@ -702,10 +700,10 @@ Dersom du finner feil eller mangler i dokumentet, ber vi om at dette meldes inn 
 </div>
 </div>
 <div class="sect1">
-<h2 id="om-denne-veilederen"><a class="anchor" href="#om-denne-veilederen"></a>Om denne veilederen</h2>
+<h2 id="om-denne-veilederen"><a class="link" href="#om-denne-veilederen">Om denne veilederen</a></h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="hensikt-og-avgrensing"><a class="anchor" href="#hensikt-og-avgrensing"></a>Hensikt og avgrensing</h3>
+<h3 id="hensikt-og-avgrensing"><a class="link" href="#hensikt-og-avgrensing">Hensikt og avgrensing</a></h3>
 <div class="paragraph">
 <p>Denne veilederen skal bidra til bedre beskrivelser av datasett, datatjenester og datakataloger. For offentlige virksomheter kan dette være en del av prosessene for å skape orden i eget hus, oppnå mer gjenbruk av data mellom offentlige virksomheter  og å gjøre mer åpne offentlige data tilgjengelig for næringsliv og sivilsamfunn. Se <a href="https://data.norge.no/guide/veileder-orden-i-eget-hus/">Veileder for orden i eget hus</a> for hvordan din virksomhet skaper orden i eget hus, bl.a. hvordan kartlegge hvilke data som skal beskrives.</p>
 </div>
@@ -723,7 +721,7 @@ Dersom du finner feil eller mangler i dokumentet, ber vi om at dette meldes inn 
 </div>
 </div>
 <div class="sect2">
-<h3 id="målgruppe"><a class="anchor" href="#målgruppe"></a>Målgruppe</h3>
+<h3 id="målgruppe"><a class="link" href="#målgruppe">Målgruppe</a></h3>
 <div class="paragraph">
 <p>Målgruppen for denne veilederen er primært deg som skal beskrive datasett, datatjenester og datakataloger i din virksomhet i henhold til <a href="https://data.norge.no/specification/dcat-ap-no/">DCAT-AP-NO v.2</a>.</p>
 </div>
@@ -732,7 +730,7 @@ Dersom du finner feil eller mangler i dokumentet, ber vi om at dette meldes inn 
 </div>
 </div>
 <div class="sect2">
-<h3 id="struktur"><a class="anchor" href="#struktur"></a>Struktur</h3>
+<h3 id="struktur"><a class="link" href="#struktur">Struktur</a></h3>
 <div class="paragraph">
 <p>Denne veilederen forklarer hvordan du beskriver følgende i henhold til <a href="https://data.norge.no/specification/dcat-ap-no/">DCAT-AP-NO v.2</a>:</p>
 </div>
@@ -782,7 +780,7 @@ Dersom du finner feil eller mangler i dokumentet, ber vi om at dette meldes inn 
 </div>
 </div>
 <div class="sect2">
-<h3 id="navnerom-brukt-i-veilederen"><a class="anchor" href="#navnerom-brukt-i-veilederen"></a>Navnerom som er brukt i denne veilederen</h3>
+<h3 id="navnerom-brukt-i-veilederen"><a class="link" href="#navnerom-brukt-i-veilederen">Navnerom som er brukt i denne veilederen</a></h3>
 <table class="tableblock frame-all grid-all stretch">
 <caption class="title">Tabell 1. Teknisk veiledning - Navnerom som er brukt i denne veilederen</caption>
 <colgroup>
@@ -912,7 +910,7 @@ Dersom du finner feil eller mangler i dokumentet, ber vi om at dette meldes inn 
 </div>
 </div>
 <div class="sect1">
-<h2 id="beskrivelse-av-datasett"><a class="anchor" href="#beskrivelse-av-datasett"></a>Beskrivelse av datasett</h2>
+<h2 id="beskrivelse-av-datasett"><a class="link" href="#beskrivelse-av-datasett">Beskrivelse av datasett</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Se <a href="https://data.norge.no/guide/veileder-orden-i-eget-hus/">Veileder for orden i eget hus</a> for hvordan din virksomhet kartlegger hvilke datasett som skal beskrives.</p>
@@ -930,7 +928,7 @@ Dersom du finner feil eller mangler i dokumentet, ber vi om at dette meldes inn 
 <p>For deg som skal utvikle/tilpasse verktøystøtte for datasettbeskrivelse i henhold til DCAT-AP-NO, inneholder veilederen også en teknisk veiledning bakerst i hvert avsnitt. NB! Bortsett fra det første eksemplet, er ikke alle eksempler i RDF Turtle komplette og de kan mangle bl.a. verdier for obligatoriske egenskaper.</p>
 </div>
 <div class="sect2">
-<h3 id="eksempel-datasettbeskrivelse"><a class="anchor" href="#eksempel-datasettbeskrivelse"></a>Eksempel på en datasettbeskrivelse</h3>
+<h3 id="eksempel-datasettbeskrivelse"><a class="link" href="#eksempel-datasettbeskrivelse">Eksempel på en datasettbeskrivelse</a></h3>
 <div class="paragraph">
 <p>Under er et eksempel på en datasettbeskrivelse, med dummydata, hvor <strong>uthevede egenskaper</strong> er obligatoriske:</p>
 </div>
@@ -996,7 +994,7 @@ Formålet med dette datasettet er å illustrere hvordan et datasett skal/bør/ka
 </div>
 </div>
 <div class="sect2">
-<h3 id="datasett-obligatoriske-egenskaper"><a class="anchor" href="#datasett-obligatoriske-egenskaper"></a>Obligatoriske egenskaper i en datasettbeskrivelse</h3>
+<h3 id="datasett-obligatoriske-egenskaper"><a class="link" href="#datasett-obligatoriske-egenskaper">Obligatoriske egenskaper i en datasettbeskrivelse</a></h3>
 <div class="paragraph">
 <p>Som et minimum skal følgende tas med i en datasettbeskrivelse:</p>
 </div>
@@ -1020,7 +1018,7 @@ Formålet med dette datasettet er å illustrere hvordan et datasett skal/bør/ka
 </ul>
 </div>
 <div class="sect3">
-<h4 id="datasett-beskrivelse"><a class="anchor" href="#datasett-beskrivelse"></a>Datasett - beskrivelse</h4>
+<h4 id="datasett-beskrivelse"><a class="link" href="#datasett-beskrivelse">Datasett - beskrivelse</a></h4>
 <div class="paragraph">
 <p>For at andre skal kunne vite hva slags datasett du har, skal du oppgi en kort og presis beskrivelse av datasettet.</p>
 </div>
@@ -1090,7 +1088,7 @@ Hva som inngår i datasettet er godt beskrevet, men unntakene her er utelatt.</p
 </div>
 </div>
 <div class="sect3">
-<h4 id="datasett-identifikator"><a class="anchor" href="#datasett-identifikator"></a>Datasett - identifikator</h4>
+<h4 id="datasett-identifikator"><a class="link" href="#datasett-identifikator">Datasett - identifikator</a></h4>
 <div class="paragraph">
 <p>For å kunne referere til et datasett er det nødvendig å tilordne datasettet en identifikator. Identifikatoren er som regel systemgenerert av verktøyet som brukes til å beskrive et datasett, slik at du som vanlig bruker ikke trenger å oppgi verdien til denne egenskapen manuelt.</p>
 </div>
@@ -1100,7 +1098,7 @@ Hva som inngår i datasettet er godt beskrevet, men unntakene her er utelatt.</p
 </div>
 </div>
 <div class="sect3">
-<h4 id="datasett-tema"><a class="anchor" href="#datasett-tema"></a>Datasett - tema</h4>
+<h4 id="datasett-tema"><a class="link" href="#datasett-tema">Datasett - tema</a></h4>
 <div class="paragraph">
 <p>For å kunne sortere datasettet inn under gitte kategorier er det nødvendig å tilordne "tema" til datasettet.</p>
 </div>
@@ -1141,7 +1139,7 @@ Hva som inngår i datasettet er godt beskrevet, men unntakene her er utelatt.</p
 </div>
 </div>
 <div class="sect3">
-<h4 id="datasett-tittel"><a class="anchor" href="#datasett-tittel"></a>Datasett - tittel</h4>
+<h4 id="datasett-tittel"><a class="link" href="#datasett-tittel">Datasett - tittel</a></h4>
 <div class="paragraph">
 <p>For at andre lett skal kunne se hva datasettet ditt omhandler når datasettet f.eks. er listet opp blant mange andre datasett, er det nødvendig å gi datasettet ditt en tittel.</p>
 </div>
@@ -1196,7 +1194,7 @@ Hva som inngår i datasettet er godt beskrevet, men unntakene her er utelatt.</p
 </div>
 </div>
 <div class="sect3">
-<h4 id="datasett-utgiver"><a class="anchor" href="#datasett-utgiver"></a>Datasett - utgiver</h4>
+<h4 id="datasett-utgiver"><a class="link" href="#datasett-utgiver">Datasett - utgiver</a></h4>
 <div class="paragraph">
 <p>For at andre lett skal kunne se hvem som er ansvarlig for at datasettet ditt <em>er</em> tilgjengelig (ikke nødvendigvis samme som den som faktisk gjør datasettet tilgjengelig), er det nødvendig å oppgi utgiver.</p>
 </div>
@@ -1237,7 +1235,7 @@ Hva som inngår i datasettet er godt beskrevet, men unntakene her er utelatt.</p
 </div>
 </div>
 <div class="sect2">
-<h3 id="datasett-anbefalte-egenskaper"><a class="anchor" href="#datasett-anbefalte-egenskaper"></a>Anbefalte egenskaper i en datasettbeskrivelse</h3>
+<h3 id="datasett-anbefalte-egenskaper"><a class="link" href="#datasett-anbefalte-egenskaper">Anbefalte egenskaper i en datasettbeskrivelse</a></h3>
 <div class="paragraph">
 <p>Følgende opplysninger bør du ta med i en datasettbeskrivelse hvis de finnes:</p>
 </div>
@@ -1273,7 +1271,7 @@ Hva som inngår i datasettet er godt beskrevet, men unntakene her er utelatt.</p
 </ul>
 </div>
 <div class="sect3">
-<h4 id="datasett-begrep"><a class="anchor" href="#datasett-begrep"></a>Datasett - begrep</h4>
+<h4 id="datasett-begrep"><a class="link" href="#datasett-begrep">Datasett - begrep</a></h4>
 <div class="paragraph">
 <p>For at andre lett skal kunne forstå typer innhold i datasettet ditt, skal du knyttet datasettet til relevante begrepsdefinisjoner <em>hvis</em> de finnes.</p>
 </div>
@@ -1319,7 +1317,7 @@ Hva som inngår i datasettet er godt beskrevet, men unntakene her er utelatt.</p
 </div>
 </div>
 <div class="sect3">
-<h4 id="datasett-bleGenerertVed"><a class="anchor" href="#datasett-bleGenerertVed"></a>Datasett - ble generert ved</h4>
+<h4 id="datasett-bleGenerertVed"><a class="link" href="#datasett-bleGenerertVed">Datasett - ble generert ved</a></h4>
 <div class="paragraph">
 <p>Hvilken type aktivitet dine data ble generert ved, kan ha betydning for dem som skal vurdere gjenbruk/viderebruk av dine data. Du skal derfor oppgi dette <em>hvis</em> det er mulig.</p>
 </div>
@@ -1380,7 +1378,7 @@ Hva som inngår i datasettet er godt beskrevet, men unntakene her er utelatt.</p
 </div>
 </div>
 <div class="sect3">
-<h4 id="datasett-datasettdistribusjon"><a class="anchor" href="#datasett-datasettdistribusjon"></a>Datasett - datasettdistribusjon</h4>
+<h4 id="datasett-datasettdistribusjon"><a class="link" href="#datasett-datasettdistribusjon">Datasett - datasettdistribusjon</a></h4>
 <div class="paragraph">
 <p><em>Hvis</em> datasettet ditt er gjort tilgjengelig skal du beskrive hvor det faktiske datasettet finnes (f.eks. hvor datafilen kan lastes ned), slik at andre skal kunne få tak i datasettet ditt.</p>
 </div>
@@ -1412,7 +1410,7 @@ Hva som inngår i datasettet er godt beskrevet, men unntakene her er utelatt.</p
 </div>
 </div>
 <div class="sect3">
-<h4 id="datasett-dekningsområde"><a class="anchor" href="#datasett-dekningsområde"></a>Datasett - dekningsområde</h4>
+<h4 id="datasett-dekningsområde"><a class="link" href="#datasett-dekningsområde">Datasett - dekningsområde</a></h4>
 <div class="paragraph">
 <p><em>Hvis</em> datasettet ditt kun har innhold fra visse geografiske områder, skal du oppgi dette. Datasettet “Observert hekking av grågås i Oppdal” har f.eks. kommune Oppdal som sitt geografiske dekningsområde.</p>
 </div>
@@ -1457,7 +1455,7 @@ Hva som inngår i datasettet er godt beskrevet, men unntakene her er utelatt.</p
 </div>
 </div>
 <div class="sect3">
-<h4 id="datasett-emneord"><a class="anchor" href="#datasett-emneord"></a>Datasett - emneord</h4>
+<h4 id="datasett-emneord"><a class="link" href="#datasett-emneord">Datasett - emneord</a></h4>
 <div class="paragraph">
 <p>Ord og uttrykk som hjelper brukeren til å finne datasettet og som ikke kan knyttes til publiserte begrepsdefinisjoner, inkluderes som emneord.</p>
 </div>
@@ -1494,7 +1492,7 @@ Hva som inngår i datasettet er godt beskrevet, men unntakene her er utelatt.</p
 </div>
 </div>
 <div class="sect3">
-<h4 id="datasett-følger"><a class="anchor" href="#datasett-følger"></a>Datasett - følger</h4>
+<h4 id="datasett-følger"><a class="link" href="#datasett-følger">Datasett - følger</a></h4>
 <div class="paragraph">
 <p><em>Hvis</em> (oppretting og/eller forvaltning av) datasettet ditt følger gitte regelverk, skal det opplyses om.</p>
 </div>
@@ -1578,7 +1576,7 @@ Hva som inngår i datasettet er godt beskrevet, men unntakene her er utelatt.</p
 </div>
 </div>
 <div class="sect3">
-<h4 id="datasett-kontaktpunkt"><a class="anchor" href="#datasett-kontaktpunkt"></a>Datasett - kontaktpunkt</h4>
+<h4 id="datasett-kontaktpunkt"><a class="link" href="#datasett-kontaktpunkt">Datasett - kontaktpunkt</a></h4>
 <div class="paragraph">
 <p>For at andre skal kunne kontakte utgiveren av et datasett, bør kontaktinformasjonen til utgiveren oppgis.</p>
 </div>
@@ -1621,7 +1619,7 @@ Hva som inngår i datasettet er godt beskrevet, men unntakene her er utelatt.</p
 </div>
 </div>
 <div class="sect3">
-<h4 id="datasett-tidsrom"><a class="anchor" href="#datasett-tidsrom"></a>Datasett - tidsrom</h4>
+<h4 id="datasett-tidsrom"><a class="link" href="#datasett-tidsrom">Datasett - tidsrom</a></h4>
 <div class="paragraph">
 <p><em>Hvis</em> innholdet i et datasett dekker et avgrenset tidsrom, skal dette opplyses om.</p>
 </div>
@@ -1673,7 +1671,7 @@ Hva som inngår i datasettet er godt beskrevet, men unntakene her er utelatt.</p
 </div>
 </div>
 <div class="sect3">
-<h4 id="datasett-tilgangsnivå"><a class="anchor" href="#datasett-tilgangsnivå"></a>Datasett - tilgangsnivå</h4>
+<h4 id="datasett-tilgangsnivå"><a class="link" href="#datasett-tilgangsnivå">Datasett - tilgangsnivå</a></h4>
 <div class="paragraph">
 <p>Uansett om datasettet ditt er gjort tilgjengelig eller ikke, bør du oppgi i hvilken grad datasettet kan bli gjort tilgjengelig for allmennheten, såkalt tilgangsnivå.</p>
 </div>
@@ -1730,7 +1728,7 @@ Hva som inngår i datasettet er godt beskrevet, men unntakene her er utelatt.</p
 </div>
 </div>
 <div class="sect2">
-<h3 id="datasett-valgfrie-egenskaper"><a class="anchor" href="#datasett-valgfrie-egenskaper"></a>Valgfrie egenskaper i en datasettbeskrivelse</h3>
+<h3 id="datasett-valgfrie-egenskaper"><a class="link" href="#datasett-valgfrie-egenskaper">Valgfrie egenskaper i en datasettbeskrivelse</a></h3>
 <div class="paragraph">
 <p>I tillegg til obligatoriske (skal brukes) og anbefalte (bør brukes) egenskaper, er det en del egenskaper som er valgfrie (kan brukes) i en datasettbeskrivelse:</p>
 </div>
@@ -1838,13 +1836,13 @@ Hva som inngår i datasettet er godt beskrevet, men unntakene her er utelatt.</p
 <p>Ikke alle valgfrie egenskaper er beskrevet i etterfølgende avsnitt. Se under <a href="#hensikt-og-avgrensing">Hensikt og avgrensning</a> for hvordan du kan melde inn behov for beskrivelser.</p>
 </div>
 <div class="sect3">
-<h4 id="datasett-annenIdentifikator"><a class="anchor" href="#datasett-annenIdentifikator"></a>Datasett - annen identifikator</h4>
+<h4 id="datasett-annenIdentifikator"><a class="link" href="#datasett-annenIdentifikator">Datasett - annen identifikator</a></h4>
 <div class="paragraph">
 <p><em>&lt;ikke beskrevet, tilsvarer <a href="https://data.norge.no/specification/dcat-ap-no/#Datasett-annenIdentifikator">Datasett: annen identifikator (<code>adms:identifier</code>) i DCAT-AP-NO</a>&gt;</em></p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="datasett-dokumentasjon"><a class="anchor" href="#datasett-dokumentasjon"></a>Datasett - dokumentasjon</h4>
+<h4 id="datasett-dokumentasjon"><a class="link" href="#datasett-dokumentasjon">Datasett - dokumentasjon</a></h4>
 <div class="paragraph">
 <p>Utdypende dokumentasjon av datasettet angis ved å peke på en side der den finnes.</p>
 </div>
@@ -1871,7 +1869,7 @@ Hva som inngår i datasettet er godt beskrevet, men unntakene her er utelatt.</p
 </div>
 </div>
 <div class="sect3">
-<h4 id="datasett-eksempeldata"><a class="anchor" href="#datasett-eksempeldata"></a>Datasett - eksempeldata</h4>
+<h4 id="datasett-eksempeldata"><a class="link" href="#datasett-eksempeldata">Datasett - eksempeldata</a></h4>
 <div class="paragraph">
 <p>Benyttes for å gi eksempeldata for et datasett, og hvordan en faktisk distribusjon ser ut.</p>
 </div>
@@ -1900,7 +1898,7 @@ Hva som inngår i datasettet er godt beskrevet, men unntakene her er utelatt.</p
 </div>
 </div>
 <div class="sect3">
-<h4 id="datasett-endringsdato"><a class="anchor" href="#datasett-endringsdato"></a>Datasett - endringsdato</h4>
+<h4 id="datasett-endringsdato"><a class="link" href="#datasett-endringsdato">Datasett - endringsdato</a></h4>
 <div class="paragraph">
 <p>For at andre skal kunne vite når datasettet sist ble oppdatert angis tidspunkt for siste endring.</p>
 </div>
@@ -1941,7 +1939,7 @@ Hva som inngår i datasettet er godt beskrevet, men unntakene her er utelatt.</p
 </div>
 </div>
 <div class="sect3">
-<h4 id="datasett-erDelAv"><a class="anchor" href="#datasett-erDelAv"></a>Datasett - er del av</h4>
+<h4 id="datasett-erDelAv"><a class="link" href="#datasett-erDelAv">Datasett - er del av</a></h4>
 <div class="paragraph">
 <p>Brukes til å angi at det aktuelle datasettet er en delmengde at et annet datasett.</p>
 </div>
@@ -1972,7 +1970,7 @@ Hva som inngår i datasettet er godt beskrevet, men unntakene her er utelatt.</p
 </div>
 </div>
 <div class="sect3">
-<h4 id="datasett-erPåkrevdAv"><a class="anchor" href="#datasett-erPåkrevdAv"></a>Datasett - er påkrevd av</h4>
+<h4 id="datasett-erPåkrevdAv"><a class="link" href="#datasett-erPåkrevdAv">Datasett - er påkrevd av</a></h4>
 <div class="paragraph">
 <p>Brukes til å referere til annet datasett som det aktuelle datasettet er nødvendig for.</p>
 </div>
@@ -1993,7 +1991,7 @@ Hva som inngår i datasettet er godt beskrevet, men unntakene her er utelatt.</p
 </div>
 </div>
 <div class="sect3">
-<h4 id="Datasett-erReferertAv"><a class="anchor" href="#Datasett-erReferertAv"></a>Datasett - er referert av</h4>
+<h4 id="Datasett-erReferertAv"><a class="link" href="#Datasett-erReferertAv">Datasett - er referert av</a></h4>
 <div class="paragraph">
 <p>Motsatt av <a href="#datasett-referererTil">Datasett - refererer til</a>.</p>
 </div>
@@ -2002,7 +2000,7 @@ Hva som inngår i datasettet er godt beskrevet, men unntakene her er utelatt.</p
 </div>
 </div>
 <div class="sect3">
-<h4 id="datasett-erVersjonAv"><a class="anchor" href="#datasett-erVersjonAv"></a>Datasett - er versjon av</h4>
+<h4 id="datasett-erVersjonAv"><a class="link" href="#datasett-erVersjonAv">Datasett - er versjon av</a></h4>
 <div class="paragraph">
 <p>Brukes til å referere til et annet datasett som det aktuelle datasettet er en versjon av.</p>
 </div>
@@ -2030,7 +2028,7 @@ Hva som inngår i datasettet er godt beskrevet, men unntakene her er utelatt.</p
 </div>
 </div>
 <div class="sect3">
-<h4 id="datasett-erstatter"><a class="anchor" href="#datasett-erstatter"></a>Datasett - erstatter</h4>
+<h4 id="datasett-erstatter"><a class="link" href="#datasett-erstatter">Datasett - erstatter</a></h4>
 <div class="paragraph">
 <p>Motsatt av <a href="#datasett-erstattesAv">Datasett - erstattes av</a>.</p>
 </div>
@@ -2039,7 +2037,7 @@ Hva som inngår i datasettet er godt beskrevet, men unntakene her er utelatt.</p
 </div>
 </div>
 <div class="sect3">
-<h4 id="datasett-erstattesAv"><a class="anchor" href="#datasett-erstattesAv"></a>Datasett - erstattes av</h4>
+<h4 id="datasett-erstattesAv"><a class="link" href="#datasett-erstattesAv">Datasett - erstattes av</a></h4>
 <div class="paragraph">
 <p>Brukes til å referere til et datasett som erstatter dette datasettet.</p>
 </div>
@@ -2067,7 +2065,7 @@ Hva som inngår i datasettet er godt beskrevet, men unntakene her er utelatt.</p
 </div>
 </div>
 <div class="sect3">
-<h4 id="datasett-frekvens"><a class="anchor" href="#datasett-frekvens"></a>Datasett - frekvens</h4>
+<h4 id="datasett-frekvens"><a class="link" href="#datasett-frekvens">Datasett - frekvens</a></h4>
 <div class="paragraph">
 <p>Brukes til å beskrive hvor ofte datasettet blir oppdatert.</p>
 </div>
@@ -2104,7 +2102,7 @@ Hva som inngår i datasettet er godt beskrevet, men unntakene her er utelatt.</p
 </div>
 </div>
 <div class="sect3">
-<h4 id="datasett-harDel"><a class="anchor" href="#datasett-harDel"></a>Datasett - har del</h4>
+<h4 id="datasett-harDel"><a class="link" href="#datasett-harDel">Datasett - har del</a></h4>
 <div class="paragraph">
 <p>Motsatt av <a href="#datasett-erDelAv">Datasett - er del av</a>.</p>
 </div>
@@ -2113,7 +2111,7 @@ Hva som inngår i datasettet er godt beskrevet, men unntakene her er utelatt.</p
 </div>
 </div>
 <div class="sect3">
-<h4 id="datasett-harKvalitetsNote"><a class="anchor" href="#datasett-harKvalitetsNote"></a>Datasett - har kvalitetsnote</h4>
+<h4 id="datasett-harKvalitetsNote"><a class="link" href="#datasett-harKvalitetsNote">Datasett - har kvalitetsnote</a></h4>
 <div class="paragraph">
 <p>Se under <a href="#beskrivelse-av-kvalitet">Beskrivelse av kvalitet</a>.</p>
 </div>
@@ -2123,7 +2121,7 @@ Hva som inngår i datasettet er godt beskrevet, men unntakene her er utelatt.</p
 </div>
 </div>
 <div class="sect3">
-<h4 id="datasett-harMåleresultat"><a class="anchor" href="#datasett-harMåleresultat"></a>Datasett - har måleresultat</h4>
+<h4 id="datasett-harMåleresultat"><a class="link" href="#datasett-harMåleresultat">Datasett - har måleresultat</a></h4>
 <div class="paragraph">
 <p>Se under <a href="#beskrivelse-av-kvalitet">Beskrivelse av kvalitet</a>.</p>
 </div>
@@ -2133,13 +2131,13 @@ Hva som inngår i datasettet er godt beskrevet, men unntakene her er utelatt.</p
 </div>
 </div>
 <div class="sect3">
-<h4 id="datasett-harVersjon"><a class="anchor" href="#datasett-harVersjon"></a>Datasett - har versjon</h4>
+<h4 id="datasett-harVersjon"><a class="link" href="#datasett-harVersjon">Datasett - har versjon</a></h4>
 <div class="paragraph">
 <p><em>&lt;ikke beskrevet, tilsvarer  <a href="https://data.norge.no/specification/dcat-ap-no/#Datasett-harVersjon">Datasett: har versjon (<code>dct:hasVersion</code>) i DCAT-AP-NO</a>&gt;</em></p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="datasett-iSamsvarMed"><a class="anchor" href="#datasett-iSamsvarMed"></a>Datasett - i samsvar med</h4>
+<h4 id="datasett-iSamsvarMed"><a class="link" href="#datasett-iSamsvarMed">Datasett - i samsvar med</a></h4>
 <div class="paragraph">
 <p>Brukes til å beskrive at et datasett er i henhold til gitt(e) standard(er)/spesifikasjon(er)/informasjonsmodell(er)/o.l.</p>
 </div>
@@ -2168,7 +2166,7 @@ Hva som inngår i datasettet er godt beskrevet, men unntakene her er utelatt.</p
 </div>
 </div>
 <div class="sect3">
-<h4 id="datasett-kilde"><a class="anchor" href="#datasett-kilde"></a>Datasett - kilde</h4>
+<h4 id="datasett-kilde"><a class="link" href="#datasett-kilde">Datasett - kilde</a></h4>
 <div class="paragraph">
 <p>Brukes til å referere til et datasett som helt eller delvis er en kilde til dette datasettet.</p>
 </div>
@@ -2205,7 +2203,7 @@ Hva som inngår i datasettet er godt beskrevet, men unntakene her er utelatt.</p
 </div>
 </div>
 <div class="sect3">
-<h4 id="datasett-krever"><a class="anchor" href="#datasett-krever"></a>Datasett - krever</h4>
+<h4 id="datasett-krever"><a class="link" href="#datasett-krever">Datasett - krever</a></h4>
 <div class="paragraph">
 <p>Motsatt av <a href="#datasett-erPåkrevdAv">Datasett: er påkrevd av</a>.</p>
 </div>
@@ -2214,19 +2212,19 @@ Hva som inngår i datasettet er godt beskrevet, men unntakene her er utelatt.</p
 </div>
 </div>
 <div class="sect3">
-<h4 id="datasett-kvalifisertKreditering"><a class="anchor" href="#datasett-kvalifisertKreditering"></a>Datasett - kvalifisert kreditering</h4>
+<h4 id="datasett-kvalifisertKreditering"><a class="link" href="#datasett-kvalifisertKreditering">Datasett - kvalifisert kreditering</a></h4>
 <div class="paragraph">
 <p><em>&lt;ikke beskrevet, tilsvarer <a href="https://data.norge.no/specification/dcat-ap-no/#Datasett-kvalifisertKreditering">Datasett: kvalifisert kreditering (<code>prov:qualifiedAttribution</code>) i DCAT-AP-NO</a>&gt;</em></p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="datasett-kvalifisertRelasjon"><a class="anchor" href="#datasett-kvalifisertRelasjon"></a>Datasett - kvalifisert relasjon</h4>
+<h4 id="datasett-kvalifisertRelasjon"><a class="link" href="#datasett-kvalifisertRelasjon">Datasett - kvalifisert relasjon</a></h4>
 <div class="paragraph">
 <p><em>&lt;ikke beskrevet, tilsvarer <a href="https://data.norge.no/specification/dcat-ap-no/#Datasett-kvalifisertRelasjon">Datasett: kvalifisert relasjon (<code>dcat:qualifiedRelation</code>) i DCAT-AP-NO</a>&gt;</em></p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="datasett-landingsside"><a class="anchor" href="#datasett-landingsside"></a>Datasett - landingsside</h4>
+<h4 id="datasett-landingsside"><a class="link" href="#datasett-landingsside">Datasett - landingsside</a></h4>
 <div class="paragraph">
 <p>Brukes til å referere til en side med dokumentasjon om datasettet, som kan beskrive datasettets innhold og struktur, og tilgang. Det anbefales at landingsside brukes der man refererer til utfyllende dokumentasjon, og <a href="#datasett-datasettdistribusjon">Datasett - datasettdistribusjon</a> benyttes f.eks. når man vil referere til en søkeside.</p>
 </div>
@@ -2269,13 +2267,13 @@ Hva som inngår i datasettet er godt beskrevet, men unntakene her er utelatt.</p
 </div>
 </div>
 <div class="sect3">
-<h4 id="datasett-opphav"><a class="anchor" href="#datasett-opphav"></a>Datasett - opphav</h4>
+<h4 id="datasett-opphav"><a class="link" href="#datasett-opphav">Datasett - opphav</a></h4>
 <div class="paragraph">
 <p><em>&lt;ikke beskrevet, tilsvarer <a href="https://data.norge.no/specification/dcat-ap-no/#Datasett-opphav">Datasett: opphav (<code>dct:provenance</code>) i DCAT-AP-NO</a>&gt;</em></p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="datasett-produsent"><a class="anchor" href="#datasett-produsent"></a>Datasett - produsent</h4>
+<h4 id="datasett-produsent"><a class="link" href="#datasett-produsent">Datasett - produsent</a></h4>
 <div class="paragraph">
 <p>Brukes til å angi produsent(er) av datasettet der dette er en annen enn utgiver (<a href="#datasett-utgiver">Datasett - utgiver</a>).</p>
 </div>
@@ -2315,7 +2313,7 @@ Hva som inngår i datasettet er godt beskrevet, men unntakene her er utelatt.</p
 </div>
 </div>
 <div class="sect3">
-<h4 id="datasett-referererTil"><a class="anchor" href="#datasett-referererTil"></a>Datasett - refererer til</h4>
+<h4 id="datasett-referererTil"><a class="link" href="#datasett-referererTil">Datasett - refererer til</a></h4>
 <div class="paragraph">
 <p>Her oppgir du referanse til andre ressurser som det kan være nyttig for brukere å være oppmerksom på.</p>
 </div>
@@ -2336,7 +2334,7 @@ Hva som inngår i datasettet er godt beskrevet, men unntakene her er utelatt.</p
 </div>
 </div>
 <div class="sect3">
-<h4 id="datasett-relatertRessurs"><a class="anchor" href="#datasett-relatertRessurs"></a>Datasett - relatert ressurs</h4>
+<h4 id="datasett-relatertRessurs"><a class="link" href="#datasett-relatertRessurs">Datasett - relatert ressurs</a></h4>
 <div class="paragraph">
 <p>Her kan du angi referanser til andre ressurser (f.eks. andre datasett) som gir supplerende informasjon om innholdet i dette datasettet. Kan f.eks. være å relatere til et annet register.</p>
 </div>
@@ -2357,13 +2355,13 @@ Hva som inngår i datasettet er godt beskrevet, men unntakene her er utelatt.</p
 </div>
 </div>
 <div class="sect3">
-<h4 id="datasett-romligOppløsning"><a class="anchor" href="#datasett-romligOppløsning"></a>Datasett - romlig oppløsning</h4>
+<h4 id="datasett-romligOppløsning"><a class="link" href="#datasett-romligOppløsning">Datasett - romlig oppløsning</a></h4>
 <div class="paragraph">
 <p><em>&lt;ikke beskrevet, tilsvarer <a href="https://data.norge.no/specification/dcat-ap-no/#Datasett-romligOppl%C3%B8sning">Datasett: romlig oppløsning  (<code>dcat:spatialResolutionInMeters</code>) i DCAT-AP-NO</a>&gt;</em></p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="datasett-språk"><a class="anchor" href="#datasett-språk"></a>Datasett - språk</h4>
+<h4 id="datasett-språk"><a class="link" href="#datasett-språk">Datasett - språk</a></h4>
 <div class="paragraph">
 <p>Her kan du oppgi hvilket språk innholdet til datasettet har.</p>
 </div>
@@ -2410,13 +2408,13 @@ Hva som inngår i datasettet er godt beskrevet, men unntakene her er utelatt.</p
 </div>
 </div>
 <div class="sect3">
-<h4 id="datasett-tidsromsoppløsning"><a class="anchor" href="#datasett-tidsromsoppløsning"></a>Datasett - tidsromsoppløsning</h4>
+<h4 id="datasett-tidsromsoppløsning"><a class="link" href="#datasett-tidsromsoppløsning">Datasett - tidsromsoppløsning</a></h4>
 <div class="paragraph">
 <p><em>&lt;ikke beskrevet, tilsvarer <a href="https://data.norge.no/specification/dcat-ap-no/#Datasett-tidsoppl%C3%B8sning">Datasett: tidsoppløsning (<code>dcat:temporalResolution</code>) i DCAT-AP-NO</a>&gt;</em></p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="datasett-type"><a class="anchor" href="#datasett-type"></a>Datasett - type</h4>
+<h4 id="datasett-type"><a class="link" href="#datasett-type">Datasett - type</a></h4>
 <div class="paragraph">
 <p>Her kan du klassifisere datasettet ditt, f.eks. at datasettet er en kodeliste, slik at det blir mulig å gruppere datasettet ditt sammen med andre kodelister i f.eks. en katalog.</p>
 </div>
@@ -2448,7 +2446,7 @@ Hva som inngår i datasettet er godt beskrevet, men unntakene her er utelatt.</p
 </div>
 </div>
 <div class="sect3">
-<h4 id="datasett-utgivelsesdato"><a class="anchor" href="#datasett-utgivelsesdato"></a>Datasett - utgivelsesdato</h4>
+<h4 id="datasett-utgivelsesdato"><a class="link" href="#datasett-utgivelsesdato">Datasett - utgivelsesdato</a></h4>
 <div class="paragraph">
 <p>Her kan du oppgi når datasettet er operativt og tilgjengelig.</p>
 </div>
@@ -2489,13 +2487,13 @@ Hva som inngår i datasettet er godt beskrevet, men unntakene her er utelatt.</p
 </div>
 </div>
 <div class="sect3">
-<h4 id="datasett-versjon"><a class="anchor" href="#datasett-versjon"></a>Datasett - versjon</h4>
+<h4 id="datasett-versjon"><a class="link" href="#datasett-versjon">Datasett - versjon</a></h4>
 <div class="paragraph">
 <p><em>&lt;ikke beskrevet, tilsvarer <a href="https://data.norge.no/specification/dcat-ap-no/#Datasett-versjon">Datasett: versjon (<code>owl:versionInfo</code>) i DCAT-AP-NO</a>&gt;</em></p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="datasett-versjonnote"><a class="anchor" href="#datasett-versjonnote"></a>Datasett - versjonsnote</h4>
+<h4 id="datasett-versjonnote"><a class="link" href="#datasett-versjonnote">Datasett - versjonsnote</a></h4>
 <div class="paragraph">
 <p><em>&lt;ikke beskrevet, tilsvarer <a href="https://data.norge.no/specification/dcat-ap-no/#Datasett-versjonsnote">Datasett: versjonsnote (<code>adms:versionNotes</code>) i DCAT-AP-NO</a>&gt;</em></p>
 </div>
@@ -2504,7 +2502,7 @@ Hva som inngår i datasettet er godt beskrevet, men unntakene her er utelatt.</p
 </div>
 </div>
 <div class="sect1">
-<h2 id="beskrivelse-av-distribusjon"><a class="anchor" href="#beskrivelse-av-distribusjon"></a>Beskrivelse av distribusjon</h2>
+<h2 id="beskrivelse-av-distribusjon"><a class="link" href="#beskrivelse-av-distribusjon">Beskrivelse av distribusjon</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>En distribusjon er en spesifikk representasjon av et datasett i form av en fil som brukeren kan få tilgang til. Det vanligste scenariet er at et datasett uttrykkes i flere formater, f.eks. både i Excel og CSV. Det kan også være slik at du kan få tilgang til et datasett enten gjennom en nattlig dump eller ved oppslag mot et API. I begge disse to scenariene anser vi at det er et datasett med to forskjellige distribusjoner. Distribusjonene tilsvarer de samme dataene (samme informasjon), men i forskjellige formater eller via forskjellige tilgangsmekanismer.</p>
@@ -2525,7 +2523,7 @@ Hva som inngår i datasettet er godt beskrevet, men unntakene her er utelatt.</p
 <p>For deg som skal utvikle/tilpasse verktøystøtte i henhold til DCAT-AP-NO, inneholder veilederen også en teknisk veiledning bakerst i hvert avsnitt. NB! Bortsett fra det første eksemplet, er ikke alle eksempler i RDF Turtle komplette og de kan mangle bl.a. verdier for obligatoriske egenskaper.</p>
 </div>
 <div class="sect2">
-<h3 id="eksempel-distribusjon"><a class="anchor" href="#eksempel-distribusjon"></a>Eksempel på en beskrivelse av en distribusjon</h3>
+<h3 id="eksempel-distribusjon"><a class="link" href="#eksempel-distribusjon">Eksempel på en beskrivelse av en distribusjon</a></h3>
 <div class="paragraph">
 <p>Under er et eksempel på en beskrivelse av en distribusjon, hvor <strong>uthevede egenskaper</strong> er  obligatoriske:</p>
 </div>
@@ -2567,7 +2565,7 @@ Hva som inngår i datasettet er godt beskrevet, men unntakene her er utelatt.</p
 </div>
 </div>
 <div class="sect2">
-<h3 id="distribusjon-obligatoriske-egenskaper"><a class="anchor" href="#distribusjon-obligatoriske-egenskaper"></a>Obligatoriske egenskaper i beskrivelse av en distribusjon</h3>
+<h3 id="distribusjon-obligatoriske-egenskaper"><a class="link" href="#distribusjon-obligatoriske-egenskaper">Obligatoriske egenskaper i beskrivelse av en distribusjon</a></h3>
 <div class="paragraph">
 <p>Som minimum skal følgende tas med i beskrivelsen av en distribusjon:</p>
 </div>
@@ -2579,7 +2577,7 @@ Hva som inngår i datasettet er godt beskrevet, men unntakene her er utelatt.</p
 </ul>
 </div>
 <div class="sect3">
-<h4 id="distribusjon-tilgangsURL"><a class="anchor" href="#distribusjon-tilgangsURL"></a>Distribusjon - tilgangsURL</h4>
+<h4 id="distribusjon-tilgangsURL"><a class="link" href="#distribusjon-tilgangsURL">Distribusjon - tilgangsURL</a></h4>
 <div class="paragraph">
 <p>Du skal oppgi nettadresse (URL) som gir tilgang til en distribusjon av datasettet. Kan også peke til en nettside som gir informasjon om hvordan en kan få tilgang til datasettet.</p>
 </div>
@@ -2610,7 +2608,7 @@ Hva som inngår i datasettet er godt beskrevet, men unntakene her er utelatt.</p
 </div>
 </div>
 <div class="sect2">
-<h3 id="distribusjon-anbefalte-egenskaper"><a class="anchor" href="#distribusjon-anbefalte-egenskaper"></a>Anbefalte egenskaper i beskrivelse av en distribusjon</h3>
+<h3 id="distribusjon-anbefalte-egenskaper"><a class="link" href="#distribusjon-anbefalte-egenskaper">Anbefalte egenskaper i beskrivelse av en distribusjon</a></h3>
 <div class="paragraph">
 <p>Følgende opplysninger bør du ta med i beskrivelsen av en distribusjon:</p>
 </div>
@@ -2634,7 +2632,7 @@ Hva som inngår i datasettet er godt beskrevet, men unntakene her er utelatt.</p
 </ul>
 </div>
 <div class="sect3">
-<h4 id="distribusjon-beskrivelse"><a class="anchor" href="#distribusjon-beskrivelse"></a>Distribusjon - beskrivelse</h4>
+<h4 id="distribusjon-beskrivelse"><a class="link" href="#distribusjon-beskrivelse">Distribusjon - beskrivelse</a></h4>
 <div class="paragraph">
 <p>For at andre skal kunne vite hva distribusjonen gir, bør du ta med en kort fritekstbeskrivelse av distribusjonen. Denne kan gjentas for flere språk.</p>
 </div>
@@ -2683,7 +2681,7 @@ Hva som inngår i datasettet er godt beskrevet, men unntakene her er utelatt.</p
 </div>
 </div>
 <div class="sect3">
-<h4 id="distribusjon-format"><a class="anchor" href="#distribusjon-format"></a>Distribusjon - format</h4>
+<h4 id="distribusjon-format"><a class="link" href="#distribusjon-format">Distribusjon - format</a></h4>
 <div class="paragraph">
 <p>Hver distribusjon har format for utveksling som bør oppgis, dvs. en maskinlesbar verdi som entydig identifiserer hvilke(t) format(er) datasettet er gjort tilgjengelig som.</p>
 </div>
@@ -2719,7 +2717,7 @@ Hva som inngår i datasettet er godt beskrevet, men unntakene her er utelatt.</p
 </div>
 </div>
 <div class="sect3">
-<h4 id="distribusjon-lisens"><a class="anchor" href="#distribusjon-lisens"></a>Distribusjon - lisens</h4>
+<h4 id="distribusjon-lisens"><a class="link" href="#distribusjon-lisens">Distribusjon - lisens</a></h4>
 <div class="paragraph">
 <p>Lisens er påkrevd for alle åpne offentlige data. Du bør ellers også oppgi lisens hvis datasettet er gjort tilgjengelig under gitt lisens.</p>
 </div>
@@ -2768,7 +2766,7 @@ Hva som inngår i datasettet er godt beskrevet, men unntakene her er utelatt.</p
 </div>
 </div>
 <div class="sect3">
-<h4 id="distribusjon-status"><a class="anchor" href="#distribusjon-status"></a>Distribusjon - status</h4>
+<h4 id="distribusjon-status"><a class="link" href="#distribusjon-status">Distribusjon - status</a></h4>
 <div class="paragraph">
 <p>Distribusjonens modenhet er viktig å vite for å kunne vurdere om/når en skal benytte seg distribusjonen. Den bør derfor oppgis.</p>
 </div>
@@ -2811,7 +2809,7 @@ Hva som inngår i datasettet er godt beskrevet, men unntakene her er utelatt.</p
 </div>
 </div>
 <div class="sect3">
-<h4 id="distribusjon-tilgjengelighet"><a class="anchor" href="#distribusjon-tilgjengelighet"></a>Distribusjon - tilgjengelighet</h4>
+<h4 id="distribusjon-tilgjengelighet"><a class="link" href="#distribusjon-tilgjengelighet">Distribusjon - tilgjengelighet</a></h4>
 <div class="paragraph">
 <p>Det er viktig å vite hvor lenge distribusjonen er planlagt tilgjengelig for å kunne vurdere om en skal benytte seg distribusjonen. Den bør derfor oppgis.</p>
 </div>
@@ -2855,7 +2853,7 @@ Hva som inngår i datasettet er godt beskrevet, men unntakene her er utelatt.</p
 </div>
 </div>
 <div class="sect2">
-<h3 id="distribusjon-valgfrie-egenskaper"><a class="anchor" href="#distribusjon-valgfrie-egenskaper"></a>Valgfrie egenskaper i beskrivelse av en distribusjon</h3>
+<h3 id="distribusjon-valgfrie-egenskaper"><a class="link" href="#distribusjon-valgfrie-egenskaper">Valgfrie egenskaper i beskrivelse av en distribusjon</a></h3>
 <div class="paragraph">
 <p>I tillegg til obligatoriske (skal brukes) og anbefalte (bør brukes) egenskaper, er det en del egenskaper som er valgfrie (kan brukes) i beskrivelse av en distribusjon:</p>
 </div>
@@ -2918,7 +2916,7 @@ Hva som inngår i datasettet er godt beskrevet, men unntakene her er utelatt.</p
 <p>Ikke alle valgfrie egenskaper er beskrevet i etterfølgende avsnitt. Se under <a href="#hensikt-og-avgrensing">Hensikt og avgrensning</a> for hvordan du kan melde inn behov for beskrivelser.</p>
 </div>
 <div class="sect3">
-<h4 id="distribusjon-dokumentasjon"><a class="anchor" href="#distribusjon-dokumentasjon"></a>Distribusjon - dokumentasjon</h4>
+<h4 id="distribusjon-dokumentasjon"><a class="link" href="#distribusjon-dokumentasjon">Distribusjon - dokumentasjon</a></h4>
 <div class="paragraph">
 <p>Du kan bruke denne egenskap til å oppgi referanse til en side eller et dokument som beskriver og dokumenterer innhold og struktur som er spesifikk for distribusjonen.</p>
 </div>
@@ -2938,7 +2936,7 @@ Hva som inngår i datasettet er godt beskrevet, men unntakene her er utelatt.</p
 </div>
 </div>
 <div class="sect3">
-<h4 id="distribusjon-endringsdato"><a class="anchor" href="#distribusjon-endringsdato"></a>Distribusjon - endringsdato</h4>
+<h4 id="distribusjon-endringsdato"><a class="link" href="#distribusjon-endringsdato">Distribusjon - endringsdato</a></h4>
 <div class="paragraph">
 <p>Dato/tid sist distribusjonen sist ble endret.</p>
 </div>
@@ -2973,13 +2971,13 @@ Hva som inngår i datasettet er godt beskrevet, men unntakene her er utelatt.</p
 </div>
 </div>
 <div class="sect3">
-<h4 id="distribusjon-filstørrelse"><a class="anchor" href="#distribusjon-filstørrelse"></a>Distribusjon - filstørrelse</h4>
+<h4 id="distribusjon-filstørrelse"><a class="link" href="#distribusjon-filstørrelse">Distribusjon - filstørrelse</a></h4>
 <div class="paragraph">
 <p><em>&lt;ikke beskrevet, tilsvarer <a href="https://data.norge.no/specification/dcat-ap-no/#Distribusjon-filst%C3%B8rrelse">Distribusjon: filstørrelse (dcat:byteSize) i DCAT-AP-NO</a>&gt;</em></p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="distribusjon-iSamsvarMed"><a class="anchor" href="#distribusjon-iSamsvarMed"></a>Distribusjon - i samsvar med</h4>
+<h4 id="distribusjon-iSamsvarMed"><a class="link" href="#distribusjon-iSamsvarMed">Distribusjon - i samsvar med</a></h4>
 <div class="paragraph">
 <p>Benyttes for å angi et etablert skjema som distribusjonen er i samsvar med, for eksempel et XSD-dokument.</p>
 </div>
@@ -2999,13 +2997,13 @@ Hva som inngår i datasettet er godt beskrevet, men unntakene her er utelatt.</p
 </div>
 </div>
 <div class="sect3">
-<h4 id="distribusjon-komprimeringsformat"><a class="anchor" href="#distribusjon-komprimeringsformat"></a>Distribusjon - komprimeringsformat</h4>
+<h4 id="distribusjon-komprimeringsformat"><a class="link" href="#distribusjon-komprimeringsformat">Distribusjon - komprimeringsformat</a></h4>
 <div class="paragraph">
 <p><em>&lt;ikke beskrevet, tilsvarer <a href="https://data.norge.no/specification/dcat-ap-no/#Distribusjon-komprimeringsformat">Distribusjon: komprimeringsformat (dcat:compressFormat) i DCAT-AP-NO</a>&gt;</em></p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="distribusjon-medietype"><a class="anchor" href="#distribusjon-medietype"></a>Distribusjon - medietype</h4>
+<h4 id="distribusjon-medietype"><a class="link" href="#distribusjon-medietype">Distribusjon - medietype</a></h4>
 <div class="paragraph">
 <p>Angivelse av medietypen for distribusjonen slik den er definert i IANAs register over medietyper.</p>
 </div>
@@ -3032,7 +3030,7 @@ Hva som inngår i datasettet er godt beskrevet, men unntakene her er utelatt.</p
 </div>
 </div>
 <div class="sect3">
-<h4 id="distribusjon-nedlastningslenke"><a class="anchor" href="#distribusjon-nedlastningslenke"></a>Distribusjon - nedlastningslenke</h4>
+<h4 id="distribusjon-nedlastningslenke"><a class="link" href="#distribusjon-nedlastningslenke">Distribusjon - nedlastningslenke</a></h4>
 <div class="paragraph">
 <p>Nedlastningslenken er en type tilgangs-url som peker direkte til en fil som lastes ned lokalt.</p>
 </div>
@@ -3059,37 +3057,37 @@ Hva som inngår i datasettet er godt beskrevet, men unntakene her er utelatt.</p
 </div>
 </div>
 <div class="sect3">
-<h4 id="distribusjon-pakkeformat"><a class="anchor" href="#distribusjon-pakkeformat"></a>Distribusjon - pakkeformat</h4>
+<h4 id="distribusjon-pakkeformat"><a class="link" href="#distribusjon-pakkeformat">Distribusjon - pakkeformat</a></h4>
 <div class="paragraph">
 <p><em>&lt;ikke beskrevet, tilsvarer <a href="https://data.norge.no/specification/dcat-ap-no/#Distribusjon-pakkeformat">Distribusjon: pakkeformat (dcat:packageFormat) i DCAT-AP-NO</a>&gt;</em></p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="distribusjon-policy"><a class="anchor" href="#distribusjon-policy"></a>Distribusjon - policy</h4>
+<h4 id="distribusjon-policy"><a class="link" href="#distribusjon-policy">Distribusjon - policy</a></h4>
 <div class="paragraph">
 <p><em>&lt;ikke beskrevet, tilsvarer <a href="https://data.norge.no/specification/dcat-ap-no/#Distribusjon-policy">Distribusjon: policy (odrl:hasPolicy) i DCAT-AP-NO</a>&gt;</em></p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="distribusjon-rettigheter"><a class="anchor" href="#distribusjon-rettigheter"></a>Distribusjon - rettigheter</h4>
+<h4 id="distribusjon-rettigheter"><a class="link" href="#distribusjon-rettigheter">Distribusjon - rettigheter</a></h4>
 <div class="paragraph">
 <p><em>&lt;ikke beskrevet, tilsvarer <a href="https://data.norge.no/specification/dcat-ap-no/#Distribusjon-rettigheter">Distribusjon: rettigheter  (dct:rights) i DCAT-AP-NO</a>&gt;</em></p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="distribusjon-romligOppløsning"><a class="anchor" href="#distribusjon-romligOppløsning"></a>Distribusjon - romlig oppløsning</h4>
+<h4 id="distribusjon-romligOppløsning"><a class="link" href="#distribusjon-romligOppløsning">Distribusjon - romlig oppløsning</a></h4>
 <div class="paragraph">
 <p><em>&lt;ikke beskrevet, tilsvarer <a href="https://data.norge.no/specification/dcat-ap-no/#Distribusjon-romlig-oppl%C3%B8sning">Distribusjon: romlig oppløsning (dcat:spatialResolutionInMeters) i DCAT-AP-NO</a>&gt;</em></p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="distribusjon-sjekksum"><a class="anchor" href="#distribusjon-sjekksum"></a>Distribusjon - sjekksum</h4>
+<h4 id="distribusjon-sjekksum"><a class="link" href="#distribusjon-sjekksum">Distribusjon - sjekksum</a></h4>
 <div class="paragraph">
 <p><em>&lt;ikke beskrevet, tilsvarer <a href="https://data.norge.no/specification/dcat-ap-no/#Distribusjon-sjekksum">Distribusjon: sjekksum (spdx:checksum) i DCAT-AP-NO</a>&gt;</em></p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="distribusjon-språk"><a class="anchor" href="#distribusjon-språk"></a>Distribusjon - språk</h4>
+<h4 id="distribusjon-språk"><a class="link" href="#distribusjon-språk">Distribusjon - språk</a></h4>
 <div class="paragraph">
 <p><em>&lt;ikke beskrevet, tilsvarer <a href="https://data.norge.no/specification/dcat-ap-no/#Distribusjon-spr%C3%A5k">Distribusjon: språk (dct:language) i DCAT-AP-NO</a>&gt;</em></p>
 </div>
@@ -3099,13 +3097,13 @@ Hva som inngår i datasettet er godt beskrevet, men unntakene her er utelatt.</p
 </div>
 </div>
 <div class="sect3">
-<h4 id="distribusjon-tidsoppløsning"><a class="anchor" href="#distribusjon-tidsoppløsning"></a>Distribusjon - tidsoppløsning</h4>
+<h4 id="distribusjon-tidsoppløsning"><a class="link" href="#distribusjon-tidsoppløsning">Distribusjon - tidsoppløsning</a></h4>
 <div class="paragraph">
 <p><em>&lt;ikke beskrevet, tilsvarer <a href="https://data.norge.no/specification/dcat-ap-no/#_distribusjon_tidsoppl%C3%B8sning_dcattemporalresolution">Distribusjon: tidsoppløsning (dcat:temporalResolution) i DCAT-AP-NO</a>&gt;</em></p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="distribusjon-tilgangstjeneste"><a class="anchor" href="#distribusjon-tilgangstjeneste"></a>Distribusjon - tilgangstjeneste</h4>
+<h4 id="distribusjon-tilgangstjeneste"><a class="link" href="#distribusjon-tilgangstjeneste">Distribusjon - tilgangstjeneste</a></h4>
 <div class="paragraph">
 <p>Angir datatjenesten som gir tilgang til distribusjonen.</p>
 </div>
@@ -3125,7 +3123,7 @@ Hva som inngår i datasettet er godt beskrevet, men unntakene her er utelatt.</p
 </div>
 </div>
 <div class="sect3">
-<h4 id="distribusjon-tittel"><a class="anchor" href="#distribusjon-tittel"></a>Distribusjon - tittel</h4>
+<h4 id="distribusjon-tittel"><a class="link" href="#distribusjon-tittel">Distribusjon - tittel</a></h4>
 <div class="paragraph">
 <p><em>&lt;ikke beskrevet, tilsvarer <a href="https://data.norge.no/specification/dcat-ap-no/#Distribusjon-tittel">Distribusjon: tittel (dct:title) i DCAT-AP-NO</a>&gt;</em></p>
 </div>
@@ -3135,7 +3133,7 @@ Hva som inngår i datasettet er godt beskrevet, men unntakene her er utelatt.</p
 </div>
 </div>
 <div class="sect3">
-<h4 id="distribusjon-utgivelsesdato"><a class="anchor" href="#distribusjon-utgivelsesdato"></a>Distribusjon - utgivelsesdato</h4>
+<h4 id="distribusjon-utgivelsesdato"><a class="link" href="#distribusjon-utgivelsesdato">Distribusjon - utgivelsesdato</a></h4>
 <div class="paragraph">
 <p>Dato/tid når distribusjonen først ble publisert i tilknytning til et datasett.</p>
 </div>
@@ -3173,7 +3171,7 @@ Hva som inngår i datasettet er godt beskrevet, men unntakene her er utelatt.</p
 </div>
 </div>
 <div class="sect1">
-<h2 id="beskrivelse-av-datatjeneste"><a class="anchor" href="#beskrivelse-av-datatjeneste"></a>Beskrivelse av datatjeneste</h2>
+<h2 id="beskrivelse-av-datatjeneste"><a class="link" href="#beskrivelse-av-datatjeneste">Beskrivelse av datatjeneste</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Nytt i DCAT-AP-NO v.2 er at standarden nå også støtter beskrivelser av datatjenester, som v.1.x av DCAT-AP-NO ikke gjorde.</p>
@@ -3185,7 +3183,7 @@ Hva som inngår i datasettet er godt beskrevet, men unntakene her er utelatt.</p
 <p>For deg som skal utvikle/tilpasse verktøystøtte i henhold til DCAT-AP-NO, inneholder veilederen også en teknisk veiledning bakerst i hvert avsnitt. NB! Bortsett fra det første eksemplet, er ikke alle eksempler i RDF Turtle komplette og de kan mangle bl.a. verdier for obligatoriske egenskaper.</p>
 </div>
 <div class="sect2">
-<h3 id="eksempel-datatjeneste"><a class="anchor" href="#eksempel-datatjeneste"></a>Eksempel på en datatjenestebeskrivelse</h3>
+<h3 id="eksempel-datatjeneste"><a class="link" href="#eksempel-datatjeneste">Eksempel på en datatjenestebeskrivelse</a></h3>
 <div class="paragraph">
 <p>Under er et eksempel på en datatjenestebeskrivelse, hvor <strong>uthevede egenskaper</strong> er obligatoriske:</p>
 </div>
@@ -3229,7 +3227,7 @@ Hva som inngår i datasettet er godt beskrevet, men unntakene her er utelatt.</p
 </div>
 </div>
 <div class="sect2">
-<h3 id="datatjeneste-obligatoriske-egenskaper"><a class="anchor" href="#datatjeneste-obligatoriske-egenskaper"></a>Obligatoriske egenskaper i en datatjenestebeskrivelse</h3>
+<h3 id="datatjeneste-obligatoriske-egenskaper"><a class="link" href="#datatjeneste-obligatoriske-egenskaper">Obligatoriske egenskaper i en datatjenestebeskrivelse</a></h3>
 <div class="paragraph">
 <p>Som et minimum skal følgende tas med i en datatjenestebeskrivelse:</p>
 </div>
@@ -3247,7 +3245,7 @@ Hva som inngår i datasettet er godt beskrevet, men unntakene her er utelatt.</p
 </ul>
 </div>
 <div class="sect3">
-<h4 id="datatjeneste-endepunktsURL"><a class="anchor" href="#datatjeneste-endepunktsURL"></a>Datatjeneste - endepunktsURL</h4>
+<h4 id="datatjeneste-endepunktsURL"><a class="link" href="#datatjeneste-endepunktsURL">Datatjeneste - endepunktsURL</a></h4>
 <div class="paragraph">
 <p>Du skal oppgi rotplassering eller primært endepunkt for tjenesten (en URI).</p>
 </div>
@@ -3266,7 +3264,7 @@ Hva som inngår i datasettet er godt beskrevet, men unntakene her er utelatt.</p
 </div>
 </div>
 <div class="sect3">
-<h4 id="datatjeneste-identifikator"><a class="anchor" href="#datatjeneste-identifikator"></a>Datatjeneste - identifikator</h4>
+<h4 id="datatjeneste-identifikator"><a class="link" href="#datatjeneste-identifikator">Datatjeneste - identifikator</a></h4>
 <div class="paragraph">
 <p>Brukes til å oppgi identifikator til datatjenesten.</p>
 </div>
@@ -3279,7 +3277,7 @@ Hva som inngår i datasettet er godt beskrevet, men unntakene her er utelatt.</p
 </div>
 </div>
 <div class="sect3">
-<h4 id="datatjeneste-tittel"><a class="anchor" href="#datatjeneste-tittel"></a>Datatjeneste - tittel</h4>
+<h4 id="datatjeneste-tittel"><a class="link" href="#datatjeneste-tittel">Datatjeneste - tittel</a></h4>
 <div class="paragraph">
 <p>Du skal oppgi navnet på datatjenesten. Gjentas hvis navnet er i flere språk.</p>
 </div>
@@ -3300,7 +3298,7 @@ Hva som inngår i datasettet er godt beskrevet, men unntakene her er utelatt.</p
 </div>
 </div>
 <div class="sect2">
-<h3 id="datatjeneste-anbefalte-egenskaper"><a class="anchor" href="#datatjeneste-anbefalte-egenskaper"></a>Anbefalte egenskaper i en datatjenestebeskrivelse</h3>
+<h3 id="datatjeneste-anbefalte-egenskaper"><a class="link" href="#datatjeneste-anbefalte-egenskaper">Anbefalte egenskaper i en datatjenestebeskrivelse</a></h3>
 <div class="paragraph">
 <p>Følgende opplysninger bør du ta med i en datatjenestebeskrivelse hvis de finnes:</p>
 </div>
@@ -3330,7 +3328,7 @@ Hva som inngår i datasettet er godt beskrevet, men unntakene her er utelatt.</p
 </ul>
 </div>
 <div class="sect3">
-<h4 id="datatjeneste-emneord"><a class="anchor" href="#datatjeneste-emneord"></a>Datatjeneste - emneord</h4>
+<h4 id="datatjeneste-emneord"><a class="link" href="#datatjeneste-emneord">Datatjeneste - emneord</a></h4>
 <div class="paragraph">
 <p>Du bør oppgi emneord (eller tag) som beskriver datatjenesten.</p>
 </div>
@@ -3343,7 +3341,7 @@ Hva som inngår i datasettet er godt beskrevet, men unntakene her er utelatt.</p
 </div>
 </div>
 <div class="sect3">
-<h4 id="datatjeneste-endepunktsbeskrivelse"><a class="anchor" href="#datatjeneste-endepunktsbeskrivelse"></a>Datatjeneste - endepunktsbeskrivelse</h4>
+<h4 id="datatjeneste-endepunktsbeskrivelse"><a class="link" href="#datatjeneste-endepunktsbeskrivelse">Datatjeneste - endepunktsbeskrivelse</a></h4>
 <div class="paragraph">
 <p>Du skal oppgi en beskrivelse av tjenesten.</p>
 </div>
@@ -3375,7 +3373,7 @@ Hva som inngår i datasettet er godt beskrevet, men unntakene her er utelatt.</p
 </div>
 </div>
 <div class="sect3">
-<h4 id="datatjeneste-format"><a class="anchor" href="#datatjeneste-format"></a>Datatjeneste - format</h4>
+<h4 id="datatjeneste-format"><a class="link" href="#datatjeneste-format">Datatjeneste - format</a></h4>
 <div class="paragraph">
 <p>Datatjenestens filformat.</p>
 </div>
@@ -3405,7 +3403,7 @@ Hva som inngår i datasettet er godt beskrevet, men unntakene her er utelatt.</p
 </div>
 </div>
 <div class="sect3">
-<h4 id="datatjeneste-kontaktpunkt"><a class="anchor" href="#datatjeneste-kontaktpunkt"></a>Datatjeneste - kontaktpunkt</h4>
+<h4 id="datatjeneste-kontaktpunkt"><a class="link" href="#datatjeneste-kontaktpunkt">Datatjeneste - kontaktpunkt</a></h4>
 <div class="paragraph">
 <p>Kontaktpunkt med kontaktopplysninger.</p>
 </div>
@@ -3418,7 +3416,7 @@ Hva som inngår i datasettet er godt beskrevet, men unntakene her er utelatt.</p
 </div>
 </div>
 <div class="sect3">
-<h4 id="datatjeneste-tema"><a class="anchor" href="#datatjeneste-tema"></a>Datatjeneste - tema</h4>
+<h4 id="datatjeneste-tema"><a class="link" href="#datatjeneste-tema">Datatjeneste - tema</a></h4>
 <div class="paragraph">
 <p>Tema for datatjenesten. En datatjeneste kan assosieres med flere tema.</p>
 </div>
@@ -3462,7 +3460,7 @@ Hva som inngår i datasettet er godt beskrevet, men unntakene her er utelatt.</p
 </div>
 </div>
 <div class="sect3">
-<h4 id="datatjeneste-tilgjengeliggjørDatasett"><a class="anchor" href="#datatjeneste-tilgjengeliggjørDatasett"></a>Datatjeneste - tilgjengeliggjør datasett</h4>
+<h4 id="datatjeneste-tilgjengeliggjørDatasett"><a class="link" href="#datatjeneste-tilgjengeliggjørDatasett">Datatjeneste - tilgjengeliggjør datasett</a></h4>
 <div class="paragraph">
 <p>Egenskapen brukes til å referere til datasett som datatjenesten kan distribuere.</p>
 </div>
@@ -3482,7 +3480,7 @@ Hva som inngår i datasettet er godt beskrevet, men unntakene her er utelatt.</p
 </div>
 </div>
 <div class="sect3">
-<h4 id="datatjeneste-utgiver"><a class="anchor" href="#datatjeneste-utgiver"></a>Datatjeneste - utgiver</h4>
+<h4 id="datatjeneste-utgiver"><a class="link" href="#datatjeneste-utgiver">Datatjeneste - utgiver</a></h4>
 <div class="paragraph">
 <p>Den aktøren (organisasjon) som er ansvarlig for å gjøre datatjenesten tilgjengelig.</p>
 </div>
@@ -3526,7 +3524,7 @@ Hva som inngår i datasettet er godt beskrevet, men unntakene her er utelatt.</p
 </div>
 </div>
 <div class="sect2">
-<h3 id="datatjeneste-valgfrie-egenskaper"><a class="anchor" href="#datatjeneste-valgfrie-egenskaper"></a>Valgfrie egenskaper i en datatjenestebeskrivelse</h3>
+<h3 id="datatjeneste-valgfrie-egenskaper"><a class="link" href="#datatjeneste-valgfrie-egenskaper">Valgfrie egenskaper i en datatjenestebeskrivelse</a></h3>
 <div class="paragraph">
 <p>I tillegg til obligatoriske (skal brukes) og anbefalte (bør brukes) egenskaper, er det en del egenskaper som er valgfrie (kan brukes) i en datatjenestebeskrivelse:</p>
 </div>
@@ -3565,7 +3563,7 @@ Hva som inngår i datasettet er godt beskrevet, men unntakene her er utelatt.</p
 <p>Ikke alle valgfrie egenskaper er beskrevet i etterfølgende avsnitt. Se under <a href="#hensikt-og-avgrensing">Hensikt og avgrensning</a> for hvordan du kan melde inn behov for beskrivelser.</p>
 </div>
 <div class="sect3">
-<h4 id="datatjeneste-beskrivelse"><a class="anchor" href="#datatjeneste-beskrivelse"></a>Datatjeneste - beskrivelse</h4>
+<h4 id="datatjeneste-beskrivelse"><a class="link" href="#datatjeneste-beskrivelse">Datatjeneste - beskrivelse</a></h4>
 <div class="paragraph">
 <p>Fritekst-beskrivelse av datatjenesten. Gjentas for flere språkversjoner. Se ellers beskrivelsen av tilsvarende felt i Datasett, <a href="#datasett-beskrivelse">Datasett - beskrivelse</a>.</p>
 </div>
@@ -3585,7 +3583,7 @@ Hva som inngår i datasettet er godt beskrevet, men unntakene her er utelatt.</p
 </div>
 </div>
 <div class="sect3">
-<h4 id="datatjeneste-dokumentasjon"><a class="anchor" href="#datatjeneste-dokumentasjon"></a>Datatjeneste - dokumentasjon</h4>
+<h4 id="datatjeneste-dokumentasjon"><a class="link" href="#datatjeneste-dokumentasjon">Datatjeneste - dokumentasjon</a></h4>
 <div class="paragraph">
 <p>Referanse til en side eller et dokument som beskriver datatjenesten.</p>
 </div>
@@ -3605,7 +3603,7 @@ Hva som inngår i datasettet er godt beskrevet, men unntakene her er utelatt.</p
 </div>
 </div>
 <div class="sect3">
-<h4 id="datatjeneste-følger"><a class="anchor" href="#datatjeneste-følger"></a>Datatjeneste - følger</h4>
+<h4 id="datatjeneste-følger"><a class="link" href="#datatjeneste-følger">Datatjeneste - følger</a></h4>
 <div class="paragraph">
 <p><em>&lt;ikke beskrevet, tilsvarer <a href="https://data.norge.no/specification/dcat-ap-no/#Datatjeneste-f%C3%B8lger">Datatjeneste: følger (cpsv:follows) i DCAT-AP-NO</a>&gt;</em></p>
 </div>
@@ -3614,7 +3612,7 @@ Hva som inngår i datasettet er godt beskrevet, men unntakene her er utelatt.</p
 </div>
 </div>
 <div class="sect3">
-<h4 id="datatjeneste-iSamsvarMed"><a class="anchor" href="#datatjeneste-iSamsvarMed"></a>Datatjeneste - i samsvar med</h4>
+<h4 id="datatjeneste-iSamsvarMed"><a class="link" href="#datatjeneste-iSamsvarMed">Datatjeneste - i samsvar med</a></h4>
 <div class="paragraph">
 <p>Referanse til en spesifikasjon eller standard som datatjenesten implementerer.</p>
 </div>
@@ -3637,7 +3635,7 @@ Hva som inngår i datasettet er godt beskrevet, men unntakene her er utelatt.</p
 </div>
 </div>
 <div class="sect3">
-<h4 id="datatjeneste-landingsside"><a class="anchor" href="#datatjeneste-landingsside"></a>Datatjeneste - landingsside</h4>
+<h4 id="datatjeneste-landingsside"><a class="link" href="#datatjeneste-landingsside">Datatjeneste - landingsside</a></h4>
 <div class="paragraph">
 <p><em>&lt;ikke beskrevet, tilsvarer <a href="https://data.norge.no/specification/dcat-ap-no/#Datatjeneste-landingsside">Datatjeneste: landingsside (dcat:landingPage) i DCAT-AP-NO</a>&gt;</em></p>
 </div>
@@ -3646,7 +3644,7 @@ Hva som inngår i datasettet er godt beskrevet, men unntakene her er utelatt.</p
 </div>
 </div>
 <div class="sect3">
-<h4 id="datatjeneste-lisens"><a class="anchor" href="#datatjeneste-lisens"></a>Datatjeneste - lisens</h4>
+<h4 id="datatjeneste-lisens"><a class="link" href="#datatjeneste-lisens">Datatjeneste - lisens</a></h4>
 <div class="paragraph">
 <p>Referanse til lisensen for datasett som datatjenesten realiserer, gjøres tilgjengelig under. Lisens er påkrevd for alle åpne offentlige data.</p>
 </div>
@@ -3688,7 +3686,7 @@ Hva som inngår i datasettet er godt beskrevet, men unntakene her er utelatt.</p
 </div>
 </div>
 <div class="sect3">
-<h4 id="datatjeneste-medietype"><a class="anchor" href="#datatjeneste-medietype"></a>Datatjeneste - medietype</h4>
+<h4 id="datatjeneste-medietype"><a class="link" href="#datatjeneste-medietype">Datatjeneste - medietype</a></h4>
 <div class="paragraph">
 <p><em>&lt;ikke beskrevet, tilsvarer <a href="https://data.norge.no/specification/dcat-ap-no/#Datatjeneste-medietype">Datatjeneste: medietype (dcat:mediaType) i DCAT-AP-NO</a>&gt;</em></p>
 </div>
@@ -3697,14 +3695,14 @@ Hva som inngår i datasettet er godt beskrevet, men unntakene her er utelatt.</p
 </div>
 </div>
 <div class="sect3">
-<h4 id="datatjeneste-tilgangsrettigheter"><a class="anchor" href="#datatjeneste-tilgangsrettigheter"></a>Datatjeneste - tilgangsrettigheter</h4>
+<h4 id="datatjeneste-tilgangsrettigheter"><a class="link" href="#datatjeneste-tilgangsrettigheter">Datatjeneste - tilgangsrettigheter</a></h4>
 <div class="paragraph">
 <p><em>&lt;ikke beskrevet, tilsvarer <a href="https://data.norge.no/specification/dcat-ap-no/#Datatjeneste-tilgangsrettigheter">Datatjeneste: tilgangsrettigheter (dct:accessRights) i DCAT-AP-NO</a>&gt;</em></p>
 </div>
 </div>
 </div>
 <div class="sect2">
-<h3 id="datatjeneste-type"><a class="anchor" href="#datatjeneste-type"></a>Datatjeneste - type</h3>
+<h3 id="datatjeneste-type"><a class="link" href="#datatjeneste-type">Datatjeneste - type</a></h3>
 <div class="paragraph">
 <p>Referanse til et begrep i en kontrollert liste som identifiserer datatjenestens type, for eksempel <a href="https://inspire.ec.europa.eu/metadata-codelist/SpatialDataServiceType">Spatial data service type</a>.</p>
 </div>
@@ -3716,7 +3714,7 @@ Hva som inngår i datasettet er godt beskrevet, men unntakene her er utelatt.</p
 </div>
 </div>
 <div class="sect1">
-<h2 id="beskrivelse-av-katalog"><a class="anchor" href="#beskrivelse-av-katalog"></a>Beskrivelse av katalog</h2>
+<h2 id="beskrivelse-av-katalog"><a class="link" href="#beskrivelse-av-katalog">Beskrivelse av katalog</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Datasettbeskrivelser fra f.eks. en virksomhet eller et virksomhetsområde kan samles i en datakatalog. Nytt fra v.2.0 av <a href="https://data.norge.no/specification/dcat-ap-no/">Standard for beskrivelse av datasett, datatjenester og datakatalog (DCAT-AP-NO)</a>, er <em>datatjenester</em> som også kan samles i en  katalog (f.eks. en API-katalog). Ordet "katalog" brukes derfor videre i dette kapittel.</p>
@@ -3734,7 +3732,7 @@ Hva som inngår i datasettet er godt beskrevet, men unntakene her er utelatt.</p
 <p>For deg som skal utvikle/tilpasse verktøystøtte for katalogbeskrivelse i henhold til DCAT-AP-NO, inneholder veilederen også en teknisk veiledning bakerst i hvert avsnitt. NB! Bortsett fra det første eksemplet, er ikke alle eksempler i RDF Turtle komplette og de kan mangle bl.a. verdier for obligatoriske egenskaper.</p>
 </div>
 <div class="sect2">
-<h3 id="eksempel-katalogbeskrivelse"><a class="anchor" href="#eksempel-katalogbeskrivelse"></a>Eksempel på en katalogbeskrivelse</h3>
+<h3 id="eksempel-katalogbeskrivelse"><a class="link" href="#eksempel-katalogbeskrivelse">Eksempel på en katalogbeskrivelse</a></h3>
 <div class="paragraph">
 <p>Under er et eksempel på en katalogbeskrivelse, med dummydata, hvor egenskaper med * foran er obligatoriske:</p>
 </div>
@@ -3778,7 +3776,7 @@ Hva som inngår i datasettet er godt beskrevet, men unntakene her er utelatt.</p
 </div>
 </div>
 <div class="sect2">
-<h3 id="katalog-obligatoriske-egenskaper"><a class="anchor" href="#katalog-obligatoriske-egenskaper"></a>Obligatoriske egenskaper i en katalogbeskrivelse</h3>
+<h3 id="katalog-obligatoriske-egenskaper"><a class="link" href="#katalog-obligatoriske-egenskaper">Obligatoriske egenskaper i en katalogbeskrivelse</a></h3>
 <div class="paragraph">
 <p>Som et minimum skal følgende tas med i en katalogbeskrivelse:</p>
 </div>
@@ -3799,7 +3797,7 @@ Hva som inngår i datasettet er godt beskrevet, men unntakene her er utelatt.</p
 </ul>
 </div>
 <div class="sect3">
-<h4 id="katalog-beskrivelse"><a class="anchor" href="#katalog-beskrivelse"></a>Katalog - beskrivelse</h4>
+<h4 id="katalog-beskrivelse"><a class="link" href="#katalog-beskrivelse">Katalog - beskrivelse</a></h4>
 <div class="paragraph">
 <p>For at andre skal kunne vite hva slags katalog du har, skal du oppgi en kort og presis beskrivelse av innholdet i katalogen.</p>
 </div>
@@ -3826,7 +3824,7 @@ Hva som inngår i datasettet er godt beskrevet, men unntakene her er utelatt.</p
 </div>
 </div>
 <div class="sect3">
-<h4 id="katalog-identifikator"><a class="anchor" href="#katalog-identifikator"></a>Katalog - identifikator</h4>
+<h4 id="katalog-identifikator"><a class="link" href="#katalog-identifikator">Katalog - identifikator</a></h4>
 <div class="paragraph">
 <p>Identifikatoren er som regel systemgenerert av verktøyet som brukes til å beskrive/publisere en katalog, slik at du som vanlig bruker ikke trenger å oppgi verdien til denne egenskapen manuelt.</p>
 </div>
@@ -3836,7 +3834,7 @@ Hva som inngår i datasettet er godt beskrevet, men unntakene her er utelatt.</p
 </div>
 </div>
 <div class="sect3">
-<h4 id="katalog-tittel"><a class="anchor" href="#katalog-tittel"></a>Katalog - tittel</h4>
+<h4 id="katalog-tittel"><a class="link" href="#katalog-tittel">Katalog - tittel</a></h4>
 <div class="paragraph">
 <p>For at andre lett skal kunne se hva din katalog omhandler, skal du oppgi et kortfattet navn på katalogen.</p>
 </div>
@@ -3876,7 +3874,7 @@ Hva som inngår i datasettet er godt beskrevet, men unntakene her er utelatt.</p
 </div>
 </div>
 <div class="sect3">
-<h4 id="katalog-utgiver"><a class="anchor" href="#katalog-utgiver"></a>Katalog - utgiver</h4>
+<h4 id="katalog-utgiver"><a class="link" href="#katalog-utgiver">Katalog - utgiver</a></h4>
 <div class="paragraph">
 <p>For at andre skal kunne vite hvem som er aktøren/organisasjonen som er ansvarlig for tilgjengeliggjøring av katalogen, skal utgiver oppgis.</p>
 </div>
@@ -3917,7 +3915,7 @@ Hva som inngår i datasettet er godt beskrevet, men unntakene her er utelatt.</p
 </div>
 </div>
 <div class="sect2">
-<h3 id="katalog-anbefalte-egenskaper"><a class="anchor" href="#katalog-anbefalte-egenskaper"></a>Anbefalte egenskaper i en katalogbeskrivelse</h3>
+<h3 id="katalog-anbefalte-egenskaper"><a class="link" href="#katalog-anbefalte-egenskaper">Anbefalte egenskaper i en katalogbeskrivelse</a></h3>
 <div class="paragraph">
 <p>Følgende opplysninger bør du ta med i en katalogbeskrivelse hvis de finnes:</p>
 </div>
@@ -3956,7 +3954,7 @@ Hva som inngår i datasettet er godt beskrevet, men unntakene her er utelatt.</p
 </ul>
 </div>
 <div class="sect3">
-<h4 id="katalog-datasett"><a class="anchor" href="#katalog-datasett"></a>Katalog - datasett</h4>
+<h4 id="katalog-datasett"><a class="link" href="#katalog-datasett">Katalog - datasett</a></h4>
 <div class="paragraph">
 <p>Hvis katalogen din er en katalog over datasett, skal  datasettbeskrivelsene inkluderes i katalogen ved å bruke denne egenskapen.</p>
 </div>
@@ -3983,7 +3981,7 @@ Hva som inngår i datasettet er godt beskrevet, men unntakene her er utelatt.</p
 </div>
 </div>
 <div class="sect3">
-<h4 id="katalog-dekningsområde"><a class="anchor" href="#katalog-dekningsområde"></a>Katalog - dekningsområde</h4>
+<h4 id="katalog-dekningsområde"><a class="link" href="#katalog-dekningsområde">Katalog - dekningsområde</a></h4>
 <div class="paragraph">
 <p>Dersom katalogen kun har innhold fra visse områder, skal avgrensningen oppgis.</p>
 </div>
@@ -3996,7 +3994,7 @@ Hva som inngår i datasettet er godt beskrevet, men unntakene her er utelatt.</p
 </div>
 </div>
 <div class="sect3">
-<h4 id="katalog-endringsdato"><a class="anchor" href="#katalog-endringsdato"></a>Katalog - endringsdato</h4>
+<h4 id="katalog-endringsdato"><a class="link" href="#katalog-endringsdato">Katalog - endringsdato</a></h4>
 <div class="paragraph">
 <p>Dersom katalogens innhold har vært endret, skal dato/tid sist katalogen ble endret oppgis.</p>
 </div>
@@ -4009,7 +4007,7 @@ Hva som inngår i datasettet er godt beskrevet, men unntakene her er utelatt.</p
 </div>
 </div>
 <div class="sect3">
-<h4 id="katalog-frekvens"><a class="anchor" href="#katalog-frekvens"></a>Katalog - frekvens</h4>
+<h4 id="katalog-frekvens"><a class="link" href="#katalog-frekvens">Katalog - frekvens</a></h4>
 <div class="paragraph">
 <p>Dersom hyppigheten for endring av innholdet i katalogen er kjent, skal den oppgis.</p>
 </div>
@@ -4022,7 +4020,7 @@ Hva som inngår i datasettet er godt beskrevet, men unntakene her er utelatt.</p
 </div>
 </div>
 <div class="sect3">
-<h4 id="katalog-hjemmeside"><a class="anchor" href="#katalog-hjemmeside"></a>Katalog - hjemmeside</h4>
+<h4 id="katalog-hjemmeside"><a class="link" href="#katalog-hjemmeside">Katalog - hjemmeside</a></h4>
 <div class="paragraph">
 <p>Dersom katalogen har en egen hjemmeside som f.eks. fungerer som en hovedside for katalogen, skal den oppgis.</p>
 </div>
@@ -4041,7 +4039,7 @@ Hva som inngår i datasettet er godt beskrevet, men unntakene her er utelatt.</p
 </div>
 </div>
 <div class="sect3">
-<h4 id="katalog-lisens"><a class="anchor" href="#katalog-lisens"></a>Katalog - lisens</h4>
+<h4 id="katalog-lisens"><a class="link" href="#katalog-lisens">Katalog - lisens</a></h4>
 <div class="paragraph">
 <p>Dersom katalogen er knyttet til en lisens som bl.a. beskriver hvordan den kan viderebrukes, skal lisensen oppgis.</p>
 </div>
@@ -4054,7 +4052,7 @@ Hva som inngår i datasettet er godt beskrevet, men unntakene her er utelatt.</p
 </div>
 </div>
 <div class="sect3">
-<h4 id="katalog-opphav"><a class="anchor" href="#katalog-opphav"></a>Katalog - opphav</h4>
+<h4 id="katalog-opphav"><a class="link" href="#katalog-opphav">Katalog - opphav</a></h4>
 <div class="paragraph">
 <p>Hvis det er noe med opphav av katalogen og/eller katalogens innhold som potensielle brukere bør vite om, skal det oppgis.</p>
 </div>
@@ -4083,7 +4081,7 @@ Hva som inngår i datasettet er godt beskrevet, men unntakene her er utelatt.</p
 </div>
 </div>
 <div class="sect3">
-<h4 id="katalog-språk"><a class="anchor" href="#katalog-språk"></a>Katalog - språk</h4>
+<h4 id="katalog-språk"><a class="link" href="#katalog-språk">Katalog - språk</a></h4>
 <div class="paragraph">
 <p>Språk som brukes i tekstlige metadata som beskriver ressursene i katalogen, bør oppgis.</p>
 </div>
@@ -4096,7 +4094,7 @@ Hva som inngår i datasettet er godt beskrevet, men unntakene her er utelatt.</p
 </div>
 </div>
 <div class="sect3">
-<h4 id="katalog-temaer"><a class="anchor" href="#katalog-temaer"></a>Katalog - temaer</h4>
+<h4 id="katalog-temaer"><a class="link" href="#katalog-temaer">Katalog - temaer</a></h4>
 <div class="paragraph">
 <p>Du bør oppgi klassifiseringssystem(er) (f.eks. en taksonomi) som er brukt til å klassifisere innholdet i katalogen din.</p>
 </div>
@@ -4126,7 +4124,7 @@ Hva som inngår i datasettet er godt beskrevet, men unntakene her er utelatt.</p
 </div>
 </div>
 <div class="sect3">
-<h4 id="katalog-utgivelsesdato"><a class="anchor" href="#katalog-utgivelsesdato"></a>Katalog - utgivelsesdato</h4>
+<h4 id="katalog-utgivelsesdato"><a class="link" href="#katalog-utgivelsesdato">Katalog - utgivelsesdato</a></h4>
 <div class="paragraph">
 <p>Du bør oppgi dato/tid katalogen først ble publisert.</p>
 </div>
@@ -4140,7 +4138,7 @@ Hva som inngår i datasettet er godt beskrevet, men unntakene her er utelatt.</p
 </div>
 </div>
 <div class="sect2">
-<h3 id="katalog-valgfrie-egenskaper"><a class="anchor" href="#katalog-valgfrie-egenskaper"></a>Valgfrie egenskaper i en katalogbeskrivelse</h3>
+<h3 id="katalog-valgfrie-egenskaper"><a class="link" href="#katalog-valgfrie-egenskaper">Valgfrie egenskaper i en katalogbeskrivelse</a></h3>
 <div class="paragraph">
 <p>I tillegg til obligatoriske (skal brukes) og anbefalte (bør brukes) egenskaper, er det en del egenskaper som er valgfrie (kan brukes) i en katalogbeskrivelse:</p>
 </div>
@@ -4173,7 +4171,7 @@ Hva som inngår i datasettet er godt beskrevet, men unntakene her er utelatt.</p
 <p>Ikke alle valgfrie egenskaper er beskrevet i etterfølgende avsnitt. Se under <a href="#hensikt-og-avgrensing">Hensikt og avgrensning</a> for hvordan du kan melde inn behov for beskrivelser.</p>
 </div>
 <div class="sect3">
-<h4 id="katalog-datatjeneste"><a class="anchor" href="#katalog-datatjeneste"></a>Katalog - datatjeneste</h4>
+<h4 id="katalog-datatjeneste"><a class="link" href="#katalog-datatjeneste">Katalog - datatjeneste</a></h4>
 <div class="paragraph">
 <p>Hvis katalogen din er en katalog over datatjenester (aka APIer), eller datasettene i katalogen din tilbys via datatjenester, skal beskrivelse av datatjenestene inkluderes i katalogen ved å bruke denne egenskapen.</p>
 </div>
@@ -4200,7 +4198,7 @@ Hva som inngår i datasettet er godt beskrevet, men unntakene her er utelatt.</p
 </div>
 </div>
 <div class="sect3">
-<h4 id="katalog-erDelAv"><a class="anchor" href="#katalog-erDelAv"></a>Katalog - er del av</h4>
+<h4 id="katalog-erDelAv"><a class="link" href="#katalog-erDelAv">Katalog - er del av</a></h4>
 <div class="paragraph">
 <p><em>&lt;ikke beskrevet, tilsvarer <a href="https://data.norge.no/specification/dcat-ap-no/#Katalog-er-del-av">Katalog: er del av (<code>dct:isPartOf</code>) i DCAT-AP-NO</a>&gt;</em></p>
 </div>
@@ -4209,7 +4207,7 @@ Hva som inngår i datasettet er godt beskrevet, men unntakene her er utelatt.</p
 </div>
 </div>
 <div class="sect3">
-<h4 id="Katalog-harDel"><a class="anchor" href="#Katalog-harDel"></a>Katalog - har del</h4>
+<h4 id="Katalog-harDel"><a class="link" href="#Katalog-harDel">Katalog - har del</a></h4>
 <div class="paragraph">
 <p>Motsatt av <a href="#katalog-erDelAv">Katalog - er del av</a>.</p>
 </div>
@@ -4218,19 +4216,19 @@ Hva som inngår i datasettet er godt beskrevet, men unntakene her er utelatt.</p
 </div>
 </div>
 <div class="sect3">
-<h4 id="katalog-katalog"><a class="anchor" href="#katalog-katalog"></a>Katalog - katalog</h4>
+<h4 id="katalog-katalog"><a class="link" href="#katalog-katalog">Katalog - katalog</a></h4>
 <div class="paragraph">
 <p><em>&lt;ikke beskrevet, tilsvarer <a href="https://data.norge.no/specification/dcat-ap-no/#Katalog-katalog">Katalog: katalog (<code>dcat:catalog</code>) i DCAT-AP-NO</a>&gt;</em></p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="katalog-katalogpost"><a class="anchor" href="#katalog-katalogpost"></a>Katalog - katalogpost</h4>
+<h4 id="katalog-katalogpost"><a class="link" href="#katalog-katalogpost">Katalog - katalogpost</a></h4>
 <div class="paragraph">
 <p><em>&lt;ikke beskrevet, tilsvarer <a href="https://data.norge.no/specification/dcat-ap-no/#Katalog-katalogpost">Katalog: katalogpost (<code>dcat:record</code>) i DCAT-AP-NO</a>&gt;</em></p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="katalog-produsent"><a class="anchor" href="#katalog-produsent"></a>Katalog - produsent</h4>
+<h4 id="katalog-produsent"><a class="link" href="#katalog-produsent">Katalog - produsent</a></h4>
 <div class="paragraph">
 <p><em>&lt;ikke beskrevet, tilsvarer <a href="https://data.norge.no/specification/dcat-ap-no/#Katalog-produsent">Katalog: produsent (<code>dct:creator</code>) i DCAT-AP-NO</a>&gt;</em></p>
 </div>
@@ -4242,7 +4240,7 @@ Hva som inngår i datasettet er godt beskrevet, men unntakene her er utelatt.</p
 </div>
 </div>
 <div class="sect3">
-<h4 id="katalog-rettigheter"><a class="anchor" href="#katalog-rettigheter"></a>Katalog - rettigheter (brukervilkår)</h4>
+<h4 id="katalog-rettigheter"><a class="link" href="#katalog-rettigheter">Katalog - rettigheter (brukervilkår)</a></h4>
 <div class="paragraph">
 <p><em>&lt;ikke beskrevet, tilsvarer <a href="https://data.norge.no/specification/dcat-ap-no/#Katalog-rettigheter">Katalog: rettigheter (brukervilkår) (<code>dct:rights</code>) i DCAT-AP-NO</a>&gt;</em></p>
 </div>
@@ -4251,13 +4249,13 @@ Hva som inngår i datasettet er godt beskrevet, men unntakene her er utelatt.</p
 </div>
 </div>
 <div class="sect1">
-<h2 id="utvalgte-temaer"><a class="anchor" href="#utvalgte-temaer"></a>Utvalgte temaer</h2>
+<h2 id="utvalgte-temaer"><a class="link" href="#utvalgte-temaer">Utvalgte temaer</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Dette kapittelet inneholder noen utvalgte temaer som forklares nærmere. Se under <a href="#hensikt-og-avgrensing">Hensikt og avgrensning</a> for hvordan du kan melde inn behov for temaer som du savner nærmere forklaringer av.</p>
 </div>
 <div class="sect2">
-<h3 id="sammenheng"><a class="anchor" href="#sammenheng"></a>Sammenheng mellom datasett, distribusjon, datatjeneste, begrep og informasjonsmodell</h3>
+<h3 id="sammenheng"><a class="link" href="#sammenheng">Sammenheng mellom datasett, distribusjon, datatjeneste, begrep og informasjonsmodell</a></h3>
 <div class="imageblock">
 <div class="content">
 <a class="image" href="images/Datasett-begrep-distribusjon-datatjeneste-infomod.png"><img src="images/Datasett-begrep-distribusjon-datatjeneste-infomod.png" alt="Datasett begrep distribusjon datatjeneste infomod"></a>
@@ -4298,7 +4296,7 @@ Hva som inngår i datasettet er godt beskrevet, men unntakene her er utelatt.</p
 </div>
 </div>
 <div class="sect2">
-<h3 id="beskrivelse-av-kvalitet"><a class="anchor" href="#beskrivelse-av-kvalitet"></a>Beskrivelse av kvalitet</h3>
+<h3 id="beskrivelse-av-kvalitet"><a class="link" href="#beskrivelse-av-kvalitet">Beskrivelse av kvalitet</a></h3>
 <div class="paragraph">
 <p>Nytt i DCAT-AP-NO v.2 er at den nå benytter <a href="https://www.w3.org/TR/vocab-dqv/">DQV (Data Quality Vocabulary) fra W3C</a> for beskrivelse av kvalitet på f.eks. et datasett. DCAT-AP-NO spesifiserer imidlertid ikke i detalj hvordan klasser og egenskaper fra DQV skal/bør/kan brukes. Det er derfor utarbeidet en <a href="https://data.norge.no/specification/dqv-ap-no/">norsk applikasjonsprofil av DQV (DQV-AP-NO)</a>, som supplerer DCAT-AP-NO, hvilket betyr at klasser og egenskaper spesifisert i DQV-AP-NO kan brukes i tillegg til de i DCAT-AP-NO.</p>
 </div>
@@ -4306,7 +4304,7 @@ Hva som inngår i datasettet er godt beskrevet, men unntakene her er utelatt.</p
 <p>Følgende er kun noen eksempler på hvordan DQV-AP-NO brukes til å beskrive kvalitet på f.eks. et datasett.</p>
 </div>
 <div class="sect3">
-<h4 id="beskrivelse-av-kvantifiserbar-kvalitet"><a class="anchor" href="#beskrivelse-av-kvantifiserbar-kvalitet"></a>Beskrivelse av kvantifiserbar kvalitet</h4>
+<h4 id="beskrivelse-av-kvantifiserbar-kvalitet"><a class="link" href="#beskrivelse-av-kvantifiserbar-kvalitet">Beskrivelse av kvantifiserbar kvalitet</a></h4>
 <div class="paragraph">
 <p>Ved å bruke egenskapen <a href="https://data.norge.no/specification/dqv-ap-no/#Datasett_harM%C3%A5leresultat">Datasett: har måleresultat (<code>dqv:hasQualityMeasurement</code>)</a> kan du knytte et måleresultat (<code>dqv:QualityMeasurement</code>) til et datasett (<code>dcat:Dataset</code>).</p>
 </div>
@@ -4362,7 +4360,7 @@ Hva som inngår i datasettet er godt beskrevet, men unntakene her er utelatt.</p
 </div>
 </div>
 <div class="sect3">
-<h4 id="beskrivelse-av-kvalitet-fritekst"><a class="anchor" href="#beskrivelse-av-kvalitet-fritekst"></a>Beskrivelse av kvalitet i form av fritekst</h4>
+<h4 id="beskrivelse-av-kvalitet-fritekst"><a class="link" href="#beskrivelse-av-kvalitet-fritekst">Beskrivelse av kvalitet i form av fritekst</a></h4>
 <div class="paragraph">
 <p>Ved å bruke egenskapen <a href="https://data.norge.no/specification/dcat-ap-no/#Datasett-harKvalitetsnote">Datasett: har kvalitetsnote</a> kan du knytte en kvalitetsbeskrivelse i fritekst (<code>dqv:QualityAnnotation</code>) til et datasett (<code>dcat:Dataset</code>).</p>
 </div>
@@ -4403,7 +4401,7 @@ Hva som inngår i datasettet er godt beskrevet, men unntakene her er utelatt.</p
 </div>
 </div>
 <div class="sect3">
-<h4 id="beskrivelse-av-kvalitet-brukertilbakemelding"><a class="anchor" href="#beskrivelse-av-kvalitet-brukertilbakemelding"></a>Beskrivelse av kvalitet i form av brukertilbakemeldinger</h4>
+<h4 id="beskrivelse-av-kvalitet-brukertilbakemelding"><a class="link" href="#beskrivelse-av-kvalitet-brukertilbakemelding">Beskrivelse av kvalitet i form av brukertilbakemeldinger</a></h4>
 <div class="paragraph">
 <p>Iht. DQV-AP-NO er en brukertilbakemelding (<code>dqv:UserFeedback</code>) en type kvalitetsnote (<code>dqv:QualityAnnotation</code>). Du kan med andre ord knytte en brukertilbakemelding på kvalitet (<code>dqv:UserQualityFeedback</code>) til et datasett (<code>dcat:Dataset</code>), på tilsvarende måte som  <a href="#beskrivelse-av-kvalitet-fritekst">beskrivelse av kvalitet i form av fritekst</a>. Se også <a href="#beskrivelse-av-kvalitet-fritekst">Beskrivelse av kvalitet i form av fritekst</a> for obligatoriske og anbefalte krav som også gjelder for brukertilbakemelding (<code>dqv:UserFeedback</code>) her.</p>
 </div>
@@ -4438,7 +4436,7 @@ Hva som inngår i datasettet er godt beskrevet, men unntakene her er utelatt.</p
 </div>
 </div>
 <div class="sect3">
-<h4 id="beskrivelse-av-kvalitet-autoritativt"><a class="anchor" href="#beskrivelse-av-kvalitet-autoritativt"></a>Beskrivelse av at et datasett er autoritativt</h4>
+<h4 id="beskrivelse-av-kvalitet-autoritativt"><a class="link" href="#beskrivelse-av-kvalitet-autoritativt">Beskrivelse av at et datasett er autoritativt</a></h4>
 <div class="paragraph">
 <p>Iht. DQV-AP-NO er et kvalitetssertifikat (<code>dqv:QualityCertificate</code>) en type kvalitetsnote (<code>dqv:QualityAnnotation</code>). Du kan med andre ord knytte et kvalitetssertifikat (<code>dqv:QualityCertificate</code>) til et datasett (<code>dcat:Dataset</code>), på tilsvarende måte som  <a href="#beskrivelse-av-kvalitet-fritekst">beskrivelse av kvalitet i form av fritekst</a>. Se også <a href="#beskrivelse-av-kvalitet-fritekst">Beskrivelse av kvalitet i form av fritekst</a> for obligatoriske og anbefalte krav som også gjelder for kvalitetssertifikat (<code>dqv:QualityCertificate</code>) her.</p>
 </div>
@@ -4465,7 +4463,7 @@ Hva som inngår i datasettet er godt beskrevet, men unntakene her er utelatt.</p
 </div>
 </div>
 <div class="sect3">
-<h4 id="beskrivelse-av-kvalitet-iSamsvarMed"><a class="anchor" href="#beskrivelse-av-kvalitet-iSamsvarMed"></a>Beskrivelse av at kvaliteten er i samsvar med gitt standard/spesifikasjon</h4>
+<h4 id="beskrivelse-av-kvalitet-iSamsvarMed"><a class="link" href="#beskrivelse-av-kvalitet-iSamsvarMed">Beskrivelse av at kvaliteten er i samsvar med gitt standard/spesifikasjon</a></h4>
 <div class="paragraph">
 <p>Ved å bruke egenskapen <a href="#datasett-iSamsvarMed">Datasett - i samsvar med</a> kan du knytte en standard/spesifikasjon (<code>dct:Standard</code>) til et datasett (<code>dcat:Dataset</code>), for å informere om at datasettet er generert/vedlikeholdt i henhold til gitt(e) standard(er)/spesifikasjon(er).</p>
 </div>
@@ -4475,7 +4473,7 @@ Hva som inngår i datasettet er godt beskrevet, men unntakene her er utelatt.</p
 </div>
 </div>
 <div class="sect2">
-<h3 id="beskrivelse-av-juss"><a class="anchor" href="#beskrivelse-av-juss"></a>Beskrivelse av juridiske rammer</h3>
+<h3 id="beskrivelse-av-juss"><a class="link" href="#beskrivelse-av-juss">Beskrivelse av juridiske rammer</a></h3>
 <div class="paragraph">
 <p>For å knytte f.eks. en lovhjemmel til et datasett eller en datatjeneste, er det to steg (her under med utgangspunkt i datasett):</p>
 </div>
@@ -4515,7 +4513,7 @@ Hva som inngår i datasettet er godt beskrevet, men unntakene her er utelatt.</p
 </div>
 </div>
 <div class="sect2">
-<h3 id="beskrivelse-av-datasettserie"><a class="anchor" href="#beskrivelse-av-datasettserie"></a>Beskrivelse av tidsserie/datasettserie</h3>
+<h3 id="beskrivelse-av-datasettserie"><a class="link" href="#beskrivelse-av-datasettserie">Beskrivelse av tidsserie/datasettserie</a></h3>
 <div class="paragraph">
 <p>For å beskrive datasett som inneholder en serie av datasett, anbefaler DCAT-AP-NO å bruke egenskapen <a href="https://data.norge.no/specification/dcat-ap-no/#Datasett-harDel">Datasett: har del</a> ("består av", <code>dct:hasPart</code>). Den motsatte egenskapen <a href="https://data.norge.no/specification/dcat-ap-no/#Datasett-erDelAv">Datasett: er del av</a> ("inngår i", <code>dct:isPartOf</code>) kan brukes til å knytte et datasett til en datasettserie.</p>
 </div>
@@ -4566,12 +4564,12 @@ I skrivende stund holder W3C på å utarbeide v.3.0 av DCAT hvor det skal være 
 </div>
 </div>
 <div class="sect2">
-<h3 id="beskrivelse-av-åpneData"><a class="anchor" href="#beskrivelse-av-åpneData"></a>Beskrivelse av åpne data</h3>
+<h3 id="beskrivelse-av-åpneData"><a class="link" href="#beskrivelse-av-åpneData">Beskrivelse av åpne data</a></h3>
 <div class="paragraph">
 <p>Et datasett kan gjøres tilgjengelig via distribusjon(er) og/eller datatjeneste(r). Se ellers under <a href="#sammenheng">Sammenheng mellom datasett, begrep, distribusjon, datatjeneste og informasjonsmodell</a> for sammenheng mellom bl.a. datasett (<code>dcat:Dataset</code>), distribusjon (<code>dcat:Distribution</code>) og datatjeneste (<code>dcat:DataService</code>).</p>
 </div>
 <div class="sect3">
-<h4 id="åpnedata-via-distribusjon"><a class="anchor" href="#åpnedata-via-distribusjon"></a>Åpne data via distribusjon(er)</h4>
+<h4 id="åpnedata-via-distribusjon"><a class="link" href="#åpnedata-via-distribusjon">Åpne data via distribusjon(er)</a></h4>
 <div class="paragraph">
 <p>Åpne data kan tilgjengeliggjøres via distribusjoner. For at et datasett (<code>dcat:Dataset</code>) skal kunne betraktes som et datasett med åpne data, <em>skal</em> følgende oppfylles:</p>
 </div>
@@ -4616,7 +4614,7 @@ I skrivende stund holder W3C på å utarbeide v.3.0 av DCAT hvor det skal være 
 </div>
 </div>
 <div class="sect3">
-<h4 id="åpnedata-via-datatjeneste"><a class="anchor" href="#åpnedata-via-datatjeneste"></a>Åpne data via datatjeneste (aka API)</h4>
+<h4 id="åpnedata-via-datatjeneste"><a class="link" href="#åpnedata-via-datatjeneste">Åpne data via datatjeneste (aka API)</a></h4>
 <div class="paragraph">
 <p>En datatjeneste (<code>dcat:Dataservice</code>) kan gi tilgang til åpne data. For at en datatjeneste (<code>dcat:DataService</code>) skal kunne sies å gi tilgang til datasett (<code>dcat:Dataset</code>) med åpne data, <em>skal</em> følgende oppfylles:</p>
 </div>
@@ -4649,13 +4647,13 @@ I skrivende stund holder W3C på å utarbeide v.3.0 av DCAT hvor det skal være 
 </div>
 </div>
 <div class="sect2">
-<h3 id="bruk-av-kontrollerte-vokabularer"><a class="anchor" href="#bruk-av-kontrollerte-vokabularer"></a>Bruk av kontrollerte vokabularer</h3>
+<h3 id="bruk-av-kontrollerte-vokabularer"><a class="link" href="#bruk-av-kontrollerte-vokabularer">Bruk av kontrollerte vokabularer</a></h3>
 <div class="paragraph">
 <p>Til flere av egenskaper er det krav til obligatorisk eller anbefalt bruk av kontrollerte vokabularer. Dette betyr at verdiene til de aktuelle egenskapene skal (obligatorisk bruk) eller bør (anbefalt bruk) hentes fra en eller flere av angitte kontrollerte lister. Se <a href="https://data.norge.no/specification/dcat-ap-no/#Kontrollerte-vokabularer">Om bruk av kontrollerte vokabularer</a> i DCAT-AP-NO, for hvilke kontrollerte vokabularer som skal/bør brukes for hvilke egenskaper.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="om-identifikator"><a class="anchor" href="#om-identifikator"></a>Om identifikator (<code>dct:identifer</code>)</h3>
+<h3 id="om-identifikator"><a class="link" href="#om-identifikator">Om identifikator (<code>dct:identifer</code>)</a></h3>
 <div class="paragraph">
 <p>Identifikatoren til en ressurs (et datasett, en datatjeneste, en katalog osv.) er som regel systemgenerert av verktøystøtte, slik at du som vanlig bruker ikke trenger å fylle ut verdien til denne egenskapen manuelt.</p>
 </div>
@@ -4698,7 +4696,7 @@ ga('send', 'pageview');
 </div>
 <div id="footer">
 <div id="footer-text">
-Sist oppdatert 2022-09-28 08:26:08 UTC
+Sist oppdatert 2024-08-08 12:17:33 UTC
 </div>
 </div>
 </body>
