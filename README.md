@@ -1,3 +1,3 @@
 # veileder-beskrivelse-av-datasett
 
-Gjelden versjon er publisert her: https://doc.difi.no/data/veileder-for-beskrivelse-av-datasett/
+Veilederen er utgått og vil ikke bli vedlikeholdt.
