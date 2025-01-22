@@ -14,17 +14,12 @@ image::images/digitaliseringsdirektoratet.png[width=50%, pdfwidth=30vw]
 
 // include::./shared/download.adoc[]
 
-// NOTE: *Innmelding av feil og mangler:* +
-// Dersom du finner feil eller mangler i dokumentet, ber vi om at dette meldes inn på https://github.com/Informasjonsforvaltning/veileder-beskrivelse-av-datasett/issues[Github Issues]. Dersom du ikke allerede har bruker på Github kan du opprette bruker gratis.
-
 // markere denne som "utgått" med fixed textbox her kodet direkte i html
 ++++
 <div style="position: fixed; top: 40%; left: 50%; transform: translateX(-50%); background-color: #ffffff; border: 1px solid black; padding: 15px; box-shadow: 15px 15px 15px red; opacity: 0.85">
-  <p> <b>NB! Denne veilederen utfases og vil ikke bli vedlikeholdt (inkl. kjente feil og mangler). Den var ment for å brukes sammen DCAT-AP-NO v.2.x som utfases. Til <a href=https://data.norge.no/specification/dcat-ap-no>DCAT-AP-NO v.3+</a> er det bestemt at det ikke skulle lages egne veiledere.</a> </b> </p>
+  <p> <strong>NB! Denne veilederen utfases og vil ikke bli vedlikeholdt (inkl. kjente feil og mangler). Den var ment for å brukes sammen DCAT-AP-NO v.2.x som utfases. Til <a href=https://data.norge.no/specification/dcat-ap-no>DCAT-AP-NO v.3+</a> er det bestemt at det ikke skulle lages egne veiledere.</a> </strong> </p>
 </div>
 ++++
-
-// WARNING: #Denne veilederen utfases# og vil ikke bli vedlikeholdt. Den var ment for å brukes sammen DCAT-AP-NO v.2.x som fases ut. Til DCAT-AP-NO v.3+ er det bestemt at det ikke skulle lages egne veiledere. 
 
 *Status*: #utfases# +
 *Versjon*: 2.0 +
@@ -32,8 +27,6 @@ image::images/digitaliseringsdirektoratet.png[width=50%, pdfwidth=30vw]
 *Oppdatert*: 2021-07-09 
 
 toc::[]
-
-// :leveloffset: +1
 
 // Innhold her.
 include::Innledning.adoc[]
