@@ -19,10 +19,12 @@ image::digitaliseringsdirektoratet.png[width=50%, pdfwidth=30vw]
 
 {description}
 
-IMPORTANT: Denne versjonen av veilederen var utarbeidet for https://data.norge.no/specification/dcat-ap-no/v1.1/[DCAT-AP-NO v.1.1] som er [yellow-background]#under utfasing#. Denne versjon av veilederen vil ikke bli oppdatert. +
-For https://data.norge.no/specification/dcat-ap-no/[DCAT-AP-NO v.2.x] se den https://data.norge.no/guide/veileder-beskrivelse-av-datasett/[gjeldende versjon av veilederen].
-
-include::./shared/download.adoc[]
+// markere denne som "utgått" med fixed textbox her kodet direkte i html
+++++
+<div style="position: fixed; top: 40%; left: 50%; transform: translateX(-50%); background-color: #ffffff; border: 1px solid black; padding: 15px; box-shadow: 15px 15px 15px red; opacity: 0.85">
+  <p> <strong>NB! Denne veilederen er utgått. Den var ment for å forklare bruken av DCAT-AP-NO v1.1. som var utgått.</strong> </p>
+</div>
+++++
 
 toc::[]
 
