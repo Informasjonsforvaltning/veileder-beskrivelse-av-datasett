@@ -22,7 +22,7 @@ image::digitaliseringsdirektoratet.png[width=50%, pdfwidth=30vw]
 // markere denne som "utgått" med fixed textbox her kodet direkte i html
 ++++
 <div style="position: fixed; top: 40%; left: 50%; transform: translateX(-50%); background-color: #ffffff; border: 1px solid black; padding: 15px; box-shadow: 15px 15px 15px red; opacity: 0.85">
-  <p> <strong>NB! Denne veilederen er utgått. Den var ment for å forklare bruken av DCAT-AP-NO v1.1. som var utgått.</a> </strong> </p>
+  <p> <strong>NB! Denne veilederen er utgått. Den var ment for å forklare bruken av DCAT-AP-NO v1.1. som var utgått.</strong> </p>
 </div>
 ++++
 
