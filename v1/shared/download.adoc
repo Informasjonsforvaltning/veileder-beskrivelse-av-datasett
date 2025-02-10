@@ -1,7 +1,0 @@
-ifeval::["{backend}" == "html5"]
-
-[TIP]
-//.Nedlasting av dokumentet
-Dette dokumentet kan også lastes ned link:files/veileder-beskrivelse-av-datasett.pdf[som PDF].
-
-endif::[]
