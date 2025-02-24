@@ -51,4 +51,4 @@ include::Utvalgte_temaer.adoc[]
 
 
 
-include::./shared/stats.adoc[]
+// include::./shared/stats.adoc[]
