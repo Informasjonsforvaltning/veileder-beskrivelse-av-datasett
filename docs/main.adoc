@@ -42,4 +42,4 @@ include::Referanser.adoc[]
 
 
 
-// include::./shared/stats.adoc[]
+include::./shared/analytics.adoc[]
