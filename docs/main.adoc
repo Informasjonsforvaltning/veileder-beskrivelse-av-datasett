@@ -50,5 +50,5 @@ include::Utvalgte_temaer.adoc[]
 // include::Referanser.adoc[]
 
 
-
+// Analytics
 include::./shared/analytics.adoc[]
