@@ -41,5 +41,5 @@ include::Datakatalog.adoc[]
 include::Referanser.adoc[]
 
 
-
+// Analytics
 include::./shared/analytics.adoc[]
